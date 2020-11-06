@@ -5,12 +5,12 @@ date: 2020-11-06T11:56:57+01:00
 ---
 
 ## Work
-Lead cloud managemt specialist @VMware 
+- Lead cloud managemt specialist @VMware 
 
 ## Interests
 
-Family 
-MTB (when time permits)
-Crossfit
-Roadracing
-Neerdy stuff :-) 
+- Family 
+- MTB (when time permits)
+- Crossfit
+- Roadracing
+- Neerdy stuff :-) 
