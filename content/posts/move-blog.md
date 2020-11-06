@@ -2,6 +2,7 @@
 title: "Move Blog"
 date: 2020-11-06T12:56:48+01:00
 tags : [Blog, Move, Blogger]
+image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 #draft: true
 ---
 ![Header](/img/erda-estremera-sxNt9g77PE0-unsplash.jpg)

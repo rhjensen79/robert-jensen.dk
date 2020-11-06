@@ -63,4 +63,4 @@ url = "mailto:robert@robert-jensen.dk"
   name = "About"
   weight = 2
   identifier = "about"
-  url = "/about/about"
+  url = "/about"

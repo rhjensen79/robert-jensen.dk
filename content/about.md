@@ -4,7 +4,7 @@ date: 2020-11-06T11:56:57+01:00
 #draft: true
 ---
 
-![Header](/about/thom-holmes-k-xKzowQRn8-unsplash.jpg)
+![Header](/img/thom-holmes-k-xKzowQRn8-unsplash.jpg)
 
 ### Work
 - Lead cloud managemt specialist @VMware 
