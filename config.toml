@@ -3,7 +3,7 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Robert-Jensen.dk"
 theme = "anatole"
-summarylength = 10
+summarylength = 50
 enableEmoji = true
 enableRobotsTXT = true
 
