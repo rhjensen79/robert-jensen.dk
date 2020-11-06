@@ -57,13 +57,13 @@ url = "mailto:robert@robert-jensen.dk"
   name = "Home"
   identifier = "home"
   weight = 100
-  url = "/"
+  url = "/posts/"
 
   [[menu.main]]
   name = "Posts"
   weight = 200
   identifier = "posts"
-  url = "/post/"
+  url = "/posts/"
 
   [[menu.main]]
   name = "About"
