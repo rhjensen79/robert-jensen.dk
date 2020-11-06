@@ -8,7 +8,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Enable Disqus
-#disqusShortname = ""
+disqusShortname = "rhjensen"
 
 # Google Analytics
 googleAnalytics = "UA-932020-4"
