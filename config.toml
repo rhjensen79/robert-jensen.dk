@@ -11,14 +11,14 @@ enableRobotsTXT = true
 #disqusShortname = ""
 
 # Google Analytics
-#googleAnalytics = "UA-123-45"
+googleAnalytics = "UA-932020-4"
 
 [params]
 title = "Robert-Jensen.dk"
 author = "Robert Jensen"
 description = "The views expressed here are my own"
 profilePicture = "/images/profile.jpg"
-keywords = ""
+keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python"
 favicon = "favicons/"
 customCss = []
 customJs = []
