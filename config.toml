@@ -16,7 +16,7 @@ enableRobotsTXT = true
 [params]
 title = "Robert-Jensen.dk"
 author = "Robert Jensen"
-description = "Disclamer : The views expressed here are my own"
+description = "The views expressed here are my own"
 profilePicture = "/images/profile.jpg"
 keywords = ""
 favicon = "favicons/"
