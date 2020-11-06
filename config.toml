@@ -14,9 +14,9 @@ enableRobotsTXT = true
 #googleAnalytics = "UA-123-45"
 
 [params]
-title = "I'm Jane Doe"
-author = "Jane Doe"
-description = "Call me Jane"
+title = "Robert-Jensen.dk"
+author = "Robert Jensen"
+#description = "Call me Jane"
 profilePicture = "/images/profile.jpg"
 keywords = ""
 favicon = "favicons/"
