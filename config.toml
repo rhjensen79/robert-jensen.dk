@@ -22,7 +22,7 @@ keywords = ""
 favicon = "favicons/"
 customCss = []
 customJs = []
-mainSections = ["post"]
+mainSections = ["posts"]
 images = ["images/site-feature-image.png"]
 # Google Site Verification
 #googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -54,19 +54,13 @@ url = "mailto:robert@robert-jensen.dk"
 [menu]
 
   [[menu.main]]
-  name = "Home"
-  identifier = "home"
-  weight = 100
-  url = "/posts/"
-
-  [[menu.main]]
   name = "Posts"
-  weight = 200
+  weight = 1
   identifier = "posts"
   url = "/posts/"
 
   [[menu.main]]
   name = "About"
-  weight = 300
+  weight = 2
   identifier = "about"
   url = "/about/"
