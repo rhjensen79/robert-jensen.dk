@@ -3,15 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://blog.robert-jensen.dk/posts/my-first-post/</loc>
+    <lastmod>2020-11-06T10:41:47+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://blog.robert-jensen.dk/posts/</loc>
+    <lastmod>2020-11-06T10:41:47+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://blog.robert-jensen.dk/</loc>
+    <lastmod>2020-11-06T10:41:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.robert-jensen.dk/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.robert-jensen.dk/tags/</loc>
   </url>
   
 </urlset>

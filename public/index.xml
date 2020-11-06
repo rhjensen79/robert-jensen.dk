@@ -2,9 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robert-Jensen.dk</title>
-    <link>https://example.com/</link>
+    <link>https://blog.robert-jensen.dk/</link>
     <description>Recent content on Robert-Jensen.dk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Fri, 06 Nov 2020 10:41:47 +0100</lastBuildDate><atom:link href="https://blog.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://blog.robert-jensen.dk/posts/my-first-post/</link>
+      <pubDate>Fri, 06 Nov 2020 10:41:47 +0100</pubDate>
+      
+      <guid>https://blog.robert-jensen.dk/posts/my-first-post/</guid>
+      <description>First post </description>
+    </item>
+    
   </channel>
 </rss>
