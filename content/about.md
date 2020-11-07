@@ -6,13 +6,14 @@ date: 2020-11-06T11:56:57+01:00
 
 ![Header](/img/thom-holmes-k-xKzowQRn8-unsplash.jpg)
 
-Welcome to my little blog. 
-I'm not a big writer, so don't exect much. But sometimes, i might post small posts, of what i'm doing, which i think, others might find interesting. 
+Welcome to my little blog.
 
-Most of my time, is spend, going from a Operations background, to learn a lot more around Development. So expect, content to be around that. 
+I'm not a big writer, so don't exect much. But sometimes, I might create small posts, of what i'm doing, which I think, others might find interesting. 
+
+Most of my time, is spend, changing from a Operations background, to learn a lot more around Development. So expect, content to be around thatt theme.
 
 ### Work
-- Lead cloud managemt specialist @VMware 
+- Lead cloud managemt specialist @VMware since 2012
 
 ### Interests
 
