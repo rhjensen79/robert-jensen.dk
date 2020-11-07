@@ -9,15 +9,19 @@ image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 
 for the last year or so, I have seen a lot of people, talking about their move of blogs, from a traditionel CMS system, to a static site.
 
-I have had this on my todo, for quite some time, but I have also been quite satisfied, with blogger.
+I have had this on my todo, for quite some time, but I have also been quite satisfied, with blogger. But the fear of Blogger being shutdown, like so many other services, have long had me thinking about alternertives.
 
-But the other day, I saw som tweets around it again, and thought that now is the time.
+The other day, i saw a couple of tweets around it again, and descided, that now was the time. 
+
+Lokking at how easy it was, and how long it took, i should have done this, a long time ago.
 
 So this is herby my first post, on my news static site, using Hugo thru Netlify.com
 
-No reason to makee this to hard, so now it's running, and i can start to use, my favorite tools, these days (VS Code), to write blogs as well :-) 
+No reason to makee this to hard, and do a lot of customization, on the site/Theme etc. That will come. 
 
-Who knows, this might even mean more posts, comming from me. Or at least just a faster site. 
+I'm hoping, since this is now being deveopled, in the same app, as i use a lot of my time (VS Code), there might even some more blogs out of it. But no promises :-) 
+
+Hopy you enjoy, the new (fast) site. 
 
 Regards
 
