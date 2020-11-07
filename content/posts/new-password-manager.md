@@ -13,7 +13,7 @@ I have been a (happy) long time user of [Keepass](https://keepass.info/).
 It was the place to store passwords, notes etc, across many of the systems I use today.  
 That means mostly OSX, but also a bit Windows, and in some cases IOS as well.  
   
-The way I used it, was by having my kdb bile, in a dropbox share, that I then accessed from all my devices.  
+The way I used it, was by having my kdb file, in a dropbox share, that I then accessed from all my devices.  
 The drawback to this, is that I could only have one open at the time. Not a big deal, but I had on 2 occasions, had a corrupted DB. No problem, since Dropbox files are easy to restore. But still a small gotcha.  
   
 Many of the big services, has been a bit to pricy, from my point of view, since I had something that was working. But that all changed, a couple of month ago.  
