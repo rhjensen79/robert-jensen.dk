@@ -6,3 +6,8 @@ draft: true
 ---
 
 A short story, around how to automate FAH appliance deployment, on my vSphere enviroment.
+
+Github issue : https://github.com/saintdle/Terraform/pull/1#issuecomment-723975191
+
+Github FAH Terraform project : https://github.com/saintdle/Terraform
+
