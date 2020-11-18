@@ -31,7 +31,7 @@ I then created a simple pipeline, that gets triggered by changes to that GitHub 
 
 ![Git](/img/automating-fah-with-cs/cs_git_webhook.png)
 
-start's my [Terraform container](https://hub.docker.com/r/robertjensen/terraform)
+The Pipeline start's by deploying my [Terraform container](https://hub.docker.com/r/robertjensen/terraform)
 
 ![container](/img/automating-fah-with-cs/cs_docker_setting.png)
 
@@ -43,22 +43,26 @@ Does an Terraform init and the a terraform apply -auto-approve, with a notificat
 
 ![Pipeline](/img/automating-fah-with-cs/cs_pipeline.png)
 
-The result is that when i see a Tweet like this.
+The result is that when I see a Tweet like this.
+
+![Tweet](/img/automating-fah-with-cs/tweet.png)
+
 It takes me 1 minutes, to change the url, and commit and push to my repo.
 
-2 minutes later, the pipeline is run.
+2 minutes later, the pipeline is complete.
 
 ![Pipeline complete](/img/automating-fah-with-cs/cs_pipeline_complete.png)
 
-and my vSphere enviroment is updated, with 3 new Folding@home appliances, running with the correct specs, and with my user, on my vSphere enviroment.
+and my vSphere enviroment is updated, with 3 new Folding@home appliances, running with the correct specs, with my FAH user profile, on my vSphere enviroment.
 
 ![vSphere](/img/automating-fah-with-cs/vsphere.png)
 
-I don't know if that qualifyes as IAC, but for me, it's a really nice demo, and it makes it so easy, to maintain my deployment.
+I don't know if that qualifyes as IAC, but for me, it's a really nice demo, and it makes it so easy, to keep my deployment updated, and running with the specs i want.
 
-A side note. When i need ressources, in my enviroment, I jsut change the number of VM's, and commit. And 2 minuts later, it happens. 
+A side note. When I need ressources, in my enviroment, I just change the number of VM's, and commit. And 2 minuts later, it happens. 
 
 Hope you found this usefull :-) 
+
 
 
 Photo credit
