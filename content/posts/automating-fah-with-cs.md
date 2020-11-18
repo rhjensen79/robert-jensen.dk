@@ -6,26 +6,28 @@ draft: false
 ---
 ![Header](/img/automating-fah-with-cs/top_picture.jpg)
 
-I am always looking for new ways to do demo's, to showcase the solutions the company I work for have. 
+I am always looking for new ways to do demo's, and to showcase the solutions the company I work for have. 
 One usecase, that I really wanted to show, was infrastructure as code (IAC), using a combination of both VMware and opensource tools.
 But not just as a deploy and destroy, but also as a way to maintain state in something that keeps running, and do the changes, from a source repository, like Github.
 
 The solution came to me, when I stumpled upon a [Github repo](https://github.com/saintdle/Terraform), that takes the fantastic project [Foldinghome](https://foldingathome.org) combined with the OVF appliance from [VMware Flings](https://flings.vmware.com/vmware-appliance-for-folding-home) and deploys it on vSphere using [Terraform](https://www.terraform.io).
 
 My idea was to combine it with [VMware Code Stream](https://cloud.vmware.com/code-stream), to automate the deployment.
+
 The result is what you read here :-) 
 
 The first thing i did, was to fork the project, and change the code, so it would pull directly from a URL. I actuallily think it was inspired from a post from [William Lam](https://twitter.com/lamw), where he described how to do just that (i can't find the post now - sorry). 
-In the intial version, the OVF was pulled for the local git repo, and since i run everything in Code Stream, using a container, having it local did not make sense for me. 
+
+In the intial version, the OVF was pulled from the local git repo folder, and since I run everything in Code Stream, using a container, having it local did not make sense for me. 
 I created a [issue](ttps://github.com/saintdle/Terraform/pull/1#issuecomment-723975191)
+
+And [Dean](https://twitter.com/saintdle) responded quickly, and have since implementet a really nice solution, in his repo, that can do both local and remote. So check out his [Github repo](https://github.com/saintdle/Terraform) if you want to play with this yourself.
 
 ![Issue](/img/automating-fah-with-cs/github_issue.png)
 
-[Dean](https://twitter.com/saintdle) responded quickly, and have since implementet a really nice solution, in his repo, that can do both local and remote. So check out his [Github repo](https://github.com/saintdle/Terraform) if you want to play with this yourself.
-
 I ended up creating my own private Github repo, with the code, to keep the demo usecase, seperate from all other stuff. 
 
-I created a simple pipeline, that gets triggered by changes to my GitHub repo using the Code Stream integration
+I then created a simple pipeline, that gets triggered by changes to that GitHub repo using the Code Stream integration
 
 ![Git](/img/automating-fah-with-cs/cs_git_webhook.png)
 
