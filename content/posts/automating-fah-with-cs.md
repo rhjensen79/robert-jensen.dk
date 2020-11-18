@@ -19,7 +19,7 @@ The first thing i did, was to fork the project, and change the code, so it would
 In the intial version, the OVF was pulled for the local git repo, and since i run everything in Code Stream, using a container, having it local did not make sense for me. 
 I created a [issue](ttps://github.com/saintdle/Terraform/pull/1#issuecomment-723975191)
 
-![Issue](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fgithub_issue.png)
+![Issue](/img/automating-fah-with-cs/github_issue.png)
 
 [Dean](https://twitter.com/saintdle) responded quickly, and have since implementet a really nice solution, in his repo, that can do both local and remote. So check out his [Github repo](https://github.com/saintdle/Terraform) if you want to play with this yourself.
 
@@ -27,30 +27,30 @@ I ended up creating my own private Github repo, with the code, to keep the demo 
 
 I created a simple pipeline, that gets triggered by changes to my GitHub repo using the Code Stream integration
 
-![Git](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fcs_git_webhook.png)
+![Git](/img/automating-fah-with-cs/cs_git_webhook.png)
 
 start's my [Terraform container](https://hub.docker.com/r/robertjensen/terraform)
 
-![container](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fcs_docker_setting.png)
+![container](/img/automating-fah-with-cs/cs_docker_setting.png)
 
 Pulls my git repo into that container.
 
-![Git Settings](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fcs_git_settings.png)
+![Git Settings](/img/automating-fah-with-cs/cs_git_settings.png)
 
 Does an Terraform init and the a terraform apply -auto-approve, with a notification, in case anything goes wrong.
 
-![Pipeline](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fcs_pipeline.png)
+![Pipeline](/img/automating-fah-with-cs/cs_pipeline.png)
 
 The result is that when i see a Tweet like this.
 It takes me 1 minutes, to change the url, and commit and push to my repo.
 
 2 minutes later, the pipeline is run.
 
-![Pipeline complete](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fcs_pipeline_complete.png)
+![Pipeline complete](/img/automating-fah-with-cs/cs_pipeline_complete.png)
 
 and my vSphere enviroment is updated, with 3 new Folding@home appliances, running with the correct specs, and with my user, on my vSphere enviroment.
 
-![vSphere](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Fvsphere.png)
+![vSphere](/img/automating-fah-with-cs/vsphere.png)
 
 I don't know if that qualifyes as IAC, but for me, it's a really nice demo, and it makes it so easy, to maintain my deployment.
 
