@@ -1,10 +1,10 @@
 ---
-title: "Automating Fah With CS"
+title: "Automating Folding@Home With CS"
 date: 2020-11-18T16:42:22+01:00
 tags : [Terraform, Code Stream, GitHub, Automation, Folding@home, vSphere]
 draft: false
 ---
-![Header](https://github.com/rhjensen79/robert-jensen.dk/blob/master/content%2Fimg%2Fautomating-fah-with-cs%2Ftop_picture.jpg)
+![Header](content/img/automating-fah-with-cs/top_picture.jpg)
 
 I am always looking for new ways to do demo's, to showcase the solutions the company I work for have. 
 One usecase, that I really wanted to show, was infrastructure as code (IAC), using a combination of both VMware and opensource tools.
