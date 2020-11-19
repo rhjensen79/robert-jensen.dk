@@ -8,7 +8,7 @@ date: 2020-11-06T11:56:57+01:00
 
 Welcome to my little blog.
 
-I'm not a big writer, so don't exect much. But sometimes, I might create small posts, of what i'm doing, which I think, others might find interesting.
+I'm not a big writer, so don't exect much. But sometimes, I might create small posts, of what i'm doing, and what I think, others might find interesting.
 
 Most of my time, is spend, changing from a Operations background, to learn a lot more around Development. So expect, content to be around thatt theme.
 
