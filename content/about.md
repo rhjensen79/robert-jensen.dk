@@ -4,7 +4,7 @@ date: 2020-11-06T11:56:57+01:00
 #draft: true
 ---
 
-![Header](/img/thom-holmes-k-xKzowQRn8-unsplash.jpg)
+![Header](/img/about/thom-holmes-k-xKzowQRn8-unsplash.jpg)
 
 Welcome to my little blog.
 
