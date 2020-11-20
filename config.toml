@@ -8,7 +8,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Enable Disqus
-disqusShortname = "rhjensen"
+DisqusShortname = "disqus_OsGKFX7o4i"
 
 # Google Analytics
 googleAnalytics = "UA-932020-4"
@@ -48,6 +48,16 @@ url = "https://github.com/rhjensen79"
 icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:robert@robert-jensen.dk"
+
+[[params.socialIcons]]
+icon = "fab fa-youtube"
+title = "Youtube"
+url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
+
+[[params.socialIcons]]
+icon = "fab fa-reddit"
+title = "reddit"
+url = "https://www.reddit.com/user/Rhjensen79"
 
 ## Menu items
 
