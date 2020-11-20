@@ -55,6 +55,11 @@ title = "Youtube"
 url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
 
 [[params.socialIcons]]
+icon = "fab fa-docker"
+title = "Docker"
+url = "https://hub.docker.com/u/robertjensen"
+
+[[params.socialIcons]]
 icon = "fab fa-reddit"
 title = "reddit"
 url = "https://www.reddit.com/user/Rhjensen79"
