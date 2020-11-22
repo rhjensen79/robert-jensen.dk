@@ -167,7 +167,7 @@ The end result, as you can see above, is that I can run
 docker run -it robertjensen/minion
 ```
 
-and now have a container, containing a SaltStack Minion, ready to test, in seconds. And when i'm done with it, I can just exit, and run it again, and get a new one.
+and now have a container, containing a SaltStack Minion, ready to test, in seconds. And when i'm done with it, I can just exit, and run it again, and get a new one. So I hope you could see, that for just a few minutes of work, I was able to create a on demand test container, that can save me a lot of time in the future. And the best part, is that it's automaticly maintained, with new versions, and patches. 
 
 Was this a static application, then I would use docker-compose, to have it running in a more static way, with the right ports open, and with the correct folders, mounted to my NFS share.
 
@@ -177,6 +177,6 @@ but for now, I hope this gave some insigt, in a simple usecase, for containers, 
 If you want to try for yourself, then all docker, jenkinsfiles from this example, is in the post.
 The only thing missing, is the Jenkins server. The container i'm using, is [here](https://hub.docker.com/r/robertjensen/jenkins) but it's quite easy to install, and there is many other versions on docker hub, that could be worth to take a look at as well.
 
-If you have comments, then fell free to reach out on Twitter etc. 
+If you have comments etc., then feel free to reach out :-). 
 
 <span>Photo by <a href="https://unsplash.com/@t_lipke?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Thomas Lipke</a> on <a href="https://unsplash.com/s/photos/whale?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
