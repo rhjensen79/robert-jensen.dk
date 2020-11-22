@@ -167,14 +167,15 @@ The end result, as you can see above, is that I can run
 docker run -it robertjensen/minion
 ```
 
-and now have a container, containing a SaltStack Minion, ready to test, in seconds. And when i'm done with it, I can just exit, and run it again, and get a new one. So I hope you could see, that for just a few minutes of work, I was able to create a on demand test container, that can save me a lot of time in the future. And the best part, is that it's automaticly maintained, with new versions, and patches. 
+and now have a container, containing a SaltStack Minion, ready to test, in seconds. And when i'm done with it, I can just exit, and run it again, and get a new one. So I hope you could see, that for just a few minutes of work, I was able to create a on-demand test container, that can save me a lot of time in the future. And the best part, is that it's automaticly maintained, with new versions, and patches. 
+I do know, that i could also build it from command line, but my idea on this post, was to show how i do it, and the value of having it automaticly maintained. 
 
-Was this a static application, then I would use docker-compose, to have it running in a more static way, with the right ports open, and with the correct folders, mounted to my NFS share.
+If this was a static application, then I would use docker-compose, to have it running in a more static way, with the right ports open, and with the correct folders, mounted to my NFS share. You can see an exmple of that, below in my description around my Jenkins container.
 
-I will share more around this, in a later post.
-but for now, I hope this gave some insigt, in a simple usecase, for containers, and how to have it automaticly updated.
+But will share more around, how to do this, in a later post.
+For now, I hope this gave some insigt, in a simple usecase.
 
-If you want to try for yourself, then all docker, jenkinsfiles from this example, is in the post.
+If you want to try for yourself, then all docker, jenkinsfiles used in this example, is in the post. It's just a matter of copy/paste.
 The only thing missing, is the Jenkins server. The container i'm using, is [here](https://hub.docker.com/r/robertjensen/jenkins) but it's quite easy to install, and there is many other versions on docker hub, that could be worth to take a look at as well.
 
 If you have comments etc., then feel free to reach out :-). 
