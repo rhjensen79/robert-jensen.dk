@@ -48,6 +48,10 @@ After first deploying new VM's (using VRA) and then pulling the official Ubuntu 
 
 So let me run you thru, what I did.
 
+First of all, I have [Docker Desktop](https://www.docker.com/products/docker-desktop) installed on my Mac. It has versions for all the different OS, you could use. 
+It works well for this usecase. For other usecases, i have a [Ubuntu](https://ubuntu.com) or [Photon](https://vmware.github.io/photon/) VM that is running Docker. 
+If you don't know how to install docker, on your OS, then google it. There are tons of guides out there. 
+
 ![Github Repo](github-overview.png)
 The private repo, i'm using, for all my docker images, has a folder, for each container. 
 
