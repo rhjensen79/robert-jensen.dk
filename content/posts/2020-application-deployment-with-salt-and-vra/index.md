@@ -128,16 +128,19 @@ docker:
       - mkdir /mnt/Data
       - mount -a
 ```
+Note this job is pretty basic. I will update it later, to include different versions, for different OS, and also some error handling. But for now, it's working, with the configs I need. 
 
 I have also setup a schelduled job, that runs HighState every hour.
-That means, that if I change a configurations that is managed here, it wil automaticly be overwritten. 
+This means, that if I change a configurations that is managed here, it wil automaticly be overwritten, when that jobs runs.
+I could also do that, a lot faster, and probably more efficient with beacons, but that is for another post :-) 
 
-Really nice, if you want to stay compliant, but also something to be aware off, you you want to do changes, that is reverted back every hour :-) 
+This is really nice, if you want all your VM's to stay compliant, but also something to be aware off, you you do changes, that is then reverted back every hour :-) 
 
 
-Thats all I had. Thanks for reading this far :-) 
+Thats all I had for now. I hope that gave some idea, on how it's possible to use SaltStack with VRA. 
 
-### The blueprint I used
+
+### The blueprint I used.
 ```
 name: Application VM
 version: 0.0.1
