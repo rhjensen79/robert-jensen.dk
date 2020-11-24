@@ -6,29 +6,29 @@ draft: false
 ---
 ![top_picture](shahadat-rahman-gnyA8vd3Otc-unsplash.jpg)
 
-Here is a short post, around my first integration between SaltStack and vRealize Automation.
+Here is a short post, around my first integration between [SaltStack](https://www.saltstack.com) and [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html).
 
 Expect this to be updated, as I get more experience in saltStack. 
 
-Note VMware (The company I work for), bought SaltStack, so I don't know, what the future plans look like, and if this is the correct way going forward.
+Note [VMware](https://www.vmware.com) (The company I work for), bought SaltStack, so I don't know, what the future plans look like, and if this is the correct way going forward, to do this kind of integration.
 
-In this post I will show you, how I have setup custom application deployment on VM's, along with making sure configurations stays compliant, even after deployment.
+In this post I will show you, how I have setup custom application deployment (Docker in this case) on VM's, along with making sure configurations stays compliant, even after deployment.
 
 ![Catalog](catalog.png) 
 First we select the "Application VM", that I have created, from the catalog
 
 ![request2](request2.png)
-The special thing about this VM, is that it possible to select "App Template" and select the application from there.
+The special thing about this VM, is that it's possible to select "App Template" and select the application from there.
 Right now it's only possible to select None or Docker, but more will come.
 
-What happens is, that depending on what we select, it will update the grains file in /etc/salt/grains with app:appname. Spoiler: This is what Salt will pick up on, and apply the configuration accordingly.
+What happens then, is that depending on what we select, it will update the grains file in /etc/salt/grains with app:appname. Spoiler: This is what Salt will pick up on, and apply the configuration accordingly.
 
 ![deployment](Deployment_finished.png)
-After the deployment is finished, the salt-minion contacts the salt master.
+After the VRA VM deployment is finished, the salt-minion contacts the salt master.
 
 In /etc/salt/master.d/reactor.con I have configured 2 states, that get's triggered when the minion contacts the master for the first time. 
 
-salt/auth : auto accepts the certificate (not best practice for production env)
+salt/auth : auto accepts the certificate (probably not best practice for production env)
 
 salt/minion/*/start : runs a highstate job, against the minion.
 
@@ -50,7 +50,7 @@ On the Salt Master, we can see the job has been run (the top one)
 And looking at the details of the job, we can see it was run with success on the VM we just deployed.
 
 ![Grains](minion_grains.png)
-And clicking the VM, we can see the different grains applyed to the VM. Note the top one "App" "Docker". This is the one we applied, in the request form.
+And clicking the VM, we can see the different grains applyed to the VM. Note the top one "App" "Docker". This is the one we applied, in the request form, that we selected earlier.
 
 ![ssh1](ssh1.png)
 Loggin in, i'm not asked for password, since my public key, is in autorized_keys, and running
