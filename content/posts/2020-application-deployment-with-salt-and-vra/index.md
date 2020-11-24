@@ -8,7 +8,7 @@ draft: false
 
 Here is a short post, around my first integration between [SaltStack](https://www.saltstack.com) and [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html).
 
-Expect this to be updated, as I get more experience in saltStack. 
+Expect this to be updated, as I get more experience in SaltStack. 
 
 Note [VMware](https://www.vmware.com) (The company I work for), bought SaltStack, so I don't know, what the future plans look like, and if this is the correct way going forward, to do this kind of integration.
 
@@ -19,6 +19,8 @@ First we select the "Application VM", that I have created, from the catalog
 
 ![request2](request2.png)
 The special thing about this VM, is that it's possible to select "App Template" and select the application from there.
+The reason i have called it template, is that it not only about the app, but just as much all the configuration around it, like correct mounts, permissions etc.
+
 Right now it's only possible to select None or Docker, but more will come.
 
 What happens then, is that depending on what we select, it will update the grains file in /etc/salt/grains with app:appname. Spoiler: This is what Salt will pick up on, and apply the configuration accordingly.
@@ -30,7 +32,7 @@ In /etc/salt/master.d/reactor.con I have configured 2 states, that get's trigger
 
 salt/auth : auto accepts the certificate (probably not best practice for production env)
 
-salt/minion/*/start : runs a highstate job, against the minion.
+salt/minion/*/start : runs a highstate job, against the minion, everytinme a Minion starts, so in this case, as soon as the key is accepted.
 
 I have included the reactor.conf file below.
 
@@ -53,14 +55,15 @@ And looking at the details of the job, we can see it was run with success on the
 And clicking the VM, we can see the different grains applyed to the VM. Note the top one "App" "Docker". This is the one we applied, in the request form, that we selected earlier.
 
 ![ssh1](ssh1.png)
-Loggin in, i'm not asked for password, since my public key, is in autorized_keys, and running
+Logging in, i'm not asked for password, since my public key, is in autorized_keys. This is one of the jobs, that the minion has had applied to it.
+Running 
 ````
 docker ps
 ````
-Shows that docker is installed.
+Shows that docker is installed, and working.
 
 But it does not stop there. 
-As part of my docker installation, I open the docker api. 
+As part of my docker installation, I open up the docker api, so that other systems on my network, can communicate with it (probably not best practice either - but hey, it's a demo env)
 I do that, by creating a file in /etc/systemd/system/docker.service.d/startup_options.conf
 that contains 
 ```
@@ -71,7 +74,7 @@ ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2376
 
 ![startup_options](startup_options.png)
 As you can see, the file is updated on my VM.
-But better yet. The original file, is currently on my Salt master, and if i change the original, this one will be updated automaticly. 
+But better yet. The original file, is currently on my Salt master, and if I change the original file, on the master, this one will be updated automaticly, along with all other minions, that has the same job.
 
 So what happens when the "highstate" job get triggers by the reactor.conf, as I menitoned yearlier.
 
@@ -92,15 +95,24 @@ base:
     - match: grain
     - docker
 ```
-'*' means all minions, and it runs base jobs, lige enabling Presence on the minion. Setting the correct SSH keys, and installing and configuring LogInsight agent.
+The top.sls file, is simply a filter, that decides what jobs to run, based on different things on the minion. This can be hostname, grains, os or something else. You can do some pretty advanced things, that is out of scope for this post. 
+
+I have mine setup as below.
+
+'*' means all minions, and it runs base jobs, like enabling Presence on the minion. Setting the correct SSH keys, and SSH configuration, and installing and configuring the LogInsight agent.
 
 'App:Docker' matches all Grains with the folling key and value, and applys the job Docker.
 
-'test:container' is for testing jobs in my container. See this [post](https://www.robert-jensen.dk/posts/2020-docker-for-almost-everything/) for more info.
+'test:container' is for testing jobs in my container. See this [post](https://www.robert-jensen.dk/posts/2020-docker-for-almost-everything/) for more info, on how i setup this litte test minion :-)
 
 The above means that my VM, get all the jobs in * but also the jobs in App:Docker.
+- presence
+- ssh
+- loginsight
+- docker
 
 All jobs are placed in /srv/salt/jobname/ with a init.sls file in each, to be run as the first job, so all I need to reference, is the folder.
+The folder can also contain files, like the startup_options.conf for docker, or LogInsight agents files, that get transfered, from the master, to the minion, as part of the job.
 
 The docker job I run, contains the following :
 
@@ -128,17 +140,27 @@ docker:
       - mkdir /mnt/Data
       - mount -a
 ```
-Note this job is pretty basic. I will update it later, to include different versions, for different OS, and also some error handling. But for now, it's working, with the configs I need. 
+Note this job is pretty basic, but it does the following.
+
+- Installs the app
+- copied the startup_options.conf file
+- makes sure the service is running at startup, and restarts it, to read the startup_options.conf file.
+- edits fstab, to mount my NFS share, that i use for some of my containers.
+- created the local mount folder and mounts the shares, selected in fstab.
+
+ I will probably update it later, to include different commands and settings, for different OS, and also some error handling. But for now, it's working, with the configs I need. 
 
 I have also setup a schelduled job, that runs HighState every hour.
-This means, that if I change a configurations that is managed here, it wil automaticly be overwritten, when that jobs runs.
+This means, that if I change a configurations that is managed here, it wil automaticly be overwritten, when that jobs runs (or at reboot with the reactor state)
 I could also do that, a lot faster, and probably more efficient with beacons, but that is for another post :-) 
 
 This is really nice, if you want all your VM's to stay compliant, but also something to be aware off, you you do changes, that is then reverted back every hour :-) 
 
 
-Thats all I had for now. I hope that gave some idea, on how it's possible to use SaltStack with VRA. 
+Thats all I had for now. I hope that gave some idea, on how it's possible to use SaltStack with VRA, and to start to use some configuration managemt, with the VM's you have already running.
 
+I have included the blueprint i use below, if you want to try it yourselv. 
+The only important things, is creating of the grains file (and the input variable there), and the installation of saltstack.
 
 ### The blueprint I used.
 ```
