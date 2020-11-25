@@ -4,7 +4,7 @@ date: 2020-11-24T14:09:39+01:00
 tags : [VRA, SaltStack, Automation, Docker]
 draft: false
 ---
-![top_picture](shahadat-rahman-gnyA8vd3Otc-unsplash.jpg)
+![top_picture](images/shahadat-rahman-gnyA8vd3Otc-unsplash.jpg)
 
 Here is a short post, around my first integration between [SaltStack](https://www.saltstack.com) and [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html).
 
@@ -14,10 +14,10 @@ Note [VMware](https://www.vmware.com) (The company I work for), bought SaltStack
 
 In this post I will show you, how I have setup custom application deployment (Docker in this case) on VM's, along with making sure configurations stays compliant, even after deployment.
 
-![Catalog](catalog.png) 
+![Catalog](images/catalog.png) 
 First we select the "Application VM", that I have created, from the catalog
 
-![request2](request2.png)
+![request2](images/request2.png)
 The special thing about this VM, is that it's possible to select "App Template" and select the application from there.
 The reason i have called it template, is that it not only about the app, but just as much all the configuration around it, like correct mounts, permissions etc.
 
@@ -25,7 +25,7 @@ Right now it's only possible to select None or Docker, but more will come.
 
 What happens then, is that depending on what we select, it will update the grains file in /etc/salt/grains with app:appname. Spoiler: This is what Salt will pick up on, and apply the configuration accordingly.
 
-![deployment](Deployment_finished.png)
+![deployment](images/Deployment_finished.png)
 After the VRA VM deployment is finished, the salt-minion contacts the salt master.
 
 In /etc/salt/master.d/reactor.con I have configured 2 states, that get's triggered when the minion contacts the master for the first time. 
@@ -45,16 +45,16 @@ reactor:
      - /srv/reactor/highstate/init.sls
 ````
 
-![jobs](jobs.png)
+![jobs](images/jobs.png)
 On the Salt Master, we can see the job has been run (the top one)
 
-![job_status](job_status.png)
+![job_status](images/job_status.png)
 And looking at the details of the job, we can see it was run with success on the VM we just deployed.
 
-![Grains](minion_grains.png)
+![Grains](images/minion_grains.png)
 And clicking the VM, we can see the different grains applyed to the VM. Note the top one "App" "Docker". This is the one we applied, in the request form, that we selected earlier.
 
-![ssh1](ssh1.png)
+![ssh1](images/ssh1.png)
 Logging in, i'm not asked for password, since my public key, is in autorized_keys. This is one of the jobs, that the minion has had applied to it.
 Running 
 ````
@@ -72,7 +72,7 @@ ExecStart=
 ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2376
 ```
 
-![startup_options](startup_options.png)
+![startup_options](images/startup_options.png)
 As you can see, the file is updated on my VM.
 But better yet. The original file, is currently on my Salt master, and if I change the original file, on the master, this one will be updated automaticly, along with all other minions, that has the same job.
 

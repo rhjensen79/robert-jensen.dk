@@ -4,7 +4,7 @@ date: 2020-11-21T19:26:12+01:00
 tags : [docker, Jenkins, automation, test, VMware, container, SaltStack, Minion, K8S]
 draft: false
 ---
-![banner](thomas-lipke-kkXDhAUnxYI-unsplash.jpg)
+![banner](images/thomas-lipke-kkXDhAUnxYI-unsplash.jpg)
 
 I'm no expert in containers, but I do talk to a lot of admins in my job, that has not taken the time, to look at containers yet, and therefore haven't found, if they can be a usefull tool, for them.
 
@@ -52,11 +52,11 @@ First of all, I have [Docker Desktop](https://www.docker.com/products/docker-des
 It works well for this usecase. For other usecases, i have a [Ubuntu](https://ubuntu.com) or [Photon](https://vmware.github.io/photon/) VM that is running Docker. 
 If you don't know how to install docker, on your OS, then google it. There are tons of guides out there. 
 
-![Github Repo](github-overview.png)
+![Github Repo](images/github-overview.png)
 The private repo, i'm using, for all my docker images, has a folder, for each container. 
 
 I created one for this usecase, called minion.
-![folder](github-minion.png)
+![folder](images/github-minion.png)
 
 Besides the Dockerfile, it also contains a jenkinsfile, that tells Jenkins, how to buid, and where to put it after.
 
@@ -134,29 +134,29 @@ I have my crenditials stored in Jenkins, for both github, and docker hub, which 
 
 Note that there is no crenditials stored in Github. This is important, and somthing I had to learn the hard way. 
 
-![Docker Hub](docker-hub.png)
+![Docker Hub](images/docker-hub.png)
 
 I also created a clean Docker hub repo, to store my container. 
 Note on this picture, I have already a couple of versions of my container build and uploaded.
 
-![Jenkins overview](jenkins-overview.png)
+![Jenkins overview](images/jenkins-overview.png)
 
 The part, that makes it all work, is in this case Jenkins.
 Note Jenkins is also running as a container, and is actualily building it's own container, on a scheldule. Thats kinda cool imho :-) 
 
-![Build Triggers](jenkins-build-trigger.png)
+![Build Triggers](images/jenkins-build-trigger.png)
 
 My Jenkins config, is setup so that it builds every 24 hours, and it looks for changes in github, every 5 minute.
 Since my Jenkins install is not public facing, i'm not able to trigger a run, when i push changes to Github. Here I have to wait, at least 5 minutes, wich is no problems at all, in my setup.
 
-![Jenkins Pipeline](jenkins-pipeline.png)
+![Jenkins Pipeline](images/jenkins-pipeline.png)
 I also tell jenkins where my Guthub repo is located, and provide it with crenditials and branch.
 
-![jenkins folder](jenkins-folder.png)
+![jenkins folder](images/jenkins-folder.png)
 I tell it where to look for changes. Remember, I have multiple docker configurations, in the same repo. So i only want to build, when sometihng happens to the Minons folder.
 And I tell it, where the jenkinsfile is located.
 
-![jenkins build](jenkins-build.png)
+![jenkins build](images/jenkins-build.png)
 
 The builds, can be seen in each stage, like this. 
 My first one failed, due to a configuration error. I fixed it, and it now build and uploads the container, in around 2 minutes. 
@@ -165,7 +165,7 @@ And that is all it takes, to buils a container, and make it public avaliable, an
 
 It might sound like a lot, when you look at it, but most of this, is somthing you do once, and the you can just copy the folder, jenkins job etc. to create a new job. So the "hard" work, is creating the dockerfile, with the configuration, and in this case, it was just putting the commands, I did manualily, into a dockerfile.
 
-![Docker](docker-run.png)
+![Docker](images/docker-run.png)
 The end result, as you can see above, is that I can run
 ```
 docker run -it robertjensen/minion

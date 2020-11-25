@@ -5,7 +5,7 @@ tags : [Blog, Move, Blogger]
 image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 #draft: true
 ---
-![Header](erda-estremera-sxNt9g77PE0-unsplash.jpg)
+![Header](images/erda-estremera-sxNt9g77PE0-unsplash.jpg)
 
 For the last year or so, I have seen a lot of people, talking about their move of blogs, from a traditionel CMS system, to a static site.
 
