@@ -13,6 +13,11 @@ enableRobotsTXT = true
 # Google Analytics
 googleAnalytics = "UA-932020-4"
 
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
 [params]
 title = "Robert-Jensen.dk"
 author = "Robert Jensen"

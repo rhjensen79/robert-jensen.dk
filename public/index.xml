@@ -2,18 +2,290 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robert-Jensen.dk</title>
-    <link>https://blog.robert-jensen.dk/</link>
+    <link>https://www.robert-jensen.dk/</link>
     <description>Recent content on Robert-Jensen.dk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2020 10:41:47 +0100</lastBuildDate><atom:link href="https://blog.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Nov 2020 14:09:39 +0100</lastBuildDate><atom:link href="https://www.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://blog.robert-jensen.dk/posts/my-first-post/</link>
-      <pubDate>Fri, 06 Nov 2020 10:41:47 +0100</pubDate>
+      <title>Application Deployment With Salt and Vra</title>
+      <link>https://www.robert-jensen.dk/posts/2020-application-deployment-with-salt-and-vra/</link>
+      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
       
-      <guid>https://blog.robert-jensen.dk/posts/my-first-post/</guid>
-      <description>First post </description>
+      <guid>https://www.robert-jensen.dk/posts/2020-application-deployment-with-salt-and-vra/</guid>
+      <description>Here is a short post, around my first integration between SaltStack and vRealize Automation.
+Expect this to be updated, as I get more experience in SaltStack.
+Note VMware (The company I work for), bought SaltStack, so I don&amp;rsquo;t know, what the future plans look like, and if this is the correct way going forward, to do this kind of integration.</description>
+    </item>
+    
+    <item>
+      <title>Docker for Almost Everything</title>
+      <link>https://www.robert-jensen.dk/posts/2020-docker-for-almost-everything/</link>
+      <pubDate>Sat, 21 Nov 2020 19:26:12 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-docker-for-almost-everything/</guid>
+      <description>I&amp;rsquo;m no expert in containers, but I do talk to a lot of admins in my job, that has not taken the time, to look at containers yet, and therefore haven&amp;rsquo;t found, if they can be a usefull tool, for them.
+I think it has a lot to do, with containers, being something developers use, and all the talk around Kubernetes (K8S).</description>
+    </item>
+    
+    <item>
+      <title>Automating Folding@Home With VMware Code Stream</title>
+      <link>https://www.robert-jensen.dk/posts/2020-automating-fah-with-cs/</link>
+      <pubDate>Wed, 18 Nov 2020 16:42:22 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-automating-fah-with-cs/</guid>
+      <description>I am always looking for new ways to do demo&amp;rsquo;s, and to showcase the solutions the company I work for have. One usecase, that I really wanted to show, was infrastructure as code (IAC), using a combination of both VMware and opensource tools. But not just as a deploy and destroy, but also as a way to maintain state in something that keeps running, and do the changes, from a source repository, like Github.</description>
+    </item>
+    
+    <item>
+      <title>Move Blog</title>
+      <link>https://www.robert-jensen.dk/posts/2020-move-blog/</link>
+      <pubDate>Fri, 06 Nov 2020 12:56:48 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-move-blog/</guid>
+      <description>For the last year or so, I have seen a lot of people, talking about their move of blogs, from a traditionel CMS system, to a static site.
+I have had this on my todo, for quite some time, but I have also been quite satisfied, with blogger (my old blog hosting).</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://www.robert-jensen.dk/about/</link>
+      <pubDate>Fri, 06 Nov 2020 11:56:57 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/about/</guid>
+      <description>Welcome to my little blog.
+I&amp;rsquo;m not a big writer, so don&amp;rsquo;t exect much. But sometimes, I might create small posts, of what i&amp;rsquo;m doing, and what I think, others might find interesting.
+Most of my time, is spend, changing from a Operations background, to learn a lot more around Development.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins and CodeStream CSRF fix</title>
+      <link>https://www.robert-jensen.dk/posts/2020-jenkins-and-codestream-csrf-fix/</link>
+      <pubDate>Thu, 30 Jul 2020 21:38:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-jenkins-and-codestream-csrf-fix/</guid>
+      <description>For some time, I have had the problem with Jenkins, that when I ran my Code Stream pipeline, it gave me the following error 
+To fix it, I have been running the code below, in the Jenkins &amp;ldquo;Script Console&amp;rdquo; import jenkins.model.Jenkins
+def instance = Jenkins.instance
+instance.setCrumbIssuer(null)
+This has been ok, until my container, running Jenkins, restarted or got updated, and then I got the error again.</description>
+    </item>
+    
+    <item>
+      <title>Demo Enviroment on demand</title>
+      <link>https://www.robert-jensen.dk/posts/2020-demo-enviroment-on-demand/</link>
+      <pubDate>Tue, 02 Jun 2020 12:25:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-demo-enviroment-on-demand/</guid>
+      <description>A couple of years ago Jad El-Zein (@virtualjad) created a demo, where he ordered a VM (I think it was) using Siri on his iPhone, with vRealize Automation (VRA).
+As a side project, to another thing, I&amp;rsquo;m working on, I thought I would recreate that demo, in a 2020 VRA Cloud version.</description>
+    </item>
+    
+    <item>
+      <title>How to show the value of Automation</title>
+      <link>https://www.robert-jensen.dk/posts/2019-how-to-show-value-of-automation/</link>
+      <pubDate>Mon, 16 Dec 2019 11:27:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-how-to-show-value-of-automation/</guid>
+      <description>Being able to show the value, of automation is essential, to be able to keep getting support, for the time you spend on it.
+One of my coworkers (Tore Brynaa) , gave me an idea, on how we could show that value back to the business, for the customers that have begun using vRealize Automation.</description>
+    </item>
+    
+    <item>
+      <title>Remote development from anywhere</title>
+      <link>https://www.robert-jensen.dk/posts/2019-remote-development-from-anywhere/</link>
+      <pubDate>Wed, 09 Oct 2019 09:05:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-remote-development-from-anywhere/</guid>
+      <description>VScode is that type of software, that I hated in the beginning, and now love (for the most part).
+I have never been any good at coding, scripting etc. but the more my day job, exposes me to automation, the more I want to learn. And along with that, I found out, that VScode, was one of the thing, I better learn to love (or live with).</description>
+    </item>
+    
+    <item>
+      <title>VMware Cloud Management series</title>
+      <link>https://www.robert-jensen.dk/posts/2019-vmware-cloud-management-series/</link>
+      <pubDate>Thu, 11 Jul 2019 11:19:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-vmware-cloud-management-series/</guid>
+      <description>I have started a new Cloud Management (CMP) series where I want to show, just how easy it is to get started at doing CMP.
+It&amp;rsquo;s all in Danish, to keep it local, but I will will update this post, to keep all the videos in one place.
+1. Multi Cloud Blueprints in Cloud Assembly.</description>
+    </item>
+    
+    <item>
+      <title>K8S Ingress and Pfsense firewall</title>
+      <link>https://www.robert-jensen.dk/posts/2019-k8s-ingress-and-pfsense-firewall/</link>
+      <pubDate>Thu, 04 Jul 2019 15:04:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-k8s-ingress-and-pfsense-firewall/</guid>
+      <description>I have been playing a bit with Kubernettes (K8S) lately.
+Since it&amp;rsquo;s running on my vSphere environment, and not a public cloud, I don&amp;rsquo;t have native access to a load balancer, so I have to use the Ingress Controller instead.
+Right now i&amp;rsquo;m using Rancher to deploy the K8S cluster, and due to lack of static ipadresses on my nodes, a LoadBalancer is not an easy thing to get working, it seams.</description>
+    </item>
+    
+    <item>
+      <title>Duplicate ipadress on Packer Ubuntu VM&#39;s</title>
+      <link>https://www.robert-jensen.dk/posts/2019-duplicate-ipadress-on-packer-ubuntu-vms/</link>
+      <pubDate>Fri, 03 May 2019 20:57:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-duplicate-ipadress-on-packer-ubuntu-vms/</guid>
+      <description>After reading a blog post, from Cody&amp;rsquo;s blog thehumblelab.com, about how to create automated vSphere templates, using Packer.
+I have been using it, for most of my vSphere templates in my demo lab at work.
+But it has not been without problems. I have been having a problem with my Ubuntu templates.</description>
+    </item>
+    
+    <item>
+      <title>New Password manager</title>
+      <link>https://www.robert-jensen.dk/posts/2020-new-password-manager/</link>
+      <pubDate>Sat, 30 Mar 2019 13:44:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-new-password-manager/</guid>
+      <description>I have been a (happy) long time user of Keepass.
+It was the place to store passwords, notes etc, across many of the systems I use today.
+That means mostly OSX, but also a bit Windows, and in some cases IOS as well.
+The way I used it, was by having my kdb file, in a dropbox share, that I then accessed from all my devices.</description>
+    </item>
+    
+    <item>
+      <title>Filter Extensibility subscriptions in CAS</title>
+      <link>https://www.robert-jensen.dk/posts/2019-filter-extensibility-subscriptions-in/</link>
+      <pubDate>Tue, 22 Jan 2019 13:28:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-filter-extensibility-subscriptions-in/</guid>
+      <description>For the last couple of days, I have been playing quite a lot with Cloud Automation Services.
+That means deploying a lot of VM&amp;rsquo;s, just to destroy them again.
+Some time ago, I got help, from some good colleagues, to setup a Python Slack notification, using the extensibility on AWS Faas.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Agnostic Blueprints in VMware CAS</title>
+      <link>https://www.robert-jensen.dk/posts/2019-cloud-agnostic-blueprints-in-vmware-cas/</link>
+      <pubDate>Fri, 18 Jan 2019 07:51:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2019-cloud-agnostic-blueprints-in-vmware-cas/</guid>
+      <description>VMware Cloud Automation Services went GA 2 days ago, on the 15/1/2019.
+There is already a ton of blogs, describing the solution.
+I thought that I would give my view on one of the things, that i find most cool about the solution.
+Note that i&amp;rsquo;m no expert, but I already love the solution, and i&amp;rsquo;m looking forward to learning more about what I, and the customers I talk to, can do with it.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with Cloud Automation Services - Almost</title>
+      <link>https://www.robert-jensen.dk/posts/2018-getting-started-with-cloud-automation/</link>
+      <pubDate>Wed, 12 Dec 2018 21:11:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-getting-started-with-cloud-automation/</guid>
+      <description>I finally got started on Cloud Automation Services (CAS), or at least Cloud Assembly.
+Living in Denmark, where many customers are talking Azure all the time, and the local vSphere environments, are smaller, the SAAS offering makes a lot of sense IMHO.
+I must admit I already love the product, even thou it requires some learning, to get the hang of it.</description>
+    </item>
+    
+    <item>
+      <title>Homekit support for non homekit devices</title>
+      <link>https://www.robert-jensen.dk/posts/2018-homekit-support-for-non-homekit-devices/</link>
+      <pubDate>Mon, 12 Nov 2018 08:58:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-homekit-support-for-non-homekit-devices/</guid>
+      <description>For that last 2 years, I have been playing around with Home Automation.
+So far i&amp;rsquo;m running a mix of both an Openhab installation, based on MQTT, and some Homekit devices (Philips hue etc).
+Openhab is a great product, but I was finding myself, more and more, using Homekit, controlled from my ATV4, to be the way i do home automation.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Domain Admins using VMware Log Insight</title>
+      <link>https://www.robert-jensen.dk/posts/2018-monitor-domain-admins-using-vmware-log/</link>
+      <pubDate>Wed, 27 Jun 2018 10:57:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-monitor-domain-admins-using-vmware-log/</guid>
+      <description>I had a customer asking me yesterday, if it was possible to use Log Insight, to monitor changes done to the Domain Admins group.
+An interesting use case, that i had not thought of before.
+The answer is off course yes, so i thought i would write a small post about it.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Management Experience Day</title>
+      <link>https://www.robert-jensen.dk/posts/2018-cloud-managent-experience-day/</link>
+      <pubDate>Mon, 19 Feb 2018 14:00:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-cloud-managent-experience-day/</guid>
+      <description>A lot of my work time, these days, is spend on preparing a new thing we have in Denmark. It&amp;rsquo;s called Cloud Management Experience day.
+We have already been running the same for VSAN, NSX and EUC.
+The idea is to have customers participating in a full day og learning, where they can experience our products.</description>
+    </item>
+    
+    <item>
+      <title>Fingbox - New security device in my home</title>
+      <link>https://www.robert-jensen.dk/posts/2018-fingbox-new-security-device-in-my-home/</link>
+      <pubDate>Mon, 12 Feb 2018 14:54:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-fingbox-new-security-device-in-my-home/</guid>
+      <description>So i bought a new gadget. After hearing my collegaue, telling me about it, and I was sold.
+Fing.io is a free network scanner app for IOS (and Android).
+They extended it, by connecting it to a physical device, that connects to your router, and monitors your network.
+It only need a cable in your router, and power, then you are done.</description>
+    </item>
+    
+    <item>
+      <title>vRealize Business - Do you know your cost ? </title>
+      <link>https://www.robert-jensen.dk/posts/2018-vrealize-business-do-you-know-your-cost/</link>
+      <pubDate>Mon, 29 Jan 2018 09:05:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-vrealize-business-do-you-know-your-cost/</guid>
+      <description>Do you know the cost of your datacenters, and what the cost would be, if you had to move your workloads to the public Cloud ?
+One of the products, that can help with that, is VMware vRealize Business.
+It&amp;rsquo;s probably one of the most overlooked products, in VMwares portfolio.</description>
+    </item>
+    
+    <item>
+      <title>Why i love my Netatmo Presence - Found potential thief</title>
+      <link>https://www.robert-jensen.dk/posts/2018-why-i-love-my-netatmo-presence-found/</link>
+      <pubDate>Fri, 19 Jan 2018 13:57:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-why-i-love-my-netatmo-presence-found/</guid>
+      <description>I love my Netatmo Presence. The reason is due to it&amp;rsquo;s abilities to detect different types of objects like cars, people, animals and other.
+Due to that, I found that i had a visit, from somebody, who was probably trying to grab my bike, in the middle of the night.</description>
+    </item>
+    
+    <item>
+      <title>Auto Clean up old recordings</title>
+      <link>https://www.robert-jensen.dk/posts/2018-auto-clean-up-old-recording/</link>
+      <pubDate>Sun, 07 Jan 2018 20:47:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-auto-clean-up-old-recording/</guid>
+      <description>Some time ago, I bought the Netatmo Presence cam. I love the &amp;ldquo;Intelligence&amp;rdquo; in the cam (it detects different objects linke cars, people, animals), and it&amp;rsquo;s ability, to work when there is no wifi etc. due to the build in SD card.
+I do however, upload everything to my NAS using ftp, for safe keeping.</description>
+    </item>
+    
+    <item>
+      <title>Data collection Catalog Item in VRA</title>
+      <link>https://www.robert-jensen.dk/posts/2018-data-collection-catalog-item-in-vra/</link>
+      <pubDate>Thu, 04 Jan 2018 12:49:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-data-collection-catalog-item-in-vra/</guid>
+      <description>One of the tasks, i often en up doing, when i work with vRealize Automation (vRA), is doing a catalog scan. The Catalog scan, checks for changes in my endpoints. This could be new templates, snapshots etc. hat i need in my blueprints.
+To do this manually, you have to go to Infrastructure -&amp;gt; Compute Ressources -&amp;gt; Your endpoint -&amp;gt; Data collection -&amp;gt; Request now (under inventory).</description>
+    </item>
+    
+    <item>
+      <title>VMware Lifecycle Manager - The first tool to install</title>
+      <link>https://www.robert-jensen.dk/posts/2018-vmware-lifecycle-manager-first-tool-to/</link>
+      <pubDate>Tue, 02 Jan 2018 11:16:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2018-vmware-lifecycle-manager-first-tool-to/</guid>
+      <description>VMware has released a new tool, to make it easyer to install and upgrade, some of your VMware products.
+The product is called vRealize Suite Lifecycle manger, not to be mistaken for en earlier product VMware had, that was also called Lifecycle Manager.
+The tool is fairly easy to install.</description>
+    </item>
+    
+    <item>
+      <title>vSphere HTML5 client - Have you tried the Fling ? </title>
+      <link>https://www.robert-jensen.dk/posts/2017-vsphere-html5-client-have-you-tried/</link>
+      <pubDate>Wed, 27 Dec 2017 19:49:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2017-vsphere-html5-client-have-you-tried/</guid>
+      <description>From time to time, people have asked me &amp;ldquo;When do you fix the vSphere web client&amp;rdquo;, or &amp;ldquo;When will the C# client come back&amp;rdquo;
+Most of the time, people don&amp;rsquo;t know about VMware&amp;rsquo;s new HTML5 client, and have not tried it.
+I must admit, that I loved the old C# client, and I had a hard time, converting to the flash Web client.</description>
     </item>
     
   </channel>
