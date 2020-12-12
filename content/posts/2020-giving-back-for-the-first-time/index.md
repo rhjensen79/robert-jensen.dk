@@ -6,7 +6,7 @@ draft: false
 ---
 ![top](images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg)
 
-One thing, I have been wanting to do, ever since I started larning Python, and started using Github, was to give back, the the projects, that I use. 
+One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. 
 I remember reading, how to get started doing this, but I see myself as a beginner, when it comes to coding, and find myself thinking, "why would anybody want something, that I have done."
 
 The article I read, was about helping with improving code. Improving graphics. Improving documentation etc. But imho it's not that easy, to just jump in, and start participating.
