@@ -11,11 +11,11 @@ During the christmas holliday, I had some time, to look into [Traefik](https://t
 The reason for me to use Traefik, is due to the automation, it delivers. 
 It can automaticly detect deployments, and present them, and for my demo projects, that is exactly what I need.
 
-Optimal, I would deploy everything to a K8S cluster, but i'm having some problems getting it working with Traefik. So for now, it's just running on a single docker host. 
+Optimal, I would deploy everything to a K8S cluster, but i'm having some problems getting it working with Traefik. So for now, it's just running on a single docker host. So K8S must be for a later blog post, when I get it working :-) 
 
 My configuration is quite simple (when I finalily got it working).
 
-I run everything using docker-compose.
+I run everything using docker-compose, so make sure you have both docker installed, as well as docker-compose.
 
 Before running the docker compose, you need to create the docker network maualily.
 
@@ -23,9 +23,10 @@ It's easy. just run
 ```
 docker network create web
 ```
-If you want to use the network web, as I do in my example.
+If you want to use the network name web, as I do in my example.
 
 The Traefik docker compose file, is as below. 
+Note i'm using :latest. That is not best practice. 
 
 ```
 version: '3'
@@ -108,13 +109,14 @@ certificatesResolvers:
 ```
 It sets 2 entrypoints to web and websecure, and setup's [LetEncrypt](https://letsencrypt.org), to auto generate a certificate, if asked for it. 
 
-I also create a docker provider, that auto generates a url, based on containername.cmplab.dk
+I also created a docker provider, that auto generates a url, based on containername.cmplab.dk (note i overwerite that, in my label, and set my own name)
 
 I have forwarded port 80 and 443 to my docker host, where the Traefik container is running, so it can handle all Web traffic.
 
 The application container, is where it get's more interesting.
 
 The application im using is my Value app, config can be found [here](https://github.com/rhjensen79/DemoApp)
+For testing, I rcommend switching it with a simple Apache or NGINX container. 
 
 
 The docker-compose file is as below :
