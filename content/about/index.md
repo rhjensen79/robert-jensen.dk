@@ -16,7 +16,7 @@ If you want to follow, what I'm doing, then follow me on github. That is where I
 
 ### Work
 
-- Lead cloud managemt specialist @VMware since 2012
+- Lead cloud management specialist @VMware since 2012
 
 ### Interests
 
