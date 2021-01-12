@@ -4,6 +4,7 @@ date: 2020-07-30T21:38:00.000+02:00
 draft: false
 aliases: [ "/2020/07/jenkins-and-codestream-csrf-fix.html" ]
 tags : [automation]
+thumbnail: "images/michael-dziedzic--Rc6usOigMk-unsplash.jpg"
 ---
 
   
@@ -64,3 +65,5 @@ You generate a token, by following the steps below.
 4.  Use "Add new Token" button to generate a new one then name it.
 5.  You must copy the token when you generate it as you cannot view the token afterwards.
 6.  Revoke old tokens when no longer needed.
+
+<span>Photo by <a href="https://unsplash.com/@lazycreekimages?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Michael Dziedzic</a> on <a href="https://unsplash.com/s/photos/fix?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

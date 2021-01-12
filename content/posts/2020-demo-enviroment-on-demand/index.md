@@ -4,6 +4,7 @@ date: 2020-06-02T12:25:00.001+02:00
 draft: false
 aliases: [ "/2020/06/demo-enviroment-on-demand.html" ]
 tags : [SDDC, VMware CAS, ubuntu, CMP, multi cloud, Self Service, Release Pipeline, cloud management, automation, XaaS, On Demand, CAS, Code Stream, VMware, AWS]
+thumbnail: "images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.jpg"
 ---
 
   
@@ -149,3 +150,5 @@ If you wanna look at other extensibility scripts etc. for VRA, then take a look 
   
 
 Thanks for reading this far, and please reach out, if you have questions etc.
+
+<span>Photo by <a href="https://unsplash.com/@ismailenesayhan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">İsmail Enes Ayhan</a> on <a href="https://unsplash.com/s/photos/servers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
