@@ -3,10 +3,8 @@ title: "Secure Deployments With Docker, Traefik and Let's Encrypt"
 date: 2021-01-06T20:45:52+01:00
 tags : [traefik, docker, streamlit, python, letsencrypt]
 draft: false
-thumbnail: "images/thom-holmes-k-xKzowQRn8-unsplash.jpg"
+thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.jpg"
 ---
-![top](images/danielle-macinnes-Ehtk87Go0Wg-unsplash.jpg)
-
 During the christmas holliday, I had some time, to look into [Traefik](https://traefik.io/traefik/) reverse proxy.
 
 The reason for me to use Traefik, is due to the automation, it delivers. 
