@@ -6,13 +6,6 @@ aliases: [ "/2020/07/jenkins-and-codestream-csrf-fix.html" ]
 tags : [automation]
 thumbnail: "images/michael-dziedzic--Rc6usOigMk-unsplash.jpg"
 ---
-
-  
-
-[![](https://1.bp.blogspot.com/-C7HqvPXLhSk/XyMfPP6tQHI/AAAAAAACP3U/reWKJR3oWeMB9Y0Ih22a5WzP1QC0m6isQCLcBGAsYHQ/w640-h427/k-i-l-i-a-n-PZLgTUAhxMM-unsplash.jpg)](https://1.bp.blogspot.com/-C7HqvPXLhSk/XyMfPP6tQHI/AAAAAAACP3U/reWKJR3oWeMB9Y0Ih22a5WzP1QC0m6isQCLcBGAsYHQ/s2048/k-i-l-i-a-n-PZLgTUAhxMM-unsplash.jpg)
-
-  
-
 For some time, I have had the problem with Jenkins, that when I ran my Code Stream pipeline, it gave me the following error 
 
 [![](https://1.bp.blogspot.com/-BRpc30hcMVE/XyMfwKhdNOI/AAAAAAACP3c/Iq-QLTGWSSA1jgaZLJBO294lPOSv7It4ACLcBGAsYHQ/w400-h130/Sk%25C3%25A6rmbillede%2B2020-07-30%2Bkl.%2B21.29.45.png)](https://1.bp.blogspot.com/-BRpc30hcMVE/XyMfwKhdNOI/AAAAAAACP3c/Iq-QLTGWSSA1jgaZLJBO294lPOSv7It4ACLcBGAsYHQ/s930/Sk%25C3%25A6rmbillede%2B2020-07-30%2Bkl.%2B21.29.45.png)

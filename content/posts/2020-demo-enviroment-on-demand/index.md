@@ -7,12 +7,6 @@ tags : [SDDC, VMware CAS, ubuntu, CMP, multi cloud, Self Service, Release Pipeli
 thumbnail: "images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.jpg"
 ---
 
-  
-
-[![](https://1.bp.blogspot.com/-a5hzLmkc714/XtYjm8W9TPI/AAAAAAACMj0/C-9xB871HfgCM9bW2YbHo39P9dQdDP--QCK4BGAsYHg/w640-h340/1*LLI4rWjfzkrKCLZtLA4zpA.jpeg)](https://1.bp.blogspot.com/-a5hzLmkc714/XtYjm8W9TPI/AAAAAAACMj0/C-9xB871HfgCM9bW2YbHo39P9dQdDP--QCK4BGAsYHg/1*LLI4rWjfzkrKCLZtLA4zpA.jpeg)
-
-  
-
 A couple of years ago Jad El-Zein (@virtualjad) created a demo, where he ordered a VM (I think it was) using Siri on his iPhone, with vRealize Automation (VRA).
 
   
