@@ -3,10 +3,9 @@ title: "Move Blog"
 date: 2020-11-06T12:56:48+01:00
 tags : [Blog, Move, Blogger]
 image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
+thumbnail: "images/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 #draft: true
 ---
-![Header](images/erda-estremera-sxNt9g77PE0-unsplash.jpg)
-
 For the last year or so, I have seen a lot of people, talking about their move of blogs, from a traditionel CMS system, to a static site.
 
 I have had this on my todo, for quite some time, but I have also been quite satisfied, with blogger (my old blog hosting). But the fear of Blogger being shutdown, like so many other Google services, have long had me thinking about alternertives.

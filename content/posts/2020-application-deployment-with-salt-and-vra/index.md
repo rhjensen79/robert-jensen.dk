@@ -3,9 +3,8 @@ title: "Application Deployment With Salt and Vra"
 date: 2020-11-24T14:09:39+01:00
 tags : [VRA, SaltStack, Automation, Docker]
 draft: false
+thumbnail: "images/shahadat-rahman-gnyA8vd3Otc-unsplash.jpg"
 ---
-![top_picture](images/shahadat-rahman-gnyA8vd3Otc-unsplash.jpg)
-
 Here is a short post, around my first integration between [SaltStack](https://www.saltstack.com) and [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html).
 
 Expect this to be updated, as I get more experience in SaltStack. 

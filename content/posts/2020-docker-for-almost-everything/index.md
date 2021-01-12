@@ -3,9 +3,8 @@ title: "Docker for Almost Everything"
 date: 2020-11-21T19:26:12+01:00
 tags : [docker, Jenkins, automation, test, VMware, container, SaltStack, Minion, K8S]
 draft: false
+thumbnail: "images/thomas-lipke-kkXDhAUnxYI-unsplash.jpg"
 ---
-![banner](images/thomas-lipke-kkXDhAUnxYI-unsplash.jpg)
-
 I'm no expert in containers, but I do talk to a lot of admins in my job, that has not taken the time, to look at containers yet, and therefore haven't found, if they can be a usefull tool, for them.
 
 I think it has a lot to do, with containers, being something developers use, and all the talk around Kubernetes (K8S). And that's just a long way away, from the tasks many sysadmins do in their job. My personal take, is that there is a lot to learn, from the way developers do things, but that is another post :-) 

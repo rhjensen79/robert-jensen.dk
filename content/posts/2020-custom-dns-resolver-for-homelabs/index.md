@@ -3,9 +3,8 @@ title: "Custom DNS Resolver for Homelabs"
 date: 2020-12-20T09:53:39+01:00
 tags : [homelab, dns, custom, server, vpn]
 draft: false
+thumbnail: "images/andrew-neel-1-29wyvvLJA-unsplash.jpg"
 ---
-![top](images/andrew-neel-1-29wyvvLJA-unsplash.jpg)
-
 Using custom dns servers, depending on enviroment, or resolving multiple internal domains, can be a real pain.
 
 You can setup host files, but it's a pain to manage.

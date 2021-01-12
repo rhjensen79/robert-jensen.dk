@@ -3,9 +3,8 @@ title: "Giving Back for the First Time"
 date: 2020-12-12T15:18:34Z
 tags : [Github, Giving, code, Hugo]
 draft: false
+thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg"
 ---
-![top](images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg)
-
 One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. 
 I remember reading, how to get started doing this, but I see myself as a beginner, when it comes to coding, and find myself thinking, "why would anybody want something, that I have done."
 
