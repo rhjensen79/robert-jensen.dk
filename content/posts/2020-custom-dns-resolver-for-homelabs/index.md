@@ -1,7 +1,7 @@
 ---
 title: "Custom DNS Resolver for Homelabs"
 date: 2020-12-20T09:53:39+01:00
-tags : [homelab, dns, custom, server, vpn]
+tags : [homelab, dns, custom, server, vpn, hosting, homelab]
 draft: false
 thumbnail: "images/andrew-neel-1-29wyvvLJA-unsplash.jpg"
 ---

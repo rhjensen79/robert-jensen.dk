@@ -1,7 +1,7 @@
 ---
 title: "Remote Access to Demolab using Apache Guacamole"
 date: 2021-01-19T09:35:55+01:00
-tags : [remote, demolab, vpn, rdp, vnc, ssh, apache, guacamole, ipsec, Traefik]
+tags : [remote, demolab, vpn, rdp, vnc, ssh, apache, guacamole, ipsec, Traefik, docker, docker-compose, compose, hosting, app, homelab]
 draft: false
 thumbnail: "images/markus-spiske-uPXs5Vx5bIg-unsplash.jpg"
 ---

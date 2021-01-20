@@ -3,7 +3,7 @@ title: 'New Password manager'
 date: 2019-03-30T13:44:00.001+01:00
 draft: false
 aliases: [ "/2019/03/new-password-manager.html" ]
-tags : [osx, ios, Security, windows, notes, password, Cloud]
+tags : [osx, ios, Security, windows, notes, password, Cloud, bitwarden, opensource, free]
 ---
 
 [![](https://images.idgesg.net/images/article/2018/08/5_password-best-practices_unique-passwords_authentication-100768646-large.jpg)](https://images.idgesg.net/images/article/2018/08/5_password-best-practices_unique-passwords_authentication-100768646-large.jpg)

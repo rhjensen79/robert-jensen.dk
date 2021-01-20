@@ -1,7 +1,7 @@
 ---
 title: "Automating Folding@Home With VMware Code Stream"
 date: 2020-11-18T16:42:22+01:00
-tags : [Terraform, Code Stream, GitHub, Automation, Folding@home, vSphere]
+tags : [Terraform, Code Stream, GitHub, Automation, Folding@home, vSphere, vmware, ci, cd, cicd, devops]
 draft: false
 thumbnail: "images/top_picture.jpg"
 ---

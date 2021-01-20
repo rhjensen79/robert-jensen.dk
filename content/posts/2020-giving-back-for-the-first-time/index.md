@@ -1,7 +1,7 @@
 ---
 title: "Giving Back for the First Time"
 date: 2020-12-12T15:18:34Z
-tags : [Github, Giving, code, Hugo]
+tags : [Github, Giving, code, Hugo, opensource, theme, web, website]
 draft: false
 thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg"
 ---

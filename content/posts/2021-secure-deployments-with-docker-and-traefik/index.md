@@ -1,7 +1,7 @@
 ---
 title: "Secure Deployments With Docker, Traefik and Let's Encrypt"
 date: 2021-01-06T20:45:52+01:00
-tags : [traefik, docker, streamlit, python, letsencrypt]
+tags : [traefik, docker, streamlit, python, letsencrypt, docker-compose, compose, web, hosting]
 draft: false
 thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.jpg"
 ---
