@@ -21,7 +21,7 @@ Find the correct .mips.tgz file on this [page](https://pkgs.tailscale.com/stable
 
 SSH to the edgerouter, and download the file, using the following command
 ```
-curl https://pkgs.tailscale.com/stable/tailscale_1.2.10_mips.tgz --output tailscale_1.2.10_mips.tgz
+curl https://pkgs.tailscale.com/stable/tailscale_1.4.1_mips.tgz --output tailscale_1.4.1_mips.tgz
 ```
 
 Untar the file
@@ -55,5 +55,8 @@ sudo tailscale up --advertise-routes=10.0.0.0/24,10.0.1.0/24
 ```
 
 You should now be running Tailscale, on you Edgerouter, and be able to use all the greatness that involves :-) 
+
+### Update
+30.01.2021 : Updated blog to include version 1.4.1 and I have also tested it, and can confirm it works.
 
 <span>Photo by <a href="https://unsplash.com/@jjying?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JJ Ying</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
