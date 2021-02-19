@@ -5,11 +5,13 @@ tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse
 draft: true
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.jpg"
 ---
-Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry.
+Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry. 
 
 Everywhere you look, [Harbor](https://goharbor.io) is mentioned, so that is the one, that I have been looking at. 
 The problem with Container registrys, is that Docker requires there to be a valid certificate, for them to work.
 I could just buy a certificate, and use that, but i'm a big fan of [Let's Encrypt](https://letsencrypt.org) so it was natural for me to look into using that.
+
+Note that Harbor, can work as a proxy, so I don't hit the Docker api, just as much. 
 
 To make Let's Encrypt work, I would have to expose Harbor to the internet, and I only have one public ipadress, and that is used by my Traefik proxy (on the same ports). Luckely, I can just use Traefik, to generate the certificates, and publish my Harbor container registry.
 
@@ -193,7 +195,9 @@ http:
 And that is it.
 
 Traefik should now have published your Harbor installation, so it avaliable for you.
-You can login with admin and the password, you set in your harbor.yml file.
+You can login with admin and the password, you set in your harbor.yml file, and you now have your own container registry.
+
+
 
 
 
