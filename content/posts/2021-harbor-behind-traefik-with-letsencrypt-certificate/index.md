@@ -22,6 +22,7 @@ My setup is [described here](https://www.robert-jensen.dk/posts/2021-secure-depl
 
 - An clean Ubuntu 18.04 VM for running Harbor
 (That is what i'm using anyway)
+Note the [requirements](https://goharbor.io/docs/2.1.0/install-config/installation-prereqs/)
 
 ### Installatin of Harbor
 
