@@ -5,15 +5,14 @@ tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse
 draft: true
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.jpg"
 ---
-Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry. 
+Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry, to put my containers, but also to use as a proxy, so I hit the Docker api a blit less.
 
-Everywhere you look, [Harbor](https://goharbor.io) is mentioned, so that is the one, that I have been looking at. 
+Everywhere I look, [Harbor](https://goharbor.io) is mentioned, so that is the one, that I have been looking at.
+
 The problem with Container registrys, is that Docker requires there to be a valid certificate, for them to work.
 I could just buy a certificate, and use that, but i'm a big fan of [Let's Encrypt](https://letsencrypt.org) so it was natural for me to look into using that.
 
-Note that Harbor, can work as a proxy, so I don't hit the Docker api, just as much. 
-
-To make Let's Encrypt work, I would have to expose Harbor to the internet, and I only have one public ipadress, and that is used by my Traefik proxy (on the same ports). Luckely, I can just use Traefik, to generate the certificates, and publish my Harbor container registry.
+To make Let's Encrypt work, I would have to expose Harbor to the internet, and I only have one public ipadress, and that is used by my Traefik proxy (on the same ports). Luckely, I can just use Traefik, to generate the certificates, and publish my Harbor container registry, thru Traefik.
 
 This blog is about how to do just that :-) 
 
@@ -26,9 +25,10 @@ My setup is [described here](https://www.robert-jensen.dk/posts/2021-secure-depl
 (That is what i'm using anyway)
 Note the [requirements](https://goharbor.io/docs/2.1.0/install-config/installation-prereqs/)
 
-### Installatin of Harbor
+### Installtion of Harbor
 
 Note: I found a lot of my inspiration, in this [guide](https://thenewstack.io/tutorial-install-the-docker-harbor-registry-server-on-ubuntu-18-04/).
+
 The steps for installing with Traefik is.
 
 Note: I'm running as root, so change accordingly if you are not. 
@@ -67,14 +67,16 @@ Now configure the harbor.yml with the config, that matches your installation.
 ```
 nano harbor.yml
 ```
-I have included the top of my config below. 
-The changes that i have made are the following :
-Hostname
-port
-relativeurls
-and external_url
+I have included the top of my config below (Do not replace this file, with you entire file). 
 
-As far as i can read, you don't need hostname, if you have external_url, but i set them both to the anyway, to the external name.
+The changes that i have made are the following :
+
+- Hostname
+- port
+- relativeurls
+- external_url
+
+As far as I can read, you don't need hostname, if you have external_url, but I set them both to the anyway, to the external hostname.
 
 I have also # all things related to https, since we are using Traefik for that. 
 
@@ -152,7 +154,7 @@ And put a # in front so they look like this
 # all of proxy_set_header X-Forwarded-Proto $scheme;
 ```
 !!! Important: There are multible lines, you need to # out. 
-If you get a lot of retrying errors later, when you push a container, then you probably did not set this everywhere in the file. 
+If you get a lot of retry errors later, when you push a container to the registry, then you probably did not set this everywhere in the file. 
 
 When this is done, you can start your Harbor installation again, by running
 ```
@@ -160,7 +162,8 @@ docker-compose up -d
 ```
 ### Configuration of Traefik
 
-If you like me, are not running Traefik, on the same host, as you are running Harbor, then you need to setup a static config in Traefik.
+If you, are not running Traefik, on the same host, as you are running Harbor, then you need to setup a static config in Traefik.
+
 Luckely it's not that hard :-) 
 
 In your traefik.yml file, add the following lines under providers.
@@ -170,13 +173,14 @@ In your traefik.yml file, add the following lines under providers.
     watch: true
 ```
 Add a the file all.yaml in the /etc/traefik directory.
+
 This is most likely where you have the traefik.yml file
 
 The content of the file should be the following.
 Replace publichostname with the pub hostname of your harbor installation (the same you sat in your harbor.yml file)
 and change the url, to be the fqdn of your harbor vm.
 
-Also if your certresolver, is called something different, then change that as well.
+Also if your certresolver, is called something different, in your setup, then change that as well.
 ```
 http:
   routers:
@@ -194,8 +198,12 @@ http:
 ```
 And that is it.
 
-Traefik should now have published your Harbor installation, so it avaliable for you.
+Traefik should now have published your Harbor installation, so it avaliable for you, on https://publicurl.
+
 You can login with admin and the password, you set in your harbor.yml file, and you now have your own container registry.
+![Harbor](images/harbor_login.png)
+
+If you want to test your new installation, then look at the Harbor website. I found this section of value, when I was trubleshooting : [Link](https://goharbor.io/docs/1.10/working-with-projects/working-with-images/pulling-pushing-images/)
 
 
 
