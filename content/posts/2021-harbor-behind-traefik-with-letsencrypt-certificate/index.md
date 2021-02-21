@@ -27,7 +27,7 @@ My setup is [described here](https://www.robert-jensen.dk/posts/2021-secure-depl
 (That is what i'm using anyway)
 Note the [requirements](https://goharbor.io/docs/2.1.0/install-config/installation-prereqs/)
 
-### Installtion of Harbor
+### Installation of Harbor
 
 Note: I found a lot of my inspiration, in this [guide](https://thenewstack.io/tutorial-install-the-docker-harbor-registry-server-on-ubuntu-18-04/).
 
