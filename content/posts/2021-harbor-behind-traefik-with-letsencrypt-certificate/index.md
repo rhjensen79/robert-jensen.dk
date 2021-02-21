@@ -12,13 +12,15 @@ Everywhere I look, [Harbor](https://goharbor.io) is mentioned, so that is the on
 The problem with Container registrys, is that Docker requires there to be a valid certificate, for them to work.
 I could just buy a certificate, and use that, but i'm a big fan of [Let's Encrypt](https://letsencrypt.org) so it was natural for me to look into using that.
 
-To make Let's Encrypt work, I would have to expose Harbor to the internet, and I only have one public ipadress, and that is used by my Traefik proxy (on the same ports). Luckely, I can just use Traefik, to generate the certificates, and publish my Harbor container registry, thru Traefik.
+To make Let's Encrypt work, I would have to expose Harbor to the internet, and since I only have one public ipadress, and that is used by my Traefik proxy (on the same ports), that wont work. 
+
+Luckely, I can just use Traefik, to generate the certificates, and publish my Harbor container registry, thru Traefik.
 
 This blog is about how to do just that :-) 
 
-### Before you begin
+### Before you begin, you need
 
-- A working Traefik proxy
+- A working Traefik proxy, with Let's Encrypt enabled
 My setup is [described here](https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/), and should be quite easy to follow.
 
 - An clean Ubuntu 18.04 VM for running Harbor
@@ -62,9 +64,10 @@ tar xvzf harbor-online-installer-v2.0.6.tgz
 
 cd harbor
 ```
-Now configure the harbor.yml with the config, that matches your installation.
+Now copy the template config, and configure it to match your installation.
 
 ```
+cp harbor.yml.tmpl harbor.yml
 nano harbor.yml
 ```
 I have included the top of my config below (Do not replace this file, with you entire file). 
@@ -205,7 +208,9 @@ You can login with admin and the password, you set in your harbor.yml file, and 
 
 If you want to test your new installation, then look at the Harbor website. I found this section of value, when I was trubleshooting : [Link](https://goharbor.io/docs/1.10/working-with-projects/working-with-images/pulling-pushing-images/)
 
+Thanks for reading so far. I hope you found it usefull.
 
+If you have any questions, then feel free to reach out on Twitter. 
 
 
 
