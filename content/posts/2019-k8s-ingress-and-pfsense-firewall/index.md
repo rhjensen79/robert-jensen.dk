@@ -4,6 +4,7 @@ date: 2019-07-04T15:04:00.002+02:00
 draft: false
 aliases: [ "/2019/07/k8s-ingress-and-pfsense-firewall.html" ]
 tags : [cna, container, vSphere, kubernetes, pfsense, ingress, k8s]
+thumbnail: "images/georg-bommeli-ybtUqjybcjE-unsplash.jpg"
 ---
 
 [![](https://mapr.com/products/kubernetes/assets/k8s-logo.png)](https://mapr.com/products/kubernetes/assets/k8s-logo.png)
@@ -37,3 +38,7 @@ The fix looks a bit different.
 Chose custom options, and add the following text.  
 
 [![](https://1.bp.blogspot.com/-RnWnKPVhFp8/XR-jlWfctHI/AAAAAAAB0j4/Bz0rCzZJK1Qf_EPQHx5dr5soFzsVePG4QCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-07-05%2Bkl.%2B21.21.57.png)](https://1.bp.blogspot.com/-RnWnKPVhFp8/XR-jlWfctHI/AAAAAAAB0j4/Bz0rCzZJK1Qf_EPQHx5dr5soFzsVePG4QCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-07-05%2Bkl.%2B21.21.57.png)
+
+<span>Photo by <a href="https://unsplash.com/@calina?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Georg Bommeli</a> on <a href="https://unsplash.com/s/photos/lock?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+
