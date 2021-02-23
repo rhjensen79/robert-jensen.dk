@@ -4,6 +4,7 @@ date: 2019-10-09T09:05:00.000+02:00
 draft: false
 aliases: [ "/2019/10/remote-development-from-anywhere.html" ]
 tags : [Network, Overlay, VPN, SDWAN, SD-WAN, Development, VSCode, VMware, Ansible, Zerotier]
+thumbnail: "images/yancy-min-842ofHC6MaI-unsplash.jpg"
 ---
 
 [![](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)
@@ -83,3 +84,5 @@ So now I don't have to think about VPN anymore. I'm always on the same network, 
 Note there is a lot more usecases, and probably just as many security concerns. But the solution is imho really cool, and useful, if used in the correct way.  
   
 thanks for reading, and hope you found this usefull.
+
+<span>Photo by <a href="https://unsplash.com/@yancymin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yancy Min</a> on <a href="https://unsplash.com/s/photos/development?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

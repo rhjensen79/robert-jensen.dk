@@ -4,6 +4,7 @@ date: 2019-12-16T11:27:00.001+01:00
 draft: false
 aliases: [ "/2019/12/how-to-show-value-of-automation.html" ]
 tags : [vRA, code, VMware, automation, AWS, value]
+thumbnail: "images/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg"
 ---
 
 [![](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s640/value-proposition.jpg)](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s1600/value-proposition.jpg)
@@ -72,3 +73,5 @@ This was really great to get something working. But in the future, i'm planning 
 \- Present different pages, that shows time saved on VM deployments. XaaS and an overview page.  
   
 For any other ideas, leave them in the comments, and let me know what you think.
+
+<span>Photo by <a href="https://unsplash.com/@pavement_special?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Riccardo Annandale</a> on <a href="https://unsplash.com/s/photos/value?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
