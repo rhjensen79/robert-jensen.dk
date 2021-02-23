@@ -24,7 +24,7 @@ It's all in Danish, to keep it local, but I will will update this post, to keep 
   
 
 1\. Multi Cloud Blueprints in Cloud Assembly.
-
+{{< youtube R1otMUOI1Js >}}
   
 
   
