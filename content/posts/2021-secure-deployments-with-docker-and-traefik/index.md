@@ -25,88 +25,79 @@ docker network create web
 If you want to use the network name web, as I do in my example.
 
 The Traefik docker compose file, is as below. 
-Note i'm using :latest. That is not best practice. 
+Note this has been changed, in the latest version of this blog post.
+
+The new file contains all configurations, in the docker-compose file, and does not need, and external file, like the old config.
+I updated it, after seeing this [video](https://traefik.io/resources/traefik-fastapi-kuberrnetes-ai-ml/?utm_campaign=Influencer:%20Sebastian%20Ramirez,%20FastAPI%20&utm_content=155438367&utm_medium=social&utm_source=twitter&hss_channel=tw-4890312130), around how to setup [FastApi](https://fastapi.tiangolo.com), with Traefik. I higly recomment to take a look at it. 
 
 ```
 version: '3'
 
 networks:
+  # Network used to expose Traefik services
   web:
     external: true
+
+volumes: 
+  # Volume to store certificates
+  traefik-certificates:
 
 services:
   traefik:
     container_name: traefik
-    # The official v2 Traefik docker image
-    image: traefik:latest
-    # Enables the web UI and tells Traefik to listen to docker
-    networks:
+    image: traefik:v2.4.5
+    networks: 
       - web
-    restart: unless-stopped
-    ports:
-      # The HTTP port
-      - "80:80"
-      #The HTTPS port
-      - "443:443"
-      # The Web UI (enabled by --api.insecure=true)
-      - "8080:8080"
-    volumes:
-      # So that Traefik can listen to the Docker events
+    restart: always
+    ports: 
+      # HTTP
+      - 80:80
+      # HTTPS
+      - 443:443
+      # Traefik Dashboard
+      - 8080:8080
+    volumes: 
+      # Access to Host Docker service
       - /var/run/docker.sock:/var/run/docker.sock
-      - local_mount_point:/etc/traefik
+      # Mount volume to store Certificates
+      - traefik-certificates:/certificates
+      # Mapping local conf file to container
+      - ./file-provider.yml:/file/file-provider.yml
+    command: 
+      # Enable Dashboard
+      - "--api.insecure=true"
+      # Pilot Dashboard token
+      - "--pilot.token=token"
+      # Enable Docker provider and set default naming schema
+      - "--providers.docker.defaultRule=Host(`{{ trimPrefix `/` .Name }}.cmplab.dk`)"
+      # Do not expose all Docker services by default
+      - "--providers.docker.exposedbydefault=false"
+      # Log settings
+      - "--log.level=INFO"
+      - "--accesslog.filepath=/etc/traefik/traefik.log"
+      - "--accesslog.bufferingsize=100"
+      # Set entrypoints
+      - "--entrypoints.http.address=:80"
+      - "--entrypoints.https.address=:443"
+      # Redirect all trafic to HTTPS
+      - "--entrypoints.http.http.redirections.entrypoint.to=https"
+      # Set certresolver for HTTPS
+      - "--entrypoints.https.http.tls.certresolver=myresolver"
+      # Set CertResolver
+      - "--certificatesresolvers.myresolver.acme.email=your@email"
+      - "--certificatesresolvers.myresolver.acme.storage=/certificates/acme.json"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=http"
+
+
 ```
 The external: true 
-is important, as is the volume mount, that I use.
-That's where I keep my traefic.yml config file. 
-I keep mine in a NFS mount, that I backup, but you can use it anyway you want. 
+is important, since it wont work without it.
+
+The volume, is for storing my Let's Encrypt certificates.
 
 I also expose port 80 and 443, as described in the traefik.yml
 
-The traefik.yml file, is shown below. 
-
-```
-## STATIC CONFIGURATION
-
-log:
-  level: INFO
-  filePath: "/etc/traefik/traefik.log"
-
-# Configuring a buffer of 100 lines
-accessLog:
-  filePath: "/etc/traefik/access.log"
-  bufferingSize: 100
-
-pilot:
-    token: "Key"
-
-providers:
-  docker:
-    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.cmplab.dk`)"
-  file:
-    filename: "traefik.yml"
-
-api:
-  insecure: true
-
-entryPoints:
-  web:
-    address: ":80"
-
-  websecure:
-    address: ":443"
-
-
-# LetsEncrypt config
-certificatesResolvers:
-  myresolver:
-    acme:
-      email: email
-      storage: acme.json
-      httpChallenge:
-        # used during the challenge
-        entryPoint: web
-```
-It sets 2 entrypoints to web and websecure, and setup's [LetEncrypt](https://letsencrypt.org), to auto generate a certificate, if asked for it. 
+It sets 2 entrypoints to http and https, and setup's [LetEncrypt](https://letsencrypt.org), to auto generate a certificate, if asked for it. 
 
 I also created a docker provider, that auto generates a url, based on containername.cmplab.dk (note i overwerite that, in my label, and set my own name)
 
