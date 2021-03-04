@@ -1,7 +1,7 @@
 ---
 title: "Installing Harbor Container Registry Behind Traefik Reverse Proxy With Let's Encrypt Certificate"
 date: 2021-02-19T13:53:10+01:00
-tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse proxy, Container Registry, secure, https, certificate]
+tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse proxy, Container Registry, secure, https, certificate, Docker Hub, Rate Limit]
 draft: false
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.jpg"
 ---
@@ -207,6 +207,8 @@ You can login with admin and the password, you set in your harbor.yml file, and 
 ![Harbor](images/harbor_login.png)
 
 If you want to test your new installation, then look at the Harbor website. I found this section of value, when I was trubleshooting : [Link](https://goharbor.io/docs/1.10/working-with-projects/working-with-images/pulling-pushing-images/)
+
+If you want to know more, about how to setup Harbor as a proxy, to get around the Docker Hub rate limnits, then follow [this guide](https://goharbor.io/docs/2.1.0/administration/configure-proxy-cache/)
 
 Thanks for reading so far. I hope you found it usefull.
 
