@@ -40,6 +40,8 @@ doNotLoadAnimations = false
 # indexDateFormat = "Mon, Jan 2, 2006"
 # listDateFormat = "Jan 2"
 # singleDateFormat = "Mon, Jan 2, 2006"
+# Commento Comments
+# CommentoURL = "https://commento.example.com/js/commento.js"
 
 [params.simpleAnalytics]
 # enable = true
@@ -70,7 +72,7 @@ url = "https://www.instagram.com/"
 [[params.socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
-url = "mailto:mail@alexbilz.com"
+url = "mailto:mail@example.com"
 
 ## Menu items
 

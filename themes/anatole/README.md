@@ -19,11 +19,12 @@ Anatole's aims to be minimalistic and sleek, but still brings some great functio
 - Post Thumbnails (optional)
 - 100⁄100 Google Lighthouse score
 - Google Analytics (optional)
-- Comments powered by Disqus or Utteranc.es (optional)
+- Comments powered by Disqus, Commento or Utteranc.es (optional)
 - SimpleAnalytics (optional)
 - Katex support (optional)
 - Formspree Contact Form (optional)
 - Twitter Cards support
+- Open Graph support
 - MIT License
 - Fontawesome 5.15.1 icons
 - Custom CSS (optional)
@@ -147,6 +148,13 @@ If you prefer having a static page as your home page rather than a listing of th
 ```
 Put any content into the `_index.md` file located in the content directory. If you want, you can also have some static text and the posts below. In such case, simply keep the `mainSections = ["post"]` and put any static content in the `_index.md`.
 
+### Show full post content on the home page
+If you prefer the full content of your posts to appear on the home page rather than a summary of each post, then set the parameter `fullPostContent` to `true`.
+```toml
+[params]
+fullPostContent = true
+```
+
 ### Multilingual support
 
 Anatole supports multilingual page setups. All you need to do is to add the languages to your 'config.toml'. For each Language you can set the custom options like title or description. It's important to include a `LanguageName`, as it will be displayed in the main menu.
@@ -223,15 +231,37 @@ issueTerm = "pathname"
 theme= "preferred-color-scheme"
 # label = 
 ```
+
 Two notes on the security of Utteranc.es
 - If you are using a strict CSP, you'll have to add the domain to it. 
 - The script currently has no built-in integrity check, due to limitations of [Utterances](https://github.com/utterance/utterances/issues/40).
+
+### Comments powered by Commento
+You can use [Commento](https://commento.io/) as an alternative to Disqus. All you need to do is to configure a `CommentoURL`:
+
+```toml
+[params]
+CommentoURL = "https://commento.example.com/js/commento.js"
+```
+
+### Disabling Comments Per Page
+
+Comments can be disabled per page by setting `disableComments: true` on the pages [Front Matter](https://gohugo.io/content-management/front-matter/)
+
+
 ### Google Analytics
 
 To use Google Analytics, a valid tracking code has to be added. If you don't want to load the code, then commend out the parameter.
 
 ```toml
 googleAnalytics = "UA-123-45"
+```
+
+To use the modern Google Analytics 4, include the following under `[params]` replacing the id with your own.
+
+```toml
+[params]
+gtagId = "G-XXXXXXXXXX"
 ```
 
 ### Simple Analytics
@@ -286,6 +316,9 @@ To define a custom image of a page, you might want to add the following to the f
 ```toml
 images = ["post-cover.png"]
 ```
+### Open Graph Support
+
+The [internal template for Open Graph protocol](https://gohugo.io/templates/internal/#open-graph) uses a mix of configuration variables; settings in `config.toml` and frontmatter of the page. In a nutshell, you will have to configure a taxonomies series.
 
 ### Post Thumbnails
 Thumbnails can be enabled easily by setting the `thumbnail` parameter in the frontmatter of a post to an image such as `"images/landscape.jpg"`.
@@ -351,6 +384,15 @@ Both approaches can even be mixed:
 ```toml
 [params]
 customJs = ["https://cdn.exmple.org/fancyscript.js", "js/world.js"]
+```
+
+### Medium Like Zoom
+
+Enabled by default, the medium like zoom for images can be disabled by adding the following config under `[params]`.
+
+```toml
+[params]
+enableMediumZoom = false
 ```
 
 ### Content Security Policy
