@@ -31,6 +31,7 @@ mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification
 #googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+copyright = "2019-2021"
 
 ## Math settings
 [params.math]
@@ -48,6 +49,11 @@ url = "https://www.linkedin.com/in/robertjensen/"
 icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/rhjensen79"
+
+[[params.socialIcons]]
+icon = "fab fa-gitlab"
+title = "GitLab"
+url = "https://gitlab.com/rhjensen79"
 
 [[params.socialIcons]]
 icon = "fas fa-envelope"
