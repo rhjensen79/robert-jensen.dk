@@ -6,7 +6,95 @@
     <description>Recent content on Robert-Jensen.dk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2020 14:09:39 +0100</lastBuildDate><atom:link href="https://www.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 10:48:02 +0100</lastBuildDate><atom:link href="https://www.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keeping .env files in sync using Bitwarden</title>
+      <link>https://www.robert-jensen.dk/posts/2021-env-files-and-bitwarden/</link>
+      <pubDate>Fri, 19 Mar 2021 10:48:02 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-env-files-and-bitwarden/</guid>
+      <description>I use multiple computers, and sometimes it can be hard, to keep everything in sync. Working documents are easy, but my .env files, has proven to be harder.
+I know there are tons of solutions for this, but since i&amp;rsquo;m a big fan of Bitwarden I thought I might as well, use that to store the data, from my .</description>
+    </item>
+    
+    <item>
+      <title>When Testing Got Easy - a story about SMTP and Docker</title>
+      <link>https://www.robert-jensen.dk/posts/2021-when-testing-got-easy/</link>
+      <pubDate>Wed, 03 Mar 2021 15:55:59 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-when-testing-got-easy/</guid>
+      <description>Sometimes it&amp;rsquo;s the simple tings, that are the hardest. For a small projekt, i&amp;rsquo;m working on, I have to test sending a lot of emails. A simple thing, but in my case, I don&amp;rsquo;t have a local SMTP server.
+I could set one up, but then, I have to configure users, maybe MX records, and other stuff.</description>
+    </item>
+    
+    <item>
+      <title>Installing Harbor Container Registry Behind Traefik Reverse Proxy With Let&#39;s Encrypt Certificate</title>
+      <link>https://www.robert-jensen.dk/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/</guid>
+      <description>Ever since Docker enforced their rate limit, I have been looking at using some other registry, to put my containers, but also to use as a proxy, so I hit the Docker api a blit less.
+Everywhere I look, Harbor is mentioned, so that is the one, that I have been looking at.</description>
+    </item>
+    
+    <item>
+      <title>Easy Updating CI/CD Tools</title>
+      <link>https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/</guid>
+      <description>I&amp;rsquo;m a big fan of using containers, whenever I do any form of automation. For me, it provides a simple way of having a consistant enviroment, where I always know, that the tools I use, are working. For some time, that way i have been using this, is by creating a docker image, for each git repo.</description>
+    </item>
+    
+    <item>
+      <title>Remote Access to Demolab using Apache Guacamole</title>
+      <link>https://www.robert-jensen.dk/posts/2021-remote-access-to-demolab/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-remote-access-to-demolab/</guid>
+      <description>My demolab, is not hostet at home, but remote. So i&amp;rsquo;m always dependend, on some kind of remote access. At home, I use a IPSEC Site2Site VPN, between my PFsense, and the Edgerouter lite, I have in my Demo enviroment.
+Remote I use Tailscale for client VPN, as I have described, in an earlier post.</description>
+    </item>
+    
+    <item>
+      <title>Tailscale on Ubitique Edgerouter</title>
+      <link>https://www.robert-jensen.dk/posts/2021-tailscale-on-edgerouter/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-tailscale-on-edgerouter/</guid>
+      <description>Tailscale is what I have been using, to get access to my demo enviroment, and allow clients to communicate with each other, across networks etc. But I have really missed, having it installed on my firewall, to make it act as a more traditional vpn. The firewall i&amp;rsquo;m using is an Ubitique Edgerouter lite.</description>
+    </item>
+    
+    <item>
+      <title>Secure Deployments With Docker, Traefik and Let&#39;s Encrypt</title>
+      <link>https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/</link>
+      <pubDate>Wed, 06 Jan 2021 20:45:52 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/</guid>
+      <description>During the christmas holliday, I had some time, to look into Traefik reverse proxy.
+The reason for me to use Traefik, is due to the automation, it delivers. It can automaticly detect deployments, and present them, and for my demo projects, that is exactly what I need.
+Optimal, I would deploy everything to a K8S cluster, but i&amp;rsquo;m having some problems getting it working with Traefik.</description>
+    </item>
+    
+    <item>
+      <title>Custom DNS Resolver for Homelabs</title>
+      <link>https://www.robert-jensen.dk/posts/2020-custom-dns-resolver-for-homelabs/</link>
+      <pubDate>Sun, 20 Dec 2020 09:53:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-custom-dns-resolver-for-homelabs/</guid>
+      <description>Using custom dns servers, depending on enviroment, or resolving multiple internal domains, can be a real pain.
+You can setup host files, but it&amp;rsquo;s a pain to manage. You can also setup your own DNS server, but if you are using company VPN etc, then it&amp;rsquo;s not always the right DNS server, that is being used.</description>
+    </item>
+    
+    <item>
+      <title>Giving Back for the First Time</title>
+      <link>https://www.robert-jensen.dk/posts/2020-giving-back-for-the-first-time/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2020-giving-back-for-the-first-time/</guid>
+      <description>One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. I remember reading, how to get started doing this, but I see myself as a beginner, when it comes to coding, and find myself thinking, &amp;ldquo;why would anybody want something, that I have done.</description>
+    </item>
+    
     <item>
       <title>Application Deployment With Salt and Vra</title>
       <link>https://www.robert-jensen.dk/posts/2020-application-deployment-with-salt-and-vra/</link>

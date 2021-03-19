@@ -1,624 +1,574 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://www.robert-jensen.dk/tags/bitwarden/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/env/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/envfiles/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-env-files-and-bitwarden/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/sync/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/docker/</loc>
+    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/mail/</loc>
+    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/python/</loc>
+    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/smtp/</loc>
+    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/testing/</loc>
+    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-when-testing-got-easy/</loc>
+    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/certificate/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/container-registry/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/docker-hub/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/harbor/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/https/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/letsencrypt/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/proxy/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/rate-limit/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/registry/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/reverse-proxy/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/secure/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/security/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/traefik/</loc>
+    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/automation/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cd/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/ci/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cicd/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/devops/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/hashicorp/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/packer/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/terraform/</loc>
+    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/apache/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/app/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/compose/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/demolab/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/docker-compose/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/guacamole/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/homelab/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/hosting/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/ipsec/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/rdp/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/remote/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-remote-access-to-demolab/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/ssh/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vnc/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vpn/</loc>
+    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/edgerouter/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/network/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/tailscale/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-tailscale-on-edgerouter/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/ubitique/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/ubnt/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/wireguard/</loc>
+    <lastmod>2021-01-12T20:28:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/</loc>
+    <lastmod>2021-01-06T20:45:52+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/streamlit/</loc>
+    <lastmod>2021-01-06T20:45:52+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/web/</loc>
+    <lastmod>2021-01-06T20:45:52+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/custom/</loc>
+    <lastmod>2020-12-20T09:53:39+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2020-custom-dns-resolver-for-homelabs/</loc>
+    <lastmod>2020-12-20T09:53:39+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/dns/</loc>
+    <lastmod>2020-12-20T09:53:39+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/server/</loc>
+    <lastmod>2020-12-20T09:53:39+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/code/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/github/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/giving/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2020-giving-back-for-the-first-time/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/hugo/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/opensource/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/theme/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/website/</loc>
+    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-application-deployment-with-salt-and-vra/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/automation/</loc>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/management/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/docker/</loc>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/salt/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/posts/</loc>
-    <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/</loc>
-    <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/saltstack/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/</loc>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vmware/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/vra/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vsphere/</loc>
+    <lastmod>2020-11-24T14:09:39+01:00</lastmod>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/container/</loc>
     <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-docker-for-almost-everything/</loc>
     <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/jenkins/</loc>
     <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/k8s/</loc>
     <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/minion/</loc>
     <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/test/</loc>
     <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/vmware/</loc>
-    <lastmod>2020-11-21T19:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-automating-fah-with-cs/</loc>
     <lastmod>2020-11-18T16:42:22+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/code-stream/</loc>
     <lastmod>2020-11-18T16:42:22+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/foldinghome/</loc>
     <lastmod>2020-11-18T16:42:22+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/github/</loc>
-    <lastmod>2020-11-18T16:42:22+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/terraform/</loc>
-    <lastmod>2020-11-18T16:42:22+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/vsphere/</loc>
-    <lastmod>2020-11-18T16:42:22+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/blog/</loc>
     <lastmod>2020-11-06T12:56:48+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/blogger/</loc>
     <lastmod>2020-11-06T12:56:48+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/move/</loc>
     <lastmod>2020-11-06T12:56:48+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-move-blog/</loc>
     <lastmod>2020-11-06T12:56:48+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/about/</loc>
     <lastmod>2020-11-06T11:56:57+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/codestream/</loc>
+    <lastmod>2020-07-30T21:38:00+02:00</lastmod>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-jenkins-and-codestream-csrf-fix/</loc>
     <lastmod>2020-07-30T21:38:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/pipeline/</loc>
+    <lastmod>2020-07-30T21:38:00+02:00</lastmod>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/aws/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cas/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cloud-management/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cmp/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-demo-enviroment-on-demand/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/multi-cloud/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/on-demand/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/release-pipeline/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/sddc/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/self-service/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/ubuntu/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/vmware-cas/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/xaas/</loc>
     <lastmod>2020-06-02T12:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/code/</loc>
-    <lastmod>2019-12-16T11:27:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-how-to-show-value-of-automation/</loc>
     <lastmod>2019-12-16T11:27:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/value/</loc>
     <lastmod>2019-12-16T11:27:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/ansible/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/development/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/network/</loc>
-    <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/overlay/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-remote-development-from-anywhere/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/sd-wan/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/sdwan/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/vpn/</loc>
-    <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/vscode/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/zerotier/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/azure/</loc>
     <lastmod>2019-07-11T11:19:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/gcp/</loc>
     <lastmod>2019-07-11T11:19:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-vmware-cloud-management-series/</loc>
     <lastmod>2019-07-11T11:19:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cna/</loc>
     <lastmod>2019-07-04T15:04:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/ingress/</loc>
     <lastmod>2019-07-04T15:04:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-k8s-ingress-and-pfsense-firewall/</loc>
     <lastmod>2019-07-04T15:04:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/kubernetes/</loc>
     <lastmod>2019-07-04T15:04:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/pfsense/</loc>
     <lastmod>2019-07-04T15:04:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/bash/</loc>
     <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-duplicate-ipadress-on-packer-ubuntu-vms/</loc>
     <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/packer/</loc>
-    <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/pipeline/</loc>
-    <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/script/</loc>
     <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/shell/</loc>
     <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/templates/</loc>
     <lastmod>2019-05-03T20:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cloud/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/free/</loc>
+    <lastmod>2019-03-30T13:44:00+01:00</lastmod>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/ios/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-new-password-manager/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/notes/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/osx/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/password/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robert-jensen.dk/tags/security/</loc>
-    <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/windows/</loc>
     <lastmod>2019-03-30T13:44:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/extensibility/</loc>
     <lastmod>2019-01-22T13:28:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-filter-extensibility-subscriptions-in/</loc>
     <lastmod>2019-01-22T13:28:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-cloud-agnostic-blueprints-in-vmware-cas/</loc>
     <lastmod>2019-01-18T07:51:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/yaml/</loc>
     <lastmod>2019-01-18T07:51:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-getting-started-with-cloud-automation/</loc>
     <lastmod>2018-12-12T21:11:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/apple/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/home-automation/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/homekit/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-homekit-support-for-non-homekit-devices/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/itead/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/mqtt/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/openhab/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/sonoff/</loc>
     <lastmod>2018-11-12T08:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/active-directory/</loc>
     <lastmod>2018-06-27T10:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/compliance/</loc>
     <lastmod>2018-06-27T10:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/log-insight/</loc>
     <lastmod>2018-06-27T10:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/logging/</loc>
     <lastmod>2018-06-27T10:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-monitor-domain-admins-using-vmware-log/</loc>
     <lastmod>2018-06-27T10:57:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-cloud-managent-experience-day/</loc>
     <lastmod>2018-02-19T14:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/education/</loc>
     <lastmod>2018-02-19T14:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/presenting/</loc>
     <lastmod>2018-02-19T14:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-fingbox-new-security-device-in-my-home/</loc>
     <lastmod>2018-02-12T14:54:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/gadget/</loc>
     <lastmod>2018-02-12T14:54:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/monitoring/</loc>
     <lastmod>2018-02-12T14:54:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/business/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cost/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/private/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/public/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/reports/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/vmware-cloud-on-aws/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-vrealize-business-do-you-know-your-cost/</loc>
     <lastmod>2018-01-29T09:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/iot/</loc>
     <lastmod>2018-01-19T13:57:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/survalience/</loc>
     <lastmod>2018-01-19T13:57:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-why-i-love-my-netatmo-presence-found/</loc>
     <lastmod>2018-01-19T13:57:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-auto-clean-up-old-recording/</loc>
     <lastmod>2018-01-07T20:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/linux/</loc>
     <lastmod>2018-01-07T20:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/netatmo/</loc>
     <lastmod>2018-01-07T20:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/presence/</loc>
     <lastmod>2018-01-07T20:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/synology/</loc>
     <lastmod>2018-01-07T20:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-data-collection-catalog-item-in-vra/</loc>
     <lastmod>2018-01-04T12:49:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/installation/</loc>
     <lastmod>2018-01-02T11:16:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/lifecycle-manager/</loc>
     <lastmod>2018-01-02T11:16:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2018-vmware-lifecycle-manager-first-tool-to/</loc>
     <lastmod>2018-01-02T11:16:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/client/</loc>
     <lastmod>2017-12-27T19:49:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/flings/</loc>
     <lastmod>2017-12-27T19:49:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/html5/</loc>
     <lastmod>2017-12-27T19:49:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2017-vsphere-html5-client-have-you-tried/</loc>
     <lastmod>2017-12-27T19:49:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.robert-jensen.dk/categories/</loc>
   </url>
-  
 </urlset>

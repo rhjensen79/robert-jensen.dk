@@ -1,7 +1,7 @@
 ---
 title: "Keeping .env files in sync using Bitwarden"
 date: 2021-03-19T10:48:02+01:00
-tags : [Bitwarden, env, envfiles, sync]
+tags : [Bitwarden, env, envfiles, sync, cli, api, zsh, bash, automation]
 draft: false
 thumbnail: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
 images: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"

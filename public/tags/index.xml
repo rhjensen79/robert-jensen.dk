@@ -6,22 +6,580 @@
     <description>Recent content in Tags on Robert-Jensen.dk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2020 14:09:39 +0100</lastBuildDate><atom:link href="https://www.robert-jensen.dk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 10:48:02 +0100</lastBuildDate><atom:link href="https://www.robert-jensen.dk/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>automation</title>
-      <link>https://www.robert-jensen.dk/tags/automation/</link>
-      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
+      <title>bitwarden</title>
+      <link>https://www.robert-jensen.dk/tags/bitwarden/</link>
+      <pubDate>Fri, 19 Mar 2021 10:48:02 +0100</pubDate>
       
-      <guid>https://www.robert-jensen.dk/tags/automation/</guid>
+      <guid>https://www.robert-jensen.dk/tags/bitwarden/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>env</title>
+      <link>https://www.robert-jensen.dk/tags/env/</link>
+      <pubDate>Fri, 19 Mar 2021 10:48:02 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/env/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>envfiles</title>
+      <link>https://www.robert-jensen.dk/tags/envfiles/</link>
+      <pubDate>Fri, 19 Mar 2021 10:48:02 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/envfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>https://www.robert-jensen.dk/tags/sync/</link>
+      <pubDate>Fri, 19 Mar 2021 10:48:02 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/sync/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
       <link>https://www.robert-jensen.dk/tags/docker/</link>
-      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
+      <pubDate>Wed, 03 Mar 2021 15:55:59 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mail</title>
+      <link>https://www.robert-jensen.dk/tags/mail/</link>
+      <pubDate>Wed, 03 Mar 2021 15:55:59 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/mail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.robert-jensen.dk/tags/python/</link>
+      <pubDate>Wed, 03 Mar 2021 15:55:59 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>smtp</title>
+      <link>https://www.robert-jensen.dk/tags/smtp/</link>
+      <pubDate>Wed, 03 Mar 2021 15:55:59 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/smtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://www.robert-jensen.dk/tags/testing/</link>
+      <pubDate>Wed, 03 Mar 2021 15:55:59 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>certificate</title>
+      <link>https://www.robert-jensen.dk/tags/certificate/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/certificate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Container Registry</title>
+      <link>https://www.robert-jensen.dk/tags/container-registry/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/container-registry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Hub</title>
+      <link>https://www.robert-jensen.dk/tags/docker-hub/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/docker-hub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Harbor</title>
+      <link>https://www.robert-jensen.dk/tags/harbor/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/harbor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>https://www.robert-jensen.dk/tags/https/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Letsencrypt</title>
+      <link>https://www.robert-jensen.dk/tags/letsencrypt/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/letsencrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://www.robert-jensen.dk/tags/proxy/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rate Limit</title>
+      <link>https://www.robert-jensen.dk/tags/rate-limit/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/rate-limit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Registry</title>
+      <link>https://www.robert-jensen.dk/tags/registry/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/registry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reverse proxy</title>
+      <link>https://www.robert-jensen.dk/tags/reverse-proxy/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/reverse-proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>secure</title>
+      <link>https://www.robert-jensen.dk/tags/secure/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/secure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://www.robert-jensen.dk/tags/security/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Traefik</title>
+      <link>https://www.robert-jensen.dk/tags/traefik/</link>
+      <pubDate>Fri, 19 Feb 2021 13:53:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/traefik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://www.robert-jensen.dk/tags/automation/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cd</title>
+      <link>https://www.robert-jensen.dk/tags/cd/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci</title>
+      <link>https://www.robert-jensen.dk/tags/ci/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cicd</title>
+      <link>https://www.robert-jensen.dk/tags/cicd/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/cicd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://www.robert-jensen.dk/tags/devops/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hashicorp</title>
+      <link>https://www.robert-jensen.dk/tags/hashicorp/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/hashicorp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packer</title>
+      <link>https://www.robert-jensen.dk/tags/packer/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/packer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://www.robert-jensen.dk/tags/terraform/</link>
+      <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apache</title>
+      <link>https://www.robert-jensen.dk/tags/apache/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>app</title>
+      <link>https://www.robert-jensen.dk/tags/app/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compose</title>
+      <link>https://www.robert-jensen.dk/tags/compose/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>demolab</title>
+      <link>https://www.robert-jensen.dk/tags/demolab/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/demolab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>https://www.robert-jensen.dk/tags/docker-compose/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guacamole</title>
+      <link>https://www.robert-jensen.dk/tags/guacamole/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/guacamole/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homelab</title>
+      <link>https://www.robert-jensen.dk/tags/homelab/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hosting</title>
+      <link>https://www.robert-jensen.dk/tags/hosting/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/hosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipsec</title>
+      <link>https://www.robert-jensen.dk/tags/ipsec/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/ipsec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rdp</title>
+      <link>https://www.robert-jensen.dk/tags/rdp/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/rdp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>remote</title>
+      <link>https://www.robert-jensen.dk/tags/remote/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/remote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://www.robert-jensen.dk/tags/ssh/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vnc</title>
+      <link>https://www.robert-jensen.dk/tags/vnc/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/vnc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPN</title>
+      <link>https://www.robert-jensen.dk/tags/vpn/</link>
+      <pubDate>Tue, 19 Jan 2021 09:35:55 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>edgerouter</title>
+      <link>https://www.robert-jensen.dk/tags/edgerouter/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/edgerouter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>https://www.robert-jensen.dk/tags/network/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tailscale</title>
+      <link>https://www.robert-jensen.dk/tags/tailscale/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/tailscale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubitique</title>
+      <link>https://www.robert-jensen.dk/tags/ubitique/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/ubitique/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubnt</title>
+      <link>https://www.robert-jensen.dk/tags/ubnt/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/ubnt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wireguard</title>
+      <link>https://www.robert-jensen.dk/tags/wireguard/</link>
+      <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/wireguard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streamlit</title>
+      <link>https://www.robert-jensen.dk/tags/streamlit/</link>
+      <pubDate>Wed, 06 Jan 2021 20:45:52 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/streamlit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://www.robert-jensen.dk/tags/web/</link>
+      <pubDate>Wed, 06 Jan 2021 20:45:52 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>custom</title>
+      <link>https://www.robert-jensen.dk/tags/custom/</link>
+      <pubDate>Sun, 20 Dec 2020 09:53:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/custom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>https://www.robert-jensen.dk/tags/dns/</link>
+      <pubDate>Sun, 20 Dec 2020 09:53:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://www.robert-jensen.dk/tags/server/</link>
+      <pubDate>Sun, 20 Dec 2020 09:53:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://www.robert-jensen.dk/tags/code/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://www.robert-jensen.dk/tags/github/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Giving</title>
+      <link>https://www.robert-jensen.dk/tags/giving/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/giving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.robert-jensen.dk/tags/hugo/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://www.robert-jensen.dk/tags/opensource/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://www.robert-jensen.dk/tags/theme/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://www.robert-jensen.dk/tags/website/</link>
+      <pubDate>Sat, 12 Dec 2020 15:18:34 +0000</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>management</title>
+      <link>https://www.robert-jensen.dk/tags/management/</link>
+      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>salt</title>
+      <link>https://www.robert-jensen.dk/tags/salt/</link>
+      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/salt/</guid>
       <description></description>
     </item>
     
@@ -35,11 +593,29 @@
     </item>
     
     <item>
+      <title>VMware</title>
+      <link>https://www.robert-jensen.dk/tags/vmware/</link>
+      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/vmware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>vRA</title>
       <link>https://www.robert-jensen.dk/tags/vra/</link>
       <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/tags/vra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vSphere</title>
+      <link>https://www.robert-jensen.dk/tags/vsphere/</link>
+      <pubDate>Tue, 24 Nov 2020 14:09:39 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/vsphere/</guid>
       <description></description>
     </item>
     
@@ -89,15 +665,6 @@
     </item>
     
     <item>
-      <title>VMware</title>
-      <link>https://www.robert-jensen.dk/tags/vmware/</link>
-      <pubDate>Sat, 21 Nov 2020 19:26:12 +0100</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/vmware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Code Stream</title>
       <link>https://www.robert-jensen.dk/tags/code-stream/</link>
       <pubDate>Wed, 18 Nov 2020 16:42:22 +0100</pubDate>
@@ -112,33 +679,6 @@
       <pubDate>Wed, 18 Nov 2020 16:42:22 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/tags/foldinghome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://www.robert-jensen.dk/tags/github/</link>
-      <pubDate>Wed, 18 Nov 2020 16:42:22 +0100</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terraform</title>
-      <link>https://www.robert-jensen.dk/tags/terraform/</link>
-      <pubDate>Wed, 18 Nov 2020 16:42:22 +0100</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/terraform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vSphere</title>
-      <link>https://www.robert-jensen.dk/tags/vsphere/</link>
-      <pubDate>Wed, 18 Nov 2020 16:42:22 +0100</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/vsphere/</guid>
       <description></description>
     </item>
     
@@ -166,6 +706,24 @@
       <pubDate>Fri, 06 Nov 2020 12:56:48 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/tags/move/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codestream</title>
+      <link>https://www.robert-jensen.dk/tags/codestream/</link>
+      <pubDate>Thu, 30 Jul 2020 21:38:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/codestream/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipeline</title>
+      <link>https://www.robert-jensen.dk/tags/pipeline/</link>
+      <pubDate>Thu, 30 Jul 2020 21:38:00 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/pipeline/</guid>
       <description></description>
     </item>
     
@@ -278,15 +836,6 @@
     </item>
     
     <item>
-      <title>code</title>
-      <link>https://www.robert-jensen.dk/tags/code/</link>
-      <pubDate>Mon, 16 Dec 2019 11:27:00 +0100</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>value</title>
       <link>https://www.robert-jensen.dk/tags/value/</link>
       <pubDate>Mon, 16 Dec 2019 11:27:00 +0100</pubDate>
@@ -314,15 +863,6 @@
     </item>
     
     <item>
-      <title>Network</title>
-      <link>https://www.robert-jensen.dk/tags/network/</link>
-      <pubDate>Wed, 09 Oct 2019 09:05:00 +0200</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Overlay</title>
       <link>https://www.robert-jensen.dk/tags/overlay/</link>
       <pubDate>Wed, 09 Oct 2019 09:05:00 +0200</pubDate>
@@ -346,15 +886,6 @@
       <pubDate>Wed, 09 Oct 2019 09:05:00 +0200</pubDate>
       
       <guid>https://www.robert-jensen.dk/tags/sdwan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VPN</title>
-      <link>https://www.robert-jensen.dk/tags/vpn/</link>
-      <pubDate>Wed, 09 Oct 2019 09:05:00 +0200</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/vpn/</guid>
       <description></description>
     </item>
     
@@ -440,24 +971,6 @@
     </item>
     
     <item>
-      <title>packer</title>
-      <link>https://www.robert-jensen.dk/tags/packer/</link>
-      <pubDate>Fri, 03 May 2019 20:57:00 +0200</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/packer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pipeline</title>
-      <link>https://www.robert-jensen.dk/tags/pipeline/</link>
-      <pubDate>Fri, 03 May 2019 20:57:00 +0200</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/pipeline/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Script</title>
       <link>https://www.robert-jensen.dk/tags/script/</link>
       <pubDate>Fri, 03 May 2019 20:57:00 +0200</pubDate>
@@ -494,6 +1007,15 @@
     </item>
     
     <item>
+      <title>free</title>
+      <link>https://www.robert-jensen.dk/tags/free/</link>
+      <pubDate>Sat, 30 Mar 2019 13:44:00 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/tags/free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ios</title>
       <link>https://www.robert-jensen.dk/tags/ios/</link>
       <pubDate>Sat, 30 Mar 2019 13:44:00 +0100</pubDate>
@@ -526,15 +1048,6 @@
       <pubDate>Sat, 30 Mar 2019 13:44:00 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/tags/password/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://www.robert-jensen.dk/tags/security/</link>
-      <pubDate>Sat, 30 Mar 2019 13:44:00 +0100</pubDate>
-      
-      <guid>https://www.robert-jensen.dk/tags/security/</guid>
       <description></description>
     </item>
     
