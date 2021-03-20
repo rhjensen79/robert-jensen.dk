@@ -6,6 +6,11 @@ draft: false
 thumbnail: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
 images: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
 ---
+Update : After posting this, I was told that Grand Orchard, had already written a similar post, around how to do the same, using [1Password](https://1password.com).
+
+So if you are a 1Password user, then take a look at his [blog](https://grantorchard.com/securing-environment-variables-with-1password/) 
+- - -
+
 I use multiple computers, and sometimes it can be hard, to keep everything in sync. Working documents are easy, but my .env files, has proven to be harder.
 
 I know there are tons of solutions for this, but since i'm a big fan of [Bitwarden](https://bitwarden.com) I thought I might as well, use that to store the data, from my .env files.
