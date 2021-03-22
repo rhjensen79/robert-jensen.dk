@@ -1,9 +1,9 @@
 ---
-title: "2021 Running Your Codestream Pipelines as Code"
+title: "Running and maintaning Your Codestream Pipelines as Code"
 date: 2021-03-22T13:54:14+01:00
 tags : [IAC, CodeStream, Fling, VMware]
 draft: true
-thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.jpg"
-images: "images/clay-banks-LjqARJaJotc-unsplash.jpg"
+thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg"
+images: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg"
 ---
 
