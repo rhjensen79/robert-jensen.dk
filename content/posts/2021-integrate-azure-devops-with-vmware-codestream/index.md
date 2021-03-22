@@ -2,19 +2,60 @@
 title: "Integrate Azure Devops With Vmware Codestream"
 date: 2021-03-22T08:22:25+01:00
 tags : [Azure, gitlab, CiCD, VMware, CodeStream, integrate, DevOps]
-draft: true
+draft: false
 thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.jpg"
 images: "images/clay-banks-LjqARJaJotc-unsplash.jpg"
 ---
 For a customer case, I had to show integration between Azure Devops, and VMware CodeStream.
 
-Since the Git endpoint in Code Stream, does not seam to work with Azure DevOps Git repository, I had to do this different. 
+Since the Git endpoint in Code Stream, does not work with Azure DevOps Git repository, I had to find another way of doing the integration.
 
-So the solution was quite simple. Trigger the pipeline, using a pipeline run by Azure Devops.
+The solution was quite simple. Trigger the pipeline, using a pipeline run by Azure Devops.
 
-Note lot of the code snippets, i'm using, I got from [Grant Orchard blog](https://grantorchard.com/tango/cloud-assembly-api-getting-started/) so take a look at that, if you want to know more.
+Note most of the code snippets, i'm using, I got from [Grant Orchard blog](https://grantorchard.com/tango/cloud-assembly-api-getting-started/). 
 
 Before you begin, you need to have an API token, that can trigger the pipeline, and a Pipeline to run.
+
+I'm no expert in Azure Devops, so there are probably better ways of doing this. 
+
+The way the script works, is by first creating an env variable, with my Token.
+Then I use this, to get a Bearer token.
+And then I use the Bearer token, to trigger the pipeline. 
+
+The pipeline ID is easy to get, by copying part of the URL, when you are editing the pipeline.
+
+The Azure-pipeline.yml code looks like below. 
+Note you need to change the API_TOKEN and the PIPELINE to match your enviroment, to make it work. 
+
+```
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- script: |
+    export api_token=API_TOKEN
+    export bearer=`curl -X POST 'https://api.mgmt.cloud.vmware.com/iaas/api/login' -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{ 'refreshToken': '$api_token' }' | jq -r '.token'`
+    curl -X POST 'https://api.mgmt.cloud.vmware.com/pipeline/api/pipelines/PIPELINE_ID/executions' -H 'Content-Type: application/json' -H 'Authorization: Bearer '$bearer'' -d '{}'
+  displayName: 'Request pipeline'
+```
+
+But this is all it takes.
+
+When you comit and push a new file, to the repo.
+![commit](images/commit.png)
+
+It triggers a Pipelin run in Azure Devops
+![Azure](images/azure.png)
+
+That start's a Ubuntu container, that runs the script, that triggers the CodeStream pipeline.
+![CodeStream](images/codestream.png)
+
+This is just a simpel example. You can do it a lot more advanced, and pass parameters to the CodeStream pipeline, if you want to. But for my usecase, this was enough, and it's easily replicated, to other platforms, that can run the script, or just do a simple rest call.
+
 
 
 Photo by <a href="https://unsplash.com/@claybanks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clay Banks</a> on <a href="/s/photos/integration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
