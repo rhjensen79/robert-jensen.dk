@@ -5,6 +5,12 @@ tags : [automation, CI, CD, CICD, devops, hashicorp, packer, terraform, docker]
 draft: false
 thumbnail: "images/sven-mieke-fteR0e2BzKo-unsplash.jpg"
 ---
+Update 23/03/2021 : I have changed my container image, to be build using Gitlab, and pushed to my private Harbor registry, due to speed, and amount of pulls.
+It's public avaliable, so if you want to use it, pull it using 
+```
+docker pull registry.cmplab.dk/cmplab/autocontainer:latest
+```
+---
 I'm a big fan of using containers, whenever I do any form of automation. For me, it provides a simple way of having a consistant enviroment, where I always know, that the tools I use, are working.
 For some time, that way i have been using this, is by creating a docker image, for each git repo. This has also lead me to suddendly having quite a lot of images to maintain.
 
