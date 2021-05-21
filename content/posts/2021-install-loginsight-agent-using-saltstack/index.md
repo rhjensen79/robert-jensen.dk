@@ -7,13 +7,15 @@ draft: false
 ---
 For a POC i'm preparing for, I had the chance to look at bit more at [SaltStack](https://www.vmware.com/products/vrealize-automation/saltstack-config.html).
 
-I like the product, and what it can do, but I really need a usecase, to do anything usefull with it. It's the same with many other products, but with SaltStack, i'm just feeling it more.
+I like the product, and what it can do, but I really need a usecase, to do anything usefull with it. It's the same with many other products, but with SaltStack, i'm just feeling it more. So it was nice to have a goal this time :-) 
 
-So I wanted to share what I have done, for inspiration, for people just starting out with SaltStack or Salt.
+I wanted to share what I have done, for inspiration, for people just starting out with SaltStack or Salt.
+This usecase, is eash to replicate, and use for other deployments/configurations etc. 
 
-The usecase is to deploy [LogInsight](https://www.vmware.com/products/vrealize-log-insight.html) agent's on all my VM's.
+The usecase is to deploy [LogInsight](https://www.vmware.com/products/vrealize-log-insight.html) agent's on all my VM's. This being both Windows and Linux in one single job. 
 
 The reason this was a bit special, is that LogInsight itself, can manage the agent and configuration after deployment. So what I needed to do, wat to deploy the correct agent, and configurations file, and then let LogInsigt take over.
+In a normal deployment, I would let SaltStack, manage the configuration files, since this is one of the key benefits of the product imho. 
 
 
 ### The Code
@@ -111,7 +113,7 @@ So I keep alle the binaries in the agents folder, and the liagent.ini file and t
 {% set allready_installed = salt['grains.get']('loginsight_installed', False) %}
 {% if allready_installed == False %}
 ```
-To begin with, I create a grain "loginsight_installed" and set it to false.
+To begin with, I create a [grain](https://docs.saltproject.io/en/latest/topics/grains/index.html) "loginsight_installed" and set it to false.
 It then checks if it's false, and only runs the rest of the job, if it's false.
 This ensures that the install part of the job, is only run once.
 
@@ -133,7 +135,7 @@ loginsight_agent_install:
     {% endif %}
 ````
 
-I then copy the correct binary to the correct path on the minon.
+Then I copy the correct binary to the on the minon, and rename it.
 
 ```
   cmd.run:
@@ -147,6 +149,9 @@ I then copy the correct binary to the correct path on the minon.
       {% endif %}
 ```
 I then install the binary on the minon, using the OS specific installer.
+Debian = dpkg
+Redhat/Photon = rpm
+Wndows = msi
 
 ```
 loginsight_agent_configure:
@@ -167,6 +172,7 @@ set_loginsight:
       - loginsight_agent_configure
 ```
 Then I copy the liagent.ini file to the correct OS path, and set the grain to True, to keep the install part of the job from running again.
+The config file, contains the settings needed for the Agent to do the initial connection to the LogInsight server.
 
 ```
 {% else %}
@@ -180,7 +186,7 @@ loginsight_allready_configured:
 
 {% endif %}
 ```
-If the grain was True, then I log that it's already installed.
+If the grain was True, then I log that it's already installed, and skip the previsus steps. 
 And then I end the initial If run.
 
 ```
@@ -193,11 +199,11 @@ loginsight_agent_start_service:
       - liagentd
       {% endif %}
 ```
-And in the end, for all jobs, I check if the service is running, and sets it, if it's not. 
-Since the highstate job, is being run at a scheldule in my system, this also ensures, that if the services stops, that it get's started again. 
+And finalily in the end, I make sure the service is running. 
+Since the [highstate](https://docs.saltproject.io/en/latest/ref/states/highstate.html) job, is being run at a scheldule in my system, this also ensures, that if the services stops, it get's started again.
 
 So to sum up. This is an example, of a job, that can run on multiple OS, and which checks/updates a grain.
-I hope you found it usefull. Let me know on Twitter, if you can use it, for other types of intersting jobs :-) 
+I hope you found it usefull. Let me know on Twitter, if you can use it, and if you have done any jobs yourself, that could be usefull to share :-) 
 
 
 Photo by <a href="https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brett Jordan</a> on <a href="https://unsplash.com/s/photos/order?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
