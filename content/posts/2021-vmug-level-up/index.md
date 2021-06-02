@@ -4,7 +4,7 @@ date: 2021-06-01T10:58:05+02:00
 tags : [vmug, career, level up, git, docker, containers, packer, netlify, hugo]
 thumbnail: "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
 images: "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
-draft: true
+draft: false
 ---
 For the [Danish VMUG summermeeting](https://sommer2021.eventbrite.com/), on the 2 June 2021, I had the pleasure of presenting, "How to level up, as a vSphere admin".
 
