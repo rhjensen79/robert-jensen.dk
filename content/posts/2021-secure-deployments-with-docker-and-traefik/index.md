@@ -4,6 +4,7 @@ date: 2021-01-06T20:45:52+01:00
 tags : [traefik, docker, streamlit, python, letsencrypt, docker-compose, compose, web, hosting]
 draft: false
 thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.jpg"
+description: "How to use Traefik Reverse Proxy, to get access to applicatons, and secure them, using a custom dns name, and with a Let's Encrypt certificate, all automaticly"
 ---
 During the christmas holliday, I had some time, to look into [Traefik](https://traefik.io/traefik/) reverse proxy.
 

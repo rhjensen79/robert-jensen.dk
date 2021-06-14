@@ -4,6 +4,7 @@ date: 2021-01-19T09:35:55+01:00
 tags : [remote, demolab, vpn, rdp, vnc, ssh, apache, guacamole, ipsec, Traefik, docker, docker-compose, compose, hosting, app, homelab]
 draft: false
 thumbnail: "images/markus-spiske-uPXs5Vx5bIg-unsplash.jpg"
+description: "How to setup Tailscale, to get remote, seamless access to you home lab, or demo enviroment."
 ---
 
 My demolab, is not hostet at home, but remote. So i'm always dependend, on some kind of remote access.

@@ -5,6 +5,7 @@ tags : [cloud-init, cloudbase-init, vsphere, packer, automation, vRealizs Automa
 draft: false
 thumbnail: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.jpg"
 images: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.jpg"
+description: "How to automaticly install Cloudbase-Init onto Windows VM's using packer, with a configuration that works with vSphere and vRealize Automation"
 ---
 Ever since [vRealize Automation 8](https://www.vmware.com/products/vrealize-automation.html) was released, and we started using [Cloud-Init](https://cloudinit.readthedocs.io/en/latest/#), I have been looking at installing [CloudBase-Init](https://cloudbase.it/cloudbase-init/) for Windows as well, as part of my automated [Packer](https://www.packer.io) template deployment.
 

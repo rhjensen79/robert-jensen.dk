@@ -4,8 +4,9 @@ date: 2021-02-18T09:18:30+01:00
 tags : [automation, CI, CD, CICD, devops, hashicorp, packer, terraform, docker]
 draft: false
 thumbnail: "images/sven-mieke-fteR0e2BzKo-unsplash.jpg"
+description: "How to use Docker autobuild feature, to automaticly create and deploy container images to Docker Hub"
 ---
-Update 09/06/2021 : Docker has changed their licenses, so that AutoBuild, in no longer part of the free license.
+Update 09/06/2021 : Docker has changed their licenses, so that AutoBuild, in no longer part of the free license., due to it being exploided by Bitcoin miners. A shame, but something i fully understand.
 Update 23/03/2021 : I have changed my container image, to be build using Gitlab, and pushed to my private Harbor registry, due to speed, and amount of pulls.
 It's public avaliable, so if you want to use it, pull it using 
 ```

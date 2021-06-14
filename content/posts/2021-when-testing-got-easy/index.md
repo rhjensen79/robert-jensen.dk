@@ -5,6 +5,7 @@ tags : [testing, smtp, mail, python, docker]
 draft: false
 thumbnail: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
 images: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
+description: "How to automaticly create your own Docker container, with all the tools you need, and update it automaticly, when new verions get's realesed."
 ---
 Sometimes it's the simple tings, that are the hardest.
 For a small projekt, i'm working on, I have to test sending a lot of emails. A simple thing, but in my case, I don't have a local SMTP server. 
