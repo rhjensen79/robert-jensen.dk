@@ -6,6 +6,10 @@ draft: false
 thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
 description: "How to install Tailscale on an Unifi Edgerouter Lite, to make it a proxy endpoint, for the rest of your Lan"
 ---
+### Update
+06.08.2021 : Updated blog to version 1.12.3 - Tested and working.
+30.01.2021 : Updated blog to version 1.4.1 - Tested and working.
+
 [Tailscale](https://tailscale.com) is what I have been using, to get access to my demo enviroment, and allow clients to communicate with each other, across networks etc.
 But I have really missed, having it installed on my firewall, to make it act as a more traditional vpn.
 The firewall i'm using is an Ubitique Edgerouter lite.
@@ -22,7 +26,7 @@ Find the correct .mips.tgz file on this [page](https://pkgs.tailscale.com/stable
 
 SSH to the edgerouter, and download the file, using the following command
 ```
-curl https://pkgs.tailscale.com/stable/tailscale_1.4.1_mips.tgz --output tailscale_1.4.1_mips.tgz
+curl https://pkgs.tailscale.com/stable/tailscale_1.12.3_mips.tgz --output tailscale_1.12.3_mips.tgz
 ```
 
 Untar the file
@@ -56,8 +60,5 @@ sudo tailscale up --advertise-routes=10.0.0.0/24,10.0.1.0/24
 ```
 
 You should now be running Tailscale, on you Edgerouter, and be able to use all the greatness that involves :-) 
-
-### Update
-30.01.2021 : Updated blog to include version 1.4.1 and I have also tested it, and can confirm it works.
 
 <span>Photo by <a href="https://unsplash.com/@jjying?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JJ Ying</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
