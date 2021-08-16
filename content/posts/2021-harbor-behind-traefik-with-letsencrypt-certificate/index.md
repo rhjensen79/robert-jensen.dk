@@ -4,6 +4,7 @@ date: 2021-02-19T13:53:10+01:00
 tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse proxy, Container Registry, secure, https, certificate, Docker Hub, Rate Limit]
 draft: false
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.jpg"
+description: "How to setup Harbor Container Registry, behind Traefik Reverse Proxy, and how to get secure https Let's Encrypt certificates deploye automaticly"
 ---
 Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry, to put my containers, but also to use as a proxy, so I hit the Docker api a blit less.
 

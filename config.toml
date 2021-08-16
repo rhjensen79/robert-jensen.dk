@@ -21,7 +21,7 @@ pygmentsCodefencesGuessSyntax = true
 [params]
 title = "Robert-Jensen.dk"
 author = "Robert Jensen"
-description = "The views expressed here are my own"
+description = "A blog about VMware, DevOps, Technical stuff, and whatever I find find interesting. The views expressed here are my own"
 profilePicture = "/images/profile.jpg"
 keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python"
 favicon = "favicons/"
