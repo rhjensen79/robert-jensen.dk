@@ -144,7 +144,8 @@ When the installer is done, then run
 docker-compose down
 ```
 
-### Update 16.08.2021 : It seams that in later versions of Harbor (I'm running v2.3.1-1058f330) that the nginx.conf edit is not required. So if you can't find the "proxy_set_header X-Forwarded-Proto $scheme;" in your file, then skip this section. 
+### Update 16.08.2021 : 
+It seams that in later versions of Harbor (I'm running v2.3.1-1058f330) that the nginx.conf edit is not required. So if you can't find the "proxy_set_header X-Forwarded-Proto $scheme;" in your file, then skip this section. 
 
 Edit the nginx.conf file, to make Harbor work, behind the Traefik proxy.
 
