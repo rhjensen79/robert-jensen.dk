@@ -143,6 +143,8 @@ When the installer is done, then run
 docker-compose down
 ```
 
+### Update 16.08.2021 : It seams that in later versions of Harbor (I'm running v2.3.1-1058f330) that the nginx.conf edit is not required. So if you can't find the "proxy_set_header X-Forwarded-Proto $scheme;" in your file, then skip this section. 
+
 Edit the nginx.conf file, to make Harbor work, behind the Traefik proxy.
 
 ```
@@ -150,7 +152,7 @@ nano common/config/nginx/nginx.conf
 ```
 Find all lines with 
 ```
-all of proxy_set_header X-Forwarded-Proto $scheme;
+proxy_set_header X-Forwarded-Proto $scheme;
 ```
 And put a # in front so they look like this 
 ```
@@ -205,6 +207,9 @@ Traefik should now have published your Harbor installation, so it avaliable for 
 
 You can login with admin and the password, you set in your harbor.yml file, and you now have your own container registry.
 ![Harbor](images/harbor_login.png)
+
+If Trivy (or one of the other services) are complaning about resolving things on the internet, then edit the docker-compose.yml file, and find "dns_search: ." under the service, and # it. 
+I don't know why Harbor did this, and it's probably not best practice, but it's working for now, in my setup.
 
 If you want to test your new installation, then look at the Harbor website. I found this section of value, when I was trubleshooting : [Link](https://goharbor.io/docs/1.10/working-with-projects/working-with-images/pulling-pushing-images/)
 
