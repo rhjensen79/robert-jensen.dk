@@ -70,8 +70,6 @@ The purpose of the setup.sh file, is just to setup some Streamlit configurations
 Now all there is left, is to build the container. 
 I wanted to use [github Actions](https://github.com/features/actions) for this, so I created a .github/workflows/master.yml file containing all the steps. 
 ```
-# This is a basic workflow to help you get started with Actions
-
 name: Deploy
 
 # Controls when the workflow will run
@@ -106,16 +104,16 @@ jobs:
           sudo apt-get install pack-cli -y
           echo set pack builder
           pack config default-builder heroku/buildpacks:20
-          echo Registry login
+          echo Docker Registry login
           docker login -u ${{ secrets.DOCKER_HUB_USER }} -p ${{ secrets.DOCKER_HUB_PASSWORD }} ${{ secrets.REGISTRY }}
 
       # Runs a set of commands using the runners shell
       - name: Build
         run: |
           echo Build container
-          pack build registry.cmplab.dk/cmplab/first-app:${{ github.run_id }}
+          pack build ${{ secrets.REGISTRY }}/cmplab/first-app:${{ github.run_id }}
           echo Push container to registry
-          docker push registry.cmplab.dk/cmplab/first-app:${{ github.run_id }}
+          docker push ${{ secrets.REGISTRY }}/cmplab/first-app:${{ github.run_id }}
 ```
 
 It requires 3 secrets in your repo :
