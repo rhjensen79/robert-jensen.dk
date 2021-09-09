@@ -50,7 +50,7 @@ The continer is now also being build every night, and pushed to Github's repo, s
 Since this is a public repo, there is no charge, but let's see if that changes in the future.
 For now, i'm happy with my new hosted repo, can I can use without thinking about API limits, in my CI/CD pipelines.
 
-I will probably still save my private images in my private Harbor registry. But since most of my images are ok in being public, I can see myself using this a lot more in the future. Maybe even creating small repo's for single containers, to have an easy way of building, updating, and hosting them.
+I will still save my private images in my private Harbor registry, since it gives me some added services, with security scanning etc. But most of my images are ok in being public, and there I can see myself using this a lot more in the future. Maybe even creating small repo's for single containers, to have an easy way of building, updating, and hosting them.
 
 If you want to try yourself, then feel free to use my container image, or to fork the Repo to create your own version : https://github.com/rhjensen79/autocontainer 
 
