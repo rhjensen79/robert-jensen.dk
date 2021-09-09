@@ -16,6 +16,7 @@ I understand fully, that Docker is trying to find out, how to make money, but I 
 So I updated the blog, to show how to do this, using [Gitlab](https://gitlab.com) runners, with a local hosted [Harbor](https://goharbor.io) instance. 
 
 Some time ago [Github](https://github.com) announces, that you could also host Docker images, as part of their [Packages offering](https://github.com/features/packages).
+
 I have long been wanting to look more into github Actions, but have struggled to find a usecase. But here was one, that sounded like it could be usefull.
 
 This is a post, on how I changed to using Github Actions to build and host my Docker containers.
