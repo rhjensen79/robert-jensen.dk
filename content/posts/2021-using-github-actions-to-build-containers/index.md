@@ -21,7 +21,10 @@ I have long been wanting to look more into github Actions, but have struggled to
 
 This is a post, on how I changed to using Github Actions to build and host my Docker containers.
 
-First I disconnected the [Gitlab sync](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html), that I had been running, to have a synced repo, on both Github and Gitlab.
+First off. I did not change anything in my repo, from my last [blog](https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/).
+But if you are starting from scratch, then create a Dockerfile in your Github repo, and make sure it works. Then you are good to follow the rest of my guide.
+
+First I disconnected the [Gitlab sync](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html), that I had been running, to have a synced repo, on both Github and Gitlab. 
 
 Then I opened the repo on github, and chosed Actions on the top.
 ![Actions menu](images/actions_menu.png)
