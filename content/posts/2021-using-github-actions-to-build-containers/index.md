@@ -48,6 +48,8 @@ For now, i'm happy with my new hosted repo, can I can use without thinking about
 
 I will probably still save my private images in my private Harbor registry. But since most of my images are ok in being public, I can see myself using this a lot more in the future. Maybe even creating small repo's for single containers, to have an easy way of building, updating, and hosting them.
 
+If you want to try yourself, then feel free to use my container image, or to fork the Repo to create your own version : https://github.com/rhjensen79/autocontainer 
+
 Hope you found this usefull. 
 
 Photo by <a href="https://unsplash.com/@carrier_lost?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Taylor</a> on <a href="https://unsplash.com/s/photos/containers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
