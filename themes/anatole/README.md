@@ -7,7 +7,7 @@ Anatole is a beautiful minimalist two-column [hugo](https://gohugo.io/) theme ba
 
 ## Features
 
-Anatole's aims to be minimalistic and sleek, but still brings some great functionality.
+Anatole's aims to be minimalistic and sleek but still brings some great functionality.
 
 ### Features include
 
@@ -16,6 +16,7 @@ Anatole's aims to be minimalistic and sleek, but still brings some great functio
 - Navigation items
 - Pagination
 - Multilingual
+- RTL support
 - Post Thumbnails (optional)
 - 100⁄100 Google Lighthouse score
 - Google Analytics (optional)
@@ -33,6 +34,7 @@ Anatole's aims to be minimalistic and sleek, but still brings some great functio
 - Compliant to strict CSP
 - Syntax highlighting
 - Uses Hugo pipes to process assets
+- Series
 
 ## Preview the exampleSite
 
@@ -58,7 +60,7 @@ git submodule update --remote --merge
 
 ## Modifying the config.toml
 
-Ìn this section I'll discuss the custom parameters available within the `config.toml`. The complete [sample](https://github.com/lxndrblz/anatole/blob/master/exampleSite/config.toml) can be found in the exampleSite folder.
+Ìn this section, I'll discuss the custom parameters available within the `config.toml`. The complete [sample](https://github.com/lxndrblz/anatole/tree/master/exampleSite/config/_default) can be found in the exampleSite folder.
 
 ### Profile picture and slogan
 
@@ -70,14 +72,33 @@ description = "Call me Jane"
 profilePicture = "images/profile.jpg"
 ```
 
+Please note that the title under the `[params]` only adjusts the page title in the sidebar. If you wish to adjust the HTML title (i.e. name of the tab), you will have to adjust the Hugo's title variable, as shown in the `config.toml`.
+
+Please note that the slogan can be multi-lined (note the three quotes at the beginning and end):
+
+```toml
+[params]
+description = """
+Call me Jane
+Blogging from Texas
+"""
+```
+
 ### Favicon
 
-Add you own favicon in `static/favicons/favicon.ico`.
+Add your favicons to `static/favicons`. Anatole currently employs following favicon files:
+
+- `favicon.ico`
+- `favicon-16x16.png`
+- `favicon-32x32.png`
+- `apple-touch-icon.png` (resolution should be 180x180)
 
 ### Copyright
-By default the copyright, will show the current year, but you can change this by configuring the `copyright` parameter.
+
+By default, the copyright will show the authors name followed by the current year, but you can change this by configuring the `copyright` parameter. If this method is used, the string `{{ YEAR }}` will be replaced with the current year during site generation.
+
 ```toml
-copyright = "2020-2021"
+copyright = "2020-{{ YEAR }}"
 ```
 
 ### Navigation items
@@ -118,21 +139,27 @@ displayMode = "dark"
 ```
 
 ### Disable Theme Switcher
+
 You can easily disable the theme switcher from the `config.toml`. All you have to do is to set the parameter `disableThemeSwitcher` to `true`.
+
 ```toml
 [params]
 disableThemeSwitcher = true # Theme switcher is enabled by default
 ```
 
 ### Disable Animations
+
 You can easily disable the animations from the `config.toml`. All you have to do is to set the parameter `doNotLoadAnimations` to `true`.
+
 ```toml
 [params]
 doNotLoadAnimations = true # Animations are loaded by default
 ```
 
 ### Control the date Format
+
 You can change the default date formating for the `list.html`, the `single.html` and the `index.html`. Simply configure the matching parameters.
+
 ```toml
 [params]
 singleDateFormat = "Mon, Jan 2, 2006"
@@ -140,16 +167,50 @@ indexDateFormat = "Mon, Jan 2, 2006"
 listDateFormat = "Jan 2"
 ```
 
+### Changing the sidebar/content ratio
+
+By default, the content fills up 60% of the screen width on devices with a full HD resolution. If you want to change the ratio, adjust the `contentratio` variable. Let's, for example, set the content ratio to 70%:
+
+```toml
+[params]
+contentratio = 0.7
+```
+
+### Read-more Links
+
+You can enable read-more links for truncated posts by setting the `readMore = true`. The length of the preview is controlled by Hugo's `summarylength`. Read-more links are disabled by default.
+
+```toml
+[params]
+  readMore = true
+```
+
 ### Have a static page as a home page
+
 If you prefer having a static page as your home page rather than a listing of the latest posts, then make sure you leave the `mainSections` parameter blank:
+
 ```toml
 [params]
   mainSections = []
 ```
+
 Put any content into the `_index.md` file located in the content directory. If you want, you can also have some static text and the posts below. In such case, simply keep the `mainSections = ["post"]` and put any static content in the `_index.md`.
 
+### Rename post section
+
+If you want to have a different post section identifier, such as `/blog`, you can specify the section name using `postSectionName`:
+
+```toml
+[params]
+  postSectionName = "blog"
+```
+
+If the parameter is not set, it will default to `post`. Be sure to check the name of the folder containing your post files and change it accordingly in order for links to reflect the new post section name.
+
 ### Show full post content on the home page
+
 If you prefer the full content of your posts to appear on the home page rather than a summary of each post, then set the parameter `fullPostContent` to `true`.
+
 ```toml
 [params]
 fullPostContent = true
@@ -157,7 +218,7 @@ fullPostContent = true
 
 ### Multilingual support
 
-Anatole supports multilingual page setups. All you need to do is to add the languages to your 'config.toml'. For each Language you can set the custom options like title or description. It's important to include a `LanguageName`, as it will be displayed in the main menu.
+Anatole supports multilingual page setups. All you need to do is to add the languages to your 'config.toml'. For each language, you can set the custom options like title or description. It's important to include a `LanguageName`, as it will be displayed in the main menu.
 
 ```toml
 [Languages]
@@ -173,7 +234,7 @@ Anatole supports multilingual page setups. All you need to do is to add the lang
   LanguageName = "DE"
 ```
 
-There are two ways of translating your content either by adding a suffix in the filename eg. `mypost.de.md` or by setting a contentDir (a certain directory) for each language. [Link to the Hugo documentation](https://gohugo.io/content-management/multilingual/). If you want to use the option with the `contentDir`, you will have to add the `contentDir` parameter for each language:
+There are two ways of translating your content, either by adding a suffix in the filename, eg. `mypost.de.md`, or by setting a contentDir (a certain directory) for each language. [Link to the Hugo documentation](https://gohugo.io/content-management/multilingual/). If you want to use the option with the `contentDir`, you will have to add the `contentDir` parameter for each language:
 
 ```toml
 [languages]
@@ -207,6 +268,14 @@ url = "/de/about/"
 
 Anatole currently ships with support for some basic languages. Contributions for other language translations are welcome.
 
+### RTL support
+
+Anatole supports RTL languages and flip the whole theme for that. To enable the RTL-mode for a specific language, it's enough to write the following code in the language params.
+
+```toml
+LanguageDirection = "rtl"
+```
+
 ### :100: Google Lighthouse score
 
 The theme is optimized to adhere to the requirements checked for in the Lighthouse Audit. On my [personal site](https://www.alexbilz.com) I was able to reach a perfect 100⁄100 score.
@@ -222,21 +291,23 @@ disqusShortname = "XXX"
 
 ### Comments powered by Utteranc.es
 
-No comment section is shown on the `single.html` unless a `repo` is specified in the `config.toml` file. If uncertain how parameter to configure, check out the official [documentation}(https://utteranc.es/).
+No comment section is shown on the `single.html` unless a `repo` is specified in the `config.toml` file. If uncertain how parameter to configure, check out the official [documentation](https://utteranc.es/).
 
 ```toml
 [params.utterances]
 repo = "githubuser/reponame"
 issueTerm = "pathname"
 theme= "preferred-color-scheme"
-# label = 
+# label =
 ```
 
 Two notes on the security of Utteranc.es
-- If you are using a strict CSP, you'll have to add the domain to it. 
-- The script currently has no built-in integrity check, due to limitations of [Utterances](https://github.com/utterance/utterances/issues/40).
+
+- If you are using a strict CSP, you'll have to add the domain to it.
+- The script currently has no built-in integrity check due to limitations of [Utterances](https://github.com/utterance/utterances/issues/40).
 
 ### Comments powered by Commento
+
 You can use [Commento](https://commento.io/) as an alternative to Disqus. All you need to do is to configure a `CommentoURL`:
 
 ```toml
@@ -244,10 +315,22 @@ You can use [Commento](https://commento.io/) as an alternative to Disqus. All yo
 CommentoURL = "https://commento.example.com/js/commento.js"
 ```
 
+### Comments powered by Gitalk
+
+No comment section is shown on the `single.html` unless a `repo` is specified in the `config.toml` file. If uncertain how parameter to configure, check out the official [documentation](https://github.com/gitalk/gitalk).
+
+```toml
+[params.gitalk]
+clientID = "GitHub Application Client ID"
+clientSecret = "GitHub Application Client Secret"
+repo = "Repository name to store issues"
+owner = "GitHub repo owner"
+admin = "GitHub repo owner and collaborators, only these guys can initialize gitHub issues"
+```
+
 ### Disabling Comments Per Page
 
 Comments can be disabled per page by setting `disableComments: true` on the pages [Front Matter](https://gohugo.io/content-management/front-matter/)
-
 
 ### Google Analytics
 
@@ -257,7 +340,7 @@ To use Google Analytics, a valid tracking code has to be added. If you don't wan
 googleAnalytics = "UA-123-45"
 ```
 
-To use the modern Google Analytics 4, include the following under `[params]` replacing the id with your own.
+To use the modern Google Analytics 4, include the following under `[params]`, replacing the id with your own.
 
 ```toml
 [params]
@@ -293,13 +376,18 @@ Replace the hash with the one Google provided you.
 enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 ```
+
 ### Formspree Contact Form on the Contact page
+
 Step 1: Configure the `contactFormAction` in the `config.toml`
+
 ```toml
 [params]
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
 ```
-Step 2: Activate the `contact: true` or  `contact=true` in the frontmatter of a page. See `exampleSite/content/contact.html` as an example.
+
+Step 2: Activate the `contact: true` or `contact=true` in the frontmatter of a page. See `exampleSite/content/contact.html` as an example.
+
 ### Twitter Cards support
 
 In order to use the full functionality of Twitter cards, you will have to define a couple of settings in the `config.toml` and the frontmatter of a page.
@@ -316,21 +404,25 @@ To define a custom image of a page, you might want to add the following to the f
 ```toml
 images = ["post-cover.png"]
 ```
+
 ### Open Graph Support
 
 The [internal template for Open Graph protocol](https://gohugo.io/templates/internal/#open-graph) uses a mix of configuration variables; settings in `config.toml` and frontmatter of the page. In a nutshell, you will have to configure a taxonomies series.
 
 ### Post Thumbnails
+
 Thumbnails can be enabled easily by setting the `thumbnail` parameter in the frontmatter of a post to an image such as `"images/landscape.jpg"`.
+
 ```md
 +++
 ...
 tags = [
-    "thumbnail",
+"thumbnail",
 ]
 thumbnail= "images/landscape.jpg"
 +++
 ```
+
 Make sure to put the image in the `static/images/` directory.
 
 ### Custom CSS
@@ -360,7 +452,7 @@ You can add your custom JS files with the `customJs` parameter of the configurat
 customJs = ["js/hello.js", "js/world.js"]
 ```
 
-On the user-side it will look like this:
+On the user-side, it will look like this:
 
 ```text
 .
@@ -372,7 +464,7 @@ On the user-side it will look like this:
 
 `hello.js` and `world.js` will be bundled into a `custom.min.js`.
 
-You can also include links to remote javascript files (hosted on CDNs for example). But be aware, that integrity settings and minification won't be applied. Further make sure to adjust your CSP. You can load a remote script like this:
+You can also include links to remote javascript files (hosted on CDNs for example). But be aware that integrity settings and minification won't be applied. Further, make sure to adjust your CSP. You can load a remote script like this:
 
 ```toml
 [params]
@@ -397,7 +489,7 @@ enableMediumZoom = false
 
 ### Content Security Policy
 
-The theme is compliant with most strict CSP policies out of the box. A sample CSP for an Anatole-based site would look something like this:
+The theme is compliant with the most strict CSP policies out of the box. A sample CSP for an Anatole-based site would look something like this:
 
 ```text
 Content-Security-Policy "
@@ -435,9 +527,13 @@ You can configure the pages shown on the front page by altering the `mainSection
   mainSections = ["post", "docs"]
 ```
 
+### \_index.md and post section header
+
+You can place custom content, by creating `_index.md` markdown file within the content directory. An example can be found [here](https://github.com/lxndrblz/anatole/blob/exampleSite/content/english/_index.md). Uncomment the section as needed. This file `_index.md` also has a parameter called `mainSectionsTitle`, which lets you specify a header for the posts on the main page. This header will be styled and placed always after the content of the `_index.md` it self.
+
 ### Robots.txt
 
-If you want Hugo to generate a robots.txt, you will have to set the `enableRobotsTXT` in the `config.toml` to `true`. By default a robots.txt, which allows search engine crawlers to access to any page, will be generated. It will look like this:
+If you want Hugo to generate a robots.txt, you will have to set the `enableRobotsTXT` in the `config.toml` to `true`. By default, a robots.txt, which allows search engine crawlers to access to any page, will be generated. It will look like this:
 
 ```text
 User-agent: *
@@ -447,7 +543,7 @@ If certain sites should be excluded from being accessed, you might want to setup
 
 ### Syntax highlighting
 
-This theme has support for either Hugo's lightning-fast Chroma code highlighting. See the [Hugo docs](https://gohugo.io/content-management/syntax-highlighting/) for more information.
+This theme has support for Hugo's lightning-fast Chroma code highlighting. See the [Hugo docs](https://gohugo.io/content-management/syntax-highlighting/) for more information.
 
 To enable Chroma, add the following to your site parameters:
 
@@ -470,13 +566,106 @@ Include the newly generated `syntax.css` like a standard custom CSS script:
 customCss = ["css/syntax.css"]
 ```
 
+### Socials
+
+You can add social media based icon links under your profile picture by using the `socialIcons` parameter.
+
+[Font Awesome](https://fontawesome.com/) is used for the icons.
+
+If you are using brand icons, prefix the icon value with `fab` if you are using a standard icon use `fas` instead.
+
+Ordering in the `config.toml` will determine the display order on the webpage.
+
+#### Sample branded social entry
+
+```toml
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://de.linkedin.com/"
+```
+
+#### Sample standard social entry
+
+```toml
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:mail@example.com"
+```
+
+### RSS
+
+Hugo natively supports RSS. To generate a feed for a given page, append `index.xml` to the page URL.
+
+Note that the RSS feed at the base of your website will include all of the pages on your website. To only include posts in your RSS feed, generate the feed within the `posts/` subdirectory with the URL `posts/index.xml`.
+
+To only generate an RSS feed for your posts, disable the RSS output for the other page types:
+
+```toml
+[outputs]
+  home = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+```
+
+By default, the RSS feed contains a brief summary of each page. If you prefer to show the entire contents for each page, then use the `rssFullContent` parameter:
+
+```toml
+[params]
+rssFullContent = true
+```
+
+### External Redirect URLs
+
+You can create pages, which redirect to another (external) URL with a short delay. This can be useful for migrating previously indexed URLs, which no longer exist, or for communicating complex external URLs to your readers.
+
+You will have to define a `redirectUrl` in the markdown header of the post or page, which you want to forward. An example can be found in the [redirect.md](https://github.com/lxndrblz/anatole/blob/master/exampleSite/content/english/post/redirect.md). The page will be automatically redirected with a delay of one second.
+
+Additionally, you can include the `{{% loading %}}` shortcode, which will display a spinner on the page that will be redirected. If it does not display, make sure that unsafe mode is enabled for `markup.goldmark.renderer`.
+
+### Enable Table of Contents
+
+You can enable a table of contents on a per post basis by adding the following parameter into the front matter of the posts you want the table of contents to appear on.
+
+```md
++++
+...
+toc = true
++++
+```
+
+Please note that only "## H2 Headings" and "### H3 Headings" will appear in the table of contents.
+
+### Enabling Series
+
+You can enable series, which allows splitting up a huge post into a set of multiple blog posts that are still linked. This would also provide a unique link to the full series of blog posts. Each individual post in the series will also contain links to the other parts under the heading `Posts in this Series`.
+
+First, we need to enable the `series` taxonomy in the config.
+
+```toml
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+```
+
+With this enabled, we can now proceed to specify the series in the Front Matter of each post of that series.
+
+```md
+series: - series-name
+```
+
+If you want to share the full series, you can do so by sharing the link `<base-url>/series/<series-name>`
+
 ## License
 
 Anatole is licensed under the [MIT license](https://github.com/lxndrblz/anatole/blob/master/LICENSE).
 
 ## Maintenance
 
-This theme is maintained by its author [Alexander Bilz](https://github.com/lxndrblz) and with the help from these awesome [contributors](https://github.com/lxndrblz/anatole/graphs/contributors). Please open an issue/pull request if you want to contribute to making this theme better and more feature-complete. For PRs please make sure that they align with theme's goals: minimalism, speed and elegance.  
+This theme is maintained by its author [Alexander Bilz](https://github.com/lxndrblz) and with the help from these awesome [contributors](https://github.com/lxndrblz/anatole/graphs/contributors). Please open an issue/pull request if you want to contribute to making this theme better and more feature-complete. For PRs, please make sure that they align with the theme's goals: minimalism, speed and elegance.
 
 ## Sponsoring
 
@@ -484,9 +673,9 @@ If you like this theme, give it a star on GitHub, and consider supporting its de
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/lxndrblz/)
 
-
 ## Special Thanks 🎁
 
-- Go to [Cai Cai](https://github.com/hi-caicai), for the great Anatole Farbox theme that formed the foundation for this theme.
-- Go to [Kareya Saleh](https://unsplash.com/photos/tLKOj6cNwe0) for providing the profile picture in the exampleSite.
-- Go to [Ales Krivec](https://unsplash.com/photos/4miBe6zg5r0) for providing the thumbnail picture in the exampleSite post.
+- Go to [Cai Cai](https://github.com/hi-caicai), for the great Anatole [Farbox theme](https://github.com/hi-caicai/farbox-theme-Anatole) that formed the foundation for this theme.
+- Go to [Kareya Saleh](https://unsplash.com/photos/tLKOj6cNwe0) for providing the [profile picture](https://github.com/lxndrblz/anatole/blob/master/exampleSite/static/images/profile.jpg) used in the exampleSite.
+- Go to [Ales Krivec](https://unsplash.com/photos/4miBe6zg5r0) for providing the thumbnail picture used in the exampleSite [image-test post](https://github.com/lxndrblz/anatole/blob/master/exampleSite/content/english/post/image-test.md).
+- Go to [Tobias Ahlin](https://github.com/tobiasahlin) for his [SpinKit](https://github.com/tobiasahlin/SpinKit) that is used in the exampleSite [redirect post](https://github.com/lxndrblz/anatole/blob/master/exampleSite/content/english/post/redirect.md).
