@@ -3,7 +3,8 @@ title: "How to Level Up, as a vSphere admin"
 date: 2021-06-01T10:58:05+02:00
 tags : [vmug, career, level up, git, docker, containers, packer, netlify, hugo]
 thumbnail: "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
-images: "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
+images: 
+- "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
 draft: false
 description: "How to level up as a vSphere admin, is about the VMUG summer presentation, around this topic, on what tools to use, when you are a vSphere admin, to be better at your job"
 ---

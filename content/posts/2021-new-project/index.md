@@ -4,7 +4,8 @@ date: 2021-05-07T20:13:49+02:00
 tags : [New Project, Hugo, GoHugo, FastApi, Traefik, MongoDB, Dynamic, DB]
 draft: false
 thumbnail: "images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg"
-images: "images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg"
+images: 
+- "images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg"
 description: "Description, of my new project, where i use Hugo, FastAPI, Mongodb and some other tools, to list all the Crossfit and Non Crossfit boxes in the world"
 ---
 

@@ -4,7 +4,8 @@ date: 2021-03-19T10:48:02+01:00
 tags : [Bitwarden, env, envfiles, sync, cli, api, zsh, bash, automation, 1password]
 draft: false
 thumbnail: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
-images: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
+images: 
+- "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
 description: "How to store your enviroment variables in Bitwarden password manager, and get the onto your system, using Bitwarden CLI"
 ---
 Update : After posting this, I was told that Grand Orchard, had already written a similar post, around how to do the same, using [1Password](https://1password.com).

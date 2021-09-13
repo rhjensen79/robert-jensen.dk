@@ -4,7 +4,8 @@ date: 2021-09-09T13:20:37+02:00
 tags : [Docker, Github, Actions, Registry, hosting, cicd, Harbor, Gitlab]
 draft: false
 thumbnail: "images/ian-taylor-jOqJbvo1P9g-unsplash.jpg"
-images: "images/ian-taylor-jOqJbvo1P9g-unsplash.jpg"
+images: 
+- "images/ian-taylor-jOqJbvo1P9g-unsplash.jpg"
 description: "How to build and host Docker containers, using Github actions"
 ---
 Some time ago, I wrote a [blog](https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/), around how to easily build and host, [Docker](https://www.docker.com) containers using Dockers autobuild tools.

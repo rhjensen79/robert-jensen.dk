@@ -4,7 +4,8 @@ date: 2021-03-03T15:55:59+01:00
 tags : [testing, smtp, mail, python, docker]
 draft: false
 thumbnail: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
-images: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
+images: 
+- "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
 description: "How to automaticly create your own Docker container, with all the tools you need, and update it automaticly, when new verions get's realesed."
 ---
 Sometimes it's the simple tings, that are the hardest.

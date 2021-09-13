@@ -4,6 +4,8 @@ date: 2021-01-12T20:28:10+01:00
 tags : [ubitique, tailscale, edgerouter, vpn, network, network, ubnt, wireguard]
 draft: false
 thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
+images:
+- "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
 description: "How to install Tailscale on an Unifi Edgerouter Lite, to make it a proxy endpoint, for the rest of your Lan"
 ---
 ### Update
