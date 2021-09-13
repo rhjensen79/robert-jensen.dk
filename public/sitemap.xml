@@ -2,7 +2,196 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.robert-jensen.dk/tags/actions/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cicd/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/docker/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/github/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/gitlab/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/harbor/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/hosting/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/registry/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-using-github-actions-to-build-containers/</loc>
+    <lastmod>2021-09-09T13:20:37+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/buildpacks/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/containers/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/dockerfile/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/git/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/github-actions/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-hello-buildpacks-goodbye-dockerfiles/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/python/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/streamlit/</loc>
+    <lastmod>2021-09-01T13:55:17+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/0day/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/automation/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cve-2021-1675/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-disable-print-spooler-exploit/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/exploit/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/print-spooler/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/saltstack/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/service/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/spooler/</loc>
+    <lastmod>2021-07-01T19:42:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-auto-install-cloudbase-init/</loc>
+    <lastmod>2021-06-03T11:27:40+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cloud-init/</loc>
+    <lastmod>2021-06-03T11:27:40+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cloudbase-init/</loc>
+    <lastmod>2021-06-03T11:27:40+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/packer/</loc>
+    <lastmod>2021-06-03T11:27:40+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vrealizs-automation/</loc>
+    <lastmod>2021-06-03T11:27:40+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vsphere/</loc>
+    <lastmod>2021-06-03T11:27:40+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/career/</loc>
+    <lastmod>2021-06-01T10:58:05+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-vmug-level-up/</loc>
+    <lastmod>2021-06-01T10:58:05+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/hugo/</loc>
+    <lastmod>2021-06-01T10:58:05+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/level-up/</loc>
+    <lastmod>2021-06-01T10:58:05+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/netlify/</loc>
+    <lastmod>2021-06-01T10:58:05+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vmug/</loc>
+    <lastmod>2021-06-01T10:58:05+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/configuration/</loc>
+    <lastmod>2021-05-20T20:50:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-install-loginsight-agent-using-saltstack/</loc>
+    <lastmod>2021-05-20T20:50:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/loginsight/</loc>
+    <lastmod>2021-05-20T20:50:06+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/db/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/dynamic/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/fastapi/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/gohugo/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/mongodb/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/new-project/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-new-project/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/traefik/</loc>
+    <lastmod>2021-05-07T20:13:49+02:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/azure/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/codestream/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/devops/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/integrate/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/posts/2021-integrate-azure-devops-with-vmware-codestream/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/microsoft/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/vmware/</loc>
+    <lastmod>2021-03-22T08:22:25+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/1password/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/api/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/bash/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
     <loc>https://www.robert-jensen.dk/tags/bitwarden/</loc>
+    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
+  </url><url>
+    <loc>https://www.robert-jensen.dk/tags/cli/</loc>
     <lastmod>2021-03-19T10:48:02+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/env/</loc>
@@ -14,25 +203,13 @@
     <loc>https://www.robert-jensen.dk/posts/2021-env-files-and-bitwarden/</loc>
     <lastmod>2021-03-19T10:48:02+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/posts/</loc>
-    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/</loc>
-    <lastmod>2021-03-19T10:48:02+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/sync/</loc>
     <lastmod>2021-03-19T10:48:02+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/</loc>
+    <loc>https://www.robert-jensen.dk/tags/zsh/</loc>
     <lastmod>2021-03-19T10:48:02+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/docker/</loc>
-    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/mail/</loc>
-    <lastmod>2021-03-03T15:55:59+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/python/</loc>
     <lastmod>2021-03-03T15:55:59+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/smtp/</loc>
@@ -53,9 +230,6 @@
     <loc>https://www.robert-jensen.dk/tags/docker-hub/</loc>
     <lastmod>2021-02-19T13:53:10+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/harbor/</loc>
-    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/https/</loc>
     <lastmod>2021-02-19T13:53:10+01:00</lastmod>
   </url><url>
@@ -71,9 +245,6 @@
     <loc>https://www.robert-jensen.dk/tags/rate-limit/</loc>
     <lastmod>2021-02-19T13:53:10+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/registry/</loc>
-    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/reverse-proxy/</loc>
     <lastmod>2021-02-19T13:53:10+01:00</lastmod>
   </url><url>
@@ -83,31 +254,16 @@
     <loc>https://www.robert-jensen.dk/tags/security/</loc>
     <lastmod>2021-02-19T13:53:10+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/traefik/</loc>
-    <lastmod>2021-02-19T13:53:10+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/automation/</loc>
-    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/cd/</loc>
     <lastmod>2021-02-18T09:18:30+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/ci/</loc>
     <lastmod>2021-02-18T09:18:30+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/cicd/</loc>
-    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/devops/</loc>
-    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/</loc>
     <lastmod>2021-02-18T09:18:30+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/hashicorp/</loc>
-    <lastmod>2021-02-18T09:18:30+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/packer/</loc>
     <lastmod>2021-02-18T09:18:30+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/terraform/</loc>
@@ -132,9 +288,6 @@
     <lastmod>2021-01-19T09:35:55+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/homelab/</loc>
-    <lastmod>2021-01-19T09:35:55+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/hosting/</loc>
     <lastmod>2021-01-19T09:35:55+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/ipsec/</loc>
@@ -182,9 +335,6 @@
     <loc>https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/</loc>
     <lastmod>2021-01-06T20:45:52+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/streamlit/</loc>
-    <lastmod>2021-01-06T20:45:52+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/web/</loc>
     <lastmod>2021-01-06T20:45:52+01:00</lastmod>
   </url><url>
@@ -203,16 +353,10 @@
     <loc>https://www.robert-jensen.dk/tags/code/</loc>
     <lastmod>2020-12-12T15:18:34+00:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/github/</loc>
-    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/giving/</loc>
     <lastmod>2020-12-12T15:18:34+00:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-giving-back-for-the-first-time/</loc>
-    <lastmod>2020-12-12T15:18:34+00:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/hugo/</loc>
     <lastmod>2020-12-12T15:18:34+00:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/opensource/</loc>
@@ -233,16 +377,7 @@
     <loc>https://www.robert-jensen.dk/tags/salt/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/saltstack/</loc>
-    <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/vmware/</loc>
-    <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/vra/</loc>
-    <lastmod>2020-11-24T14:09:39+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/vsphere/</loc>
     <lastmod>2020-11-24T14:09:39+01:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/container/</loc>
@@ -286,9 +421,6 @@
   </url><url>
     <loc>https://www.robert-jensen.dk/about/</loc>
     <lastmod>2020-11-06T11:56:57+01:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/codestream/</loc>
-    <lastmod>2020-07-30T21:38:00+02:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/posts/2020-jenkins-and-codestream-csrf-fix/</loc>
     <lastmod>2020-07-30T21:38:00+02:00</lastmod>
@@ -365,9 +497,6 @@
     <loc>https://www.robert-jensen.dk/tags/zerotier/</loc>
     <lastmod>2019-10-09T09:05:00+02:00</lastmod>
   </url><url>
-    <loc>https://www.robert-jensen.dk/tags/azure/</loc>
-    <lastmod>2019-07-11T11:19:00+02:00</lastmod>
-  </url><url>
     <loc>https://www.robert-jensen.dk/tags/gcp/</loc>
     <lastmod>2019-07-11T11:19:00+02:00</lastmod>
   </url><url>
@@ -388,9 +517,6 @@
   </url><url>
     <loc>https://www.robert-jensen.dk/tags/pfsense/</loc>
     <lastmod>2019-07-04T15:04:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.robert-jensen.dk/tags/bash/</loc>
-    <lastmod>2019-05-03T20:57:00+02:00</lastmod>
   </url><url>
     <loc>https://www.robert-jensen.dk/posts/2019-duplicate-ipadress-on-packer-ubuntu-vms/</loc>
     <lastmod>2019-05-03T20:57:00+02:00</lastmod>

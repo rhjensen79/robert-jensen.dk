@@ -6,15 +6,101 @@
     <description>Recent content on Robert-Jensen.dk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Mar 2021 10:48:02 +0100</lastBuildDate><atom:link href="https://www.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 13:20:37 +0200</lastBuildDate><atom:link href="https://www.robert-jensen.dk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Github Actions to Build Containers (and host them)</title>
+      <link>https://www.robert-jensen.dk/posts/2021-using-github-actions-to-build-containers/</link>
+      <pubDate>Thu, 09 Sep 2021 13:20:37 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-using-github-actions-to-build-containers/</guid>
+      <description>Some time ago, I wrote a blog, around how to easily build and host, Docker containers using Dockers autobuild tools.
+After the blog post Docker both changed to using rate limits, for API calls, but also removed the Autobuild feature.
+I understand fully, that Docker is trying to find out, how to make money, but I am not a fan of the Rate limit.</description>
+    </item>
+    
+    <item>
+      <title>Hello Buildpacks, goodbye Dockerfiles</title>
+      <link>https://www.robert-jensen.dk/posts/2021-hello-buildpacks-goodbye-dockerfiles/</link>
+      <pubDate>Wed, 01 Sep 2021 13:55:17 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-hello-buildpacks-goodbye-dockerfiles/</guid>
+      <description>I might be late to the party, but recently I learned about Buildpacks.io and what they can do vs Dockerfiles, and I just had to try it out.
+If you never heard about Buildpacks, then it&amp;rsquo;s a way to package your application into a container, without using Dockerfiles.
+The benefits can be</description>
+    </item>
+    
+    <item>
+      <title>Disable Windows Print Spooler to avoid Exploit CVE-2021-1675</title>
+      <link>https://www.robert-jensen.dk/posts/2021-disable-print-spooler-exploit/</link>
+      <pubDate>Thu, 01 Jul 2021 19:42:06 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-disable-print-spooler-exploit/</guid>
+      <description>Update 7.7.2021 : There is now a patch avaliable. Please patch your systems, and only use this blog post, as a reference, on how to do configuration management, on multiple systems. And not as a way to fix this problem. https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527
+A new exploit, allowing remote code execution on Windows servers using the Print spoller service, has been released as CVE-2021-1675.</description>
+    </item>
+    
+    <item>
+      <title>Auto Install Cloudbase-Init</title>
+      <link>https://www.robert-jensen.dk/posts/2021-auto-install-cloudbase-init/</link>
+      <pubDate>Thu, 03 Jun 2021 11:27:40 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-auto-install-cloudbase-init/</guid>
+      <description>Ever since vRealize Automation 8 was released, and we started using Cloud-Init, I have been looking at installing CloudBase-Init for Windows as well, as part of my automated Packer template deployment.
+While Cloud-Init on Linux, is dead simple to install, the Windows version, has given me a lot of problems.</description>
+    </item>
+    
+    <item>
+      <title>How to Level Up, as a vSphere admin</title>
+      <link>https://www.robert-jensen.dk/posts/2021-vmug-level-up/</link>
+      <pubDate>Tue, 01 Jun 2021 10:58:05 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-vmug-level-up/</guid>
+      <description>For the Danish VMUG summermeeting, on the 2 June 2021, I had the pleasure of presenting, &amp;ldquo;How to level up, as a vSphere admin&amp;rdquo;.
+A presentation, around what tools/technologies, to look at, if you are doing infrastructure today, to prepare, for the future.
+This post, will be published, during the presentation, as part of the last demo.</description>
+    </item>
+    
+    <item>
+      <title>Install Loginsight agent using SaltStack</title>
+      <link>https://www.robert-jensen.dk/posts/2021-install-loginsight-agent-using-saltstack/</link>
+      <pubDate>Thu, 20 May 2021 20:50:06 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-install-loginsight-agent-using-saltstack/</guid>
+      <description>For a POC i&amp;rsquo;m preparing for, I had the chance to look at bit more at SaltStack.
+I like the product, and what it can do, but I really need a usecase, to do anything usefull with it. It&amp;rsquo;s the same with many other products, but with SaltStack, i&amp;rsquo;m just feeling it more.</description>
+    </item>
+    
+    <item>
+      <title>New Project</title>
+      <link>https://www.robert-jensen.dk/posts/2021-new-project/</link>
+      <pubDate>Fri, 07 May 2021 20:13:49 +0200</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-new-project/</guid>
+      <description>I love doing doing Crossfit, and before Covid19 hit, I was pretty active in my local Box.
+Crossfit boxes are split into 2 segments. The official affiliates, which is a part of the company Crossfit.com, and all the others, which offer functional training.
+For a new person, that wants to get into shape, and do some functinal training, then it&amp;rsquo;s probably hard to see the difference.</description>
+    </item>
+    
+    <item>
+      <title>Integrate Azure Devops With Vmware Codestream</title>
+      <link>https://www.robert-jensen.dk/posts/2021-integrate-azure-devops-with-vmware-codestream/</link>
+      <pubDate>Mon, 22 Mar 2021 08:22:25 +0100</pubDate>
+      
+      <guid>https://www.robert-jensen.dk/posts/2021-integrate-azure-devops-with-vmware-codestream/</guid>
+      <description>For a customer case, I had to show integration between Azure Devops, and VMware CodeStream.
+Since the Git endpoint in Code Stream, does not work with Azure DevOps Git repository, I had to find another way of doing the integration.
+The solution was quite simple. Trigger the pipeline, using a pipeline run by Azure Devops.</description>
+    </item>
+    
     <item>
       <title>Keeping .env files in sync using Bitwarden</title>
       <link>https://www.robert-jensen.dk/posts/2021-env-files-and-bitwarden/</link>
       <pubDate>Fri, 19 Mar 2021 10:48:02 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/posts/2021-env-files-and-bitwarden/</guid>
-      <description>I use multiple computers, and sometimes it can be hard, to keep everything in sync. Working documents are easy, but my .env files, has proven to be harder.
-I know there are tons of solutions for this, but since i&amp;rsquo;m a big fan of Bitwarden I thought I might as well, use that to store the data, from my .</description>
+      <description>Update : After posting this, I was told that Grand Orchard, had already written a similar post, around how to do the same, using 1Password.
+So if you are a 1Password user, then take a look at his blog
+ I use multiple computers, and sometimes it can be hard, to keep everything in sync.</description>
     </item>
     
     <item>
@@ -43,7 +129,7 @@ Everywhere I look, Harbor is mentioned, so that is the one, that I have been loo
       <pubDate>Thu, 18 Feb 2021 09:18:30 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/</guid>
-      <description>I&amp;rsquo;m a big fan of using containers, whenever I do any form of automation. For me, it provides a simple way of having a consistant enviroment, where I always know, that the tools I use, are working. For some time, that way i have been using this, is by creating a docker image, for each git repo.</description>
+      <description>Update 09/06/2021 : Docker has changed their licenses, so that AutoBuild, in no longer part of the free license., due to it being exploided by Bitcoin miners. A shame, but something i fully understand. Update 23/03/2021 : I have changed my container image, to be build using Gitlab, and pushed to my private Harbor registry, due to speed, and amount of pulls.</description>
     </item>
     
     <item>
@@ -62,7 +148,8 @@ Remote I use Tailscale for client VPN, as I have described, in an earlier post.<
       <pubDate>Tue, 12 Jan 2021 20:28:10 +0100</pubDate>
       
       <guid>https://www.robert-jensen.dk/posts/2021-tailscale-on-edgerouter/</guid>
-      <description>Tailscale is what I have been using, to get access to my demo enviroment, and allow clients to communicate with each other, across networks etc. But I have really missed, having it installed on my firewall, to make it act as a more traditional vpn. The firewall i&amp;rsquo;m using is an Ubitique Edgerouter lite.</description>
+      <description>Update 06.08.2021 : Updated blog to version 1.12.3 - Tested and working. 30.01.2021 : Updated blog to version 1.4.1 - Tested and working.
+Tailscale is what I have been using, to get access to my demo enviroment, and allow clients to communicate with each other, across networks etc. But I have really missed, having it installed on my firewall, to make it act as a more traditional vpn.</description>
     </item>
     
     <item>

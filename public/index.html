@@ -3,8 +3,8 @@
     <title> Robert Jensen | Robert-Jensen.dk </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="The views expressed here are my own">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="A blog about VMware, DevOps, Technical stuff, and whatever I find find interesting. The views expressed here are my own">
     
     <link rel="stylesheet"
           href="https://www.robert-jensen.dk/css/style.min.d98386e9809c4644e290afb256e8aad6d2ae6b1aefe82c504efd652e6642708d.css"
@@ -54,7 +54,7 @@
 <meta name="twitter:image" content="https://www.robert-jensen.dk/images/thom-holmes-k-xKzowQRn8-unsplash.jpg"/>
 
 <meta name="twitter:title" content="Robert-Jensen.dk"/>
-<meta name="twitter:description" content="The views expressed here are my own"/>
+<meta name="twitter:description" content="A blog about VMware, DevOps, Technical stuff, and whatever I find find interesting. The views expressed here are my own"/>
 
 
     
@@ -66,7 +66,7 @@
             <img src="https://www.robert-jensen.dk/images/profile.jpg" alt="profile picture">
             <h3 title=""><a href="/">Robert-Jensen.dk</a></h3>
             <div class="description">
-                <p>The views expressed here are my own</p>
+                <p>A blog about VMware, DevOps, Technical stuff, and whatever I find find interesting. The views expressed here are my own</p>
             </div>
         </div>
     </div>
@@ -166,6 +166,314 @@
         <div class="post  animated fadeInDown ">
             
             <div class="post-thumbnail">
+                <a href="/posts/2021-using-github-actions-to-build-containers/">
+                <img src="/images/ian-taylor-jOqJbvo1P9g-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-using-github-actions-to-build-containers/">Using Github Actions to Build Containers (and host them)</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Some time ago, I wrote a blog, around how to easily build and host, Docker containers using Dockers autobuild tools.
+After the blog post Docker both changed to using rate limits, for API calls, but also removed the Autobuild feature.
+I understand fully, that Docker is trying to find out, how to make money, but I am not a fan of the Rate limit.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Thu, Sep 9, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/docker/">Docker</a><a class="tag"
+                                   href="/tags/github/">Github</a><a class="tag"
+                                   href="/tags/actions/">Actions</a><a class="tag"
+                                   href="/tags/registry/">Registry</a><a class="tag"
+                                   href="/tags/hosting/">hosting</a><a class="tag"
+                                   href="/tags/cicd/">cicd</a><a class="tag"
+                                   href="/tags/harbor/">Harbor</a><a class="tag"
+                                   href="/tags/gitlab/">Gitlab</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-hello-buildpacks-goodbye-dockerfiles/">
+                <img src="/images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-hello-buildpacks-goodbye-dockerfiles/">Hello Buildpacks, goodbye Dockerfiles</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>I might be late to the party, but recently I learned about Buildpacks.io and what they can do vs Dockerfiles, and I just had to try it out.
+If you never heard about Buildpacks, then it&rsquo;s a way to package your application into a container, without using Dockerfiles.
+The benefits can be</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Wed, Sep 1, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/buildpacks/">buildpacks</a><a class="tag"
+                                   href="/tags/dockerfile/">dockerfile</a><a class="tag"
+                                   href="/tags/docker/">docker</a><a class="tag"
+                                   href="/tags/containers/">containers</a><a class="tag"
+                                   href="/tags/cicd/">cicd</a><a class="tag"
+                                   href="/tags/github/">github</a><a class="tag"
+                                   href="/tags/git/">git</a><a class="tag"
+                                   href="/tags/github-actions/">github actions</a><a class="tag"
+                                   href="/tags/python/">Python</a><a class="tag"
+                                   href="/tags/streamlit/">Streamlit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-disable-print-spooler-exploit/">
+                <img src="/images/nahel-abdul-hadi-flha0KwRrRc-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-disable-print-spooler-exploit/">Disable Windows Print Spooler to avoid Exploit CVE-2021-1675</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Update 7.7.2021 : There is now a patch avaliable. Please patch your systems, and only use this blog post, as a reference, on how to do configuration management, on multiple systems. And not as a way to fix this problem. https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527
+A new exploit, allowing remote code execution on Windows servers using the Print spoller service, has been released as CVE-2021-1675.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Thu, Jul 1, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/cve-2021-1675/">CVE-2021-1675</a><a class="tag"
+                                   href="/tags/print-spooler/">print spooler</a><a class="tag"
+                                   href="/tags/service/">service</a><a class="tag"
+                                   href="/tags/spooler/">spooler</a><a class="tag"
+                                   href="/tags/saltstack/">SaltStack</a><a class="tag"
+                                   href="/tags/automation/">automation</a><a class="tag"
+                                   href="/tags/0day/">0day</a><a class="tag"
+                                   href="/tags/exploit/">exploit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-auto-install-cloudbase-init/">
+                <img src="/images/jonathan-hanna-xgdsC0tRsPc-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-auto-install-cloudbase-init/">Auto Install Cloudbase-Init</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Ever since vRealize Automation 8 was released, and we started using Cloud-Init, I have been looking at installing CloudBase-Init for Windows as well, as part of my automated Packer template deployment.
+While Cloud-Init on Linux, is dead simple to install, the Windows version, has given me a lot of problems.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Thu, Jun 3, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/cloud-init/">cloud-init</a><a class="tag"
+                                   href="/tags/cloudbase-init/">cloudbase-init</a><a class="tag"
+                                   href="/tags/vsphere/">vsphere</a><a class="tag"
+                                   href="/tags/packer/">packer</a><a class="tag"
+                                   href="/tags/automation/">automation</a><a class="tag"
+                                   href="/tags/vrealizs-automation/">vRealizs Automation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-vmug-level-up/">
+                <img src="/images/jack-sloop-eYwn81sPkJ8-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-vmug-level-up/">How to Level Up, as a vSphere admin</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>For the Danish VMUG summermeeting, on the 2 June 2021, I had the pleasure of presenting, &ldquo;How to level up, as a vSphere admin&rdquo;.
+A presentation, around what tools/technologies, to look at, if you are doing infrastructure today, to prepare, for the future.
+This post, will be published, during the presentation, as part of the last demo.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Tue, Jun 1, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/vmug/">vmug</a><a class="tag"
+                                   href="/tags/career/">career</a><a class="tag"
+                                   href="/tags/level-up/">level up</a><a class="tag"
+                                   href="/tags/git/">git</a><a class="tag"
+                                   href="/tags/docker/">docker</a><a class="tag"
+                                   href="/tags/containers/">containers</a><a class="tag"
+                                   href="/tags/packer/">packer</a><a class="tag"
+                                   href="/tags/netlify/">netlify</a><a class="tag"
+                                   href="/tags/hugo/">hugo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-install-loginsight-agent-using-saltstack/">
+                <img src="/images/brett-jordan-YuQEEaNOgBA-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-install-loginsight-agent-using-saltstack/">Install Loginsight agent using SaltStack</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>For a POC i&rsquo;m preparing for, I had the chance to look at bit more at SaltStack.
+I like the product, and what it can do, but I really need a usecase, to do anything usefull with it. It&rsquo;s the same with many other products, but with SaltStack, i&rsquo;m just feeling it more.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Thu, May 20, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/saltstack/">SaltStack</a><a class="tag"
+                                   href="/tags/automation/">Automation</a><a class="tag"
+                                   href="/tags/loginsight/">LogInsight</a><a class="tag"
+                                   href="/tags/configuration/">Configuration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-new-project/">
+                <img src="/images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-new-project/">New Project</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>I love doing doing Crossfit, and before Covid19 hit, I was pretty active in my local Box.
+Crossfit boxes are split into 2 segments. The official affiliates, which is a part of the company Crossfit.com, and all the others, which offer functional training.
+For a new person, that wants to get into shape, and do some functinal training, then it&rsquo;s probably hard to see the difference.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Fri, May 7, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/new-project/">New Project</a><a class="tag"
+                                   href="/tags/hugo/">Hugo</a><a class="tag"
+                                   href="/tags/gohugo/">GoHugo</a><a class="tag"
+                                   href="/tags/fastapi/">FastApi</a><a class="tag"
+                                   href="/tags/traefik/">Traefik</a><a class="tag"
+                                   href="/tags/mongodb/">MongoDB</a><a class="tag"
+                                   href="/tags/dynamic/">Dynamic</a><a class="tag"
+                                   href="/tags/db/">DB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
+                <a href="/posts/2021-integrate-azure-devops-with-vmware-codestream/">
+                <img src="/images/clay-banks-LjqARJaJotc-unsplash.jpg" alt="Thumbnail image" loading="lazy">
+                </a>
+            </div>
+            
+            <div class="post-title">
+                <h3><a href="/posts/2021-integrate-azure-devops-with-vmware-codestream/">Integrate Azure Devops With Vmware Codestream</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>For a customer case, I had to show integration between Azure Devops, and VMware CodeStream.
+Since the Git endpoint in Code Stream, does not work with Azure DevOps Git repository, I had to find another way of doing the integration.
+The solution was quite simple. Trigger the pipeline, using a pipeline run by Azure Devops.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                            <span class="date"> Mon, Mar 22, 2021 
+                                             </span>
+                        
+                        <a class="tag"
+                                   href="/tags/azure/">Azure</a><a class="tag"
+                                   href="/tags/gitlab/">gitlab</a><a class="tag"
+                                   href="/tags/cicd/">CiCD</a><a class="tag"
+                                   href="/tags/vmware/">VMware</a><a class="tag"
+                                   href="/tags/codestream/">CodeStream</a><a class="tag"
+                                   href="/tags/integrate/">integrate</a><a class="tag"
+                                   href="/tags/devops/">DevOps</a><a class="tag"
+                                   href="/tags/git/">Git</a><a class="tag"
+                                   href="/tags/microsoft/">Microsoft</a><a class="tag"
+                                   href="/tags/vmware/">VMware</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="post  animated fadeInDown ">
+            
+            <div class="post-thumbnail">
                 <a href="/posts/2021-env-files-and-bitwarden/">
                 <img src="/images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg" alt="Thumbnail image" loading="lazy">
                 </a>
@@ -176,8 +484,9 @@
                 </h3>
             </div>
             <div class="post-content">
-                <div class="p_part"><p>I use multiple computers, and sometimes it can be hard, to keep everything in sync. Working documents are easy, but my .env files, has proven to be harder.
-I know there are tons of solutions for this, but since i&rsquo;m a big fan of Bitwarden I thought I might as well, use that to store the data, from my .</p></div>
+                <div class="p_part"><p>Update : After posting this, I was told that Grand Orchard, had already written a similar post, around how to do the same, using 1Password.
+So if you are a 1Password user, then take a look at his blog
+ I use multiple computers, and sometimes it can be hard, to keep everything in sync.</p></div>
             </div>
             <div class="post-footer">
                 <div class="meta">
@@ -190,7 +499,13 @@ I know there are tons of solutions for this, but since i&rsquo;m a big fan of Bi
                                    href="/tags/bitwarden/">Bitwarden</a><a class="tag"
                                    href="/tags/env/">env</a><a class="tag"
                                    href="/tags/envfiles/">envfiles</a><a class="tag"
-                                   href="/tags/sync/">sync</a>
+                                   href="/tags/sync/">sync</a><a class="tag"
+                                   href="/tags/cli/">cli</a><a class="tag"
+                                   href="/tags/api/">api</a><a class="tag"
+                                   href="/tags/zsh/">zsh</a><a class="tag"
+                                   href="/tags/bash/">bash</a><a class="tag"
+                                   href="/tags/automation/">automation</a><a class="tag"
+                                   href="/tags/1password/">1password</a>
                     </div>
                 </div>
             </div>
@@ -231,354 +546,37 @@ I could set one up, but then, I have to configure users, maybe MX records, and o
             </div>
         </div>
     
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/">
-                <img src="/images/everaldo-coelho-KPaSCpklCZw-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/">Installing Harbor Container Registry Behind Traefik Reverse Proxy With Let&#39;s Encrypt Certificate</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>Ever since Docker enforced their rate limit, I have been looking at using some other registry, to put my containers, but also to use as a proxy, so I hit the Docker api a blit less.
-Everywhere I look, Harbor is mentioned, so that is the one, that I have been looking at.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Fri, Feb 19, 2021 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/harbor/">Harbor</a><a class="tag"
-                                   href="/tags/traefik/">Traefik</a><a class="tag"
-                                   href="/tags/letsencrypt/">Letsencrypt</a><a class="tag"
-                                   href="/tags/registry/">Registry</a><a class="tag"
-                                   href="/tags/docker/">Docker</a><a class="tag"
-                                   href="/tags/security/">security</a><a class="tag"
-                                   href="/tags/proxy/">proxy</a><a class="tag"
-                                   href="/tags/reverse-proxy/">reverse proxy</a><a class="tag"
-                                   href="/tags/container-registry/">Container Registry</a><a class="tag"
-                                   href="/tags/secure/">secure</a><a class="tag"
-                                   href="/tags/https/">https</a><a class="tag"
-                                   href="/tags/certificate/">certificate</a><a class="tag"
-                                   href="/tags/docker-hub/">Docker Hub</a><a class="tag"
-                                   href="/tags/rate-limit/">Rate Limit</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2021-easy-updating-cdicd-tools/">
-                <img src="/images/sven-mieke-fteR0e2BzKo-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2021-easy-updating-cdicd-tools/">Easy Updating CI/CD Tools</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>I&rsquo;m a big fan of using containers, whenever I do any form of automation. For me, it provides a simple way of having a consistant enviroment, where I always know, that the tools I use, are working. For some time, that way i have been using this, is by creating a docker image, for each git repo.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Thu, Feb 18, 2021 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/automation/">automation</a><a class="tag"
-                                   href="/tags/ci/">CI</a><a class="tag"
-                                   href="/tags/cd/">CD</a><a class="tag"
-                                   href="/tags/cicd/">CICD</a><a class="tag"
-                                   href="/tags/devops/">devops</a><a class="tag"
-                                   href="/tags/hashicorp/">hashicorp</a><a class="tag"
-                                   href="/tags/packer/">packer</a><a class="tag"
-                                   href="/tags/terraform/">terraform</a><a class="tag"
-                                   href="/tags/docker/">docker</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2021-remote-access-to-demolab/">
-                <img src="/images/markus-spiske-uPXs5Vx5bIg-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2021-remote-access-to-demolab/">Remote Access to Demolab using Apache Guacamole</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>My demolab, is not hostet at home, but remote. So i&rsquo;m always dependend, on some kind of remote access. At home, I use a IPSEC Site2Site VPN, between my PFsense, and the Edgerouter lite, I have in my Demo enviroment.
-Remote I use Tailscale for client VPN, as I have described, in an earlier post.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Tue, Jan 19, 2021 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/remote/">remote</a><a class="tag"
-                                   href="/tags/demolab/">demolab</a><a class="tag"
-                                   href="/tags/vpn/">vpn</a><a class="tag"
-                                   href="/tags/rdp/">rdp</a><a class="tag"
-                                   href="/tags/vnc/">vnc</a><a class="tag"
-                                   href="/tags/ssh/">ssh</a><a class="tag"
-                                   href="/tags/apache/">apache</a><a class="tag"
-                                   href="/tags/guacamole/">guacamole</a><a class="tag"
-                                   href="/tags/ipsec/">ipsec</a><a class="tag"
-                                   href="/tags/traefik/">Traefik</a><a class="tag"
-                                   href="/tags/docker/">docker</a><a class="tag"
-                                   href="/tags/docker-compose/">docker-compose</a><a class="tag"
-                                   href="/tags/compose/">compose</a><a class="tag"
-                                   href="/tags/hosting/">hosting</a><a class="tag"
-                                   href="/tags/app/">app</a><a class="tag"
-                                   href="/tags/homelab/">homelab</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2021-tailscale-on-edgerouter/">
-                <img src="/images/jj-ying-8bghKxNU1j0-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2021-tailscale-on-edgerouter/">Tailscale on Ubitique Edgerouter</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>Tailscale is what I have been using, to get access to my demo enviroment, and allow clients to communicate with each other, across networks etc. But I have really missed, having it installed on my firewall, to make it act as a more traditional vpn. The firewall i&rsquo;m using is an Ubitique Edgerouter lite.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Tue, Jan 12, 2021 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/ubitique/">ubitique</a><a class="tag"
-                                   href="/tags/tailscale/">tailscale</a><a class="tag"
-                                   href="/tags/edgerouter/">edgerouter</a><a class="tag"
-                                   href="/tags/vpn/">vpn</a><a class="tag"
-                                   href="/tags/network/">network</a><a class="tag"
-                                   href="/tags/network/">network</a><a class="tag"
-                                   href="/tags/ubnt/">ubnt</a><a class="tag"
-                                   href="/tags/wireguard/">wireguard</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2021-secure-deployments-with-docker-and-traefik/">
-                <img src="/images/danielle-macinnes-Ehtk87Go0Wg-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2021-secure-deployments-with-docker-and-traefik/">Secure Deployments With Docker, Traefik and Let&#39;s Encrypt</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>During the christmas holliday, I had some time, to look into Traefik reverse proxy.
-The reason for me to use Traefik, is due to the automation, it delivers. It can automaticly detect deployments, and present them, and for my demo projects, that is exactly what I need.
-Optimal, I would deploy everything to a K8S cluster, but i&rsquo;m having some problems getting it working with Traefik.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Wed, Jan 6, 2021 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/traefik/">traefik</a><a class="tag"
-                                   href="/tags/docker/">docker</a><a class="tag"
-                                   href="/tags/streamlit/">streamlit</a><a class="tag"
-                                   href="/tags/python/">python</a><a class="tag"
-                                   href="/tags/letsencrypt/">letsencrypt</a><a class="tag"
-                                   href="/tags/docker-compose/">docker-compose</a><a class="tag"
-                                   href="/tags/compose/">compose</a><a class="tag"
-                                   href="/tags/web/">web</a><a class="tag"
-                                   href="/tags/hosting/">hosting</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2020-custom-dns-resolver-for-homelabs/">
-                <img src="/images/andrew-neel-1-29wyvvLJA-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2020-custom-dns-resolver-for-homelabs/">Custom DNS Resolver for Homelabs</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>Using custom dns servers, depending on enviroment, or resolving multiple internal domains, can be a real pain.
-You can setup host files, but it&rsquo;s a pain to manage. You can also setup your own DNS server, but if you are using company VPN etc, then it&rsquo;s not always the right DNS server, that is being used.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Sun, Dec 20, 2020 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/homelab/">homelab</a><a class="tag"
-                                   href="/tags/dns/">dns</a><a class="tag"
-                                   href="/tags/custom/">custom</a><a class="tag"
-                                   href="/tags/server/">server</a><a class="tag"
-                                   href="/tags/vpn/">vpn</a><a class="tag"
-                                   href="/tags/hosting/">hosting</a><a class="tag"
-                                   href="/tags/homelab/">homelab</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2020-giving-back-for-the-first-time/">
-                <img src="/images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2020-giving-back-for-the-first-time/">Giving Back for the First Time</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. I remember reading, how to get started doing this, but I see myself as a beginner, when it comes to coding, and find myself thinking, &ldquo;why would anybody want something, that I have done.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Sat, Dec 12, 2020 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/github/">Github</a><a class="tag"
-                                   href="/tags/giving/">Giving</a><a class="tag"
-                                   href="/tags/code/">code</a><a class="tag"
-                                   href="/tags/hugo/">Hugo</a><a class="tag"
-                                   href="/tags/opensource/">opensource</a><a class="tag"
-                                   href="/tags/theme/">theme</a><a class="tag"
-                                   href="/tags/web/">web</a><a class="tag"
-                                   href="/tags/website/">website</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
-        <div class="post  animated fadeInDown ">
-            
-            <div class="post-thumbnail">
-                <a href="/posts/2020-application-deployment-with-salt-and-vra/">
-                <img src="/images/shahadat-rahman-gnyA8vd3Otc-unsplash.jpg" alt="Thumbnail image" loading="lazy">
-                </a>
-            </div>
-            
-            <div class="post-title">
-                <h3><a href="/posts/2020-application-deployment-with-salt-and-vra/">Application Deployment With Salt and Vra</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>Here is a short post, around my first integration between SaltStack and vRealize Automation.
-Expect this to be updated, as I get more experience in SaltStack.
-Note VMware (The company I work for), bought SaltStack, so I don&rsquo;t know, what the future plans look like, and if this is the correct way going forward, to do this kind of integration.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                            <span class="date"> Tue, Nov 24, 2020 
-                                             </span>
-                        
-                        <a class="tag"
-                                   href="/tags/vra/">VRA</a><a class="tag"
-                                   href="/tags/saltstack/">SaltStack</a><a class="tag"
-                                   href="/tags/automation/">Automation</a><a class="tag"
-                                   href="/tags/docker/">Docker</a><a class="tag"
-                                   href="/tags/salt/">salt</a><a class="tag"
-                                   href="/tags/management/">management</a><a class="tag"
-                                   href="/tags/vmware/">vmware</a><a class="tag"
-                                   href="/tags/vsphere/">vsphere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
     <div class="pagination">
         
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/">1</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/page/2/">2</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/page/3/">3</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/page/4/">4</a>
-  </li>
-  <li class="page-item">
-    <a href="/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
-
-
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a href="#" aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a href="#" aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/5/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
     </div>
 
         </div>
