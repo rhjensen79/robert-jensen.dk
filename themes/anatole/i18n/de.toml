@@ -22,15 +22,3 @@ other = "Kommentare"
 
 [send]
 other = "Senden"
-
-[read_more]
-other = "weiterlesen"
-
-[name]
-other = "Name"
-
-[email]
-other = "E-Mail Adresse"
-
-[message]
-other = "Nachricht" 
