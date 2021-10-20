@@ -23,6 +23,7 @@ But I can't remember that last time, I was this exited about a new role, and I c
 So expect a lot more application focused content, from my side, in the future. 
 
 Btw. If you are interested in applying for my old role, then you can find it [here](https://www.linkedin.com/jobs/view/2751104475/?trk=eml-sjr-top-apply-cta&midToken=AQG1TdqRdNZw2Q&midSig=1bPXVPT9kZLpY1&trkEmail=eml-email_jobs_saved_job_reminder_01-null-0-mercado_redesign-null-4know%7Ekuztsuso%7E9d-null-jobs%7Eview)
+
 I highly recommend the company, the job, and the collegaues :-) 
 
 
