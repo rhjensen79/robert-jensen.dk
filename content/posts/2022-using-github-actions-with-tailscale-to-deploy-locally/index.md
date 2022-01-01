@@ -1,5 +1,5 @@
 ---
-title: "Using Github Actions With Tailscale to build in the cloud and Deploy Localy"
+title: "Using Github Actions With Tailscale to build in the cloud and Deploy Locally"
 date: 2021-12-27T19:46:27+01:00
 tags : [Github, Actions, Tailscale, Kubernetes, K8S, container, Docker, cloud, CI/CD]
 draft: false
