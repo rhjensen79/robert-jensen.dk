@@ -61,5 +61,12 @@ tkg-system           kapp-controller-779d9777dc-hf7fr                     1/1   
 ### Create Deployment
 
 
+### Cleanup
+
+To delete your running cluster, and cleanup just run
+```
+tanzu unmanaged-cluster delete firstcluster
+```
+
 Photo by <a href="https://unsplash.com/@matthaeus123?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">matthaeus</a> on <a href="https://unsplash.com/collections/1964905/open-doors?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
