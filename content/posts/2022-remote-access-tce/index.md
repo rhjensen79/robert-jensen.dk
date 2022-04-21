@@ -56,6 +56,32 @@ tkg-system           kapp-controller-779d9777dc-hf7fr                     1/1   
 ### Configure remote access
 
 
+### Create container
+
+Since i'm using an Arm Based M1, I cannot use the officiel Docker image on [Docker Hub](https://hub.docker.com/r/cloudflare/cloudflared). 
+Also to be honest, I have yet to make it work, exactly like I want to. But I think it has more to do with me, than the image.
+
+So I created a simple one, that works on Arm.
+
+The Dockerfile is simply 
+```
+FROM ubuntu:20.04 AS stage
+RUN apt-get update && \
+    apt-get install -y wget && \
+    apt-get upgrade -y && \
+    wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64.deb && \
+    dpkg -i cloudflared-linux-arm64.deb
+FROM stage
+CMD ["cloudflared","tunnel","run"]
+```
+
+I also created a Github Repo, that can build the image, and share it, so it's easy to access.
+You can find the repo, with all the details [here](https://github.com/TanzuDK/cloudflared)
+To pull the container image simply run 
+```
+docker pull ghcr.io/tanzudk/cloudflared:latest
+```
+Note that it's currently only for ARM, and not x86.
 
 
 ### Create Deployment
