@@ -55,11 +55,20 @@ tkg-system           kapp-controller-779d9777dc-hf7fr                     1/1   
 
 ### Configure remote access
 
+The thing that makes all of this work, is [Cloudflare](https://www.cloudflare.com) so you will need to have at least an account there, and a domain, controlled by them.
+
+It's free, and I have been using them, to host all my domains, for the last couple of years, so i can recommend you doing the same.
+
+Once that is done, you need to login, and access their [Zero Trust page.](https://dash.teams.cloudflare.com/)
+
+I seam to remember, having to setup a team the first time i opened the link, just follow the guide if that is the case for you. It's quite easy.
+
+
 
 ### Create container
 
 Since i'm using an Arm Based M1, I cannot use the officiel Docker image on [Docker Hub](https://hub.docker.com/r/cloudflare/cloudflared). 
-Also to be honest, I have yet to make it work, exactly like I want to. But I think it has more to do with me, than the image.
+Also to be honest, I have yet to make it work, exactly like I want it to. But I think it has more to do with me, than the image.
 
 So I created a simple one, that works on Arm.
 
