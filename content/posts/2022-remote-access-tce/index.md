@@ -123,36 +123,50 @@ This is CloudFlare pointing your new record, to the newly created tunnel id.
 ## Create container
 
 Since i'm using an Arm Based M1, I cannot use the officiel Docker image on [Docker Hub](https://hub.docker.com/r/cloudflare/cloudflared). 
-Also to be honest, I have yet to make it work, exactly like I want it to. But I think it has more to do with me, than the image.
+So I have created my own build, that works on both ARM and x86.
+If you are not running ARM, then feel free, to use the official one from Docker Hub.
 
-So I created a simple one, that works on Arm.
-
-The Dockerfile is simply 
-```
-FROM ubuntu:20.04 AS stage
-RUN apt-get update && \
-    apt-get install -y wget && \
-    apt-get upgrade -y && \
-    wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64.deb && \
-    dpkg -i cloudflared-linux-arm64.deb
-FROM stage
-CMD ["cloudflared","tunnel","run"]
-```
-
-I also created a Github Repo, that can build the image, and share it, so it's easy to access.
-You can find the repo, with all the details [here](https://github.com/TanzuDK/cloudflared)
-To pull the container image simply run 
+My version, can found [here](https://github.com/TanzuDK/cloudflared/pkgs/container/cloudflared) 
+and can be pulled by running
 ```
 docker pull ghcr.io/tanzudk/cloudflared:latest
 ```
-Note that it's currently only for ARM, and not x86.
-
-
 
 ## Deploy cloudFlare tunnel container
 
-To get access into the cluster, and access our service, we need to deploy the CloudFlared container.
-
+To get access to the cluster, we will create a deployment.
+Create a file `cloudflared.yaml` with the following content
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflared
+  namespace: cloudflare
+spec:
+  selector:
+    matchLabels:
+      app: cloudflared
+  template:
+    metadata:
+      labels:
+        app: cloudflared
+    spec:
+      containers:
+      - name: cloudflared
+        image: ghcr.io/tanzudk/cloudflared:latest
+        args:
+        - tunnel
+        # Points cloudflared to the config file, which configures what
+        # cloudflared will actually do. This file is created by a ConfigMap
+        # below.
+        - run
+        - --token
+        - YourToken
+```
+You need to replace `YourToken` with the token, we got in the `Setup Cloudflare tunnel` section.
+Note this is a modified version, of the official [one](https://github.com/cloudflare/argo-tunnel-examples/blob/master/named-tunnel-k8s/cloudflared.yaml), since I found this to work better for this usecase.
+I recommend you take a look at the official one, if you want to learn more, or maybe do more advanced configurations.
 
 
 ## Cleanup
