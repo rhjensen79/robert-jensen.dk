@@ -2,12 +2,12 @@
 title: "Remote Access to POD, without opening firewall, on Tanzu Community Edition"
 date: 2022-04-21T08:36:34+02:00
 tags : [Access, Ports, Firewall, Tanzu, Community edition, K8S, Kubernetes, Pods, Service, CloudFlare]
-draft: true
+draft: false
 thumbnail: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 images: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 description: "How to expose a local POD or Service, to the outside world, without opening any firewall ports"
 ---
-In tihs blog post, i'm gonna show you, how you can open access up to an internal pod, running on your own machine, to the outside world. All without opening any firewall ports, and with a valid certificate, and access control. And did i mention, it's all for free.
+In this blog post, i'm gonna show you, how you can use [Cloudflare](https://www.cloudflare.com) to access an internal pod, running on your own machine, to the outside world. All without opening any firewall ports, and with a valid certificate, and access control. And did I mention, it's all for free.
 
 I will be doing all on the [Tanzu Community edition](https://tanzucommunityedition.io). It will work on any Kubernetes distibution, Docker container etc. But when we got a cool free product, why not show it there :-) 
 
@@ -55,13 +55,13 @@ tkg-system           kapp-controller-779d9777dc-hf7fr                     1/1   
 
 ## Create Deployment
 
-To test this is working, we are going to create a simple Nginx deployment, and publish a service from it.
+To test our tunnel is working, we are going to create a simple Nginx deployment, and publish a service from it.
 
 To create the deployment run
 ```
 kubectl create deployment nginx --image=nginx
 ```
-To create a service, we can use, run
+And then expose the service by running
 ```
 kubectl create service clusterip nginx --tcp=80:80
 ```
@@ -69,7 +69,8 @@ To see all is running, run the following command
 ```
 kubectl get pod,svc
 ```
-This dhould provide the following result, showing you both have a Pod and a Service created and running.
+This should provide the following result, showing you both have a Pod and a Service created and running.
+Note there is no external ip, so it's only exposed internalily.
 ```
 NAME                         READY   STATUS    RESTARTS   AGE
 pod/nginx-6799fc88d8-tltz2   1/1     Running   0          34m
@@ -86,6 +87,8 @@ The thing that makes all of this work, is [Cloudflare](https://www.cloudflare.co
 
 It's free, and I have been using them, to host all my domains, for the last couple of years, so I can recommend you doing the same.
 
+They have quite a few usefull services, that I recommend you take a look at, but it's outside the scope of this blog post.
+
 Once that is done, you need to login, and access their [Zero Trust page.](https://dash.teams.cloudflare.com/)
 
 The first time you click the link, you have to setup a team. Just pick a name that makes sense to you, and select the Free plan, you you are prompted for it.
@@ -97,17 +100,21 @@ To create a new tunnel, select Access -> Tunnels from the left menu, and click `
 
 Give your tunnel a name. Note a tunnel can expose multiple endpoints, so the name should be generic. I will call mine `Tanzu Community Edition` 
 ![Tunnel Name](images/name_tunnel.png)
+
 Click `Save tunnel`
 
 You will now be presented with different enviroment options. The closest fit we have, is the Docker one. So click that one, and copy and save the command. We will need some of it later.
 ![Docker enviroment](images/docker_command.png)
-Note I have regenerated the token, so it's not working anymore. You should offcourse not share it on the internet.
+
+Note I have regenerated the token, so it's not working anymore. You should offcourse not share this on the internet.
 
 The last thing, we need to do, is to create a public url, to access our service on.
 
 I have chosen the url nginx.tanzu.dk and i'm pointing it to the internal service, within my k8s cluster.
+
 The cloudflare tunnel, will be deployed in the default namespace, so I can just reference the nginx service with http://nginx:80
-If i was in seperatete namespaces, then the url would look something like this http://nginx.namespace:80
+
+If you need to access different namespaces, then the url would look something like this http://nginx.namespace:80
 ![Setup DNS](images/setup_dns.png)
 
 Click `Save Tanzu Community Edition tunnel`
@@ -116,13 +123,15 @@ You should now see a new tunnel apear, with the status Inactive.
 Don't close the website, since we will use it later.
 ![Inaktive Tunnel](images/inaktive_tunnel.png)
 
-I you go the the DNS settings for your domain, you will see a new CNAME entry has been created, with the nginx.tanzu.dk domain name, pointing to a strange url.
+Open DNS settings for your domain, and see a new CNAME entry has been created, with the nginx.tanzu.dk domain name, pointing to a strange url.
+
 This is CloudFlare pointing your new record, to the newly created tunnel id.
 ![DNS CNAME](images/dns_cname.png)
 
 ## Create container
 
 Since i'm using an Arm Based M1, I cannot use the officiel Docker image on [Docker Hub](https://hub.docker.com/r/cloudflare/cloudflared). 
+
 So I have created my own build, that works on both ARM and x86.
 If you are not running ARM, then feel free, to use the official one from Docker Hub.
 
@@ -135,6 +144,7 @@ docker pull ghcr.io/tanzudk/cloudflared:latest
 ## Deploy cloudFlare tunnel container
 
 To get access to the cluster, we will create a deployment.
+
 Create a file `cloudflared.yaml` with the following content
 ```
 ---
@@ -142,7 +152,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cloudflared
-  namespace: cloudflare
 spec:
   selector:
     matchLabels:
@@ -157,21 +166,39 @@ spec:
         image: ghcr.io/tanzudk/cloudflared:latest
         args:
         - tunnel
-        # Points cloudflared to the config file, which configures what
-        # cloudflared will actually do. This file is created by a ConfigMap
-        # below.
         - run
         - --token
         - YourToken
 ```
-You need to replace `YourToken` with the token, we got in the `Setup Cloudflare tunnel` section.
+You need to replace the last line `YourToken` with the token, we got in the `Setup Cloudflare tunnel` section.
+
 Note this is a modified version, of the official [one](https://github.com/cloudflare/argo-tunnel-examples/blob/master/named-tunnel-k8s/cloudflared.yaml), since I found this to work better for this usecase.
+
 I recommend you take a look at the official one, if you want to learn more, or maybe do more advanced configurations.
 
+To deploy run 
+```
+kubectl apply -f cloudflared.yaml
+```
+After a couple of minutes, you should be able to see that your tunnel is up and running.
+![active tunnel](images/active_tunnel.png)
+
+And if you connect to the public url [http://nginx.tanzu.dk](http://nginx.tanzu.dk), we created earlier, you should now see a working Nginx website.
+Note it works both as http and https with a valid certificate.
+![Nginx](images/nginx.png)
+
+## summary
+
+So what we did here, was to create a new Cloudflare Tunnel, where we pointed the dns record nginx.tanzu.dk to the internal service https://nginx:80
+
+We then deployed a container, with the correct token, and then CloudFlare, made sure we could connect, and made sure we had valid certificates etc. 
+
+There are many other options to explore, in this offering, lige RBAC access to the applications, using you Github org, as auth. 
+But that is material for another blog post.
 
 ## Cleanup
 
-To delete your running cluster, and cleanup just run
+To cleanup and delete your running cluster, just run
 ```
 tanzu unmanaged-cluster delete firstcluster
 ```
