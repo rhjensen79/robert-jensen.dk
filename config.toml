@@ -51,11 +51,6 @@ title = "GitHub"
 url = "https://github.com/rhjensen79"
 
 [[params.socialIcons]]
-icon = "fab fa-gitlab"
-title = "GitLab"
-url = "https://gitlab.com/rhjensen79"
-
-[[params.socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:robert@robert-jensen.dk"
