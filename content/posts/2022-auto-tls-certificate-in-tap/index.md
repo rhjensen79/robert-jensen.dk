@@ -1,80 +1,121 @@
 ---
-title: "How I Deploy Apps - config"
-date: 2022-11-12T19:46:27+01:00
-tags : [Containers, Docker, Github, Kubernetes]
-draft: true
+title: "Auto generating TLS Certificates for Tanzu Application Platform (TAP) Workloads"
+date: 2022-10-27T19:46:27+01:00
+tags : [tanzu, tap, tls, certificate, knative, letsencrypt, cert-manager, tanzu application platform, secure]
+draft: false
 thumbnail: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
 images: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
-description: "How I deploy applications in my setup - configuration"
+description: "How to configure Tanzu Application Platform, to auto generate certificates for workloads"
 ---
 
-In my home setup, I have several tings running, and I thougt it could be interesting, for others, so hear how I do things, for inspiration.
-I don't do things the most easy way (to begin with), but I do like to make it as easy to maintain, going forward, and I always have a focus, on trying to learn, some of the techniques used in the "real world" where possible,
+As part of learning and using [Tanzu Application Platform (TAP)](https://tanzu.vmware.com/application-platform), I looked into auto generating TLS certificates, for the Workloads I provision.
 
-In this blog post, I will focus on an application, that I use daily. It's the dashboard app [Homer](https://github.com/bastienwirtz/homer)
-I use this as a easy bookmark page, for the services I use in my job, mostly when i'm doing demos, to have fast access to them.
+The full documentation for what I describe in this blog post, can be found [here](https://docs.vmware.com/en/Cloud-Native-Runtimes-for-VMware-Tanzu/2.0/tanzu-cloud-native-runtimes/GUID-auto-tls.html).
+This blog post, describes how I did it, with with the set of components, that I use.
 
-The app, is deployed on a single node Kubernetes cluster, in [Oracles free forever tier](https://www.oracle.com/cloud/free/) on a Ubuntu VM, running [MicroK8S](https://microk8s.io)
+TAP installs [Cert-Manager](https://cert-manager.io) as part of the installation.
+Other than being a really cool solution, it also made sense to use that, to generate the certificates I needed.
 
-## Config
+To be able to create new certificates, I created a Clusterissuer, that could generate certificates from [Let's Encyrpt](https://letsencrypt.org), by using DNS validation, via [CloudFlares](https://www.cloudflare.com) API.
 
-All config, and deployment for this app, are in [Github](https://github.com)
-In this case, it's in a priva Github org called TanzuDK (not that it really matters). The important things, is that it's in a private repo. This is important, when we get to the deployment part.
+This requires having your domains hosted by Cloudflare, and to generate a API key. It's easy, and very well decribed in Cert-Managers documentation [here](https://cert-manager.io/docs/configuration/acme/dns01/cloudflare/).
 
-The repo's file structure, looks like this (I excluded the .git directory). The app itself, is in the "assets" directory, so my focus in this post, is around the other files.
+The first thing I needed to do, was to create a secret, with the API key, to communicate, with Cloudflare.
+
+secret.yaml
 
 ```
-.
-├── .DS_Store
-├── .github
-│   └── workflows
-│       └── homer.yaml
-├── Dockerfile
-├── assets
-│   ├── .DS_Store
-│   ├── additional-page.yml.dist
-│   ├── config.yml
-│   ├── config.yml.dist
-│   ├── config.yml.dist.sample-sui
-│   ├── custom.css.sample
-│   ├── icons
-│   │   ├── argo-icon-color.png
-│   │   ├── favicon-16x16.png
-│   │   ├── favicon-32x32.png
-│   │   ├── firewall.png
-│   │   ├── grafana_icon.svg
-│   │   ├── harbor-icon-color.png
-│   │   ├── icon-any.png
-│   │   ├── icon-any.svg
-│   │   ├── icon-maskable.png
-│   │   ├── qnap.png
-│   │   ├── safari-pinned-tab.svg
-│   │   ├── saltstack-icon-white-fill.png
-│   │   ├── saltstack.png
-│   │   ├── tanzu-icon.png
-│   │   ├── tekton.png
-│   │   ├── vcd.png
-│   │   └── vcenter.png
-│   ├── manifest.json
-│   └── tools
-│       ├── sample.png
-│       └── sample2.png
-├── docker-compose.yml
-├── homer.yaml
-└── readme.md
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cloudflare-api-token
+  namespace: cert-manager
+type: Opaque
+stringData:
+  api-token: YOURAPITOKEN
 ```
 
-The Application is configured, using the config.yml file. So all I need to do, to add or edit, a bookmark, is to chainge that file, and maybe add am icon to the icons folder. and commit it. I will show the entire flow, in the end.
+Replace "YOURAPITOKEN" with your own token and run
 
-The other files are
+```
+kubectl apply -f secret.yaml
+```
 
-- Dockerfile
-This is the
+Then I created the ClusterIssuer, that was going to use that secret
 
-## Build
+clusterissuer.yaml
 
-## Deploy
+```
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt
+  namespace: cert-manager
+spec:
+  acme:
+    email: YOUREMAIL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-account-key
+    solvers:
+    - dns01:
+        cloudflare:
+          email: YOUREMAIL
+          apiTokenSecretRef:
+            name: cloudflare-api-token
+            key: api-token
+```
 
-## Access
+Replace "YOUREMAIL" with your own email and run
 
-## Demo
+```
+kubectl apply -f clusterissuer.yaml
+```
+
+You should now have the ability to create valid certificates.
+
+The next part, was configuring TAP to do this automaticly.
+
+For this, I needed to update 2 configmaps.
+I did this by creating the following file
+
+patch-certmanager-tls.yaml
+
+```
+data:
+  issuerRef: |
+    kind: ClusterIssuer
+    name: letsencrypt
+```
+
+Witch I used to update the config-certmanager configmap, by running the following
+
+```
+kubectl patch configmap config-certmanager -n knative-serving --patch-file patch-certmanager-tls.yaml
+```
+
+Then I created
+
+patch-network-tls.yaml
+
+```
+data:
+  auto-tls: Enabled
+  http-protocol: Redirected
+```
+
+To set TLS to be autogenerated, and to redirect to HTTPS.
+And used that to patch onfig-network configmap, by running
+
+```
+kubectl patch configmap config-network -n knative-serving --patch-file patch-network-tls.yaml
+```
+
+And that was it.
+All workloads, is now deployed with a valid certificate :-)
+![Certificate](images/certificate.png)
+
+Note if you wan't Tap-Gui to also use a HTTPS certificate, from cert-manager (You should) then the documentation, on how to do that is found [here](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-tap-gui-tls-enable-tls-existing-cert.html?hWord=N4IghgNiBcIC5gA4FoDmBXAlgAjhAziAL5A).
+
+Photo by <a href="https://unsplash.com/@bank_phrom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bank Phrom</a> on <a href="https://unsplash.com/s/photos/printing-press?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
