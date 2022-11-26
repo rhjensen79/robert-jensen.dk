@@ -7,6 +7,9 @@ summarylength = 50
 enableEmoji = true
 enableRobotsTXT = true
 
+[mermaid]
+enable = true
+
 # Enable Disqus
 #DisqusShortname = "disqus_OsGKFX7o4i"
 
@@ -32,6 +35,8 @@ images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification
 #googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 copyright = "2019-2021"
+relatedPosts = true
+numberOfRelatedPosts = 3
 
 ## Math settings
 [params.math]

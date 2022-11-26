@@ -2,3 +2,7 @@
 demo/
 .hugo/*
 !.hugo/version
+.hugo_build.lock
+/node_modules
+.devcontainer
+exampleSite/public/
