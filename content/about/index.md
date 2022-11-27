@@ -16,7 +16,7 @@ If you want to follow, what I'm doing, then follow me on github. That is where I
 
 ### Work
 
-- Lead cloud management specialist @VMware since 2012
+Been +10 years @vmware. Since 2021 it's been as a Lead solutions engineer in the Modern applications business unit.
 
 ### Interests
 
