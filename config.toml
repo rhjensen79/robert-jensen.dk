@@ -24,9 +24,9 @@ pygmentsCodefencesGuessSyntax = true
 [params]
 title = "Robert-Jensen.dk"
 author = "Robert Jensen"
-description = "A place for my random ramblings. Mostly about VMware, Containers, DevOps etc. but not limited to that :-) "
+description = "A place for my random ramblings. Mostly about VMware, Cloud Native, DevOps etc. but not limited to that :-) "
 profilePicture = "/images/profile.jpg"
-keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python"
+keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Cloud Native, Devops, Kubernetes"
 favicon = "favicons/"
 customCss = []
 customJs = []
