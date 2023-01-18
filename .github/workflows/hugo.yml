@@ -68,3 +68,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: Update Github profile with new posts
+        run: |
+          curl -H "Accept: application/vnd.github.everest-preview+json" \
+          -H "Authorization: token ${{ secrets.ACTION_TOKEN }}" \
+          --request POST \
+          --data '{"event_type": "update"}' \
+          https://api.github.com/repos/rhjensen79/rhjensen79/dispatches
