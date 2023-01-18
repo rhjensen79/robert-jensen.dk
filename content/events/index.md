@@ -5,7 +5,7 @@ relatedPosts: false
 #draft: true
 ---
 
-![Header](events.jpeg)
+![Header](events.jpg)
 
 ## 2023
 
