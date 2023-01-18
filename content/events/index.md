@@ -1,6 +1,7 @@
 ---
-title: "Public events where i'm speaking"
-date: 2023-01-18T11:56:57+01:00
+title: "Events where i'm speaking"
+date: 2023-01-17T11:56:57+01:00
+relatedPosts: false
 #draft: true
 ---
 
