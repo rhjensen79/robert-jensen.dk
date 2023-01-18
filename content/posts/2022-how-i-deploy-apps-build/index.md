@@ -3,6 +3,7 @@ title: "How I Deploy Apps - Build"
 date: 2022-11-12T19:46:27+01:00
 tags : [Containers, Docker, Github, Kubernetes]
 draft: true
+toc: true
 thumbnail: "images/randy-fath-ymf4_9Y9S_A-unsplash.jpg"
 #image: "images/randy-fath-ymf4_9Y9S_A-unsplash.jpg"
 description: "How I deploy applications in my setup - Build"

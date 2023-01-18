@@ -3,10 +3,12 @@ title: "How I Deploy Apps - config"
 date: 2022-11-12T19:46:27+01:00
 tags : [Containers, Docker, Github, Kubernetes]
 draft: true
+toc: true
 thumbnail: "images/john-barkiple-l090uFWoPaI-unsplash.jpg"
 #image: "images/john-barkiple-l090uFWoPaI-unsplash.jpg"
 description: "How I deploy applications in my setup - configuration"
 ---
+## Intro
 
 In my home setup, I have several tings running, and I thougt it could be interesting, for others, so hear how I deploy and manage it.
 

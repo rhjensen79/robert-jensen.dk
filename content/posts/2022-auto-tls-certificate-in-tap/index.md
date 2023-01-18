@@ -3,10 +3,12 @@ title: "Auto generating TLS Certificates for Tanzu Application Platform (TAP) Wo
 date: 2022-10-27T19:46:27+01:00
 tags : [tanzu, tap, tls, certificate, knative, letsencrypt, cert-manager, tanzu application platform, secure]
 draft: false
+toc: true
 thumbnail: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
 #image: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
 description: "How to configure Tanzu Application Platform, to auto generate certificates for workloads"
 ---
+## Intro
 
 As part of learning and using [Tanzu Application Platform (TAP)](https://tanzu.vmware.com/application-platform), I looked into auto generating TLS certificates, for the Workloads I provision.
 
@@ -15,6 +17,8 @@ This blog post, describes how I did it, with with the set of components, that I 
 
 TAP installs [Cert-Manager](https://cert-manager.io) as part of the installation.
 Other than being a really cool solution, it also made sense to use that, to generate the certificates I needed.
+
+## Solution
 
 To be able to create new certificates, I created a Clusterissuer, that could generate certificates from [Let's Encyrpt](https://letsencrypt.org), by using DNS validation, via [CloudFlares](https://www.cloudflare.com) API.
 

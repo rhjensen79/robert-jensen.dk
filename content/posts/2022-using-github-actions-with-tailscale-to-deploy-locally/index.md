@@ -3,10 +3,12 @@ title: "Using Github Actions With Tailscale to build in the cloud and Deploy Loc
 date: 2021-12-27T19:46:27+01:00
 tags : [Github, Actions, Tailscale, Kubernetes, K8S, container, Docker, cloud, CI/CD]
 draft: false
+toc: true
 thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to use Github Actions, to Create and build docker containers, and then deploy them localy using Tailscale, to Kubernetes"
 ---
+## Intro
 
 I have been a long time user of [GitLab](www.gitlab.com), due to the fact, that their runners was so easy to get working, and they allowed me to deploy them on prem, so I had access to my local enviorement.
 
@@ -19,7 +21,7 @@ And this was the solution that would allow me to use internal ressources, withou
 
 All I needed now, was a project, where I could combine the two.
 
-### The Project
+## The Project
 
 So this blog post, is not about the project. but I wanted to share a bit of light, on that it is i'm doing here.
 
@@ -30,7 +32,7 @@ The reason is that I also want to be able to use this, as a demo app, for my day
 
 The name of the app is [Perfect-Charge](https://github.com/rhjensen79/perfect-charge), and it's avaliable on [Github](https://github.com/rhjensen79/perfect-charge), if you want to check it out :-)
 
-### The job
+## The job
 
 ![action](images/action.png)
 

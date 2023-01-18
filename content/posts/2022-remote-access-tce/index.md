@@ -8,6 +8,8 @@ thumbnail: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 #image: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 description: "How to expose a local POD or Service, to the outside world, without opening any firewall ports"
 ---
+## Intro
+
 In this blog post, i'm gonna show you, how you can use [Cloudflare](https://www.cloudflare.com) to access an internal pod, running on your own machine, to the outside world. All without opening any firewall ports, and with a valid certificate, and access control. And did I mention, it's all for free.
 
 I will be doing all on the [Tanzu Community edition](https://tanzucommunityedition.io). It will work on any Kubernetes distibution, Docker container etc. But when we got a cool free product, why not show it there :-)

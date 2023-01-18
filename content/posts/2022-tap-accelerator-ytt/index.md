@@ -3,15 +3,20 @@ title: "Tanzu Application Platform Accelerator with YTT"
 date: 2022-04-11T08:18:44+02:00
 tags : [Tanzu, TAP, YTT, Carvel, VMware]
 draft: false
+toc: true
 thumbnail: "images/pro-church-media-7NGU2YqBue8-unsplash.jpg"
 #image: "images/pro-church-media-7NGU2YqBue8-unsplash.jpg"
 description: "How to use YTT with Tanzu Application Accelerators"
 ---
+## Intro
+
 [Tanzu Appliation Platform (TAP)](https://tanzu.vmware.com/application-platform) has the concept of [accelerators](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/index.html).
 
 Accelerators contain complete and runnable application code and deployment configurations, and can be used by developers to create new projects that follow enterprise standards, as stated in the [documentation](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/index.html).
 
 While learning TAP, I quickly saw, that a good way for me, would be to use the [Carvel](https://carvel.dev) project [YTT](https://carvel.dev/ytt/), to create my templates.
+
+## YTT
 
 YTT a really nice way, to customize your yaml files, with inputs from TAP. Here I can use variables instead of text search/replace, and also do a lot of logic, which is beyond this blog post.
 
