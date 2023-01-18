@@ -87,7 +87,13 @@ url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
   url = "/posts/"
 
   [[menu.main]]
-  name = "About"
+  name = "Events"
   weight = 2
+  identifier = "events"
+  url = "/events"
+
+  [[menu.main]]
+  name = "About"
+  weight = 3
   identifier = "about"
   url = "/about"
