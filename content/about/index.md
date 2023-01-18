@@ -2,7 +2,7 @@
 title: "About"
 date: 2020-11-06T11:56:57+01:00
 #draft: true
-thumbnail: "thom-holmes-k-xKzowQRn8-unsplash.jpg"
+thumbnail: "images/thom-holmes-k-xKzowQRn8-unsplash.jpg"
 ---
 Welcome to my little blog.
 
