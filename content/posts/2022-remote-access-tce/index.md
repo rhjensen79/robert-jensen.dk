@@ -3,6 +3,7 @@ title: "Remote Access to POD, without opening firewall, on Tanzu Community Editi
 date: 2022-04-21T08:36:34+02:00
 tags : [Access, Ports, Firewall, Tanzu, Community edition, K8S, Kubernetes, Pods, Service, CloudFlare]
 draft: false
+toc: true
 thumbnail: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 #image: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 description: "How to expose a local POD or Service, to the outside world, without opening any firewall ports"
