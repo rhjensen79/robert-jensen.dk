@@ -46,14 +46,24 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
 [[params.socialIcons]]
-icon = "fab fa-linkedin"
-title = "Linkedin"
-url = "https://www.linkedin.com/in/robertjensen/"
-
-[[params.socialIcons]]
 icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/rhjensen79"
+
+[[params.socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/rhjensen"
+
+[[params.socialIcons]]
+icon = "fab fa-mastodon"
+title = "Mastodon"
+url = "https://hachyderm.io/@rhjensen"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/robertjensen/"
 
 [[params.socialIcons]]
 icon = "fas fa-envelope"
@@ -65,15 +75,6 @@ icon = "fab fa-youtube"
 title = "Youtube"
 url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
 
-[[params.socialIcons]]
-icon = "fab fa-docker"
-title = "Docker"
-url = "https://hub.docker.com/u/robertjensen"
-
-[[params.socialIcons]]
-icon = "fab fa-reddit"
-title = "reddit"
-url = "https://www.reddit.com/user/Rhjensen79"
 
 ## Menu items
 
