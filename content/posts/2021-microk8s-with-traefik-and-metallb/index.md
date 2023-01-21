@@ -5,11 +5,14 @@ Description: "How to install MicroK8S with Traefik and MetalLB on Ubuntu 20.04"
 Tags: [k8s, kubernetes, traefik, metallb, reverse proxy, full guide, Tanzu, community]
 Categories: []
 DisableComments: false
+toc: true
 thumbnail: "images/kimi-lee-M3RVFbqKGu4-unsplash.jpg"
 #images: 
 #- "images/kimi-lee-M3RVFbqKGu4-unsplash.jpg"
 draft: false
 ---
+## Intro
+
 For some time, I have been writing about setting up [Traefik](https://traefik.io), with [docker](https://www.docker.com), and using it as a reverse proxy, for my workloads.
 
 I have been running a stand alone Docker host, for a while, but due to changes in my job (more about that in the next post), I wanted to change this to Kubernetes instead, to get a lot more hands on.
@@ -18,6 +21,8 @@ I have been a fan of Traefik, for quite some time. But getting it up and running
 
 I ended up asking on the [Traefik forum](https://community.traefik.io/t/k8s-traefik-and-lets-encrypt/11937) for help, and I got pointed to a [Youtube channel](https://www.youtube.com/c/wenkatn-justmeandopensource/featured), that had a lot of good videos, on how to set this up.
 A big thanks to [Ramon Tayag](https://community.traefik.io/u/ramon.tayag/summary) for pointing me this way.
+
+## Extrenal Trainings etc
 
 The playlist, that helped me, was [this one](https://youtube.com/playlist?list=PL34sAs7_26wNldKrBBY_uagluNKC9cCak), but there is so much good content in there, so I highly recommend giving the [channel](https://www.youtube.com/c/wenkatn-justmeandopensource/featured) a subscribe, and a lot of likes, for the awsome work.
 
@@ -199,7 +204,7 @@ spec:
   tls:
     certResolver: letsencrypt
 
-````
+```
 
 ## Closing
 
