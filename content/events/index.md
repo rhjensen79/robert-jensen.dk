@@ -11,6 +11,8 @@ thumbnail: "images/events.jpg"
 
     Topic : Backstage and Tanzu Application Platform
 
+    [Presentation](2023/2023_2_CNCF_TAP_Backstage.pdf)
+
 - 28.2.2023 : [CNCF community event in Copenhagen](https://community.cncf.io/events/details/cncf-copenhagen-presents-secure-and-manage-your-kubernetes-platform-like-a-pro/)
 
     Topic : Backstage and Tanzu Application Platform
