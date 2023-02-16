@@ -54,8 +54,8 @@ Before we begin, we need to create a Git repository. I have created one in Githu
 └── readme.md
 ```
 
-It uses [Kustomize](https://kustomize.io) for the structure, so if you are not familiar with that, then I recommend taking a look at the website.
-It has some good getting-started guides.
+It uses [Kustomize](https://kustomize.io) for the structure, so if you are not familiar with that, then I recommend taking a look at their website.
+They has some good getting-started guides.
 
 The concept is that I can point to overlays/production folder, for production workloads, and overlays/test for test workloads.
 All my base templates are in Apps and Base, and Kustomize can customize them, so they match the configuration I want in Production and Test.
