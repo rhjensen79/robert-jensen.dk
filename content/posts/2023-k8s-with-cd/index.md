@@ -57,6 +57,8 @@ Before we begin, we need to create a Git repository. I have created one in Githu
 It uses [Kustomize](https://kustomize.io) for the structure, so if you are not familiar with that, then I recommend taking a look at their website.
 They has some good getting-started guides.
 
+If you just want to get started fast, then I have included link to a basic sample repository, in the end of this blog post.
+
 The concept is that I can point to overlays/production folder, for production workloads, and overlays/test for test workloads.
 All my base templates are in Apps and Base, and Kustomize can customize them, so they match the configuration I want in Production and Test.
 
@@ -128,6 +130,11 @@ This means all my configurations, have been applied, without me having to do any
 Also if I change or add anything, it will be applied, within the next 5 minutes.
 
 Pretty neat, or what do you think?
+
+## Sample Repository
+
+For quick getting started, I have created a basic Sample repository, that you can fork and use to get started fast.
+[github.com/rhjensen79/tmc-cd-sampe-repo](https://github.com/rhjensen79/tmc-cd-sampe-repo)
 
 Photo by <a href="https://unsplash.com/@carlosaranda?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">carlos aranda</a> on <a href="https://unsplash.com/photos/QMjCzOGeglA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
