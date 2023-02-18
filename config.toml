@@ -34,7 +34,7 @@ mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification
 #googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-copyright = "2019-2023"
+copyright = "2019-{{ YEAR }}"
 relatedPosts = true
 numberOfRelatedPosts = 3
 
