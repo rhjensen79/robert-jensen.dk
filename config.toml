@@ -37,6 +37,7 @@ images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 copyright = "2019-{{ YEAR }}"
 relatedPosts = true
 numberOfRelatedPosts = 3
+contentratio = 0.8
 
 ## Math settings
 [params.math]
