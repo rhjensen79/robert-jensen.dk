@@ -38,6 +38,9 @@ copyright = "2019-{{ YEAR }}"
 relatedPosts = true
 numberOfRelatedPosts = 3
 contentratio = 0.8
+#hidesidebar = true
+gtagId = "G-545708GXNW"
+
 
 ## Math settings
 [params.math]
