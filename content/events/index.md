@@ -7,12 +7,16 @@ thumbnail: "images/events.jpg"
 ---
 ## 2023
 
+- May : VMware vForum
+
+- 28.2.2023 : [CNCF community event in Copenhagen](https://community.cncf.io/events/details/cncf-copenhagen-presents-secure-and-manage-your-kubernetes-platform-like-a-pro/)
+
+    Topic : Backstage and Tanzu Application Platform
+
+    [Presentation](2023/2023_2_CNCF_CPH_TAP_Backstage.pdf)
+
 - 2.2.2023 : [CNCF Community event in Aalborg](https://community.cncf.io/events/details/cncf-aalborg-presents-how-to-pave-paths-for-developers-and-ops-with-backstagetap-cartographer/)
 
     Topic : Backstage and Tanzu Application Platform
 
     [Presentation](2023/2023_2_CNCF_TAP_Backstage.pdf)
-
-- 28.2.2023 : [CNCF community event in Copenhagen](https://community.cncf.io/events/details/cncf-copenhagen-presents-secure-and-manage-your-kubernetes-platform-like-a-pro/)
-
-    Topic : Backstage and Tanzu Application Platform
