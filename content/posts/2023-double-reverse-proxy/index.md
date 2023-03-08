@@ -38,7 +38,8 @@ If you don't have this requirement, you can use cloudflare without Caddy, and ju
 
 ## Setup
 
-The environment is pretty simple.
+The environment is pretty simple, and you can find all files etc. in the Github repository [https://github.com/rhjensen79/double-reverse-proxy](https://github.com/rhjensen79/double-reverse-proxy)
+
 It consists of an env file, that contains the Cloudflare proxy token.
 
 A Caddyfile with the configuration for Caddy.
