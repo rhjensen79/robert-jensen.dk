@@ -169,6 +169,8 @@ Note that all URL have a valid certificate. This is provided by default by the `
 
 So it's a pretty cool solution, for exposing multiple endpoints, using Caddy as a reverse proxy.
 
+Remember if you want to try for yourself, then find all files in the [Github Repository](https://github.com/rhjensen79/double-reverse-proxy), made for this post.
+
 Hope this was useful, and thanks for reading this far.
 
 Photo by <a href="https://unsplash.com/@marcojodoin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marc-Olivier Jodoin</a> on <a href="https://unsplash.com/photos/-TQUERQGUZ8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
