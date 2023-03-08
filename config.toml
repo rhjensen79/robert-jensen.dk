@@ -7,9 +7,6 @@ summarylength = 50
 enableEmoji = true
 enableRobotsTXT = true
 
-[mermaid]
-enable = true
-
 # Enable Disqus
 #DisqusShortname = "disqus_OsGKFX7o4i"
 
@@ -40,6 +37,7 @@ numberOfRelatedPosts = 3
 contentratio = 0.8
 #hidesidebar = true
 gtagId = "G-545708GXNW"
+
 
 
 ## Math settings
