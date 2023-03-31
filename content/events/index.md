@@ -7,11 +7,17 @@ thumbnail: "images/events.jpg"
 ---
 ## 2023
 
-- May : VMware vForum
-
-- May : CNCF Aarhus
+- 15.5.2023 : [CNCF Aarhus](https://community.cncf.io/events/details/cncf-aarhus-presents-paving-the-path-to-production-with-backstagetap-cartographer/)
 
     Topic : Backstage and Tanzu Application Platform
+
+- 11.5.2023 : [VMware Technology Forum Oslo](https://www.vmwareforum.com/norway/)
+
+    Topic : Accelerate Your Modern Apps To Production
+
+- 9.5.2023 : [VMware Technology Forum Copenhagen](https://www.vmwareforum.com/denmark/)
+
+    Topic : Accelerate Your Modern Apps To Production
 
 - 28.2.2023 : [CNCF community event in Copenhagen](https://community.cncf.io/events/details/cncf-copenhagen-presents-secure-and-manage-your-kubernetes-platform-like-a-pro/)
 
