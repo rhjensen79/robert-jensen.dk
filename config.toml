@@ -7,8 +7,6 @@ summarylength = 50
 enableEmoji = true
 enableRobotsTXT = true
 
-# Enable Disqus
-#DisqusShortname = "disqus_OsGKFX7o4i"
 
 # Google Analytics
 # googleAnalytics = "UA-932020-4"
@@ -42,7 +40,7 @@ gtagId = "G-545708GXNW"
 repo = "rhjensen79/robert-jensen.dk"
 issueTerm = "pathname"
 theme= "github-light"
-label = "comment"
+# label = "comment"
 
 
 
