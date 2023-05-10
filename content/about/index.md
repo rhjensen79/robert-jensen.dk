@@ -19,10 +19,13 @@ Been +10 years @vmware. Since 2021 it's been as a Lead solutions engineer in the
 ### Interests
 
 - Family.
-  I have 2 small girls, that take up all my time. 
+
+  I have 2 small girls, that take up all my time.
 - MTB (when time permits)
 - Crossfit
-- Roadracing
+- Roadracing.
+
+  I ride a Yamaha R1 from 2004.
 - Neerdy stuff :-)
 
 <span>Photo by <a href="https://unsplash.com/@thomholmes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Thom Holmes</a> on <a href="https://unsplash.com/s/photos/about?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
