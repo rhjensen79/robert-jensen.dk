@@ -18,7 +18,8 @@ Been +10 years @vmware. Since 2021 it's been as a Lead solutions engineer in the
 
 ### Interests
 
-- Family
+- Family.
+  I have 2 small girls, that take up all my time. 
 - MTB (when time permits)
 - Crossfit
 - Roadracing
