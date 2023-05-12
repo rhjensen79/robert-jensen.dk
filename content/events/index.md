@@ -7,7 +7,7 @@ thumbnail: "images/events.jpg"
 ---
 ## 2023
 
-- 15.5.2023 : [CNCF Aarhus](https://community.cncf.io/events/details/cncf-aarhus-presents-paving-the-path-to-production-with-backstagetap-cartographer/)
+- 1.6.2023 : [CNCF Aarhus](https://community.cncf.io/events/details/cncf-aarhus-presents-paving-the-path-to-production-with-backstagetap-cartographer-1/)
 
     Topic : Backstage and Tanzu Application Platform
 
@@ -15,9 +15,13 @@ thumbnail: "images/events.jpg"
 
     Topic : Accelerate Your Modern Apps To Production
 
+    [Presentation](2023/VMware_Tech_forum_2023_Modern_apps_no.pdf)
+
 - 9.5.2023 : [VMware Technology Forum Copenhagen](https://www.vmwareforum.com/denmark/)
 
     Topic : Accelerate Your Modern Apps To Production
+
+    [Presentation](2023/VMware_Tech_forum_2023_Modern_apps_dk.pdf)
 
 - 28.2.2023 : [CNCF community event in Copenhagen](https://community.cncf.io/events/details/cncf-copenhagen-presents-secure-and-manage-your-kubernetes-platform-like-a-pro/)
 
