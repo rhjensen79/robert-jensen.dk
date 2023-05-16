@@ -42,7 +42,9 @@ issueTerm = "pathname"
 theme= "github-light"
 # label = "comment"
 
-
+[params.umami]
+serverURL = "umami.robert-jensen.dk"
+id = "23aa458c-ec3b-42e7-a212-c4b93f985260"
 
 ## Math settings
 [params.math]
@@ -103,3 +105,10 @@ url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
   weight = 3
   identifier = "about"
   url = "/about"
+
+[module]
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/lxndrblz/anatole -> ../../anatole"
+  [[module.imports]]
+    path = "github.com/lxndrblz/anatole"
+    disable = false
