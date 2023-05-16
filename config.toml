@@ -36,7 +36,7 @@ contentratio = 0.8
 #hidesidebar = true
 gtagId = "G-545708GXNW"
 
-[[params.utterances]]
+[params.utterances]
 repo = "rhjensen79/robert-jensen.dk"
 issueTerm = "pathname"
 theme= "github-light"
