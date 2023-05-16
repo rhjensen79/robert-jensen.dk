@@ -42,7 +42,7 @@ issueTerm = "pathname"
 theme= "github-light"
 # label = "comment"
 
-[[params.umami]]
+[params.umami]
 serverURL = "umami.robert-jensen.dk"
 id = "23aa458c-ec3b-42e7-a212-c4b93f985260"
 
