@@ -43,7 +43,7 @@ theme= "github-light"
 # label = "comment"
 
 [[params.umami]]
-serverURL = "https://umami.robert-jensen.dk"
+serverURL = "umami.robert-jensen.dk"
 id = "23aa458c-ec3b-42e7-a212-c4b93f985260"
 
 ## Math settings
