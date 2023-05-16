@@ -44,7 +44,7 @@ theme= "github-light"
 
 [params.umami]
 serverURL = "umami.robert-jensen.dk"
-id = "dc61d59c-8c79-49ae-8c46-3e8bc97cb149"
+id = "cf0287c1-904a-4677-a996-17710f55a7e2"
 
 ## Math settings
 [params.math]
