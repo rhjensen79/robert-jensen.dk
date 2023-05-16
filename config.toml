@@ -36,18 +36,18 @@ contentratio = 0.8
 #hidesidebar = true
 gtagId = "G-545708GXNW"
 
-[params.utterances]
+[[params.utterances]]
 repo = "rhjensen79/robert-jensen.dk"
 issueTerm = "pathname"
 theme= "github-light"
 # label = "comment"
 
-[params.umami]
+[[params.umami]]
 serverURL = "https://umami.robert-jensen.dk"
 id = "23aa458c-ec3b-42e7-a212-c4b93f985260"
 
 ## Math settings
-[params.math]
+[[params.math]]
 enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
