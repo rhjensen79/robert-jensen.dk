@@ -25,7 +25,7 @@ keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Clo
 favicon = "favicons/"
 customCss = []
 customJs = []
-mainSections = ["posts"]
+mainSections = ["post"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification
 #googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -92,7 +92,7 @@ url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
   name = "Posts"
   weight = 1
   identifier = "posts"
-  url = "/posts/"
+  url = "/post/"
 
   [[menu.main]]
   name = "Events"
