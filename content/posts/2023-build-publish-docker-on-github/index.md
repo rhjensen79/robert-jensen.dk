@@ -2,7 +2,7 @@
 title: "Build, Publish and host your Docker images on Github Registry"
 date: 2023-05-23T12:00:00+01:00
 tags : [Containers, Actions, Github, automation]
-draft: true
+draft: false
 toc: true
 thumbnail: "images/containers.jpg"
 description: "How to build, publish and host docker images on Github using Github actions"
@@ -11,7 +11,10 @@ description: "How to build, publish and host docker images on Github using Githu
 
 The other day, I replied to a tweet from @ChrisShort where he mentioned seing that [Github Container registry,](https://github.blog/2020-09-01-introducing-github-container-registry/) was being used more and more.
 
-I replied since I have been using it ever since [Docker Hub(https://hub.docker.com)] started with their [rate limiting](https://docs.docker.com/docker-hub/download-rate-limit/), and I was hit by it.
+I replied since I have been using it ever since [Docker Hub(https://hub.docker.com)] started with their [rate limiting](https://docs.docker.com/docker-hub/download-rate-limit/), and I was hit by it, in my small demo enviroment.
+My search for a replacement, lead me to Github Container Registry.
+
+A part of that move, it was natural, to also use Github Actions, to build the container images as well.
 
 ![tweet](images/tweet.jpg)
 
@@ -19,7 +22,7 @@ This blog post, is ment as a getting started guide, for building and publishing 
 
 ## Prerequisites
 
-I will be using the following:
+You will need the following:
 
 - A clean public [Github Repository](https://www.github.com)
 - [VS Code](https://code.visualstudio.com)
@@ -31,7 +34,10 @@ Start by creating a new Repository on [Github.com](https://www.github.com)
 ![Repository](images/repository.jpg)
 I call mine "MyApp" which will also be the default name of the container image, unless you change it.
 
-Remember to set it Public, and in my case, I also added a Readme file.
+Remember to set it Public, and add a Readme file, since we will use it in the demo, and it's always a good thing to have in your repository.
+
+You can still use the Registry, if you set it private, but then you need to setup autentification.
+This is probably a good thing going forward, if you have privagte projects, but it out of scope, for this blog post.
 
 Now clone it to your local computer and open it in VS Code.
 For me this is done by running
@@ -54,7 +60,7 @@ WORKDIR /app
 COPY README.md .
 ```
 
-This will create a container, that builds from Ubuntu 22.04 and includes the Readme file from my repository.
+This will create a container, from the Official Ubuntu 22.04 image, and includes the Readme file from the repository.
 
 ## Github actions
 
@@ -62,10 +68,13 @@ Let's create the automation, that builds and pushed the container to the registr
 
 Open your repository on github.com and select the actions tab.
 
-In the search field type container and click `configure` on the first one that show up with the name "Publish Docker Container"
+In the search field type `container` and click `configure` on the first one that show up with the name "Publish Docker Container"
+
+Note there are many others, but this one, will work for our usecase.
+
 ![Actions Search](images/github_actions_search.jpg)
 
-This will show a Yaml file, with all the steps required.
+You should now see a Yaml file, with all the steps required.
 We will modify it a bit, to make it a bit more usefull, for our setup.
 
 Remove line 9 and 10 about scheldule and cron and line 12 about branches.
@@ -172,6 +181,11 @@ jobs:
 
 Don't worry about not understanding all the steps. You can always dig deeper into it, when you get more comfortable with Github Actions, and the steps it runs thru.
 
+Note if you want to change the name of the container, then you want to change the `IMAGE_NAME` in the beginning of the file.
+By default it's using the repository name.
+
+Also by default, it uses your Github credentials, to push the finished container image, to the repo. This can also be changed, if you are using a different container registry.
+
 For now click "Commit Changes" and commit directly to the main branch.
 ![Commit_Action](images/commit_action.jpg)
 
@@ -183,7 +197,7 @@ Git pull
 
 to pull the newly comitted changes, and see the following directories and file apear `.github/workflows/docker-publish.yml` in your repo
 
-This is the actions file, from before.
+This is the actions YAML file, from before.
 
 If you need to change anything, you can just edit that file, and commit it.
 
@@ -193,14 +207,15 @@ But for now, let's focus on the first build.
 
 The Dockerfile in your repo should not be comitted yet.
 So start by doing that.
-Give it the message "Added Dockerfile" and click `Commit`
+Give it the commit message "Added Dockerfile" and click `Commit`
 ![Commit](images/initial_commit.jpg)
 
-Also click `Sync Changes`to push the commit to the remote Registry on Github.
+Also click `Sync Changes` to push the commit to the remote Registry on Github.
 
 Note i'm using the VS Code UI here, but you can do all of these steps, from the CLI, if you are more comfortable with that.
 
 To build a container with the changes, we have made so far, we need to add a tag.
+
 Click `Command ⌘ + Shift ⇧ + P` to open the command pallette, and type `Create Tag`
 ![create_tag](images/create_tag.jpg)
 
@@ -216,14 +231,14 @@ And say yes to sync the tag.
 After this, you can open your repository on github,.com, and select the Actions tab, and see a new workflow has been run.
 If you did everything right, then it should be green. If not, then it's time to trubleshoot. But don't worry, there is plenty of logs to help you.
 ![Action Run](images/actions_workflow.jpg)
-Note the name is the latest Commit message, and the verion is the tag.
+Note the Workflow Run name is the latest Commit message, and the version is the tag.
 
 ## Registry
 
-On the front page, of your repository, you should see `MyApp`under Packages.
+On the front page, of your Github repository, you should see `MyApp`under Packages.
 ![myapp](images/myapp.jpg)
 
-click on `MyApp`to go to the Package site.
+click on `MyApp` to go to the Package site.
 
 Here you can see all the information about yor container.
 ![package](images/package.jpg)
@@ -259,10 +274,18 @@ This allows me to run a bash shell, inside the container, to see the README.md f
 ## Ending
 
 So by this, you should have an idea on how to build, and host a container, on Github.
-When you want a new buils, simply commit and push your changes, and then create a new tag, and see it get build.
+
+When you want a new build, simply commit and push your changes, and then create a new tag, with a higher version, and see it get build.
 
 Note since Github Actions is running in x86 mode, this will not work for ARM based images.
-You can easely add that, to the Actions file, along with testing, scanning, signing etc.
+This is easy to change, and something i recommend doing.
+
+You can also make the workflow more advanced, by adding testing, scanning, signing etc.
+
+For most of these tasks, there already exist Github Action modules, that does this, that's easy to add.
+
 But thats for another blog post.
+
+If you found it usefull, then let me know in the comments below.
 
 Thanks for reading this far.
