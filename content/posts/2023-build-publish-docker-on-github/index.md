@@ -37,7 +37,7 @@ I call mine "MyApp" which will also be the default name of the container image, 
 Remember to set it Public, and add a Readme file, since we will use it in the demo, and it's always a good thing to have in your repository.
 
 You can still use the Registry, if you set it private, but then you need to setup autentification.
-This is probably a good thing going forward, if you have privagte projects, but it out of scope, for this blog post.
+This is probably a good thing going forward, if you have private projects, but it's out of scope, for this blog post.
 
 Now clone it to your local computer and open it in VS Code.
 For me this is done by running
@@ -60,7 +60,7 @@ WORKDIR /app
 COPY README.md .
 ```
 
-This will create a container, from the Official Ubuntu 22.04 image, and includes the Readme file from the repository.
+This will create a container, from the Official [Ubuntu 22.04 image](https://hub.docker.com/_/ubuntu), and includes the Readme file from the repository.
 
 ## Github actions
 
@@ -70,7 +70,7 @@ Open your repository on github.com and select the actions tab.
 
 In the search field type `container` and click `configure` on the first one that show up with the name "Publish Docker Container"
 
-Note there are many others, but this one, will work for our usecase.
+Note there are many others Actions, but this one, will work for our usecase.
 
 ![Actions Search](images/github_actions_search.jpg)
 
@@ -184,7 +184,11 @@ Don't worry about not understanding all the steps. You can always dig deeper int
 Note if you want to change the name of the container, then you want to change the `IMAGE_NAME` in the beginning of the file.
 By default it's using the repository name.
 
+I suggest leaving it as is for now.
+
 Also by default, it uses your Github credentials, to push the finished container image, to the repo. This can also be changed, if you are using a different container registry.
+
+!!! Remember not to put secrets in your Public (or private) git repository, if you chose another repository at a later time.
 
 For now click "Commit Changes" and commit directly to the main branch.
 ![Commit_Action](images/commit_action.jpg)
@@ -273,16 +277,16 @@ This allows me to run a bash shell, inside the container, to see the README.md f
 
 ## Ending
 
-So by this, you should have an idea on how to build, and host a container, on Github.
+So by now, you should have an idea on how to build, and host a container, on Github.
 
 When you want a new build, simply commit and push your changes, and then create a new tag, with a higher version, and see it get build.
 
 Note since Github Actions is running in x86 mode, this will not work for ARM based images.
-This is easy to change, and something i recommend doing.
+This is easy to change, and something I recommend doing.
 
 You can also make the workflow more advanced, by adding testing, scanning, signing etc.
 
-For most of these tasks, there already exist Github Action modules, that does this, that's easy to add.
+For most of these tasks, there already exist Github Action modules, that does this, and they are easy to add.
 
 But thats for another blog post.
 
