@@ -14,7 +14,7 @@ The other day, I replied to a tweet from [@ChrisShort](https://twitter.com/Chris
 I replied since I have been using it ever since [Docker Hub(https://hub.docker.com)] started with their [rate limiting](https://docs.docker.com/docker-hub/download-rate-limit/), and I was hit by it, in my small demo enviroment.
 My search for a replacement, lead me to Github Container Registry.
 
-A part of that move, it was natural, to also use Github Actions, to build the container images as well.
+A part of that move, it was natural, to also use [Github Actions](https://github.com/features/actions), to build the container images as well.
 
 ![tweet](images/tweet.jpg)
 
@@ -26,7 +26,7 @@ You will need the following:
 
 - A clean public [Github Repository](https://www.github.com)
 - [VS Code](https://code.visualstudio.com)
-- Docker installed a place, where I can test the image
+- Docker installed, so you can test the image
 
 ## Repository
 
