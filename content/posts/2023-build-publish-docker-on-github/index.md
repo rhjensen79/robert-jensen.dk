@@ -20,6 +20,8 @@ A part of that move, it was natural, to also use [Github Actions](https://github
 
 This blog post, is ment as a getting started guide, for building and publishing Docker images to Github Container registry, fully automated using [Github Actions](https://github.com/features/actions).
 
+Note if you want to look at my samle repo for reference, you can find it here [https://github.com/rhjensen79/MyApp](https://github.com/rhjensen79/MyApp)
+
 ## Prerequisites
 
 You will need the following:
