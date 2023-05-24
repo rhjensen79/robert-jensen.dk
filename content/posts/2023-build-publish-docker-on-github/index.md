@@ -9,7 +9,7 @@ description: "How to build, publish and host docker images on Github using Githu
 ---
 ## Intro
 
-The other day, I replied to a tweet from @ChrisShort where he mentioned seing that [Github Container registry,](https://github.blog/2020-09-01-introducing-github-container-registry/) was being used more and more.
+The other day, I replied to a tweet from [@ChrisShort](https://twitter.com/ChrisShort) where he mentioned seing that [Github Container registry,](https://github.blog/2020-09-01-introducing-github-container-registry/) was being used more and more.
 
 I replied since I have been using it ever since [Docker Hub(https://hub.docker.com)] started with their [rate limiting](https://docs.docker.com/docker-hub/download-rate-limit/), and I was hit by it, in my small demo enviroment.
 My search for a replacement, lead me to Github Container Registry.
