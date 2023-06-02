@@ -11,7 +11,7 @@ thumbnail: "images/events.jpg"
 
     Topic : Backstage and Tanzu Application Platform
 
-    Presentation](2023/2023_6_CNCF_TAP_Backstage.pdf)
+    [Presentation](2023/2023_6_CNCF_TAP_Backstage.pdf)
 
 - 11.5.2023 : [VMware Technology Forum Oslo](https://www.vmwareforum.com/norway/)
 
