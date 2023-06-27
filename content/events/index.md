@@ -7,6 +7,10 @@ thumbnail: "images/events.jpg"
 ---
 ## 2023
 
+- 20-21.9.2023 : [TechX 300 2023](https://www.eventbrite.com/e/techx-300-2023-tickets-647990355597)
+
+    Topic : What i wish my mom had told me about containers
+
 - 1.6.2023 : [CNCF Aarhus](https://community.cncf.io/events/details/cncf-aarhus-presents-paving-the-path-to-production-with-backstagetap-cartographer-1/)
 
     Topic : Backstage and Tanzu Application Platform
