@@ -16,6 +16,14 @@ thumbnail: "images/events.jpg"
 
     Topic : What i wish my mom had told me about containers
 
+- 30.8.2023 : [VMware Klubben Copenhagen](https://www.atea.dk/events/2023/vmware-klubben-modernisering-og-automatisering-tanzu-aria-og-veba-i-fokus-i-ballerup/)
+
+    Topic : Accelerér din cloud-rejse med Tanzu Kubernetes Grid
+
+- 29.8.2023 : [VMware Klubben Aarhus](https://www.atea.dk/events/2023/vmware-klubben-modernisering-og-automatisering-tanzu-aria-og-veba-i-fokus-i-aarhus/)
+
+    Topic : Accelerér din cloud-rejse med Tanzu Kubernetes Grid
+
 - 15.8.2023 - 3.10.2023 : [Tanzu CNA Webinars](https://webinars.tanzu.dk)
 
     I'm running a series of 6 webinars, around Cloud Native Applications.
