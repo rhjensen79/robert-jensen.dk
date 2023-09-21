@@ -22,6 +22,8 @@ thumbnail: "images/events.jpg"
 
    [Presentation](2023/2023_9_techx300.pdf)
 
+   [Git Repo](https://github.com/rhjensen79/techx300-2023-presentation-repo)
+
 ### August
 
 - 30.8.2023 : [VMware Klubben Copenhagen](https://www.atea.dk/events/2023/vmware-klubben-modernisering-og-automatisering-tanzu-aria-og-veba-i-fokus-i-ballerup/)
