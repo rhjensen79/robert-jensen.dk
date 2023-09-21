@@ -18,7 +18,9 @@ thumbnail: "images/events.jpg"
 
 - 20-21.9.2023 : [TechX 300 2023](https://www.eventbrite.com/e/techx-300-2023-tickets-647990355597)
 
-   Topic : What i wish my mom had told me about containers
+   Topic : What I wish my mom had told me about containers
+
+   [Presentation](2023/2023_9_techx300.pdf)
 
 ### August
 
