@@ -1,22 +1,11 @@
 ---
-title: "Tanzu Basic Videos"
-date: 2023-09-17T12:00:00+01:00
-tags : [Kubernetes, Docker, K8S, CICD, Tanzu, TKG]
-draft: false
+title: "Tanzu Cloud Native Webinars"
+date: 2023-09-03T12:00:00+01:00
+tags : [Kubernetes, Docker, K8S, CICD, Webinar]
+draft: true
 toc: true
-thumbnail: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
-#image: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
-description: "A list of videos create to show the basics of VMware Tanzu Kubernetes grid"
+thumbnail: "images/minions.jpg"
+#image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
+description: ""
 ---
 ## Intro
-
-I often get the question "How can I deploy Tanzu Kubernetes on vSphere" when I meet new customers.
-The question often comes from the vSphere admins, that want to know, how to deliver this "new" type of service, to their users.
-
-So set out to create a couple of basic videos, showing just that.
-
-!!! I will be adding more videos as they are being published.
-
-## Deliver Tanzu Kubernetes to your users, as a VMware vSphere administrator
-
-{{< youtube 0GmDSbtVxeE >}}
