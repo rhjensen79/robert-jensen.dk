@@ -24,3 +24,7 @@ So I set out to create a couple of basic videos, showing just that.
 ## How to deploy and consume Tanzu Kubernetes clusters on vSphere infrastructure, as a Kubernetes admin
 
 {{< youtube I_HmboWZPc0 >}}
+
+## How to attach VMware Tanzu Mission control to vSphere to automate Kubernetes deployment
+
+{{< youtube GZI--vrGFQU >}}
