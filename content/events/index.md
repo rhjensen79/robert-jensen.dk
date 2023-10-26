@@ -14,6 +14,12 @@ thumbnail: "images/events.jpg"
     Not speaking, but wanted to include this anyway, since i'm part of the organizer team.
     CFP's are open, from 1.8.2023 - 15.9.2023, so submit yours, if you have something to share.
 
+### October
+
+- 26.10.2023 : [Arrow Innovators Club Podcast (Danish)](https://innovators-club-pitch.zencast.website/episodes/containerteknologi-hos-danske-virksomheder-med-vmware-tanzu?utm_source=linkedin_company&utm_medium=social&utm_campaign=brand)
+
+    Was invited to participate in a podcast with a panel of really skilled people, to talk about VMware Tanzu, Containers and Cloud Native in general.
+
 ### September
 
 - 20-21.9.2023 : [TechX 300 2023](https://www.eventbrite.com/e/techx-300-2023-tickets-647990355597)
