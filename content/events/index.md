@@ -12,8 +12,11 @@ thumbnail: "images/events.jpg"
 - 14.11.2023 : [KCDdenmark](https://kcddenmark.dk)
 
     Not speaking, but wanted to include this anyway, since i'm part of the organizer team.
+
     [Event Videos](https://www.youtube.com/playlist?list=PL09s8ZalKQe85iIzlixAOQEh_oFMoMKtM)
+
     [Event Blog Post](https://www.cncf.io/blog/2023/12/04/kcd-denmark-a-collective-triumph-in-the-cloud-native-universe/)
+    
     [Images](https://www.flickr.com/photos/199545304@N04/sets/72177720312734839/)
 
 ### October
