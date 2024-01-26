@@ -8,6 +8,15 @@ thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to fix running Cilium on a local Kind cluster on a M1 Macbook"
 ---
+## Update
+
+It seams that either downgrading Docker engine, to an earlier version or waiting for version 4.27.0 will fix the Cilium problem.
+
+More info can be found in this [issue](https://github.com/kubernetes/minikube/issues/17780).
+Thanks to [Daniil Bazhanov](https://www.linkedin.com/in/daniil-bazhanov-65bb16184/), for the link/update.
+
+For me, Docker Desktop is gone, and I will test out Colima in my env going forward, and see how that works.
+
 ## Intro
 
 I have started playing with [Cilium](https://cilium.io), and learning about all the interesting things it offeres. 
