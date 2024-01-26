@@ -42,7 +42,15 @@ After that it was just a matter of starting Colima by running
 colima start
 ```
 
-I ran it with the default settings, but it might make sense to give it a bit more resources later. See the [blog](https://jacobtomlinson.dev/posts/2022/goodbye-docker-desktop-for-mac-hello-colima/) post on how to to do that.
+If you want it to auto start, then you can run the following instead
+```bash
+brew services start colima
+``````
+
+Also if you want to change the default settings like cpu, memory, disk and a lot of other things, then run
+```bash
+colima template
+```
 
 With colima running, I could follow the Cilium Kind guide again, and after 2 minutes, I had a fully working Cilium installation again.
 ![Cilium-cluster-working](images/cluster-working.png)
@@ -51,7 +59,9 @@ With colima running, I could follow the Cilium Kind guide again, and after 2 min
 
 Calima seams to be a seamless replacement for Docker desktop.
 
-The biggest thing to be aware of, sems to be the resources that the VM is given, and that Calima don't auto start. But these are really minor things, that is fixable.
+And judging from some of the comments, I got on this post, there is a lot of options for running colima, that is worth looking further into.
+
+But that's for another blog post :-)  
 
 Thanks for reading this far.
 
