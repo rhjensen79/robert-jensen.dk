@@ -12,7 +12,7 @@ description: "How to use Devcontainers with Tailscale, to develop anywhere"
 
 For the last 12 years, I have been working in different locations, where I had to have access to different tools, enviroments etc. no matter where I were.
 
-Due to that, it's a core part of my way of working, that all tools, must be either synced or avaliable, whereever I am, as long as i have a working internet connection.
+Due to that, it's a core part of my way of working, that all tools, must be either synced or avaliable, whereever I am, as long as I have a working internet connection.
 
 Due to that, I'm a huge fan of [Tailscale](https://tailscale.com), and I use it to access more or less everything I have. if you havent tried it yet, then stop reading, and go test it now. You will thank me later. It truly binds all my services together, and allows me to acces them anywhere.
 
@@ -109,5 +109,29 @@ The new devcontainer file looks like this
 }
 ```
 
-I will modify it a bit, to be more automatic.
-The 
+So in theory this should work, and have done so in the past.
+But when I was testing out, writing this article, I could not get Tailscale to start. 
+So my setup ended up looking a bit different.
+
+### Devcontainer.json
+
+My devcontainer.json file ended up looking like this (I removed all the comments etc.)
+```json
+{
+	"name": "Python 3",
+	"image": "python:3.12",
+	"runArgs": ["--env-file",".devcontainer/devcontainer.env"],
+	"postCreateCommand": ".devcontainer/install.sh"
+}
+```
+The changes are :
+- The image is changed to the latest python:3.12, since I could not get Tailscale working with the official Devcontainer image.
+- I load env variables at start, that I use when I start Tailscale.
+- I run a post install script, that install Git, curl and Tailscale and later maybe other things I need in my dev env.
+
+Both devcontainer.env and install.sh are located in my .devcontainer folder.
+Remember to add .devcontainer/devcontainer.env to your .gitignore file, to make sure you don't commit secrets etc.
+
+### Devcontainer.env
+
+The devcontainer.env contains
