@@ -14,7 +14,11 @@ If you want to follow, what I'm doing, then follow me on github. That is where I
 
 ### Work
 
-Been +10 years @vmware. Since 2021 it's been as a Lead solutions engineer in the Modern applications business unit.
+Since 2024 I have been working as a Cloud Native Consultant, for [Globeteam](https://globeteam.com)
+
+
+From 2012 - to 2024 I worked for [VMware](https://www.vmware.com), as a Systems engineer, starting with covering the core products, and then moving on to Cloud Management specialist, and for the last couple of years, then Covering the [Tanzu](https://tanzu.vmware.com) portfolio, for the Modern applications business unit.
+
 
 ### Interests
 

@@ -5,3 +5,5 @@ content/.DS_Store
 public/*
 public
 .vscode
+.DS_Store
+static/.DS_Store
