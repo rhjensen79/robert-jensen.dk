@@ -10,7 +10,7 @@ description: "Are you tired of manually creating DNS records for your Kubernetes
 ---
 ## Update
 
-Just after creating this blog post, I submitted a PR to [https://github.com/kubernetes-sigs/external-dns/](https://github.com/kubernetes-sigs/external-dns/) where I added the things I was missing in the documentation.
+Just after creating this blog post, I submitted a PR to [https://github.com/kubernetes-sigs/external-dns/](https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/cloudflare.md) where I added the things I was missing in the documentation.
 
 I expected it to take weeks, if ever, to get approved. But a couple of hours later, it was merged into the Master branch.
 
