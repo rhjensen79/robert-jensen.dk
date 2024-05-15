@@ -8,6 +8,15 @@ thumbnail: "images/brittany-colette-GFLMi4c8XMg-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Are you tired of manually creating DNS records for your Kubernetes services? In this tutorial, we'll show you how to automate the process using CloudFlare and External DNS. We'll walk you through the steps of setting up a Cloudflare API key, installing External DNS, and configuring it to work with your Kubernetes cluster. With this setup, you can easily create and manage DNS records for your services without having to manually update them in CloudFlare. Perfect for IT professionals looking to streamline their workflow and improve their infrastructure's reliability and security."
 ---
+## Update
+
+Just after creating this blog post, I submitted a PR to [https://github.com/kubernetes-sigs/external-dns/](https://github.com/kubernetes-sigs/external-dns/) where I added the things I was missing in the documentation.
+
+I expected it to take weeks, if ever, to get approved. But a couple of hours later, it was merged into the Master branch.
+
+This kinda makes this blog post obsolete. 
+But I will still keep it here, for reference, and maybe as a reminder to fix things at the source, before writing a blog post about it, in the future :-) 
+
 ## The problem
 
 I love [external DNS](https://github.com/kubernetes-sigs/external-dns).
