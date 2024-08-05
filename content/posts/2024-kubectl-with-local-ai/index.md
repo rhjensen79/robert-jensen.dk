@@ -1,12 +1,12 @@
 ---
-title: "Kubectl with local AI"
+title: "Enhance Kubectl with Local AI using Ollama and Open Source LLMs"
 date: 2024-08-04T12:00:00+01:00
 tags : [AI, Kubectl, Kubernetes, Ollama, LLM, kubectl-ai, github]
 draft: false
 toc: true
 thumbnail: "images/boliviainteligente-DEci5GH0r0k-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "Enhancing Kubectl with local AI using Ollama and Open Source LLM's"
+description: "Learn how to enhance your Kubectl experience with local AI using Ollama and open-source LLMs."
 ---
 ## Intro
 
