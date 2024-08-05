@@ -1,5 +1,5 @@
 ---
-title: "Kubectl with AI"
+title: "Kubectl with local AI"
 date: 2024-08-04T12:00:00+01:00
 tags : [AI, Kubectl, Kubernetes, Ollama, LLM, kubectl-ai, github]
 draft: false
