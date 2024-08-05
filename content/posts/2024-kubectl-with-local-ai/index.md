@@ -34,7 +34,7 @@ Today I saw that Kubectl-ai had a new [release](https://github.com/sozercan/kube
 
 So I had to try it out. 
 
-This blog is about that :-)
+This blog post is about that :-)
 
 ## Installation
 
