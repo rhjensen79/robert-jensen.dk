@@ -8,9 +8,6 @@ enableEmoji = true
 enableRobotsTXT = true
 #ignoreLogs = 'err-youtube-remote'
 
-# Google Analytics
-# googleAnalytics = "UA-932020-4"
-
 # Syntax highlighting
 pygmentsUseClasses = true
 pygmentsCodeFences = true
