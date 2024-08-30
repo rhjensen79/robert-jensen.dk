@@ -4,7 +4,7 @@ date: 2024-08-29T12:00:00+01:00
 tags : [VMware, Broadcom, NSX, VCF]
 draft: false
 toc: true
-thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg"
+thumbnail: "images/tim-mossholder-rx_GNopVlFs-unsplash.jpg"
 #image: "images/tim-mossholder-rx_GNopVlFs-unsplash.jpg"
 description: "vCloud Foundation (VCF) installation fails with Create Transport Node Collection at 48 percent"
 ---
