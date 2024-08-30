@@ -1,6 +1,6 @@
 ---
 title: "VCF Create Transport Node Collection fails at 48 percent"
-date: 2024-02-18T12:00:00+01:00
+date: 2024-08-29T12:00:00+01:00
 tags : [VMware, Broadcom, NSX, VCF]
 draft: false
 toc: true
