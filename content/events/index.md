@@ -5,6 +5,18 @@ relatedPosts: false
 #draft: true
 thumbnail: "images/events.jpg"
 ---
+## 2024
+
+- 03.10.2024 : Webinar [Globeteam](https://www.globeteam.com)
+
+    Topic : Fremtidens It-Medarbejder (Danish)
+    [Recording](https://youtu.be/uhSGnAZAGhQ?si=0ouCHvqkQujEC06-)
+
+- 17.09.2024 : [Vmug Event](https://www.eventbrite.dk/e/vmugdk-2-dage-i-sor-2024-tickets-914402250747?aff=oddtdtcreator)
+    Topic : Containers - Where to start
+    
+    [Presentation](2024/vmug-2024.pdf)
+
 ## 2023
 
 ### November
