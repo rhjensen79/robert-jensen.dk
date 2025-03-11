@@ -1,3 +1,4 @@
+---
 title: "Securely Exposing Services with Traefik and Tailscale"
 date: 2025-03-10T12:00:00+01:00
 tags : [Docker, Traefik, Tailscale, Networking, Security, Proxy]
