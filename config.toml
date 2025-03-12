@@ -2,7 +2,7 @@ baseURL = "https://rhjensen79.github.io/robert-jensen.dk"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Robert-Jensen.dk"
-theme = "anatole"
+#theme = "anatole"
 summarylength = 50
 enableEmoji = true
 enableRobotsTXT = true
@@ -80,6 +80,8 @@ url = "mailto:robert@robert-jensen.dk"
 icon = "fab fa-youtube"
 title = "Youtube"
 url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
+
+ignoreLogs = ['warning-goldmark-raw-html']
 
 
 ## Menu items
