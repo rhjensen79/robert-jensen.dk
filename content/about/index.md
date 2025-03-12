@@ -4,23 +4,25 @@ date: 2020-11-06T11:56:57+01:00
 #draft: true
 thumbnail: "images/thom-holmes-k-xKzowQRn8-unsplash.jpg"
 ---
-Welcome to my little blog.
+Welcome to my blog.
 
-I'm not a big writer, so don't expect much. But sometimes, I might create small posts, of what i'm doing, and what I think, others could find interesting.
+I'm not a big writer, so don't expect too much. But from time to time, I create posts, of what i'm doing, and what I think, others could find interesting.
 
-Most of my time, is spend, changing from a Operations background, to learn a lot more around Development. So expect, content to be around that theme.
+Most posts will probably be around cloud Native developemnt, and things in that space. But I might wander off, and do other stuff as well :-) 
 
 If you want to follow, what I'm doing, then follow me on github. That is where I put everything I do.
 
-### Work
+I'm also also happy for a connect on Linkein or bluesky.
 
-Since 2024 I have been working as a Cloud Native Consultant, for [Globeteam](https://globeteam.com)
+## Work
+
+Since 2024 I have been a freelance Cloud Native/DevOps Consultant, for my company [12F](https://12f.dk)
 
 
 From 2012 - to 2024 I worked for [VMware](https://www.vmware.com), as a Systems engineer, starting with covering the core products, and then moving on to Cloud Management specialist, and for the last couple of years, then Covering the [Tanzu](https://tanzu.vmware.com) portfolio, for the Modern applications business unit.
 
 
-### Interests
+## Interests
 
 - Family.
 
@@ -31,5 +33,11 @@ From 2012 - to 2024 I worked for [VMware](https://www.vmware.com), as a Systems 
 
   I ride a Yamaha R1 from 2004.
 - Neerdy stuff :-)
+
+  SwiftUI programming
+
+  Python Programming
+
+  Etc.
 
 <span>Photo by <a href="https://unsplash.com/@thomholmes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Thom Holmes</a> on <a href="https://unsplash.com/s/photos/about?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

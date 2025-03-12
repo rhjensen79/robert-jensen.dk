@@ -56,15 +56,20 @@ icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/rhjensen79"
 
-[[params.socialIcons]]
-icon = "fab fa-twitter"
-title = "Twitter"
-url = "https://twitter.com/rhjensen"
+#[[params.socialIcons]]
+#icon = "fab fa-twitter"
+#title = "Twitter"
+#url = "https://twitter.com/rhjensen"
 
 [[params.socialIcons]]
-icon = "fab fa-mastodon"
-title = "Mastodon"
-url = "https://hachyderm.io/@rhjensen"
+icon = "fab fa-bluesky"
+title = "BlueSky"
+url = "https://bsky.app/profile/robert-jensen.dk"
+
+#[[params.socialIcons]]
+#icon = "fab fa-mastodon"
+#title = "Mastodon"
+#url = "https://hachyderm.io/@rhjensen"
 
 [[params.socialIcons]]
 icon = "fab fa-linkedin"
