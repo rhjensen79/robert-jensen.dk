@@ -1,11 +1,11 @@
 ---
-title: "LoadBalancer not working on single node Talos cluster"
+title: "Fix LoadBalancer Services Not Working on Single Node Talos Kubernetes Cluster"
 date: 2025-03-26T12:00:00+01:00
-tags : [Kubernetes, Talos, Loadbalancer, Network, Cilium, MetalLB]
+tags: [Kubernetes, Talos, LoadBalancer, Single-Node Cluster, Cilium, MetalLB, Homelab, Node Labels, K8s Troubleshooting]
 draft: false
 toc: true
 thumbnail: "images/jackson-simmer-Vqg809B-SrE-unsplash.jpg"
-description: "How to fix LoadBalancer services on a single node Talos cluster"
+description: "Step-by-step guide to fixing LoadBalancer services on single-node Talos Kubernetes clusters by modifying node labels for both Cilium and MetalLB implementations."
 ---
 ## Intro
 
