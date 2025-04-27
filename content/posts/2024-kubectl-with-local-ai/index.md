@@ -1,12 +1,12 @@
 ---
 title: "Enhance Kubectl with Local AI using Ollama and Open Source LLMs"
 date: 2024-08-04T12:00:00+01:00
-tags : [AI, Kubectl, Kubernetes, Ollama, LLM, kubectl-ai, github]
+tags: [kubernetes, kubectl-ai, ollama, local-llm, k8s, devops, ai-tools, developer-productivity, cloud-native, open-source-llm, kubernetes-automation, kubectl-plugin, infrastructure-as-code, ai-for-developers, container-orchestration]
 draft: false
 toc: true
 thumbnail: "images/boliviainteligente-DEci5GH0r0k-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "Learn how to enhance your Kubectl experience with local AI using Ollama and open-source LLMs."
+description: "Learn how to streamline Kubernetes manifest creation with kubectl-ai and local LLMs running on Ollama. This step-by-step guide shows how to install, configure and use open-source AI models locally to enhance your Kubernetes workflow without cloud dependencies."
 ---
 ## Intro
 

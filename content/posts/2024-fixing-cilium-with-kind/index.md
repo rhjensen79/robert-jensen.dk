@@ -1,12 +1,12 @@
 ---
 title: "Fixing Cilium on Kind"
 date: 2024-01-25T12:00:00+01:00
-tags : [Kubernetes, Docker, Cilium, Colima]
+tags: [Kubernetes, Kind, Cilium, Docker Desktop, Colima, M1 Mac, CNI, Container Networking]
 draft: false
 toc: true
 thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "How to fix running Cilium on a local Kind cluster on a M1 Macbook"
+description: "Troubleshooting and solving Cilium networking issues on Apple Silicon M1 MacBooks by replacing Docker Desktop with Colima for local Kubernetes Kind clusters"
 ---
 ## Update
 
