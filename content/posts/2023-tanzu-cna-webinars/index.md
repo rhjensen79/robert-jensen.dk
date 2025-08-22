@@ -6,6 +6,6 @@ draft: true
 toc: true
 thumbnail: "images/minions.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: ""
+description: "Discover key insights from VMware Tanzu Cloud Native webinar series covering Kubernetes, Docker, CI/CD pipelines, and modern application development practices."
 ---
 ## Intro

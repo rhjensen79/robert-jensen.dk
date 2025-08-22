@@ -6,7 +6,7 @@ draft: false
 thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 #images: 
 #- "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "An introduction on using Buildpacks"
+description: "Discover Cloud Native Buildpacks as a Dockerfile alternative for containerizing applications. Learn benefits, implementation with GitHub Actions, and Python/Streamlit examples."
 ---
 I might be late to the party, but recently I learned about [Buildpacks.io](https://buildpacks.io) and what they can do vs Dockerfiles, and I just had to try it out.
 

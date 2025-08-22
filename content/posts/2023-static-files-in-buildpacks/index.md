@@ -6,7 +6,7 @@ draft: false
 toc: true
 thumbnail: "images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.jpg"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "How to use static files in Buildpacks"
+description: "Troubleshoot and solve static file preservation issues in Cloud Native Buildpacks. Step-by-step guide for handling static assets in containerized Golang applications."
 ---
 ## Intro
 

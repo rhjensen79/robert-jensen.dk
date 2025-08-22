@@ -4,7 +4,7 @@ date: 2021-10-20T12:25:48+02:00
 tags : [Cloud Management, Modern Application, Tanzu, Kubernetes, developers]
 draft: false
 thumbnail: "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
-description: "Change of role, from Cloud Management to Applization Platform Tanzu"
+description: "Transitioning from VMware Cloud Management Specialist to Modern Applications business unit, focusing on Tanzu platform and DevOps practices for developers."
 #images: 
 #- "images/ross-findon-mG28olYFgHI-unsplash.jpg"
 ---

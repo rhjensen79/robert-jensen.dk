@@ -1,4 +1,4 @@
-baseURL = "https://rhjensen79.github.io/robert-jensen.dk"
+baseURL = "https://robert-jensen.dk"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Robert-Jensen.dk"
@@ -25,13 +25,18 @@ customJs = []
 mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification
-#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+# Google Search Console verified via DNS records
 copyright = "2019-{{ YEAR }}"
 relatedPosts = true
 numberOfRelatedPosts = 3
 contentratio = 0.8
 #hidesidebar = true
 gtagId = "G-545708GXNW"
+
+# Social Media and SEO
+[params.seo]
+twitterCard = "summary_large_image"
+ogType = "website"
 
 [params.utterances]
 repo = "rhjensen79/robert-jensen.dk"
