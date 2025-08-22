@@ -208,7 +208,7 @@ And that is it.
 Traefik should now have published your Harbor installation, so it avaliable for you, on https://publicurl.
 
 You can login with admin and the password, you set in your harbor.yml file, and you now have your own container registry.
-![Harbor](images/harbor_login.png)
+![Harbor Container Registry login interface showing the administrator authentication page with username and password fields](images/harbor_login.png)
 
 If Trivy (or one of the other services) are complaning about resolving things on the internet, then edit the docker-compose.yml file, and find "dns_search: ." under the service, and # it. 
 I don't know why Harbor did this, and it's probably not best practice, but it's working for now, in my setup.

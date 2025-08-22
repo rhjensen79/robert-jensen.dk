@@ -33,7 +33,7 @@ brew install bitwarden bitwarden-cli jq
 ```
 
 Login using the GUI, and create a new secure note with the name zshenv
-![Create Note](images/create_note.png)
+![Bitwarden desktop application showing the interface for creating a new secure note with the name "zshenv" for storing environment variables](images/create_note.png)
 
 Create the env data, you want to use, in the Notes field.
 I have used dummy data, but use whatever you like, in the format below:
@@ -57,7 +57,7 @@ Use Bitwarden-cli to get a session key by running
 export BW_SESSION=$(bw login $email --raw)
 ```
 
-![Login](images/login.png)
+![Terminal window displaying the Bitwarden CLI login process with the session key export command being executed](images/login.png)
 
 You will be prompted, for a master password.
 We could have kept it in a variable, but I don't want the master key, to all my secrets, in a env variable on my computer.
@@ -77,7 +77,7 @@ All we have to do now, is to use that Session key, to get the data from the secu
 bw get item zshenv | jq -r '.notes' > $home\.zshenv
 ```
 
-![working](images/working.png)
+![Terminal showing successful execution of the Bitwarden CLI command that retrieves environment variables from the secure note and writes them to the .zshenv file](images/working.png)
 
 As you can see it's now working.
 

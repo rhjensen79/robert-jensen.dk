@@ -131,16 +131,16 @@ It requires 3 secrets in your repo :
 
 to be able to login and push your container after build.
 But once you get this, then it auto builds, on every push.
-![actions](images/actions.png)
+![GitHub Actions workflow execution showing successful buildpack build and deployment process with green checkmarks](images/actions.png)
 In my setup, it takes less than 3 minutes, to execute.
 
 The echo part of the script, should explain what every part of the job does, so I won't cover it in details here.
 
 The versioning is based on the run_id variable. There might be better ways of doing this, but it works fine in my usecase.
 
-After it's build, and pushed, my [Harbor](https://goharbor.io) registry, does security scans on it. So this is something to consider, for extra security.
+After it's build, and pushed, my [Harbor](https://goharbor.io) registry, does security scans on it. So this is something to consider, for extra security. If you're interested in setting up your own Harbor registry, check out my [guide on installing Harbor behind Traefik with Let's Encrypt certificates](https://www.robert-jensen.dk/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/).
 
-![Harbor](images/harbor.png)
+![Harbor Container Registry security scan results displaying vulnerability assessment for the buildpack-generated container image](images/harbor.png)
 
 To test the image, simply run
 
@@ -149,7 +149,7 @@ docker run -p 80:80 registry.cmplab.dk:443/cmplab/first-app@sha256:4873acdd3b3c0
 ```
 
 And open <http://localhost:80> to see the app
-![Harbor](images/app.png)
+![Streamlit application running in browser showing a simple data table with first and second columns](images/app.png)
 
 Note that the version, needs to be correct, as well as your registry url, for this to work. The above example, only works for the specific version, that might not be available, when you read this.
 

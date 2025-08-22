@@ -16,7 +16,7 @@ For a clean installation, Cloud Builder fails with the step "Create Transport No
 
 Troubleshooting the problems by logging into the NSX manager, revelaled the problem was "Waiting for connection to managers"
 So that ment that the hosts were trying to contact the NSX manager, with no luck.
-![nsx](images/1.png)
+![NSX Manager Transport Node Collection showing "Waiting for connection to managers" error status](images/1.png)
 
 The ESX hosts and the NSX appliances, were on different subnets. 
 

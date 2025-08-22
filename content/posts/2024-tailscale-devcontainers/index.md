@@ -43,23 +43,23 @@ code.
 ```
 
 Then I opened VScode command pallette and found "Dev Containers: Add Devcontainers Configuration files..."
-![image](images/1.png)
+![VSCode command palette showing the "Dev Containers: Add Devcontainers Configuration files..." option highlighted for setting up a development container](images/1.png)
 
 I chose to add the files to my workspace, to keep it in Git. This is my prefered option, since config and code stays in the same location.
-![image](images/2.png)
+![VSCode dialog asking whether to add devcontainer configuration files to workspace with "Add to workspace" option selected](images/2.png)
 
 I selected Python, since that is what I will be developing in. But there are tons of options, if you are doing something else.
-![image](images/3.png)
+![VSCode devcontainer template selection showing Python language option among various available development environment templates](images/3.png)
 
 I chose latest version as of this writing.
 If I was updating an older project, then I might have chosen a different version, that was more compatible. But this is part of the strenght of Devcontainers. You can have a different env, for each repo.
-![image](images/4.png)
+![VSCode devcontainer Python version selection dialog showing the latest Python version option for the development container](images/4.png)
 
 Then I searched for Tailscale, to have that automaticly installed inside my container.
-![image](images/5.png)
+![VSCode devcontainer features search interface showing Tailscale feature option for automatic installation inside the development container](images/5.png)
 
 VScode automaticly detects that there is now a Devcontainer config, and asked me if I want to open my env inside of it. I selected "Reopen in container", to have it build and run.
-![image](images/6.png)
+![VSCode notification popup asking to "Reopen in Container" after detecting the new devcontainer configuration files](images/6.png)
 
 After a short while (Depending on the hardware you are running on), I have a VScode running inside of a container, with the latest version of Python and Tailscale installed.
 

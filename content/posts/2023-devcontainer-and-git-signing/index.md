@@ -52,7 +52,7 @@ So my new Devcontainer.json file looks like this
 
 To make sure it's reusable across different accounts, I used the `${localEnv:HOME}` path, instead of a hardcoded path. 
 
-Now all my commits are verified again (as they should be), and it's reusable everywhere I need it. Just note, that I need to have a SSH key, that I can use to sign, on any system I run this on.
+Now all my commits are verified again (as they should be), and it's reusable everywhere I need it. Just note, that I need to have a SSH key, that I can use to sign, on any system I run this on. For more advanced devcontainer setups, check out my guide on [using Devcontainers with Tailscale for remote development](https://www.robert-jensen.dk/posts/2024-tailscale-devcontainers/).
 ![verified](images/verified.png)
 
 

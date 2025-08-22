@@ -37,7 +37,7 @@ To create an API key
 - Log in.
 - Select "My Profile"
 - Select "API Tokens"
-![cloudflare](images/1.png))
+![Cloudflare API Tokens page showing how to create a new API token for External DNS integration](images/1.png)
 
 At the bottom, there is a section called "API Keys"
 
@@ -192,7 +192,7 @@ For me, is was all about using locked-down tokens, and not the full API access k
 
 And I had a lot of trial and error, finding a configuration that worked.
 
-Hope you found it useful and can use it to automate your DNS creations.
+Hope you found it useful and can use it to automate your DNS creations. For more Kubernetes automation, you might also find my post on [using GitHub Actions with Tailscale to deploy locally](https://www.robert-jensen.dk/posts/2022-using-github-actions-with-tailscale-to-deploy-locally/) helpful.
 
 Photo by <a href="https://unsplash.com/@candidbcolette?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brittany Colette</a> on <a href="https://unsplash.com/photos/persons-holding-book-GFLMi4c8XMg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   

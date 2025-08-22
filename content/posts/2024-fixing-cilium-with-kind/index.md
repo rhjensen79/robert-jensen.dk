@@ -66,7 +66,7 @@ With colima running, I could follow the Cilium Kind guide again, and after 2 min
 
 ## Afterthought
 
-Calima seams to be a seamless replacement for Docker desktop.
+Colima seems to be a seamless replacement for Docker desktop. If you're looking for alternative ways to build containers without Docker Desktop, you might also be interested in [using Buildpacks instead of Dockerfiles](https://www.robert-jensen.dk/posts/2021-hello-buildpacks-goodbye-dockerfiles/).
 
 And judging from some of the comments, I got on this post, there is a lot of options for running colima, that is worth looking further into.
 
