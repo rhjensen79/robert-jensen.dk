@@ -93,6 +93,53 @@ url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
 
 ignoreLogs = ['warning-goldmark-raw-html']
 
+# Performance optimizations
+[build]
+  writeStats = true
+  
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.html]
+      keepComments = false
+      keepConditionalComments = true
+      keepDefaultAttrVals = true
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+      keepWhitespace = false
+    [minify.tdewolff.js]
+      precision = 0
+      keepVarNames = false
+    [minify.tdewolff.json]
+      precision = 0
+    [minify.tdewolff.svg]
+      precision = 0
+    [minify.tdewolff.xml]
+      keepWhitespace = false
+
+# Asset processing and optimization
+[processing]
+  [processing.images]
+    quality = 85
+    resampleFilter = "CatmullRom"
+    anchor = "smart"
+    
+[caches]
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = "24h"
+
 
 ## Menu items
 
