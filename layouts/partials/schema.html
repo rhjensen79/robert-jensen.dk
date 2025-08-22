@@ -1,0 +1,145 @@
+{{- if .IsPage -}}
+{{- if eq .Section "posts" -}}
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "image": {
+    "@type": "ImageObject",
+    {{- if .Params.thumbnail -}}
+    "url": {{ (printf "%s%s" .Site.BaseURL .Params.thumbnail) | jsonify }},
+    {{- else if .Params.images -}}
+    "url": {{ (printf "%s%s" .Site.BaseURL (index .Params.images 0)) | jsonify }},
+    {{- else -}}
+    "url": {{ (printf "%s%s" .Site.BaseURL .Site.Params.images) | jsonify }},
+    {{- end -}}
+    "width": 1200,
+    "height": 630
+  },
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }},
+    "sameAs": [
+      {{- $social := slice -}}
+      {{- range .Site.Params.socialIcons -}}
+        {{- if ne .title "e-mail" -}}
+          {{- $social = $social | append .url -}}
+        {{- end -}}
+      {{- end -}}
+      {{- range $i, $url := $social -}}
+        {{- if $i -}},{{- end -}}
+        {{ $url | jsonify }}
+      {{- end -}}
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ (printf "%s%s" .Site.BaseURL .Site.Params.profilePicture) | jsonify }},
+      "width": 200,
+      "height": 200
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  },
+  {{- if .Params.tags -}}
+  "keywords": [
+    {{- range $i, $tag := .Params.tags -}}
+      {{- if $i -}},{{- end -}}
+      {{ $tag | jsonify }}
+    {{- end -}}
+  ],
+  {{- end -}}
+  "articleSection": "{{ .Section | title }}",
+  "wordCount": {{ .WordCount }},
+  "inLanguage": "{{ .Site.Language.Lang }}"
+}
+</script>
+{{- end -}}
+{{- end -}}
+
+{{- if .IsHome -}}
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }},
+    "jobTitle": "Cloud Native Specialist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Broadcom"
+    },
+    "sameAs": [
+      {{- $social := slice -}}
+      {{- range .Site.Params.socialIcons -}}
+        {{- if ne .title "e-mail" -}}
+          {{- $social = $social | append .url -}}
+        {{- end -}}
+      {{- end -}}
+      {{- range $i, $url := $social -}}
+        {{- if $i -}},{{- end -}}
+        {{ $url | jsonify }}
+      {{- end -}}
+    ]
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{- end -}}
+
+<!-- Breadcrumb Schema -->
+{{- if not .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ .Site.BaseURL | jsonify }}
+    }
+    {{- if .Section -}},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Section | title | jsonify }},
+      "item": {{ printf "%s%s/" .Site.BaseURL .Section | jsonify }}
+    }
+    {{- end -}}
+    {{- if .IsPage -}},
+    {
+      "@type": "ListItem",
+      "position": {{ if .Section }}3{{ else }}2{{ end }},
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+    {{- end -}}
+  ]
+}
+</script>
+{{- end -}}
