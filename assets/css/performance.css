@@ -1,0 +1,141 @@
+/* Performance Optimizations for Core Web Vitals */
+
+/* Font Display Swap for all web fonts */
+@font-face {
+  font-display: swap;
+}
+
+/* Prevent layout shift from font loading */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Reserve space for images to prevent CLS */
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Aspect ratio for images without dimensions */
+picture img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize touch targets for mobile (minimum 44x44px) */
+a, button, input, select, textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Small links and buttons get padding for better touch targets */
+a.small, button.small {
+  padding: 12px;
+}
+
+/* Smooth scrolling with reduced motion support */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Optimize animations for performance */
+* {
+  animation-duration: 0.3s !important;
+  animation-timing-function: ease-out !important;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize rendering performance */
+.wrapper__sidebar,
+.wrapper__main {
+  will-change: auto;
+  contain: layout style;
+}
+
+/* Reduce repaints for fixed elements */
+.header,
+.footer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize list rendering */
+.post-list,
+.archive-list {
+  contain: layout;
+}
+
+/* FontAwesome specific optimizations */
+.fa,
+.fas,
+.far,
+.fab {
+  font-display: swap;
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+
+/* Profile picture optimization */
+.profile-picture {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  contain: layout size;
+}
+
+/* Code block optimization */
+pre {
+  contain: layout;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Optimize font sizes for mobile */
+  html {
+    font-size: 15px;
+  }
+  
+  /* Ensure touch targets are large enough */
+  .nav__link,
+  .menu__item a {
+    padding: 12px 16px;
+    display: block;
+  }
+  
+  /* Optimize images for mobile viewport */
+  img {
+    max-width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+  }
+  
+  .content img {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  * {
+    animation-duration: 0.2s !important;
+  }
+}

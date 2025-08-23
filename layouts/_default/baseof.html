@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+<head>
+  {{/* Critical performance optimizations first */}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  {{/* Preconnect to critical domains */}}
+  <link rel="preconnect" href="https://umami.robert-jensen.dk" crossorigin>
+  {{ if .Site.Params.gtagId }}
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  {{ end }}
+  
+  {{/* DNS Prefetch for additional domains */}}
+  <link rel="dns-prefetch" href="https://umami.robert-jensen.dk">
+  
+  <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  
+  {{/* Meta tags */}}
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  
+  {{/* Critical CSS inline for faster FCP */}}
+  <style>
+    /* Critical inline styles for faster initial paint */
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .wrapper { display: flex; min-height: 100vh; }
+    img { max-width: 100%; height: auto; }
+    
+    /* Font display optimization */
+    @font-face { font-display: swap; }
+    
+    /* Prevent CLS */
+    img, video, iframe { aspect-ratio: attr(width) / attr(height); }
+  </style>
+  
+  {{/* Performance CSS */}}
+  {{ $performanceCSS := resources.Get "css/performance.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $performanceCSS.RelPermalink }}" integrity="{{ $performanceCSS.Data.Integrity }}" crossorigin="anonymous">
+  
+  {{/* Theme CSS with preload */}}
+  {{ $mainSCSS := resources.Get "scss/anatole/main.scss" }}
+  {{ if $mainSCSS }}
+    {{ $mainCSS := $mainSCSS | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="preload" href="{{ $mainCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="{{ $mainCSS.Data.Integrity }}" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}" integrity="{{ $mainCSS.Data.Integrity }}" crossorigin="anonymous"></noscript>
+  {{ end }}
+  
+  {{/* Other CSS files */}}
+  <link rel="stylesheet" href="/scss/main.min.5e992246f421732b6ab21ff3aff77d166613012c2845ed7a69f563abc938dc12.css" integrity="sha256-XpkiRvQhcytqsh/zr/d9FmYTASwoRe16afVjq8k43BI=" crossorigin="anonymous" type="text/css">
+  <link rel="stylesheet" href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css" integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA=" crossorigin="anonymous" type="text/css">
+  
+  {{/* FontAwesome with optimized loading */}}
+  <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css" integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC+3978NBRk=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css" integrity="sha256-5l3FtI+185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css" integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR+rP2S8=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css" integrity="sha256-4QQlrXaLyY/x+ycqCshCD50boi8GEsCP8QEMlQgP/n4=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
+  
+  {{/* Favicon and icons */}}
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  
+  {{/* Canonical and feeds */}}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+  {{ end }}
+  
+  {{/* Preload profile image on homepage */}}
+  {{ if .IsHome }}
+    {{ $profileImg := resources.Get "images/profile.jpg" }}
+    {{ if $profileImg }}
+      {{ $profileWebP := $profileImg.Resize "300x300 webp q85" }}
+      <link rel="preload" as="image" href="{{ $profileWebP.RelPermalink }}" type="image/webp">
+    {{ end }}
+  {{ end }}
+  
+  {{/* JavaScript - defer non-critical */}}
+  <script defer src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js" integrity="sha256-+RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI=" crossorigin="anonymous"></script>
+  <script defer src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js" integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc=" crossorigin="anonymous"></script>
+  
+  {{/* Analytics - defer loading */}}
+  {{ if .Site.Params.umami }}
+  <script defer src="https://umami.robert-jensen.dk/script.js" data-website-id="{{ .Site.Params.umami.id }}"></script>
+  {{ end }}
+  
+  {{/* Social media and SEO meta tags */}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  
+  {{/* Structured data */}}
+  {{ partial "schema.html" . }}
+  
+  {{/* Google Analytics - load after interaction */}}
+  {{ if .Site.Params.gtagId }}
+  <script>
+    // Load Google Analytics after user interaction
+    let gaLoaded = false;
+    function loadGA() {
+      if (!gaLoaded) {
+        gaLoaded = true;
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtagId }}';
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.Params.gtagId }}');
+      }
+    }
+    // Load on first interaction
+    ['scroll', 'click', 'touchstart'].forEach(event => {
+      window.addEventListener(event, loadGA, { once: true, passive: true });
+    });
+    // Or after 4 seconds
+    setTimeout(loadGA, 4000);
+  </script>
+  {{ end }}
+  
+  {{/* Web font optimization */}}
+  <script>
+    // Font loading optimization
+    if ('fonts' in document) {
+      document.fonts.ready.then(function() {
+        document.documentElement.classList.add('fonts-loaded');
+      });
+    }
+  </script>
+</head>
+<body class="body">
+  <div class="wrapper">
+    {{ block "main" . }}{{ end }}
+  </div>
+</body>
+</html>

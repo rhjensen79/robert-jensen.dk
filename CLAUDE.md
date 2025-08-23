@@ -66,9 +66,9 @@ Based on PageSpeed Insights analysis, the following performance improvements sho
 - [x] **Image Optimization**: ✅ COMPLETED - Implemented next-gen image formats (WebP) and responsive images with automatic processing
 - [x] **CSS Optimization**: ✅ COMPLETED - Minify and inline critical CSS, defer non-critical CSS
 - [x] **JavaScript Optimization**: ✅ COMPLETED - Minify JavaScript and implement code splitting
-- [ ] **Font Loading**: Optimize web font loading with font-display: swap
-- [ ] **Core Web Vitals**: Address Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS)
-- [ ] **Critical Resource Preloading**: Add preload hints for above-the-fold content
+- [x] **Font Loading**: ✅ COMPLETED - Optimized web font loading with font-display: swap
+- [x] **Core Web Vitals**: ✅ COMPLETED - Addressed LCP, FID, and CLS with optimizations
+- [x] **Critical Resource Preloading**: ✅ COMPLETED - Added preload hints and preconnect for critical resources
 
 ### Medium Priority  
 - [x] **Render-blocking Resources**: ✅ COMPLETED - Eliminated render-blocking CSS and JavaScript through minification
@@ -108,10 +108,10 @@ Based on PageSpeed Insights analysis, the following performance improvements sho
 - ✅ **Image Processing**: Quality optimization (85%) and smart anchor configured
 
 ### Next Priority Items
-1. **Image Optimization**: Implement WebP/AVIF formats and responsive images
-2. **Font Loading**: Add font-display: swap and preload critical fonts
-3. **Critical Resource Preloading**: Add specific preload hints for above-the-fold content
-4. **Core Web Vitals**: Focus on LCP and CLS improvements
+1. **Unused CSS/JS**: Remove unused code to reduce bundle sizes
+2. **Third-party Scripts**: Optimize Google Analytics and Umami tracking load
+3. **Mobile Performance**: Focus on mobile-specific optimizations
+4. **Service Worker**: Consider implementing service worker for offline support
 
 ## SEO Optimization TODO
 
