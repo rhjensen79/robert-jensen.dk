@@ -63,7 +63,7 @@ This is a Hugo-based personal blog for Robert Jensen (robert-jensen.dk). The sit
 Based on PageSpeed Insights analysis, the following performance improvements should be implemented:
 
 ### High Priority
-- [ ] **Image Optimization**: Implement next-gen image formats (WebP/AVIF) and responsive images
+- [x] **Image Optimization**: ✅ COMPLETED - Implemented next-gen image formats (WebP) and responsive images with automatic processing
 - [x] **CSS Optimization**: ✅ COMPLETED - Minify and inline critical CSS, defer non-critical CSS
 - [x] **JavaScript Optimization**: ✅ COMPLETED - Minify JavaScript and implement code splitting
 - [ ] **Font Loading**: Optimize web font loading with font-display: swap
@@ -144,3 +144,4 @@ Based on comprehensive SEO analysis of robert-jensen.dk, the following improveme
 - [ ] **Publishing Schedule**: Maintain consistent content publication
 - [ ] **Topic Clusters**: Create pillar pages for main topics with supporting content
 - [ ] **User Intent**: Optimize content for different search intents (how-to, troubleshooting, tutorials)
+- aways save and read from claude.md task list. so it's updated

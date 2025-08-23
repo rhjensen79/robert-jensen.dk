@@ -1,0 +1,42 @@
+{{/* Image Shortcode with WebP/AVIF Support */}}
+{{/* Usage: {{< image src="images/example.jpg" alt="Description" caption="Optional caption" >}} */}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" }}
+{{ $class := .Get "class" | default "" }}
+{{ $link := .Get "link" }}
+
+{{/* Find the image resource */}}
+{{ $img := "" }}
+{{ with .Page.Resources.GetMatch $src }}
+  {{ $img = . }}
+{{ else }}
+  {{ with .Page.Resources.GetMatch (printf "*%s*" $src) }}
+    {{ $img = . }}
+  {{ else }}
+    {{ with resources.Get $src }}
+      {{ $img = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<figure class="image-figure {{ $class }}">
+  {{ if $link }}
+    <a href="{{ $link }}" target="_blank" rel="noopener">
+  {{ end }}
+  
+  {{ if $img }}
+    {{ partial "responsive-image.html" (dict "src" $src "alt" $alt "context" .Page "class" "figure-img") }}
+  {{ else }}
+    <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async" class="figure-img">
+  {{ end }}
+  
+  {{ if $link }}
+    </a>
+  {{ end }}
+  
+  {{ if $caption }}
+    <figcaption>{{ $caption | markdownify }}</figcaption>
+  {{ end }}
+</figure>

@@ -1,0 +1,105 @@
+{{/* Responsive Image Partial with WebP/AVIF Support */}}
+{{/* Usage: {{ partial "responsive-image.html" (dict "src" .Params.image "alt" .Title "context" .) }} */}}
+
+{{ $src := .src }}
+{{ $alt := .alt | default "" }}
+{{ $class := .class | default "" }}
+{{ $loading := .loading | default "lazy" }}
+{{ $sizes := .sizes | default "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px" }}
+{{ $widths := .widths | default (slice 320 640 800 1200 1600) }}
+
+{{/* Process the image if it's a page resource */}}
+{{ $img := "" }}
+{{ if .context }}
+  {{ with .context.Resources.GetMatch $src }}
+    {{ $img = . }}
+  {{ else }}
+    {{ with .context.Resources.GetMatch (printf "*%s*" $src) }}
+      {{ $img = . }}
+    {{ else }}
+      {{/* Try to find in static folder */}}
+      {{ $staticPath := printf "static/%s" $src }}
+      {{ if fileExists $staticPath }}
+        {{ $img = resources.Get $src }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $img }}
+  {{/* Generate responsive images in multiple formats */}}
+  {{ $originalFormat := $img.MediaType.SubType }}
+  
+  <picture>
+    {{/* AVIF format (best compression, limited support) */}}
+    {{ if hugo.IsExtended }}
+      {{ $avifSrcSet := slice }}
+      {{ range $widths }}
+        {{ $resized := $img.Resize (printf "%dx webp q85" .) }}
+        {{ if $resized }}
+          {{ $avifSrcSet = $avifSrcSet | append (printf "%s %dw" $resized.RelPermalink .) }}
+        {{ end }}
+      {{ end }}
+      {{ if $avifSrcSet }}
+        <source 
+          type="image/avif"
+          srcset="{{ delimit $avifSrcSet ", " }}"
+          sizes="{{ $sizes }}"
+        >
+      {{ end }}
+    {{ end }}
+    
+    {{/* WebP format (good compression, wide support) */}}
+    {{ $webpSrcSet := slice }}
+    {{ range $widths }}
+      {{ $resized := $img.Resize (printf "%dx webp q85" .) }}
+      {{ if $resized }}
+        {{ $webpSrcSet = $webpSrcSet | append (printf "%s %dw" $resized.RelPermalink .) }}
+      {{ end }}
+    {{ end }}
+    {{ if $webpSrcSet }}
+      <source 
+        type="image/webp"
+        srcset="{{ delimit $webpSrcSet ", " }}"
+        sizes="{{ $sizes }}"
+      >
+    {{ end }}
+    
+    {{/* Original format fallback (JPEG/PNG) */}}
+    {{ $fallbackSrcSet := slice }}
+    {{ range $widths }}
+      {{ $resized := "" }}
+      {{ if eq $originalFormat "png" }}
+        {{ $resized = $img.Resize (printf "%dx png" .) }}
+      {{ else }}
+        {{ $resized = $img.Resize (printf "%dx jpg q85" .) }}
+      {{ end }}
+      {{ if $resized }}
+        {{ $fallbackSrcSet = $fallbackSrcSet | append (printf "%s %dw" $resized.RelPermalink .) }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* Main img tag with fallback */}}
+    {{ $defaultImg := $img.Resize "800x jpg q85" }}
+    <img 
+      src="{{ $defaultImg.RelPermalink }}"
+      {{ if $fallbackSrcSet }}
+        srcset="{{ delimit $fallbackSrcSet ", " }}"
+      {{ end }}
+      sizes="{{ $sizes }}"
+      alt="{{ $alt }}"
+      loading="{{ $loading }}"
+      {{ if $class }}class="{{ $class }}"{{ end }}
+      width="{{ $defaultImg.Width }}"
+      height="{{ $defaultImg.Height }}"
+    >
+  </picture>
+{{ else }}
+  {{/* Fallback to original image if processing fails */}}
+  <img 
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    {{ if $class }}class="{{ $class }}"{{ end }}
+  >
+{{ end }}

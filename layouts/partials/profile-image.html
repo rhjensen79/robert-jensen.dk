@@ -1,0 +1,29 @@
+{{/* Optimized Profile Image Partial */}}
+{{ $profileImg := resources.Get "images/profile.jpg" }}
+{{ if $profileImg }}
+  <picture class="profile-picture">
+    {{/* WebP version */}}
+    {{ $webp := $profileImg.Resize "300x300 webp q85" }}
+    <source type="image/webp" srcset="{{ $webp.RelPermalink }}">
+    
+    {{/* JPEG fallback */}}
+    {{ $jpeg := $profileImg.Resize "300x300 jpg q85" }}
+    <img 
+      src="{{ $jpeg.RelPermalink }}"
+      alt="{{ .Site.Params.author | default "Profile" }}"
+      width="300"
+      height="300"
+      loading="eager"
+      decoding="async"
+    >
+  </picture>
+{{ else }}
+  {{/* Fallback to original if resource processing fails */}}
+  <img 
+    src="{{ .Site.Params.profilePicture }}"
+    alt="{{ .Site.Params.author | default "Profile" }}"
+    class="profile-picture"
+    loading="eager"
+    decoding="async"
+  >
+{{ end }}
