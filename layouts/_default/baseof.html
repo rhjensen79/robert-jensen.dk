@@ -24,15 +24,28 @@
   {{/* Critical CSS inline for faster FCP */}}
   <style>
     /* Critical inline styles for faster initial paint */
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
     .wrapper { display: flex; min-height: 100vh; }
-    img { max-width: 100%; height: auto; }
+    img { max-width: 100%; height: auto; aspect-ratio: attr(width) / attr(height); }
     
-    /* Font display optimization */
+    /* Font display optimization - prevent FOIT */
     @font-face { font-display: swap; }
     
-    /* Prevent CLS */
-    img, video, iframe { aspect-ratio: attr(width) / attr(height); }
+    /* Prevent CLS for common elements */
+    .post__thumbnail { aspect-ratio: 16/9; object-fit: cover; }
+    .profile-picture { aspect-ratio: 1/1; }
+    
+    /* Reserve space for sidebar */
+    .wrapper__sidebar { width: 240px; flex-shrink: 0; }
+    .wrapper__main { flex: 1; min-width: 0; }
+    
+    /* Prevent flash of unstyled content */
+    .post { margin-bottom: 2rem; }
+    .post__content h3 { margin: 0 0 1rem; }
+    
+    /* Early loading state */
+    body { opacity: 0; animation: fadeIn 0.3s ease-in-out forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
   </style>
   
   {{/* Performance CSS */}}
@@ -51,11 +64,31 @@
   <link rel="stylesheet" href="/scss/main.min.5e992246f421732b6ab21ff3aff77d166613012c2845ed7a69f563abc938dc12.css" integrity="sha256-XpkiRvQhcytqsh/zr/d9FmYTASwoRe16afVjq8k43BI=" crossorigin="anonymous" type="text/css">
   <link rel="stylesheet" href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css" integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA=" crossorigin="anonymous" type="text/css">
   
-  {{/* FontAwesome with optimized loading */}}
-  <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css" integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC+3978NBRk=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css" integrity="sha256-5l3FtI+185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css" integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR+rP2S8=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css" integrity="sha256-4QQlrXaLyY/x+ycqCshCD50boi8GEsCP8QEMlQgP/n4=" crossorigin="anonymous" type="text/css" media="print" onload="this.media='all'">
+  {{/* FontAwesome with optimized loading and font-display: swap */}}
+  <style>
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Solid';
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Regular';
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Brands';
+      font-display: swap;
+    }
+  </style>
+  <link rel="preload" href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC+3978NBRk=" crossorigin="anonymous">
+  <link rel="preload" href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha256-5l3FtI+185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM=" crossorigin="anonymous">
+  <noscript>
+    <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css" integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC+3978NBRk=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css" integrity="sha256-5l3FtI+185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM=" crossorigin="anonymous">
+  </noscript>
   
   {{/* Favicon and icons */}}
   <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
@@ -69,12 +102,14 @@
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
   {{ end }}
   
-  {{/* Preload profile image on homepage */}}
+  {{/* Preload profile image on homepage with high priority */}}
   {{ if .IsHome }}
     {{ $profileImg := resources.Get "images/profile.jpg" }}
     {{ if $profileImg }}
       {{ $profileWebP := $profileImg.Resize "300x300 webp q85" }}
-      <link rel="preload" as="image" href="{{ $profileWebP.RelPermalink }}" type="image/webp">
+      <link rel="preload" as="image" href="{{ $profileWebP.RelPermalink }}" type="image/webp" fetchpriority="high">
+    {{ else }}
+      <link rel="preload" as="image" href="/images/profile.jpg" fetchpriority="high">
     {{ end }}
   {{ end }}
   
@@ -122,12 +157,25 @@
   </script>
   {{ end }}
   
-  {{/* Web font optimization */}}
+  {{/* Web font optimization and Service Worker */}}
   <script>
     // Font loading optimization
     if ('fonts' in document) {
       document.fonts.ready.then(function() {
         document.documentElement.classList.add('fonts-loaded');
+      });
+    }
+    
+    // Service Worker registration for caching
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('SW registered: ', registration);
+          })
+          .catch(function(registrationError) {
+            console.log('SW registration failed: ', registrationError);
+          });
       });
     }
   </script>

@@ -17,6 +17,22 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
+  /* Prevent layout shift by setting aspect ratio */
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Specific fixes for common images */
+.post__thumbnail {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.profile-picture img {
+  aspect-ratio: 1 / 1;
+  width: 300px;
+  height: 300px;
 }
 
 /* Aspect ratio for images without dimensions */

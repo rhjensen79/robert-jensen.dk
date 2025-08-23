@@ -33,6 +33,7 @@
       {{ if $title }}title="{{ $title }}"{{ end }}
       loading="lazy"
       decoding="async"
+      fetchpriority="low"
     >
   {{ else }}
     {{/* Process raster images for responsive display */}}
@@ -98,8 +99,10 @@
       {{ if $title }}title="{{ $title }}"{{ end }}
       loading="lazy"
       decoding="async"
+      fetchpriority="low"
       width="{{ $defaultImg.Width }}"
       height="{{ $defaultImg.Height }}"
+      style="aspect-ratio: {{ $defaultImg.Width }} / {{ $defaultImg.Height }};"
     >
     </picture>
   {{ end }}
