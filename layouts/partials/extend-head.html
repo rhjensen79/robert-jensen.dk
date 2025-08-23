@@ -1,0 +1,104 @@
+{{/* Performance optimizations to extend the theme's head */}}
+
+{{/* Preconnect to external domains for faster resource loading */}}
+<link rel="preconnect" href="https://umami.robert-jensen.dk" crossorigin>
+{{ if .Site.Params.gtagId }}
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+{{ end }}
+
+{{/* DNS Prefetch for additional performance */}}
+<link rel="dns-prefetch" href="https://umami.robert-jensen.dk">
+
+{{/* Critical CSS inline for faster FCP */}}
+<style>
+  /* Critical inline styles for faster initial paint */
+  body { font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+  img { aspect-ratio: attr(width) / attr(height); }
+  
+  /* Font display optimization - prevent FOIT */
+  @font-face { font-display: swap !important; }
+  
+  /* Prevent CLS for common elements */
+  .post__thumbnail { aspect-ratio: 16/9; object-fit: cover; }
+  .profile-picture { aspect-ratio: 1/1; }
+</style>
+
+{{/* Performance CSS */}}
+{{ $performanceCSS := resources.Get "css/performance.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $performanceCSS.RelPermalink }}" integrity="{{ $performanceCSS.Data.Integrity }}" crossorigin="anonymous">
+
+{{/* FontAwesome with optimized loading and font-display: swap */}}
+<style>
+  @font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap !important;
+  }
+  @font-face {
+    font-family: 'Font Awesome 6 Solid';
+    font-display: swap !important;
+  }
+  @font-face {
+    font-family: 'Font Awesome 6 Regular';
+    font-display: swap !important;
+  }
+  @font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap !important;
+  }
+</style>
+
+{{/* Preload profile image on homepage with high priority */}}
+{{ if .IsHome }}
+  {{ $profileImg := resources.Get "images/profile.jpg" }}
+  {{ if $profileImg }}
+    {{ $profileWebP := $profileImg.Resize "300x300 webp q85" }}
+    <link rel="preload" as="image" href="{{ $profileWebP.RelPermalink }}" type="image/webp" fetchpriority="high">
+  {{ else }}
+    <link rel="preload" as="image" href="/images/profile.jpg" fetchpriority="high">
+  {{ end }}
+{{ end }}
+
+{{/* Google Analytics - load after user interaction */}}
+{{ if .Site.Params.gtagId }}
+<script>
+  // Load Google Analytics after user interaction
+  let gaLoaded = false;
+  function loadGA() {
+    if (!gaLoaded) {
+      gaLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtagId }}';
+      document.head.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.Params.gtagId }}');
+    }
+  }
+  // Load on first interaction
+  ['scroll', 'click', 'touchstart'].forEach(event => {
+    window.addEventListener(event, loadGA, { once: true, passive: true });
+  });
+  // Or after 4 seconds
+  setTimeout(loadGA, 4000);
+</script>
+{{ end }}
+
+{{/* Service Worker registration for caching */}}
+<script>
+  // Service Worker registration for caching
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          console.log('SW registered: ', registration);
+        })
+        .catch(function(registrationError) {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+</script>
