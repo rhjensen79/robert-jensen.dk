@@ -3,7 +3,7 @@ title: "Tailscale on Ubitique Edgerouter"
 date: 2021-01-12T20:28:10+01:00
 tags : [ubitique, tailscale, edgerouter, vpn, network, network, ubnt, wireguard]
 draft: false
-thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
+thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.webp"
 #image:
 #- "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
 description: "How to install Tailscale on an Unifi Edgerouter Lite, to make it a proxy endpoint, for the rest of your Lan"
@@ -18,7 +18,7 @@ But I have really missed, having it installed on my firewall, to make it act as 
 The firewall i'm using is an Ubitique Edgerouter lite.
 
 While searching the internet, I found the following [post](https://github.com/tailscale/tailscale/issues/735)
-![post](images/forum.png)
+![post](images/forum.webp)
 
 I got it working, but the commands was not 100% correct. So I thought I would fix them, and present them here.
 

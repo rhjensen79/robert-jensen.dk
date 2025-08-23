@@ -3,7 +3,7 @@ title: "Auto Install Cloudbase-Init"
 date: 2021-06-03T11:27:40+02:00
 tags : [cloud-init, cloudbase-init, vsphere, packer, automation, vRealizs Automation]
 draft: false
-thumbnail: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.jpg"
+thumbnail: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.webp"
 #images: 
 #- "images/jonathan-hanna-xgdsC0tRsPc-unsplash.jpg"
 description: "How to automaticly install Cloudbase-Init onto Windows VM's using packer, with a configuration that works with vSphere and vRealize Automation"

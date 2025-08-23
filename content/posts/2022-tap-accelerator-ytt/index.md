@@ -4,7 +4,7 @@ date: 2022-04-11T08:18:44+02:00
 tags : [Tanzu, TAP, YTT, Carvel, VMware]
 draft: false
 toc: true
-thumbnail: "images/pro-church-media-7NGU2YqBue8-unsplash.jpg"
+thumbnail: "images/pro-church-media-7NGU2YqBue8-unsplash.webp"
 #image: "images/pro-church-media-7NGU2YqBue8-unsplash.jpg"
 description: "How to use YTT with Tanzu Application Accelerators"
 ---

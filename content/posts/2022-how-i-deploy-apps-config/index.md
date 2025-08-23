@@ -4,7 +4,7 @@ date: 2022-11-12T19:46:27+01:00
 tags : [Containers, Docker, Github, Kubernetes]
 draft: true
 toc: true
-thumbnail: "images/john-barkiple-l090uFWoPaI-unsplash.jpg"
+thumbnail: "images/john-barkiple-l090uFWoPaI-unsplash.webp"
 #image: "images/john-barkiple-l090uFWoPaI-unsplash.jpg"
 description: "How I deploy applications in my setup - configuration"
 ---

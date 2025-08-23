@@ -3,7 +3,7 @@ title: "Events where i'm speaking"
 date: 2023-01-17T11:56:57+01:00
 relatedPosts: false
 #draft: true
-thumbnail: "images/events.jpg"
+thumbnail: "images/events.webp"
 ---
 ## 2024
 

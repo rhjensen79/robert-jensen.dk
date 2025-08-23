@@ -4,7 +4,7 @@ date: 2021-12-27T19:46:27+01:00
 tags : [Github, Actions, Tailscale, Kubernetes, K8S, container, Docker, cloud, CI/CD]
 draft: false
 toc: true
-thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
+thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to use Github Actions, to Create and build docker containers, and then deploy them localy using Tailscale, to Kubernetes"
 ---
@@ -34,7 +34,7 @@ The name of the app is [Perfect-Charge](https://github.com/rhjensen79/perfect-ch
 
 ## The job
 
-![action](images/action.png)
+![action](images/action.webp)
 
 My current action, builds each of the current 4 containers, and pushes them to Githib's Container registry, with a unique label.
 
@@ -44,7 +44,7 @@ And then I install Tailscale, and apply's the updated config, to my Kubernetes c
 To make this work, I have created an [Ephemeral](https://tailscale.com/kb/1111/ephemeral-nodes/) auth key. This means that as soon as the Tailscale agent stops, then the client is removed again, which is exactly what I need in my pipeline.
 
 The key is added as a Action Secret in Github as "TAILSCALE_AUTHKEY"
-![secrets](images/secrets.png)
+![secrets](images/secrets.webp)
 
 The actions is pretty simple.
 I will only focus on the last phase, and it looks like this.

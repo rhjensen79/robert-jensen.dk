@@ -4,7 +4,7 @@ date: 2024-01-25T12:00:00+01:00
 tags: [Kubernetes, Kind, Cilium, Docker Desktop, Colima, M1 Mac, CNI, Container Networking]
 draft: false
 toc: true
-thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg"
+thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Troubleshooting and solving Cilium networking issues on Apple Silicon M1 MacBooks by replacing Docker Desktop with Colima for local Kubernetes Kind clusters"
 ---
@@ -62,7 +62,7 @@ colima template
 ```
 
 With colima running, I could follow the Cilium Kind guide again, and after 2 minutes, I had a fully working Cilium installation again.
-![Cilium-cluster-working](images/cluster-working.png)
+![Cilium-cluster-working](images/cluster-working.webp)
 
 ## Afterthought
 

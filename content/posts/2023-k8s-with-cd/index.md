@@ -4,7 +4,7 @@ date: 2023-02-16T12:00:00+01:00
 tags : [Kubernetes, Containers, CD, Continuous Delivery, GitOps, Git]
 draft: false
 toc: true
-thumbnail: "images/carlos-aranda-QMjCzOGeglA-unsplash.jpg"
+thumbnail: "images/carlos-aranda-QMjCzOGeglA-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to deploy kubernetes with Continuous Delivery as part of the deployment"
 ---
@@ -86,23 +86,23 @@ And saved the output, to use in the next step.
 In TMC, I have created 2 cluster groups, which I will be using for this.
 
 production-cd and test-cd
-![cd-groups](images/cd-groups.png)
+![cd-groups](images/cd-groups.webp)
 
 I enabled "continuous delivery" on the production group.
-![enable-cd](images/enable_cd.png)
+![enable-cd](images/enable_cd.webp)
 
 Created Repository credentials with a name, my private key, and the output from the ssh-keyscan command.
-![git_credentials](images/git_credentials.png)
+![git_credentials](images/git_credentials.webp)
 
 In Git repositories, I added my repository and pointed it to the credentials I created in the last step.
 Note the SSH URL for my repo is in the following format `ssh://github.com/username/reponame.git`
 The branch also needs to be set to main, under advanced settings (or whatever your branch is)
-![git_repo](images/git_repo.png)
+![git_repo](images/git_repo.webp)
 
 Last I added a Kustomization, with a name, my repository, and the path `overlays/production` for my production cluster group.
 
 I also enable "Prune" under advanced settings.
-![kustomization](images/kustomization.png)
+![kustomization](images/kustomization.webp)
 
 And then I did the same, for the `test-cd` cluster group. The only change is that the path is `overlays/test` instead.
 
@@ -111,19 +111,19 @@ And then I did the same, for the `test-cd` cluster group. The only change is tha
 All there's left now is to deploy a new cluster using TMC, or to attach an existing one, and add it to the cluster group.
 
 I have created one, and attached it to the `test-cd group`.
-![attach_cluster](images/attach_cluster.png)
+![attach_cluster](images/attach_cluster.webp)
 
 Right after attaching it to TMC, I can see it says `reconciling` which means it's enabling continuous delivery and applying the configurations.
-![reconciling](images/reconciling.png)
+![reconciling](images/reconciling.webp)
 
 A simple `k get ns` shows that a test namespace has been created.
 
 This is specific for the `overlays/test`folder
 
 But I can also see projectcontour, cert-manager, nginx there.
-![namespace](images/namespace.png)
+![namespace](images/namespace.webp)
 Running `k get secrets -n cert-manager` shows that my Cloudflare secret, has been applied, so I can pull new certificates, using the Clusterissuer, that is also installed.
-![secret](images/secret.png)
+![secret](images/secret.webp)
 
 This means all my configurations, have been applied, without me having to do anything, and my colleagues that use the same platform, can deploy K8S clusters, pre-configured, with the settings they need.
 

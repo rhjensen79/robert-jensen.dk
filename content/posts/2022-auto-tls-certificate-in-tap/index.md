@@ -4,7 +4,7 @@ date: 2022-10-27T19:46:27+01:00
 tags : [tanzu, tap, tls, certificate, knative, letsencrypt, cert-manager, tanzu application platform, secure]
 draft: false
 toc: true
-thumbnail: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
+thumbnail: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.webp"
 #image: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
 description: "How to configure Tanzu Application Platform, to auto generate certificates for workloads"
 ---
@@ -117,7 +117,7 @@ kubectl patch configmap config-network -n knative-serving --patch-file patch-net
 
 And that was it.
 All workloads, is now deployed with a valid certificate :-)
-![Certificate](images/certificate.png)
+![Certificate](images/certificate.webp)
 
 Note if you wan't Tap-Gui to also use a HTTPS certificate, from cert-manager (You should) then the documentation, on how to do that is found [here](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-tap-gui-tls-enable-tls-existing-cert.html?hWord=N4IghgNiBcIC5gA4FoDmBXAlgAjhAziAL5A).
 

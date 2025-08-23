@@ -3,7 +3,7 @@ title: "Manage Multiple Kubeconfigs Using iCloud and Kubectx"
 date: 2021-11-04T13:37:46+01:00
 tags : [Kubernetes, k8s, kubectx, kubeconfig, fzf, iCloud, apple, config]
 draft: false
-thumbnail: "images/wesley-tingey-snNHKZ-mGfE-unsplash.jpg"
+thumbnail: "images/wesley-tingey-snNHKZ-mGfE-unsplash.webp"
 #images: "images/wesley-tingey-snNHKZ-mGfE-unsplash.jpg"
 description: "How to manage multiple kubeconfig files, using iCloud sync, and Kubectx"
 ---
@@ -63,7 +63,7 @@ export KUBECONFIG=`ls -1 ~/Documents/kubeconfig/kubeconfig-* | paste -sd ":" -`
 to the end of the ~/.zshrc
 and it will run, every time you start a new terminal.
 
-![terminal](images/terminal.png)
+![terminal](images/terminal.webp)
 
 An easy fix, to keep my config files in sync :-)
 

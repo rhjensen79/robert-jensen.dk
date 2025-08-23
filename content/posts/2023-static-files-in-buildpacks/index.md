@@ -4,7 +4,7 @@ date: 2023-01-20T12:00:00+01:00
 tags : [Buildpacks, Containers, Golang, static]
 draft: false
 toc: true
-thumbnail: "images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.jpg"
+thumbnail: "images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Troubleshoot and solve static file preservation issues in Cloud Native Buildpacks. Step-by-step guide for handling static assets in containerized Golang applications."
 ---

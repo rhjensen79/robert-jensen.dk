@@ -3,7 +3,7 @@ title: "Easy Updating CI/CD Tools"
 date: 2021-02-18T09:18:30+01:00
 tags : [automation, CI, CD, CICD, devops, hashicorp, packer, terraform, docker]
 draft: false
-thumbnail: "images/sven-mieke-fteR0e2BzKo-unsplash.jpg"
+thumbnail: "images/sven-mieke-fteR0e2BzKo-unsplash.webp"
 description: "How to use Docker autobuild feature, to automaticly create and deploy container images to Docker Hub"
 ---
 Update 09/06/2021 : Docker has changed their licenses, so that AutoBuild, in no longer part of the free license., due to it being exploided by Bitcoin miners. A shame, but something i fully understand.
@@ -107,23 +107,23 @@ For this image, I don't need it to be build fast, and i want it to be avaliable,
 The way to do this, is :
 
 From you Docker Hub profile, create a new repository
-![Create Repo](images/create_repo.png)
+![Create Repo](images/create_repo.webp)
 
 Link it to your Github or Bitbucket repo
-![connect](images/connect.png)
+![connect](images/connect.webp)
 
 Select your repo from the list
-![select](images/select.png)
+![select](images/select.webp)
 
 Chose if you want to do Autotest, and if you want your image, to be auto updated, when your from image is updated. Note the last, only works for non official images.
 
 Then select where your Dockerfile is located and branch. 
 For me, my Dockerfile is in the root of my master branch, and i want it named latest, so default works for me. 
 So I just need to select save and build, and then my auto build is setup :-) 
-![Build Settings](images/build_settings.png)
+![Build Settings](images/build_settings.webp)
 
 My Builds
-![My Builds](images/builds.png)
+![My Builds](images/builds.webp)
 
 That's all it takes.
 Not that Docker hub autobuilds, is not the fastest. So if you need to build your images fast, then you should look into other options. That said, I think it's a really nice service.

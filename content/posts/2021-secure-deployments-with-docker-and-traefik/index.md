@@ -3,7 +3,7 @@ title: "Secure Deployments With Docker, Traefik and Let's Encrypt"
 date: 2021-01-06T20:45:52+01:00
 tags : [traefik, docker, streamlit, python, letsencrypt, docker-compose, compose, web, hosting]
 draft: false
-thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.jpg"
+thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.webp"
 description: "Learn to deploy secure Docker applications using Traefik reverse proxy with automatic Let's Encrypt SSL certificates and custom DNS configuration for production-ready setups."
 ---
 During the christmas holliday, I had some time, to look into [Traefik](https://traefik.io/traefik/) reverse proxy.
@@ -166,7 +166,7 @@ CNAME   *           cmplab.dk
 That makes sure, the domain can be resolved, and also enables me to use whatever subdomain automaticly.
 
 The result from the docker-compose file above, can be seen here https://value.cmplab.dk as a secure website.
-![value.cmplab.dk](images/value_screenshot.png)
+![value.cmplab.dk](images/value_screenshot.webp)
 
 When using the configuration above, it's simple for me, to spin up a container, and dynmic deploy a new webservice, with a valid, secure certificate. 
 Also I can presentm any container, using a subdomain, in a secure manner, without opening additional ports. 

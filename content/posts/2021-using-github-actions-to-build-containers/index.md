@@ -3,7 +3,7 @@ title: "Using Github Actions to Build Containers (and host them)"
 date: 2021-09-09T13:20:37+02:00
 tags : [Docker, Github, Actions, Registry, hosting, cicd, Harbor, Gitlab]
 draft: false
-thumbnail: "images/ian-taylor-jOqJbvo1P9g-unsplash.jpg"
+thumbnail: "images/ian-taylor-jOqJbvo1P9g-unsplash.webp"
 #image: 
 #- "images/ian-taylor-jOqJbvo1P9g-unsplash.jpg"
 description: "How to build and host Docker containers, using Github actions"
@@ -28,13 +28,13 @@ But if you are starting from scratch, then create a Dockerfile in your Github re
 First I disconnected the [Gitlab sync](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html), that I had been running, to have a synced repo, on both Github and Gitlab.
 
 Then I opened the repo on github, and chosed Actions on the top.
-![Actions menu](images/actions_menu.png)
+![Actions menu](images/actions_menu.webp)
 
 From here I selected "New Workflow" and then I selected the "Publish Docker Container" from the top right.
-![Publish Docker Container](images/workflow_templates.png)
+![Publish Docker Container](images/workflow_templates.webp)
 
 The cool thing, is that all I had to do now, was to give the file a Name, and then press "Start Commit" in the top right corner, for it to work.
-![Action Code](images/action_code.png)
+![Action Code](images/action_code.webp)
 
 The action, automaticly found my Dockerfile in the root of my Repo, build it using the repo name and branch, and pushed it to my Github Repo.
 

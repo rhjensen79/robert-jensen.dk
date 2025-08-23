@@ -3,7 +3,7 @@ title: "Giving Back for the First Time"
 date: 2020-12-12T15:18:34Z
 tags : [Github, Giving, code, Hugo, opensource, theme, web, website]
 draft: false
-thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg"
+thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"
 ---
 One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. 
 I remember reading, how to get started doing this, but I see myself as a beginner, when it comes to coding, and find myself thinking, "why would anybody want something, that I have done."
@@ -22,7 +22,7 @@ I forked the repo, and added a Danish file, with the translations. Then I  creat
 
 It quickly got accepted and merged, and the other day, I got an update from the repo, saying that version 4 was released, and thank you, to all the contributors. 
 In the release notes my contribution was mentioned (Danish language) and there I was/am, among a lot of other people, on the contribution [page](https://github.com/lxndrblz/anatole/graphs/contributors).
-![update](images/email.png)
+![update](images/email.webp)
 
 So the point of this post, is to show, that we all can do this, and giving something back, does not have to be that hard (depending on how much you can/want to do)
 

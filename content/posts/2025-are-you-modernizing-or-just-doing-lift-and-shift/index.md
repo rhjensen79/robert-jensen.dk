@@ -4,7 +4,7 @@ date: 2025-04-25T12:00:00+01:00
 tags: [modernizing, virtualization, business, legacy, hypervisor, containers, kubernetes]
 draft: false
 toc: true
-thumbnail: "images/hamster.jpeg"
+thumbnail: "images/hamster.webp"
 description: "Moving between hypervisor platforms might save on licensing costs, but are you truly modernizing your applications or just moving in circles?"
 ---
 

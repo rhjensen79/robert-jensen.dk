@@ -4,7 +4,7 @@ date: 2022-04-21T08:36:34+02:00
 tags : [Access, Ports, Firewall, Tanzu, Community edition, K8S, Kubernetes, Pods, Service, CloudFlare]
 draft: false
 toc: true
-thumbnail: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
+thumbnail: "images/matthaeus-hew8vAvvvz4-unsplash.webp"
 #image: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 description: "How to expose a local POD or Service, to the outside world, without opening any firewall ports"
 ---
@@ -112,15 +112,15 @@ The first time you click the link, you have to setup a team. Just pick a name th
 ## Setup Cloudflare tunnel
 
 To create a new tunnel, select Access -> Tunnels from the left menu, and click `Create a tunnel` on the right.
-![menu](images/menu_create_tunnel.png)
+![menu](images/menu_create_tunnel.webp)
 
 Give your tunnel a name. Note a tunnel can expose multiple endpoints, so the name should be generic. I will call mine `Tanzu Community Edition`
-![Tunnel Name](images/name_tunnel.png)
+![Tunnel Name](images/name_tunnel.webp)
 
 Click `Save tunnel`
 
 You will now be presented with different enviroment options. The closest fit we have, is the Docker one. So click that one, and copy and save the command. We will need some of it later.
-![Docker enviroment](images/docker_command.png)
+![Docker enviroment](images/docker_command.webp)
 
 Note I have regenerated the token, so it's not working anymore. You should offcourse not share this on the internet.
 
@@ -131,18 +131,18 @@ I have chosen the url nginx.tanzu.dk and i'm pointing it to the internal service
 The cloudflare tunnel, will be deployed in the default namespace, so I can just reference the nginx service with <http://nginx:80>
 
 If you need to access different namespaces, then the url would look something like this <http://nginx.namespace:80>
-![Setup DNS](images/setup_dns.png)
+![Setup DNS](images/setup_dns.webp)
 
 Click `Save Tanzu Community Edition tunnel`
 
 You should now see a new tunnel apear, with the status Inactive.
 Don't close the website, since we will use it later.
-![Inaktive Tunnel](images/inaktive_tunnel.png)
+![Inaktive Tunnel](images/inaktive_tunnel.webp)
 
 Open DNS settings for your domain, and see a new CNAME entry has been created, with the nginx.tanzu.dk domain name, pointing to a strange url.
 
 This is CloudFlare pointing your new record, to the newly created tunnel id.
-![DNS CNAME](images/dns_cname.png)
+![DNS CNAME](images/dns_cname.webp)
 
 ## Create container
 
@@ -202,11 +202,11 @@ kubectl apply -f cloudflared.yaml
 ```
 
 After a couple of minutes, you should be able to see that your tunnel is up and running.
-![active tunnel](images/active_tunnel.png)
+![active tunnel](images/active_tunnel.webp)
 
 And if you connect to the public url [http://nginx.tanzu.dk](http://nginx.tanzu.dk), we created earlier, you should now see a working Nginx website.
 Note it works both as http and https with a valid certificate.
-![Nginx](images/nginx.png)
+![Nginx](images/nginx.webp)
 
 ## summary
 

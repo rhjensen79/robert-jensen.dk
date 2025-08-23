@@ -4,7 +4,7 @@ date: 2023-05-23T12:00:00+01:00
 tags : [Containers, Actions, Github, automation]
 draft: false
 toc: true
-thumbnail: "images/containers.jpg"
+thumbnail: "images/containers.webp"
 description: "How to build, publish and host docker images on Github using Github actions"
 ---
 ## Intro
@@ -16,7 +16,7 @@ My search for a replacement, lead me to Github Container Registry.
 
 A part of that move, it was natural, to also use [Github Actions](https://github.com/features/actions), to build the container images as well.
 
-![tweet](images/tweet.jpg)
+![tweet](images/tweet.webp)
 
 This blog post, is ment as a getting started guide, for building and publishing Docker images to Github Container registry, fully automated using [Github Actions](https://github.com/features/actions).
 
@@ -33,7 +33,7 @@ You will need the following:
 ## Repository
 
 Start by creating a new Repository on [Github.com](https://www.github.com)
-![Repository](images/repository.jpg)
+![Repository](images/repository.webp)
 I call mine "MyApp" which will also be the default name of the container image, unless you change it.
 
 Remember to set it Public, and add a Readme file, since we will use it in the demo, and it's always a good thing to have in your repository.
@@ -74,7 +74,7 @@ In the search field type `container` and click `configure` on the first one that
 
 Note there are many others Actions, but this one, will work for our usecase.
 
-![Actions Search](images/github_actions_search.jpg)
+![Actions Search](images/github_actions_search.webp)
 
 You should now see a Yaml file, with all the steps required.
 We will modify it a bit, to make it a bit more usefull, for our setup.
@@ -193,7 +193,7 @@ Also by default, it uses your Github credentials, to push the finished container
 !!! Remember not to put secrets in your Public (or private) git repository, if you chose another repository at a later time.
 
 For now click "Commit Changes" and commit directly to the main branch.
-![Commit_Action](images/commit_action.jpg)
+![Commit_Action](images/commit_action.webp)
 
 On you local computer run
 
@@ -214,7 +214,7 @@ But for now, let's focus on the first build.
 The Dockerfile in your repo should not be comitted yet.
 So start by doing that.
 Give it the commit message "Added Dockerfile" and click `Commit`
-![Commit](images/initial_commit.jpg)
+![Commit](images/initial_commit.webp)
 
 Also click `Sync Changes` to push the commit to the remote Registry on Github.
 
@@ -223,31 +223,31 @@ Note i'm using the VS Code UI here, but you can do all of these steps, from the 
 To build a container with the changes, we have made so far, we need to add a tag.
 
 Click `Command ⌘ + Shift ⇧ + P` to open the command pallette, and type `Create Tag`
-![create_tag](images/create_tag.jpg)
+![create_tag](images/create_tag.webp)
 
 The tag needs to be in the format `v*.*.*`as described in the actions file. We will name ours `v0.0.1`
-![tag](images/tag_version.jpg)
+![tag](images/tag_version.webp)
 
 Give it the description `Version v0.0.1`
-![Tag Description](images/tag_description.jpg)
+![Tag Description](images/tag_description.webp)
 
 And say yes to sync the tag.
-![Tag Sync](images/sync_tag.jpg)
+![Tag Sync](images/sync_tag.webp)
 
 After this, you can open your repository on github,.com, and select the Actions tab, and see a new workflow has been run.
 If you did everything right, then it should be green. If not, then it's time to trubleshoot. But don't worry, there is plenty of logs to help you.
-![Action Run](images/actions_workflow.jpg)
+![Action Run](images/actions_workflow.webp)
 Note the Workflow Run name is the latest Commit message, and the version is the tag.
 
 ## Registry
 
 On the front page, of your Github repository, you should see `MyApp`under Packages.
-![myapp](images/myapp.jpg)
+![myapp](images/myapp.webp)
 
 click on `MyApp` to go to the Package site.
 
 Here you can see all the information about yor container.
-![package](images/package.jpg)
+![package](images/package.webp)
 
 The container can be pulled in 3 different ways.
 
@@ -275,7 +275,7 @@ cat README.md
 ```
 
 This allows me to run a bash shell, inside the container, to see the README.md file, we copied into it during the build.
-![container bash](images/container_bash.jpg)
+![container bash](images/container_bash.webp)
 
 ## Ending
 

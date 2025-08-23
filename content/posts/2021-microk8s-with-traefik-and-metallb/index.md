@@ -6,7 +6,7 @@ Tags: [k8s, kubernetes, traefik, metallb, reverse proxy, full guide, Tanzu, comm
 Categories: []
 DisableComments: false
 toc: true
-thumbnail: "images/kimi-lee-M3RVFbqKGu4-unsplash.jpg"
+thumbnail: "images/kimi-lee-M3RVFbqKGu4-unsplash.webp"
 #images: 
 #- "images/kimi-lee-M3RVFbqKGu4-unsplash.jpg"
 draft: false
@@ -102,7 +102,7 @@ If you run
 kubectl get sc
 ```
 
-![Get SC](images/get_sc.png)
+![Get SC](images/get_sc.webp)
 
 you shuld now see you new storage class, with a (default) after it, showing that it's the default storage, meaning we don't have to specify it later.
 If you want other configurations, then look at the [Github](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner) page, for the project. for documentation.

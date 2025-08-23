@@ -11,7 +11,8 @@
       "WebSearch",
       "WebFetch(domain:www.seoptimer.com)",
       "WebFetch(domain:www.seobility.net)",
-      "WebFetch(domain:www.robert-jensen.dk)"
+      "WebFetch(domain:www.robert-jensen.dk)",
+      "Bash(brew install:*)"
     ],
     "deny": [],
     "ask": []

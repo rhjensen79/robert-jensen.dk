@@ -4,7 +4,7 @@ date: 2023-06-27T12:00:00+01:00
 tags : [Kubernetes, Docker, K8S, Github Action, Watchtower, CICD]
 draft: false
 toc: true
-thumbnail: "images/minions.jpg"
+thumbnail: "images/minions.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to update applications on Docker, the same you you would on Kubernetes"
 ---

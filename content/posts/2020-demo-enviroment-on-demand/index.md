@@ -4,7 +4,7 @@ date: 2020-06-02T12:25:00.001+02:00
 draft: false
 aliases: [ "/2020/06/demo-enviroment-on-demand.html" ]
 tags : [SDDC, VMware CAS, ubuntu, CMP, multi cloud, Self Service, Release Pipeline, cloud management, automation, XaaS, On Demand, CAS, Code Stream, VMware, AWS]
-thumbnail: "images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.jpg"
+thumbnail: "images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.webp"
 ---
 
 A couple of years ago Jad El-Zein (@virtualjad) created a demo, where he ordered a VM (I think it was) using Siri on his iPhone, with vRealize Automation (VRA).

@@ -4,7 +4,7 @@ date: 2024-04-22T12:00:00+01:00
 tags : [K8S, Tanzu, VLAN, Network, vSphere, VMware,  Broadkom, Kubernetes, Loadbalancer, AVI, Port Groups, Virtuel Infrastructure]
 draft: false
 toc: true
-thumbnail: "images/jordan-harrison-40XgDxBfYXM-unsplash.jpg"
+thumbnail: "images/jordan-harrison-40XgDxBfYXM-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Are you struggling to add more than one network to your vSphere with Tanzu environment using the AVI Loadbalancer? This quick guide shows you how to overcome this limitation and use multiple networks on your workload namespaces. Learn how to configure your supervisor cluster, add new port groups, and define network ranges for each network. Perfect for IT professionals looking to optimize and secure their virtual infrastructure."
 ---
@@ -25,22 +25,22 @@ Note it's only possible (as far as I know), to have 1 network to each vSphere na
 ## Howto
 
 I will be adding my new port group vlan200, in this guide.
-![vlan200](images/1.png)
+![vlan200](images/1.webp)
 
 Go to workload management, find your supervisor cluster, and select it.
-![supervisor](images/2.png)
+![supervisor](images/2.webp)
 
 
 Click configure -> Network -> Workload Network and click add
-![network](images/3.png)
+![network](images/3.webp)
 
 
 Select the new port group, and add the network ranges that can be used.
-![network](images/4.png)
+![network](images/4.webp)
 
 
 Now you can select the new network when you create new vSphere namespaces.
-![network](images/5.png)
+![network](images/5.webp)
 
 
 ## Notes

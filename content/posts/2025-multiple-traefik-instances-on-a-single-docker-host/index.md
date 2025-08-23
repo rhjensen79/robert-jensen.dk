@@ -4,7 +4,7 @@ date: 2025-03-19T12:00:00+01:00
 tags : [Docker, Traefik, Networking, Proxy, Labels, Containers]
 draft: false
 toc: true
-thumbnail: "images/sigmund-EJe6LqEjHpA-unsplash.jpg"
+thumbnail: "images/sigmund-EJe6LqEjHpA-unsplash.webp"
 description: "How to run multiple Traefik instances on the same Docker host and selectively route containers to different proxies using labels"
 ---
 ## Intro

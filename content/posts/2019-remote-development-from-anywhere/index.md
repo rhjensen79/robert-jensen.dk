@@ -4,7 +4,7 @@ date: 2019-10-09T09:05:00.000+02:00
 draft: false
 aliases: [ "/2019/10/remote-development-from-anywhere.html" ]
 tags : [Network, Overlay, VPN, SDWAN, SD-WAN, Development, VSCode, VMware, Ansible, Zerotier]
-thumbnail: "images/yancy-min-842ofHC6MaI-unsplash.jpg"
+thumbnail: "images/yancy-min-842ofHC6MaI-unsplash.webp"
 ---
 
 [![](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)

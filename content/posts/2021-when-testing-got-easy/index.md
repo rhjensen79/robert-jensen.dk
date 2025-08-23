@@ -3,7 +3,7 @@ title: "When Testing Got Easy - a story about SMTP and Docker"
 date: 2021-03-03T15:55:59+01:00
 tags : [testing, smtp, mail, python, docker]
 draft: false
-thumbnail: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
+thumbnail: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.webp"
 toc: true
 #image: 
 #- "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
@@ -116,11 +116,11 @@ python3 mail.py
 To use the script to send an email.
 
 and open [http://localhost:8025](http://localhost:8025)
-![Login](images/login.png)
+![Login](images/login.webp)
 As you can see, there is an email in the inbox.
 The server is setup, to catch all the emails that we send to it.
 
-![mail](images/mail.png)
+![mail](images/mail.webp)
 And when we open it, we can read the content.
 
 When i'm done testing, all I need to do is to run

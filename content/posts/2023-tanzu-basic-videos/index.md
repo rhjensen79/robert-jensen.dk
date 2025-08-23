@@ -4,7 +4,7 @@ date: 2023-09-17T12:00:00+01:00
 tags : [Kubernetes, Docker, K8S, CICD, Tanzu, TKG]
 draft: false
 toc: true
-thumbnail: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
+thumbnail: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.webp"
 #image: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
 description: "A list of videos create to show the basics of VMware Tanzu Kubernetes grid"
 ---

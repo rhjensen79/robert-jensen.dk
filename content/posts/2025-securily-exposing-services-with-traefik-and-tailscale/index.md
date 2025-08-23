@@ -4,7 +4,7 @@ date: 2025-03-10T12:00:00+01:00
 tags: [Tailscale VPN, Traefik Reverse Proxy, Docker Containers, Secure Networking, Self-Hosted Services, HTTPS Certificates, DNS Configuration, Mesh VPN, Service Discovery, Private Network Security]
 draft: false
 toc: true
-thumbnail: "images/joshua-sortino-LqKhnDzSF-8-unsplash.jpg"
+thumbnail: "images/joshua-sortino-LqKhnDzSF-8-unsplash.webp"
 description: "Step-by-step guide to creating a secure gateway for self-hosted services using Traefik reverse proxy with Tailscale VPN, complete with automatic HTTPS certificates and clean URL routing for your private network infrastructure"
 ---
 ## Intro

@@ -4,7 +4,7 @@ date: 2024-08-29T12:00:00+01:00
 tags: [VMware NSX Troubleshooting, VCF Installation Error, Transport Node Collection Failure, NSX Manager Connectivity, ESXi Firewall Configuration, VMware Cloud Foundation, Broadcom NSX, Enterprise Virtualization]
 draft: false
 toc: true
-thumbnail: "images/tim-mossholder-rx_GNopVlFs-unsplash.jpg"
+thumbnail: "images/tim-mossholder-rx_GNopVlFs-unsplash.webp"
 #image: "images/tim-mossholder-rx_GNopVlFs-unsplash.jpg"
 description: "Troubleshooting guide for VMware Cloud Foundation (VCF) deployment failure during Transport Node Collection creation at 48%. Learn how to resolve NSX Manager connectivity issues and firewall configuration problems in your VMware infrastructure."
 ---
@@ -16,7 +16,7 @@ For a clean installation, Cloud Builder fails with the step "Create Transport No
 
 Troubleshooting the problems by logging into the NSX manager, revelaled the problem was "Waiting for connection to managers"
 So that ment that the hosts were trying to contact the NSX manager, with no luck.
-![NSX Manager Transport Node Collection showing "Waiting for connection to managers" error status](images/1.png)
+![NSX Manager Transport Node Collection showing "Waiting for connection to managers" error status](images/1.webp)
 
 The ESX hosts and the NSX appliances, were on different subnets. 
 

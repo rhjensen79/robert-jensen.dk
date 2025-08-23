@@ -4,7 +4,7 @@ date: 2023-12-05T00:00:00+01:00
 tags : [VScode, Git, SSH, Devcontainer]
 draft: false
 toc: true
-thumbnail: "images/certificate.jpg"
+thumbnail: "images/certificate.webp"
 #image: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
 description: "How to setup VScode Devcontainer to use a local SSH key for signing"
 ---
@@ -53,7 +53,7 @@ So my new Devcontainer.json file looks like this
 To make sure it's reusable across different accounts, I used the `${localEnv:HOME}` path, instead of a hardcoded path. 
 
 Now all my commits are verified again (as they should be), and it's reusable everywhere I need it. Just note, that I need to have a SSH key, that I can use to sign, on any system I run this on. For more advanced devcontainer setups, check out my guide on [using Devcontainers with Tailscale for remote development](https://www.robert-jensen.dk/posts/2024-tailscale-devcontainers/).
-![verified](images/verified.png)
+![verified](images/verified.webp)
 
 
 ## Links

@@ -4,7 +4,7 @@ date: 2023-03-06T12:00:00+01:00
 tags : [reverse proxy, caddy, cloudflare, cloudflared, argo]
 draft: false
 toc: true
-thumbnail: "images/marc-olivier-jodoin--TQUERQGUZ8-unsplash.jpg"
+thumbnail: "images/marc-olivier-jodoin--TQUERQGUZ8-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to setup Caddy reverse proxy, after Cloudflare reverse proxy"
 ---
@@ -103,19 +103,19 @@ This allows us to communicate with all containers, using their name.
 In Cloudflare, go to Zero Trust and find your Tunnel.
 Once found, edit it.
 Create a new public hostname.
-![public_hostname](images/public_hostname.png)
+![public_hostname](images/public_hostname.webp)
 Mine is called caddy.robert-jensen.dk, but the important thing, is the service part.
 Here i have selected https and the url is caddy:443 which is the internal dns name, for my container, along with the port.
 
 I have also configured one additional setting.
-![no_tls](images/no_tls.png)
+![no_tls](images/no_tls.webp)
 `No TLS Verify Enabled`
 
 This is important since the certificate for Caddy is self-signed and not trusted.
 Caddy can pull its own certificate, from Let's Encrypt, etc. But in this case, Cloudflare provides a certificate, so it's not needed.
 This setting tells Cloudflare to ignore the certificate warning.
 
-![http_host_header](images/http_host_header.png)
+![http_host_header](images/http_host_header.webp)
 Another thing is to set the `HTTP Host Header` to caddy.
 
 This ensures that the requested URL matches the one we set in the first line in the `Caddyfile` in the next step.
@@ -157,13 +157,13 @@ In the end, we tell it that all other traffic goes to the nginx container, witho
 ## Test
 
 Running a simple `docker compose up` should provide this result for  `https://caddy.robert-jensen.dk/nginx`
-![NGINX_URL](images/nginx_url.png)
+![NGINX_URL](images/nginx_url.webp)
 
 This result for `<https://caddy.robert-jensen.dk/httpd>`
-![HTTPD_URL](images/httpd_url.png)
+![HTTPD_URL](images/httpd_url.webp)
 
 And this result for `https://caddy.robert-jensen.dk`
-![Clean_URL](images/clean_url.png)
+![Clean_URL](images/clean_url.webp)
 
 Note that all URL have a valid certificate. This is provided by default by the `Cloudflared Proxy`
 

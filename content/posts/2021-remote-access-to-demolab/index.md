@@ -3,7 +3,7 @@ title: "Remote Access to Demolab using Apache Guacamole"
 date: 2021-01-19T09:35:55+01:00
 tags : [remote, demolab, vpn, rdp, vnc, ssh, apache, guacamole, ipsec, Traefik, docker, docker-compose, compose, hosting, app, homelab]
 draft: false
-thumbnail: "images/markus-spiske-uPXs5Vx5bIg-unsplash.jpg"
+thumbnail: "images/markus-spiske-uPXs5Vx5bIg-unsplash.webp"
 description: "How to setup Tailscale, to get remote, seamless access to you home lab, or demo enviroment."
 ---
 
@@ -32,20 +32,20 @@ For work that takes longer, I prefer my Terminal, or a RDP (or Horizon View) cli
 Let me take you thru how it looks.
 
 The login is easy, and can be setup with LDAP and 2 factor auth. It also supports different groups, so you can chose who can access what.
-![login](images/login.png)
+![login](images/login.webp)
 
 The overview, shows the connections you have avalible, and the ones you have active. 
-![overview](images/overview.png)
+![overview](images/overview.webp)
 
 The Rdp Connection works as expected, and you can make it so, it resizes the screen, after the size of your browser window.
-![rdp](images/rdp.png)
+![rdp](images/rdp.webp)
 
 SSH also works as expected, and a nice feature, is that you can easily change between active connections, in the windows in the bottom right (the was is also true for RDP)
 There is also an opton for SFTP, but I have not tried that yet. 
-![ssh](images/ssh.png)
+![ssh](images/ssh.webp)
 
 Creating a new connection is easy, and there is a ton of options to chose from. I have only setup the minimum in my enviroment, like username, pass and FQDN.
-![connection](images/connection.png)
+![connection](images/connection.webp)
 
 And for me, that is all I needed to get it working. 
 

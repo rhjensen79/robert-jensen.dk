@@ -4,7 +4,7 @@ date: 2019-12-16T11:27:00.001+01:00
 draft: false
 aliases: [ "/2019/12/how-to-show-value-of-automation.html" ]
 tags : [vRA, code, VMware, automation, AWS, value]
-thumbnail: "images/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg"
+thumbnail: "images/riccardo-annandale-7e2pe9wjL9M-unsplash.webp"
 ---
 
 [![](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s640/value-proposition.jpg)](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s1600/value-proposition.jpg)

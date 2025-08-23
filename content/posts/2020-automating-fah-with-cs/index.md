@@ -3,7 +3,7 @@ title: "Automating Folding@Home With VMware Code Stream"
 date: 2020-11-18T16:42:22+01:00
 tags : [Terraform, Code Stream, GitHub, Automation, Folding@home, vSphere, vmware, ci, cd, cicd, devops]
 draft: false
-thumbnail: "images/top_picture.jpg"
+thumbnail: "images/top_picture.webp"
 ---
 I am always looking for new ways to do demo's, and to showcase the solutions the company I work for have. 
 One usecase, that I really wanted to show, was infrastructure as code (IAC), using a combination of both VMware and opensource tools.
@@ -22,39 +22,39 @@ I created a [issue](https://github.com/saintdle/Terraform/pull/1#issuecomment-72
 
 And [Dean](https://twitter.com/saintdle) responded quickly, and have since implementet a really nice solution, in his repo, that can do both local and remote. So check out his [Github repo](https://github.com/saintdle/Terraform) if you want to play with this yourself.
 
-![Issue](images/github_issue.png)
+![Issue](images/github_issue.webp)
 
 I ended up creating my own private Github repo, with the code, to keep the demo usecase, seperate from all other stuff. 
 
 I then created a simple pipeline, that gets triggered by changes to that GitHub repo using the Code Stream integration
 
-![Git](images/cs_git_webhook.png)
+![Git](images/cs_git_webhook.webp)
 
 The Pipeline start's by deploying my [Terraform container](https://hub.docker.com/r/robertjensen/terraform)
 
-![container](images/cs_docker_setting.png)
+![container](images/cs_docker_setting.webp)
 
 Pulls my git repo into that container.
 
-![Git Settings](images/cs_git_settings.png)
+![Git Settings](images/cs_git_settings.webp)
 
 Does an Terraform init and the a terraform apply -auto-approve, with a notification, in case anything goes wrong.
 
-![Pipeline](images/cs_pipeline.png)
+![Pipeline](images/cs_pipeline.webp)
 
 The result is that when I see a Tweet like this.
 
-![Tweet](images/tweet.png)
+![Tweet](images/tweet.webp)
 
 It takes me 1 minutes, to change the url, and commit and push to my repo.
 
 2 minutes later, the pipeline is complete.
 
-![Pipeline complete](images/cs_pipeline_complete.png)
+![Pipeline complete](images/cs_pipeline_complete.webp)
 
 and my vSphere enviroment is updated, with 3 new Folding@home appliances, running with the correct specs, with my FAH user profile, on my vSphere enviroment.
 
-![vSphere](images/vsphere.png)
+![vSphere](images/vsphere.webp)
 
 I don't know if that qualifyes as IAC, but for me, it's a really nice demo, and it makes it so easy, to keep my deployment updated, and running with the specs i want.
 

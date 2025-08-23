@@ -3,7 +3,7 @@ title: "Installing Harbor Container Registry Behind Traefik Reverse Proxy With L
 date: 2021-02-19T13:53:10+01:00
 tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse proxy, Container Registry, secure, https, certificate, Docker Hub, Rate Limit]
 draft: false
-thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.jpg"
+thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.webp"
 description: "How to setup Harbor Container Registry, behind Traefik Reverse Proxy, and how to get secure https Let's Encrypt certificates deploye automaticly"
 ---
 Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry, to put my containers, but also to use as a proxy, so I hit the Docker api a blit less.
@@ -208,7 +208,7 @@ And that is it.
 Traefik should now have published your Harbor installation, so it avaliable for you, on https://publicurl.
 
 You can login with admin and the password, you set in your harbor.yml file, and you now have your own container registry.
-![Harbor Container Registry login interface showing the administrator authentication page with username and password fields](images/harbor_login.png)
+![Harbor Container Registry login interface showing the administrator authentication page with username and password fields](images/harbor_login.webp)
 
 If Trivy (or one of the other services) are complaning about resolving things on the internet, then edit the docker-compose.yml file, and find "dns_search: ." under the service, and # it. 
 I don't know why Harbor did this, and it's probably not best practice, but it's working for now, in my setup.

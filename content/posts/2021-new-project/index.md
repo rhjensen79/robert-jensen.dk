@@ -3,7 +3,7 @@ title: "New Project"
 date: 2021-05-07T20:13:49+02:00
 tags : [New Project, Hugo, GoHugo, FastApi, Traefik, MongoDB, Dynamic, DB]
 draft: false
-thumbnail: "images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg"
+thumbnail: "images/joshua-eckstein-VAJEea9u6k8-unsplash.webp"
 #images: 
 #- "images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg"
 description: "Description, of my new project, where i use Hugo, FastAPI, Mongodb and some other tools, to list all the Crossfit and Non Crossfit boxes in the world"
@@ -22,7 +22,7 @@ As far as I can see, such a complete list, does not exist.
 Since this is a technical blog (for the most parts), I will focus this post, on the technical parts of the project.
 But if you are doing Crossfit (or functional training), then take a look, at see if your Box is there. If not, then add it, so others can find it as well :-)
 The address is [www.xFitInfo.com](https://www.xFitInfo.com)
-![Website](images/website.png)
+![Website](images/website.webp)
 
 The site is far from finished, so expect to see a lot of changes, over the next couple of month.
 

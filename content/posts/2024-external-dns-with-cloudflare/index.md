@@ -4,7 +4,7 @@ date: 2024-05-15T12:00:00+01:00
 tags : [K8S, ExternalDNS, Kubernetes, DNS, Automation]
 draft: false
 toc: true
-thumbnail: "images/brittany-colette-GFLMi4c8XMg-unsplash.jpg"
+thumbnail: "images/brittany-colette-GFLMi4c8XMg-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Are you tired of manually creating DNS records for your Kubernetes services? In this tutorial, we'll show you how to automate the process using CloudFlare and External DNS. We'll walk you through the steps of setting up a Cloudflare API key, installing External DNS, and configuring it to work with your Kubernetes cluster. With this setup, you can easily create and manage DNS records for your services without having to manually update them in CloudFlare. Perfect for IT professionals looking to streamline their workflow and improve their infrastructure's reliability and security."
 ---
@@ -37,7 +37,7 @@ To create an API key
 - Log in.
 - Select "My Profile"
 - Select "API Tokens"
-![Cloudflare API Tokens page showing how to create a new API token for External DNS integration](images/1.png)
+![Cloudflare API Tokens page showing how to create a new API token for External DNS integration](images/1.webp)
 
 At the bottom, there is a section called "API Keys"
 
@@ -48,7 +48,7 @@ Instead, select Create Token" in the top right corner.
 
 Select "Create Custom Token" at the bottom of the screen.
 
-![Custom token](images/2.png)
+![Custom token](images/2.webp)
 
 Give it a custom name.
 
@@ -64,19 +64,19 @@ I did not define expiry, but it's absolutely best practice, to not let it live f
 
 Click "Continue to Summery"
 
-![create api](images/3.png)
+![create api](images/3.webp)
 
 You should see a summary like this
 
 Click "Create Token"
 
-![summery](images/4.png)
+![summery](images/4.webp)
 
 Copy the token, and save it in a safe place. We will need it later.
 
 (The token has already been deleted when you read this blog post. Just FYI.)
 
-![token](images/5.png)
+![token](images/5.webp)
 
 Note at the bottom, that you can copy the command, to test the token.
 I recommend doing so, so you know it works before you begin troubleshooting later.
@@ -121,7 +121,7 @@ helm upgrade --install external-dns external-dns/external-dns --values values.ya
 ```
 
 If you use [K9S](https://k9scli.io) then you can quickly start it, and find your external-dns pod, and see the logs, by pressing "l"
-![k9s](images/6.png)
+![k9s](images/6.webp)
 
 It shows that it's working by saying that all records are up to date.
 
@@ -174,13 +174,13 @@ kubectl apply -f nginx.yaml
 
 Open K9S again, and see the logs of the External DNS pod again.
 It should now show something like this.
-![logs](images/7.png)
+![logs](images/7.webp)
 
 In Cloudflare, you can also see that 3 new records have been created.
 
 The most important one is the A record, for our Nginx service.
 The other 2 txt records, are External DNS way of keeping track of the records it creates (as I understand it)
-![cloudflare](images/8.png)
+![cloudflare](images/8.webp)
 
 ## Notes
 

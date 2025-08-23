@@ -3,7 +3,7 @@ title: "Integrate Azure Devops With Vmware Codestream"
 date: 2021-03-22T08:22:25+01:00
 tags : [Azure, gitlab, CiCD, VMware, CodeStream, integrate, DevOps, Git, Microsoft, VMware]
 draft: false
-thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.jpg"
+thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.webp"
 #images: 
 #- "images/clay-banks-LjqARJaJotc-unsplash.jpg"
 ---
@@ -49,13 +49,13 @@ steps:
 But this is all it takes.
 
 When you comit and push a new file, to the repo.
-![commit](images/commit.png)
+![commit](images/commit.webp)
 
 It triggers a Pipelin run in Azure Devops
-![Azure](images/azure.png)
+![Azure](images/azure.webp)
 
 That start's a Ubuntu container, that runs the script, that triggers the CodeStream pipeline.
-![CodeStream](images/codestream.png)
+![CodeStream](images/codestream.webp)
 
 This is just a simpel example. You can do it a lot more advanced, and pass parameters to the CodeStream pipeline, if you want to. But for my usecase, this was enough, and it's easily replicated, to other platforms, that can run the script, or just do a simple rest call.
 
