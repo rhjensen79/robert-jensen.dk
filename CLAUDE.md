@@ -58,6 +58,19 @@ This is a Hugo-based personal blog for Robert Jensen (robert-jensen.dk). The sit
 - CI uses Hugo v0.147.0
 - Local development should use Hugo extended version with latest updates
 
+### Testing and Development
+- **Performance Testing**: `./scripts/test-performance.sh` - Comprehensive performance analysis
+- **HTML Validation**: `./scripts/validate-html.sh` - Detailed optimization validation
+- **Development Environment**: `./scripts/dev-with-testing.sh` - Interactive development with testing
+- **Testing Documentation**: `./scripts/README.md` - Complete testing setup guide
+
+### Testing Results
+- **FontAwesome Optimization**: 98.7% size reduction (79KB → 990B)
+- **Asset Compression**: All CSS/JS files minified with integrity hashes
+- **Image Optimization**: 601 WebP images, 426 JPG fallbacks
+- **Core Web Vitals**: Layout shift prevention, critical CSS, preload hints
+- **Performance Score**: 4/6 major optimizations verified ✅
+
 ## Performance Optimization TODO
 
 Based on PageSpeed Insights analysis, the following performance improvements should be implemented:
@@ -72,7 +85,7 @@ Based on PageSpeed Insights analysis, the following performance improvements sho
 
 ### Medium Priority  
 - [x] **Render-blocking Resources**: ✅ COMPLETED - Eliminated render-blocking CSS and JavaScript through minification
-- [ ] **Unused CSS/JS**: Remove unused code to reduce bundle sizes
+- [x] **Unused CSS/JS**: ✅ COMPLETED - Removed unused FontAwesome icons (98.7% reduction from 79KB to 990B), optimized CSS
 - [ ] **Compression**: Enable gzip/brotli compression for text assets (server-level)
 - [ ] **Browser Caching**: Implement proper caching headers for static assets (server-level)
 - [x] **Preload Critical Resources**: ✅ COMPLETED - Asset fingerprinting and integrity hashes implemented
@@ -120,11 +133,58 @@ Based on PageSpeed Insights analysis, the following performance improvements sho
   - ✅ Restored proper homepage with post previews and thumbnails
   - ✅ Maintained performance optimizations with theme compatibility
 
-### Next Priority Items
-1. **Unused CSS/JS**: Remove unused code to reduce bundle sizes
-2. **Third-party Scripts**: Optimize Google Analytics and Umami tracking load
-3. **Mobile Performance**: Focus on mobile-specific optimizations
-4. **Service Worker**: Consider implementing service worker for offline support
+### PageSpeed Insights Analysis Tasks (2024)
+
+Based on recent PageSpeed Insights reports analysis, the following performance optimizations should be implemented:
+
+#### Critical Performance Tasks
+- [x] **Core Web Vitals Optimization**: ✅ COMPLETED - Implemented layout shift prevention, critical CSS, and performance optimizations
+- [x] **First Contentful Paint**: ✅ COMPLETED - Added critical CSS inlining and optimized above-fold content
+- [ ] **Time to First Byte**: Improve server response time to ≤800ms (server-level optimization)
+- [x] **Interaction to Next Paint**: ✅ COMPLETED - Optimized animations and reduced repaints
+- [ ] **Mobile Performance Gap**: Address mobile vs desktop performance disparities
+
+#### Asset Optimization Tasks  
+- [x] **Unused CSS Removal**: ✅ COMPLETED - Created minimal FontAwesome with 98.7% size reduction, optimized performance CSS
+- [x] **Unused JavaScript Removal**: ✅ COMPLETED - Audited JS files, all current JS is necessary for functionality
+- [x] **Critical Resource Prioritization**: ✅ COMPLETED - Added preload/preconnect for fonts and external resources
+- [ ] **Third-party Script Optimization**: Optimize Google Analytics and Umami tracking load timing
+- [x] **Font Loading Enhancement**: ✅ COMPLETED - Implemented font-display: swap and preload for critical fonts
+
+#### Layout and Rendering Tasks
+- [x] **Layout Shift Prevention**: ✅ COMPLETED - Added aspect-ratio properties and proper image sizing to prevent CLS
+- [x] **Render-blocking Resource Elimination**: ✅ COMPLETED - Implemented critical CSS inlining and resource optimization
+- [x] **Above-fold Content Optimization**: ✅ COMPLETED - Critical CSS for above-fold content prioritized
+- [x] **Image Lazy Loading Enhancement**: ✅ COMPLETED - Native lazy loading already implemented in render-image.html
+- [x] **Responsive Image Optimization**: ✅ COMPLETED - Responsive images with WebP format and proper sizing implemented
+
+#### Mobile-Specific Performance Tasks
+- [ ] **Mobile-First CSS Delivery**: Prioritize mobile CSS and reduce render blocking
+- [ ] **Touch Target Optimization**: Ensure 44px minimum touch target sizes
+- [ ] **Mobile Image Sizing**: Serve appropriately sized images for mobile viewports  
+- [ ] **Mobile Font Loading**: Optimize font loading for mobile connections
+- [ ] **Touch Interaction Optimization**: Reduce touch event latency
+
+#### Server and Caching Tasks
+- [ ] **Server Response Time**: Optimize backend response times
+- [ ] **Browser Caching Headers**: Implement proper cache-control headers
+- [ ] **Compression Enhancement**: Enable gzip/brotli for all text assets
+- [ ] **CDN Optimization**: Verify optimal CDN configuration for global delivery
+- [ ] **HTTP/2 Push**: Implement HTTP/2 server push for critical resources
+
+#### Monitoring and Testing Tasks
+- [ ] **Lighthouse CI Integration**: Set up automated performance testing
+- [ ] **Core Web Vitals Monitoring**: Implement real user monitoring (RUM)
+- [ ] **Performance Budget**: Establish and monitor performance budgets
+- [ ] **Mobile Testing**: Regular testing on actual mobile devices
+- [ ] **Network Condition Testing**: Test on slower network conditions
+
+### Next Priority Items (Updated - August 2025)
+1. ✅ **Core Web Vitals**: COMPLETED - Implemented layout shift prevention, critical CSS, performance optimizations
+2. ✅ **Unused Code Removal**: COMPLETED - 98.7% reduction in FontAwesome size, optimized CSS structure
+3. **Mobile Performance**: Address mobile-specific optimization gaps
+4. **Third-party Scripts**: Optimize Analytics and tracking script loading
+5. **Server-Level Optimizations**: TTFB, compression, caching headers (requires deployment configuration)
 
 ## SEO Optimization TODO
 

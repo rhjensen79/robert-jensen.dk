@@ -1,0 +1,16 @@
+{{/* Critical CSS for above-the-fold content */}}
+<style>
+/* Critical above-the-fold styles - inlined for fastest LCP */
+.wrapper{display:flex;min-height:100vh}
+.wrapper__sidebar{flex:0 0 300px}
+.wrapper__main{flex:1;min-width:0}
+.sidebar{padding:2rem}
+.sidebar__introduction-title h1{font-size:1.5rem;margin:0.5rem 0}
+.sidebar__introduction-description{color:#666;margin-bottom:1rem}
+.sidebar__list{list-style:none;padding:0;margin:1rem 0}
+.sidebar__list-item{display:inline-block;margin:0 0.5rem}
+.post__thumbnail-wrapper{aspect-ratio:16/9;background:#f5f5f5;border-radius:4px;overflow:hidden}
+.post__thumbnail{width:100%;height:auto;object-fit:cover}
+.animated{animation-duration:0.5s;animation-fill-mode:forwards}
+@media(max-width:768px){.wrapper{flex-direction:column}.wrapper__sidebar{flex:none}}
+</style>

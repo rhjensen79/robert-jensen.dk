@@ -1,0 +1,56 @@
+/* Minimal FontAwesome - Only used icons for better performance */
+
+/* Base FontAwesome styles */
+.fa, .fas, .far, .fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-display: swap;
+}
+
+/* FontAwesome Solid icons */
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* FontAwesome Brands icons */
+.fab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/* Size modifiers */
+.fa-2x { font-size: 2em; }
+.fa-fw { width: 1.25em; text-align: center; }
+
+/* Only the icons we actually use */
+.fa-github:before { content: "\f09b"; }
+.fa-bluesky:before { content: "\e671"; }
+.fa-linkedin:before { content: "\f08c"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-youtube:before { content: "\f167"; }
+.fa-adjust:before { content: "\f042"; }
+.fa-calendar-day:before { content: "\f783"; }
+.fa-angle-right:before { content: "\f105"; }
+
+/* Web font loading optimization */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fontawesome/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fontawesome/webfonts/fa-brands-400.woff2") format("woff2");
+}

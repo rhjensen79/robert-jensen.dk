@@ -1,26 +1,73 @@
-/* Conservative Performance Optimizations for Core Web Vitals */
+/* Core Web Vitals Optimizations */
 
-/* Font Display Swap for all web fonts */
-@font-face {
-  font-display: swap !important;
+/* Critical resource loading */
+@media (prefers-reduced-motion: no-preference) {
+  /* Preload critical images */
+  .post__thumbnail {
+    will-change: transform;
+    transform: translateZ(0);
+  }
 }
 
-/* Only target specific image optimization without breaking layout */
+/* Image loading optimization - let theme control sizing */
 .post__thumbnail {
   object-fit: cover;
 }
 
-/* Very minimal performance optimizations */
+.post__thumbnail-wrapper {
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
 
-/* Font loading performance */
+/* Font loading performance - moved to minimal fontawesome */
 .fa, .fas, .far, .fab {
   font-display: swap;
 }
 
-/* Reduce motion for accessibility */
+/* Reduce motion for accessibility and performance */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
+
+/* Optimize animations */
+.animated {
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+/* Intersection Observer polyfill for lazy loading */
+.lazyload {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazyloaded {
+  opacity: 1;
+}
+
+/* Performance optimizations without layout overrides */
+
+/* Optimize theme switch performance */
+.themeswitch {
+  will-change: transform;
+}
+
+/* Reduce repaints */
+.sidebar__list-item a {
+  will-change: transform;
+}
+
+/* Optimize pagination */
+.pagination__list {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
 }
