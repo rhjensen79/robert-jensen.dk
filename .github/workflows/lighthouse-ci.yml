@@ -83,14 +83,12 @@ jobs:
                 const report = JSON.parse(fs.readFileSync(path.join(resultsPath, reportFile), 'utf8'));
                 const scores = report.categories;
                 
-                const comment = `## 🚨 Lighthouse Performance Report
-                
-**Performance:** ${Math.round(scores.performance.score * 100)}/100
-**Accessibility:** ${Math.round(scores.accessibility.score * 100)}/100  
-**Best Practices:** ${Math.round(scores['best-practices'].score * 100)}/100
-**SEO:** ${Math.round(scores.seo.score * 100)}/100
-
-View detailed results in the Actions tab.`;
+                const comment = "## 🚨 Lighthouse Performance Report\n\n" +
+                  "**Performance:** " + Math.round(scores.performance.score * 100) + "/100\n" +
+                  "**Accessibility:** " + Math.round(scores.accessibility.score * 100) + "/100\n" +  
+                  "**Best Practices:** " + Math.round(scores['best-practices'].score * 100) + "/100\n" +
+                  "**SEO:** " + Math.round(scores.seo.score * 100) + "/100\n\n" +
+                  "View detailed results in the Actions tab.";
                 
                 github.rest.issues.createComment({
                   issue_number: context.issue.number,
