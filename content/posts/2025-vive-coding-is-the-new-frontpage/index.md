@@ -5,7 +5,7 @@ draft: false
 description: "How AI-assisted coding tools like GitHub Copilot and ChatGPT mirror the democratization of web development that Microsoft FrontPage started. Why the resistance is familiar and why embracing AI coding tools is the right path forward."
 tags: ["AI", "Development", "Programming", "Opinion"]
 toc: true
-thumbnail: "images/kimi-lee-M3RVFbqKGu4-unsplash.webp"
+thumbnail: "images/frontpage.webp"
 categories: ["Technology"]
 ---
 
