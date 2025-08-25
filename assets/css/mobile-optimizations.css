@@ -23,6 +23,20 @@
     line-height: 1.4;
   }
   
+  /* Display social links horizontally on all mobile devices */
+  .sidebar__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .sidebar__list-item {
+    display: inline-block;
+    margin: 0;
+  }
+  
   /* Touch target optimization - 44px minimum */
   .sidebar__list-item a,
   .post__title a,
@@ -34,6 +48,12 @@
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
+  }
+  
+  .sidebar__list-item a {
+    width: auto;
+    justify-content: center;
+    padding: 8px;
   }
   
   /* Reduce layout shifts on mobile */
@@ -70,26 +90,6 @@
   
   .post__thumbnail-wrapper {
     height: 150px;
-  }
-  
-  /* Display social links horizontally on mobile */
-  .sidebar__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem 0;
-  }
-  
-  .sidebar__list-item {
-    display: inline-block;
-    margin: 0;
-  }
-  
-  .sidebar__list-item a {
-    width: auto;
-    justify-content: center;
-    padding: 8px;
   }
   
   /* Optimize typography for small screens */
