@@ -13,8 +13,9 @@
 .post__thumbnail {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
+  aspect-ratio: 16/9;
 }
 
 .post__thumbnail-wrapper {
@@ -22,7 +23,6 @@
   border-radius: 4px;
   background-color: #f5f5f5;
   aspect-ratio: 16/9;
-  height: 200px;
   width: 100%;
   position: relative;
 }
