@@ -1,0 +1,26 @@
+{
+  "name": "Robert Jensen - Tech Blog",
+  "short_name": "Robert-Jensen.dk",
+  "description": "VMware, Cloud Native, DevOps, Kubernetes blog and technical insights",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196f3",
+  "orientation": "portrait-primary",
+  "categories": ["technology", "developer", "blog"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicons/android-chrome-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -3,6 +3,14 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  # TTFB Optimization headers
+  X-DNS-Prefetch-Control: on
+  Accept-CH: Viewport-Width, Width, DPR
+  Critical-CH: Viewport-Width, Width
+  # Early hints for critical resources
+  Link: </css/performance.min.css>; rel=preload; as=style
+  Link: </scss/main.min.css>; rel=preload; as=style
+  Link: </images/profile.webp>; rel=preload; as=image; fetchpriority=high
   
 # Enable compression for text-based assets
 /*.html
@@ -97,12 +105,20 @@
 /*.json
   Cache-Control: public, max-age=86400
 
-# HTML pages should not be cached too long
+# HTML pages optimized for TTFB
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=300, s-maxage=3600, stale-while-revalidate=86400
+  # Additional TTFB optimizations
+  X-Content-Type-Options: nosniff
+  X-DNS-Prefetch-Control: on
+  # Early hints for HTML pages
+  Link: </css/performance.min.css>; rel=preload; as=style; crossorigin
+  Link: </scss/main.min.css>; rel=preload; as=style; crossorigin
 
 /
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=300, s-maxage=3600, stale-while-revalidate=86400
+  # Homepage specific optimizations
+  Link: </images/profile.webp>; rel=preload; as=image; fetchpriority=high
 
 # Cache manifest and service worker files for 0 (immediate revalidation)
 /manifest.json

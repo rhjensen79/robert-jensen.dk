@@ -1,0 +1,33 @@
+<!-- Optimized Umami Analytics - Delayed Load -->
+<script>
+  // Preconnect to improve connection time
+  const umamiPreconnect = document.createElement('link');
+  umamiPreconnect.rel = 'preconnect';
+  umamiPreconnect.href = 'https://{{ .Site.Params.umami.serverURL }}';
+  document.head.appendChild(umamiPreconnect);
+
+  // Load Umami script after user interaction or delay
+  let umamiLoaded = false;
+  function loadUmami() {
+    if (!umamiLoaded) {
+      umamiLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.defer = true;
+      script.src = 'https://{{ .Site.Params.umami.serverURL }}/{{ .Site.Params.umami.trackerScriptName | default "umami.js" }}';
+      script.setAttribute('data-website-id', '{{ .Site.Params.umami.id }}');
+      document.head.appendChild(script);
+    }
+  }
+
+  // Load on user interaction or after 2 seconds
+  const umamiEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+  const umamiAutoLoad = () => {
+    loadUmami();
+    umamiEvents.forEach(event => document.removeEventListener(event, umamiAutoLoad));
+    clearTimeout(umamiTimer);
+  };
+  
+  umamiEvents.forEach(event => document.addEventListener(event, umamiAutoLoad, { passive: true, once: true }));
+  const umamiTimer = setTimeout(loadUmami, 2000);
+</script>

@@ -48,14 +48,27 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/hugo_cache
+            ~/.cache/hugo_cache
+            resources/_gen
+          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
           hugo \
             --minify \
+            --enableGitInfo=false \
+            --templateMetrics=false \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

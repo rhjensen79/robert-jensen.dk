@@ -96,6 +96,13 @@ ignoreLogs = ['warning-goldmark-raw-html']
 # Performance optimizations
 [build]
   writeStats = true
+  useResourceCacheWhen = "fallback"
+  # Enable fast render for development
+  fastRender = false
+  # Optimize build performance
+  buildExpired = false
+  buildFuture = false
+  buildDrafts = false
   
 [minify]
   disableCSS = false
@@ -140,7 +147,16 @@ ignoreLogs = ['warning-goldmark-raw-html']
 [caches]
   [caches.images]
     dir = ":resourceDir/_gen"
-    maxAge = "24h"
+    maxAge = "720h"  # 30 days for better build performance
+  [caches.assets]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"  # 30 days
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = "1h"
+  [caches.getcsv]
+    dir = ":cacheDir/:project"
+    maxAge = "1h"
 
 
 ## Menu items

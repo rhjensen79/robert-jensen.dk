@@ -1,0 +1,53 @@
+<!-- Optimized Google Analytics - Async Load -->
+<script>
+  // Preconnect to improve connection time
+  const preconnect = document.createElement('link');
+  preconnect.rel = 'preconnect';
+  preconnect.href = 'https://www.googletagmanager.com';
+  document.head.appendChild(preconnect);
+
+  // Initialize dataLayer early
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.gtagId }}', {
+    // Performance optimization settings
+    send_page_view: false,
+    transport_type: 'beacon',
+    custom_map: { metric1: 'page_load_time' }
+  });
+
+  // Load GA script after page load or user interaction
+  let gaLoaded = false;
+  function loadGA() {
+    if (!gaLoaded) {
+      gaLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtagId }}';
+      document.head.appendChild(script);
+      
+      script.onload = function() {
+        // Send the page view after script loads
+        gtag('config', '{{ .Site.Params.gtagId }}', {
+          page_title: document.title,
+          page_location: window.location.href,
+          send_page_view: true
+        });
+      };
+    }
+  }
+
+  // Load on user interaction or after 3 seconds
+  const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+  const autoLoad = () => {
+    loadGA();
+    events.forEach(event => document.removeEventListener(event, autoLoad));
+    clearTimeout(fallbackTimer);
+  };
+  
+  events.forEach(event => document.addEventListener(event, autoLoad, { passive: true, once: true }));
+  const fallbackTimer = setTimeout(loadGA, 3000);
+</script>

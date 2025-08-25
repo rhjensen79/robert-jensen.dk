@@ -19,7 +19,9 @@
       "Bash(./scripts/manual-test.sh:*)",
       "WebFetch(domain:anatole-demo.netlify.app)",
       "Read(//var/folders/58/__mk3yx14x37j5wvyfdmckl40000gn/T/TemporaryItems/NSIRD_screencaptureui_afrE47/**)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git checkout:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
