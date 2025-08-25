@@ -20,7 +20,7 @@ description = "A place for my random ramblings. Mostly about VMware, Cloud Nativ
 profilePicture = "/images/profile.webp"
 keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Cloud Native, Devops, Kubernetes"
 favicon = "favicons/"
-customCss = ["css/performance.css", "css/fontawesome-minimal.css"]
+customCss = ["css/performance.css", "css/fontawesome-minimal.css", "css/mobile-optimizations.css"]
 customJs = []
 mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
@@ -128,12 +128,14 @@ ignoreLogs = ['warning-goldmark-raw-html']
     [minify.tdewolff.xml]
       keepWhitespace = false
 
-# Asset processing and optimization
+# Asset processing and optimization - mobile-first
 [processing]
   [processing.images]
     quality = 85
     resampleFilter = "CatmullRom"
     anchor = "smart"
+    # Mobile-optimized image processing
+    hint = "photo"
     
 [caches]
   [caches.images]

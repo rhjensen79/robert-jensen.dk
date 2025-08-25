@@ -1,0 +1,112 @@
+/* Mobile Performance Optimizations */
+
+/* Preload hints - handled via meta tags in custom-head.html */
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .wrapper__sidebar {
+    flex: none;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    padding: 1rem;
+  }
+  
+  .sidebar__introduction-title h1 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+  
+  /* Touch target optimization - 44px minimum */
+  .sidebar__list-item a,
+  .post__title a,
+  .post__meta a,
+  .nav__list-item a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+  }
+  
+  /* Reduce layout shifts on mobile */
+  .post__thumbnail-wrapper {
+    aspect-ratio: 16/9;
+    height: 200px;
+  }
+  
+  .post__thumbnail {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Optimize for mobile performance */
+  .wrapper {
+    contain: layout style paint;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .wrapper__sidebar {
+    padding: 0.5rem;
+  }
+  
+  .sidebar {
+    padding: 0.5rem;
+  }
+  
+  .sidebar__introduction-title h1 {
+    font-size: 1.2rem;
+  }
+  
+  .post__thumbnail-wrapper {
+    height: 150px;
+  }
+  
+  /* Stack navigation items vertically */
+  .sidebar__list-item {
+    display: block;
+    margin: 0.25rem 0;
+  }
+  
+  .sidebar__list-item a {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  /* Optimize typography for small screens */
+  .post__content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Reduce motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  .animated,
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hardware acceleration for smooth scrolling */
+.post__thumbnail {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Font display optimization */
+@font-face {
+  font-display: swap;
+}

@@ -12,7 +12,14 @@
       "WebFetch(domain:www.seoptimer.com)",
       "WebFetch(domain:www.seobility.net)",
       "WebFetch(domain:www.robert-jensen.dk)",
-      "Bash(brew install:*)"
+      "Bash(brew install:*)",
+      "Bash(chmod:*)",
+      "Bash(./scripts/test-performance.sh:*)",
+      "Bash(./scripts/validate-html.sh:*)",
+      "Bash(./scripts/manual-test.sh:*)",
+      "WebFetch(domain:anatole-demo.netlify.app)",
+      "Read(//var/folders/58/__mk3yx14x37j5wvyfdmckl40000gn/T/TemporaryItems/NSIRD_screencaptureui_afrE47/**)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []

@@ -36,9 +36,9 @@
       fetchpriority="low"
     >
   {{ else }}
-    {{/* Process raster images for responsive display */}}
-    {{ $widths := slice 320 640 800 1200 1600 }}
-    {{ $sizes := "(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 800px" }}
+    {{/* Process raster images for responsive display - mobile-first */}}
+    {{ $widths := slice 280 480 640 800 1200 1600 }}
+    {{ $sizes := "(max-width: 480px) 95vw, (max-width: 640px) 90vw, (max-width: 1024px) 85vw, 800px" }}
     
     <picture>
       {{/* WebP format (best balance of compatibility and compression) */}}

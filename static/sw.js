@@ -1,23 +1,36 @@
-// Service Worker for caching optimization
-const CACHE_NAME = 'robert-jensen-v1';
-const STATIC_CACHE_URLS = [
+// Service Worker for mobile-optimized caching
+const CACHE_NAME = 'robert-jensen-mobile-v2';
+const MOBILE_CRITICAL_URLS = [
   '/css/performance.min.css',
   '/scss/main.min.css',
-  '/css/markupHighlight.min.css',
   '/fontawesome/css/fontawesome.min.css',
-  '/fontawesome/css/solid.min.css',
   '/js/anatole-header.min.js',
-  '/js/anatole-theme-switcher.min.js',
   '/images/profile.jpg',
   '/favicons/favicon.ico'
 ];
 
-// Install event - cache static resources
+const MOBILE_OPTIONAL_URLS = [
+  '/css/markupHighlight.min.css',
+  '/fontawesome/css/solid.min.css',
+  '/js/anatole-theme-switcher.min.js'
+];
+
+// Install event - prioritize mobile resources
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        return cache.addAll(STATIC_CACHE_URLS);
+        // Cache critical resources first for mobile performance
+        return cache.addAll(MOBILE_CRITICAL_URLS)
+          .then(() => {
+            // Add optional resources in background (don't block install)
+            MOBILE_OPTIONAL_URLS.forEach(url => {
+              cache.add(url).catch(() => {
+                // Fail silently for optional resources
+                console.log(`Optional resource failed to cache: ${url}`);
+              });
+            });
+          });
       })
       .then(() => self.skipWaiting())
   );
@@ -64,11 +77,23 @@ self.addEventListener('fetch', event => {
           return response;
         }
 
-        // Cache images, CSS, JS, and fonts for future requests
+        // Cache images, CSS, JS, and fonts with mobile-first strategy
         if (event.request.url.match(/\.(jpg|jpeg|png|webp|gif|css|js|woff|woff2|ttf|eot)$/i)) {
           const responseToCache = response.clone();
+          
+          // Priority caching for mobile performance
           caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
+            // Cache smaller images immediately for mobile
+            if (event.request.url.match(/\.(webp|jpg|jpeg|png)$/i)) {
+              // Check if it's a mobile-optimized image (smaller dimensions in URL)
+              if (event.request.url.match(/_(280|480|640)x?\d*\.(webp|jpg|jpeg|png)$/i) ||
+                  event.request.url.includes('profile')) {
+                cache.put(event.request, responseToCache);
+              }
+            } else {
+              // Cache all other static resources
+              cache.put(event.request, responseToCache);
+            }
           });
         }
 
