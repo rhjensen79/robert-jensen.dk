@@ -44,32 +44,12 @@
       {{ if .Params.thumbnail }}
         <div class="post__thumbnail-wrapper">
           <a href="{{ .RelPermalink }}">
-            {{/* Process thumbnail image with proper aspect ratio */}}
-            {{ $thumbnail := "" }}
-            {{ $thumbnailPath := .Params.thumbnail }}
-            
-            {{/* Try to get image from static folder */}}
-            {{ $img := resources.Get $thumbnailPath }}
-            {{ if $img }}
-              {{/* Crop to 16:9 aspect ratio (800x450) for consistency */}}
-              {{ $thumbnail = $img.Fill "800x450 Center" }}
-              <img 
-                class="post__thumbnail" 
-                src="{{ $thumbnail.RelPermalink }}" 
-                alt="Thumbnail for {{ .Title }}"
-                loading="lazy"
-                width="800"
-                height="450"
-              />
-            {{ else }}
-              {{/* Fallback to original image if processing fails */}}
-              <img 
-                class="post__thumbnail" 
-                src="{{ .Params.thumbnail | relURL }}" 
-                alt="Thumbnail for {{ .Title }}"
-                loading="lazy" 
-              />
-            {{ end }}
+            <img 
+              class="post__thumbnail" 
+              src="{{ .Params.thumbnail | relURL }}" 
+              alt="Thumbnail for {{ .Title }}"
+              loading="lazy" 
+            />
           </a>
         </div>
       {{ end }}

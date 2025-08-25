@@ -110,18 +110,22 @@
   /* Reduce layout shifts on mobile */
   .post__thumbnail-wrapper {
     aspect-ratio: 16/9;
+    height: 200px;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .post__thumbnail {
     object-fit: cover;
+    object-position: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    aspect-ratio: 16/9;
   }
   
   /* Ensure posts don't overflow on mobile */
@@ -153,6 +157,7 @@
   }
   
   .post__thumbnail-wrapper {
+    height: 150px;
     width: 100%;
     max-width: 100%;
   }

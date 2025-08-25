@@ -9,13 +9,13 @@
   }
 }
 
-/* Image loading optimization with proper sizing */
+/* Image loading optimization with better aspect ratio handling */
 .post__thumbnail {
   object-fit: cover;
+  object-position: center;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  aspect-ratio: 16/9;
 }
 
 .post__thumbnail-wrapper {
@@ -23,8 +23,12 @@
   border-radius: 4px;
   background-color: #f5f5f5;
   aspect-ratio: 16/9;
+  height: 200px;
   width: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Fix homepage post layout */
