@@ -3,6 +3,7 @@ title: "Giving Back for the First Time"
 date: 2020-12-12T15:18:34Z
 tags : [Github, Giving, code, Hugo, opensource, theme, web, website]
 draft: false
+description: "My first experience contributing to open source projects on GitHub. Learn how easy it can be to contribute to projects you use daily, starting with simple translations and documentation improvements."
 thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"
 ---
 One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. 

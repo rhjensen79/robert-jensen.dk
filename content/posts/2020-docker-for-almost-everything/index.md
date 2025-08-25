@@ -3,6 +3,7 @@ title: "Docker for Almost Everything"
 date: 2020-11-21T19:26:12+01:00
 tags : [docker, Jenkins, automation, test, VMware, container, SaltStack, Minion, K8S]
 draft: false
+description: "Discover how to use Docker containers for system administration tasks beyond development. Learn GitOps approach with Docker Hub, Jenkins automation, and practical examples including SaltStack minion containers for testing."
 thumbnail: "images/thomas-lipke-kkXDhAUnxYI-unsplash.webp"
 ---
 I'm no expert in containers, but I do talk to a lot of admins in my job, that has not taken the time, to look at containers yet, and therefore haven't found, if they can be a usefull tool, for them.

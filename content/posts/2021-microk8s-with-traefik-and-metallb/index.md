@@ -1,8 +1,8 @@
 ---
 title: "Installing Microk8s With Traefik and Metallb"
 date: 2021-10-18T20:32:15+02:00
-Description: "How to install MicroK8S with Traefik and MetalLB on Ubuntu 20.04"
-Tags: [k8s, kubernetes, traefik, metallb, reverse proxy, full guide, Tanzu, community]
+description: "Complete guide to install MicroK8s with Traefik reverse proxy and MetalLB load balancer on Ubuntu 20.04. Learn Kubernetes setup with automatic Let's Encrypt certificates and external IP management."
+tags: [k8s, kubernetes, traefik, metallb, reverse proxy, full guide, Tanzu, community]
 Categories: []
 DisableComments: false
 toc: true
