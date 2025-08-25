@@ -1,0 +1,102 @@
+name: Lighthouse CI Performance Testing
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+          
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/hugo_cache
+            ~/.cache/hugo_cache
+            resources/_gen
+          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+            
+      - name: Build site
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+          HUGO_CACHEDIR: /tmp/hugo_cache
+        run: |
+          hugo \
+            --minify \
+            --enableGitInfo=false \
+            --templateMetrics=false \
+            --baseURL "http://localhost:8080/"
+            
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.12.x
+        
+      - name: Start local server
+        run: |
+          cd public
+          python3 -m http.server 8080 &
+          sleep 5
+          
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun --upload.target=temporary-public-storage
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            // Find the latest lighthouse results
+            const resultsPath = '.lighthouseci';
+            if (fs.existsSync(resultsPath)) {
+              const files = fs.readdirSync(resultsPath);
+              const reportFile = files.find(f => f.startsWith('lhr-') && f.endsWith('.json'));
+              
+              if (reportFile) {
+                const report = JSON.parse(fs.readFileSync(path.join(resultsPath, reportFile), 'utf8'));
+                const scores = report.categories;
+                
+                const comment = `## 🚨 Lighthouse Performance Report
+                
+**Performance:** ${Math.round(scores.performance.score * 100)}/100
+**Accessibility:** ${Math.round(scores.accessibility.score * 100)}/100  
+**Best Practices:** ${Math.round(scores['best-practices'].score * 100)}/100
+**SEO:** ${Math.round(scores.seo.score * 100)}/100
+
+View detailed results in the Actions tab.`;
+                
+                github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: comment
+                });
+              }
+            }
