@@ -72,15 +72,24 @@
     height: 150px;
   }
   
-  /* Stack navigation items vertically */
+  /* Display social links horizontally on mobile */
+  .sidebar__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
   .sidebar__list-item {
-    display: block;
-    margin: 0.25rem 0;
+    display: inline-block;
+    margin: 0;
   }
   
   .sidebar__list-item a {
-    width: 100%;
-    justify-content: flex-start;
+    width: auto;
+    justify-content: center;
+    padding: 8px;
   }
   
   /* Optimize typography for small screens */
