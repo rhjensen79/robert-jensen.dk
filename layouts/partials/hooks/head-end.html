@@ -16,3 +16,9 @@
 <!-- Error handling and accessibility improvements -->
 {{ $errorFix := resources.Get "js/fix-console-errors.js" | resources.Minify }}
 <script src="{{ $errorFix.RelPermalink }}" defer></script>
+
+<!-- Analytics -->
+{{- if and .Site.Params.gtagId (ne .Site.Params.gtagId "") -}}
+  {{- partial "google-analytics-gtag-async.html" . -}}
+  {{- partial "analytics/web-vitals.html" . -}}
+{{- end -}}

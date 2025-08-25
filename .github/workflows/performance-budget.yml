@@ -1,0 +1,146 @@
+name: Performance Budget Monitor
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  schedule:
+    # Run weekly performance check
+    - cron: '0 9 * * 1'
+
+jobs:
+  performance-budget:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/hugo_cache
+            ~/.cache/hugo_cache
+            resources/_gen
+          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+            
+      - name: Install dependencies
+        run: |
+          npm install -g @lhci/cli@0.12.x
+          
+      - name: Run Performance Budget Monitor
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+          HUGO_CACHEDIR: /tmp/hugo_cache
+        run: |
+          node scripts/performance-budget-monitor.js
+          
+      - name: Upload performance results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-budget-results
+          path: |
+            .lighthouseci/
+            performance-budget.json
+          retention-days: 30
+          
+      - name: Comment PR with performance results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            // Find the latest lighthouse results
+            const resultsPath = '.lighthouseci';
+            let performanceComment = '## 🚨 Performance Budget Report\n\n';
+            
+            if (fs.existsSync(resultsPath)) {
+              const files = fs.readdirSync(resultsPath);
+              const reportFile = files.find(f => f.startsWith('lhr-') && f.endsWith('.json'));
+              
+              if (reportFile) {
+                const report = JSON.parse(fs.readFileSync(path.join(resultsPath, reportFile), 'utf8'));
+                const categories = report.categories;
+                
+                // Performance scores
+                performanceComment += '### 📊 Performance Scores\n\n';
+                performanceComment += `| Category | Score | Status |\n`;
+                performanceComment += `|----------|-------|--------|\n`;
+                
+                const thresholds = {
+                  performance: 80,
+                  accessibility: 90,
+                  'best-practices': 90,
+                  seo: 90
+                };
+                
+                Object.entries(thresholds).forEach(([category, threshold]) => {
+                  if (categories[category]) {
+                    const score = Math.round(categories[category].score * 100);
+                    const status = score >= threshold ? '✅' : '❌';
+                    performanceComment += `| ${category.charAt(0).toUpperCase() + category.slice(1)} | ${score}/100 | ${status} |\n`;
+                  }
+                });
+                
+                // Core Web Vitals
+                const audits = report.audits;
+                performanceComment += '\n### ⚡ Core Web Vitals\n\n';
+                performanceComment += `| Metric | Value | Budget | Status |\n`;
+                performanceComment += `|--------|-------|--------|--------|\n`;
+                
+                const vitals = {
+                  'first-contentful-paint': { budget: 2000, unit: 'ms' },
+                  'largest-contentful-paint': { budget: 2500, unit: 'ms' },
+                  'cumulative-layout-shift': { budget: 0.1, unit: '' },
+                  'total-blocking-time': { budget: 300, unit: 'ms' },
+                  'speed-index': { budget: 3000, unit: 'ms' }
+                };
+                
+                Object.entries(vitals).forEach(([metric, config]) => {
+                  const audit = audits[metric];
+                  if (audit && audit.numericValue !== undefined) {
+                    const value = metric === 'cumulative-layout-shift' 
+                      ? audit.numericValue.toFixed(3)
+                      : Math.round(audit.numericValue);
+                    const status = audit.numericValue <= config.budget ? '✅' : '❌';
+                    const displayName = metric.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                    performanceComment += `| ${displayName} | ${value}${config.unit} | ${config.budget}${config.unit} | ${status} |\n`;
+                  }
+                });
+                
+                performanceComment += '\n📈 [View detailed Lighthouse report in Actions artifacts]';
+              } else {
+                performanceComment += '❌ No performance data available - check the workflow logs.';
+              }
+            } else {
+              performanceComment += '❌ No performance results found - workflow may have failed.';
+            }
+            
+            // Post comment
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: performanceComment
+            });

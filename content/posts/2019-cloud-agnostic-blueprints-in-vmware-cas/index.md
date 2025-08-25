@@ -4,6 +4,7 @@ date: 2019-01-18T07:51:00.001+01:00
 draft: false
 aliases: [ "/2019/01/cloud-agnostic-blueprints-in-vmware-cas.html" ]
 tags : [yaml, Azure, CAS, multi cloud, vSphere, gcp, VMware, automation, AWS, Cloud]
+slug: "cloud-agnostic-blueprints-vmware-cas"
 ---
 
 [![](https://i.pinimg.com/originals/48/d3/26/48d326ab0636b4902d16f0a216385380.jpg)](https://i.pinimg.com/originals/48/d3/26/48d326ab0636b4902d16f0a216385380.jpg)

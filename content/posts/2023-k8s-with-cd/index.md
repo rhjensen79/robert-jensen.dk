@@ -81,7 +81,7 @@ ssh-keyscan github.com
 
 And saved the output, to use in the next step.
 
-# TMC
+## TMC
 
 In TMC, I have created 2 cluster groups, which I will be using for this.
 

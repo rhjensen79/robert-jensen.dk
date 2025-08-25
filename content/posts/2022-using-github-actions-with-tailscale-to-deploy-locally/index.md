@@ -7,6 +7,7 @@ toc: true
 thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to use Github Actions, to Create and build docker containers, and then deploy them localy using Tailscale, to Kubernetes"
+slug: "github-actions-tailscale-deploy-locally"
 ---
 ## Intro
 

@@ -17,7 +17,7 @@ I use multiple computers, and sometimes it can be hard, to keep everything in sy
 
 I know there are tons of solutions for this, but since i'm a big fan of [Bitwarden](https://bitwarden.com) I thought I might as well, use that to store the data, from my .env files.
 
-### Disclamer - This is probably not best practice, to keep all your secrets in env files etc. So keep that in mind, if you are using this guide
+## Disclamer - This is probably not best practice, to keep all your secrets in env files etc. So keep that in mind, if you are using this guide
 
 I will be using Bitwardens GUI to create the data, and the CLI client with jq to gather the data, end update my env file.
 

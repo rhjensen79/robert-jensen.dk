@@ -7,6 +7,7 @@ toc: true
 thumbnail: "images/tim-mossholder-rx_GNopVlFs-unsplash.webp"
 #image: "images/tim-mossholder-rx_GNopVlFs-unsplash.jpg"
 description: "Troubleshooting guide for VMware Cloud Foundation (VCF) deployment failure during Transport Node Collection creation at 48%. Learn how to resolve NSX Manager connectivity issues and firewall configuration problems in your VMware infrastructure."
+slug: "vmware-vcf-create-transport-node-collection-fails"
 ---
 ## The problem
 

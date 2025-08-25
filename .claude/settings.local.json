@@ -22,7 +22,13 @@
       "Bash(git rm:*)",
       "Bash(git checkout:*)",
       "Bash(curl:*)",
-      "Bash(cwebp:*)"
+      "Bash(cwebp:*)",
+      "Read(//var/folders/58/__mk3yx14x37j5wvyfdmckl40000gn/T/TemporaryItems/NSIRD_screencaptureui_iPTcej/**)",
+      "Read(//var/folders/58/__mk3yx14x37j5wvyfdmckl40000gn/T/TemporaryItems/NSIRD_screencaptureui_2HB8jq/**)",
+      "Bash(npx lighthouse:*)",
+      "Bash(npm install:*)",
+      "Bash(./scripts/check-performance.sh:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

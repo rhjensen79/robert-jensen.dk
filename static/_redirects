@@ -1,0 +1,8 @@
+# URL Redirects for SEO optimization
+# Hugo will automatically handle the new slug-based URLs
+
+# Legacy redirects - ensuring old URLs continue to work
+# These will be handled by Hugo's alias system in frontmatter
+
+# Future: Consider adding 301 redirects for major URL changes
+# Format: /old-path /new-path 301

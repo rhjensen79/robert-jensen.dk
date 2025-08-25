@@ -10,7 +10,7 @@ description: "Moving between hypervisor platforms might save on licensing costs,
 
 This blog post is a repost of the following [Linkedin](https://www.linkedin.com/pulse/you-modernizing-just-doing-lift-shift-robert-jensen-7bicf) article.
 
-### Intro
+## Intro
 
 These days, I see a lot of articles about changing one hypervisor platform for another. The reason is that the old platform, is changing the license terms, so you need to buy xx for xx amount (that makes sense, if you are running any serious workload)
 Note i'm biased, since I have worked for one of the vendors.

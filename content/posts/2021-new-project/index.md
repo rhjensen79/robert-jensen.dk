@@ -26,7 +26,7 @@ The address is [www.xFitInfo.com](https://www.xFitInfo.com)
 
 The site is far from finished, so expect to see a lot of changes, over the next couple of month.
 
-### The setup
+## The setup
 
 First up I wanted to create a website, that could scale.
 The last couple of websites, I have been doing, has been based on [Hugo](https://gohugo.io), as a static website, hosted on a CDN.

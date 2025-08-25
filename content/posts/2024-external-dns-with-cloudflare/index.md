@@ -7,6 +7,7 @@ toc: true
 thumbnail: "images/brittany-colette-GFLMi4c8XMg-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Are you tired of manually creating DNS records for your Kubernetes services? In this tutorial, we'll show you how to automate the process using CloudFlare and External DNS. We'll walk you through the steps of setting up a Cloudflare API key, installing External DNS, and configuring it to work with your Kubernetes cluster. With this setup, you can easily create and manage DNS records for your services without having to manually update them in CloudFlare. Perfect for IT professionals looking to streamline their workflow and improve their infrastructure's reliability and security."
+slug: "external-dns-cloudflare-kubernetes-automation"
 ---
 ## Update
 

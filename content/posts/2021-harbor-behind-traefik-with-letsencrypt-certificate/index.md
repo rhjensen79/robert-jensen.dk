@@ -5,6 +5,7 @@ tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse
 draft: false
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.webp"
 description: "How to setup Harbor Container Registry, behind Traefik Reverse Proxy, and how to get secure https Let's Encrypt certificates deploye automaticly"
+slug: "harbor-behind-traefik-lets-encrypt-certificate"
 ---
 Ever since [Docker](https://www.docker.com) enforced their [rate limit](https://www.docker.com/increase-rate-limits), I have been looking at using some other registry, to put my containers, but also to use as a proxy, so I hit the Docker api a blit less.
 
@@ -19,7 +20,7 @@ Luckely, I can just use Traefik, to generate the certificates, and publish my Ha
 
 This blog is about how to do just that :-) 
 
-### Before you begin, you need
+## Before you begin, you need
 
 - A working Traefik proxy, with Let's Encrypt enabled
 My setup is [described here](https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/), and should be quite easy to follow.
@@ -144,7 +145,7 @@ When the installer is done, then run
 docker-compose down
 ```
 
-### Update 16.08.2021 : 
+## Update 16.08.2021 : 
 It seams that in later versions of Harbor (I'm running v2.3.1-1058f330) that the nginx.conf edit is not required. So if you can't find the "proxy_set_header X-Forwarded-Proto $scheme;" in your file, then skip this section. 
 
 Edit the nginx.conf file, to make Harbor work, behind the Traefik proxy.
@@ -167,7 +168,7 @@ When this is done, you can start your Harbor installation again, by running
 ```
 docker-compose up -d
 ```
-### Configuration of Traefik
+## Configuration of Traefik
 
 If you, are not running Traefik, on the same host, as you are running Harbor, then you need to setup a static config in Traefik.
 

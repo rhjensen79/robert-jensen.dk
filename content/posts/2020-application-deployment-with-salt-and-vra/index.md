@@ -4,6 +4,7 @@ date: 2020-11-24T14:09:39+01:00
 tags : [VRA, SaltStack, Automation, Docker, salt, management, vmware, vsphere]
 draft: false
 thumbnail: "images/shahadat-rahman-gnyA8vd3Otc-unsplash.webp"
+slug: "application-deployment-salt-vrealize-automation"
 ---
 Here is a short post, around my first integration between [SaltStack](https://www.saltstack.com) and [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html).
 
@@ -161,7 +162,7 @@ Thats all I had for now. I hope that gave some idea, on how it's possible to use
 I have included the blueprint i use below, if you want to try it yourselv. 
 The only important things, is creating of the grains file (and the input variable there), and the installation of saltstack.
 
-### The blueprint I used.
+## The blueprint I used.
 ```
 name: Application VM
 version: 0.0.1

@@ -6,6 +6,7 @@ draft: false
 toc: true
 thumbnail: "images/sigmund-EJe6LqEjHpA-unsplash.webp"
 description: "How to run multiple Traefik instances on the same Docker host and selectively route containers to different proxies using labels"
+slug: "multiple-traefik-instances-single-docker-host"
 ---
 ## Intro
 

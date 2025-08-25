@@ -15,7 +15,7 @@ Switching between 2 computers, meant it quicly became a mess, to have access to 
 This is my little guide on how to solve this.
 Note there might be a better way to do this, if you know of one, then let me know on Twitter :-)
 
-### Kubectx
+## Kubectx
 
 The best way to switch between configs, seams to be [Kubectx](https://github.com/ahmetb/kubectx)
 It's easy to install, and if you also install [fzf](https://github.com/junegunn/fzf) then you can even switch between your configs, using an interactive menu. Really cool :-)

@@ -8,7 +8,7 @@ thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.webp"
 #- "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
 description: "How to install Tailscale on an Unifi Edgerouter Lite, to make it a proxy endpoint, for the rest of your Lan"
 ---
-### Update
+## Update
 
 06.08.2021 : Updated blog to version 1.12.3 - Tested and working.
 30.01.2021 : Updated blog to version 1.4.1 - Tested and working.

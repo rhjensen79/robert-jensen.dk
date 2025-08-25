@@ -21,7 +21,7 @@ If you are looking for inspiration, then I highly recommend, to take a look at m
 
 I will only focus on the config files, and the script to make it work.
 
-### The config files
+## The config files
 
 There are 2 config files, that needs to be in a location, where you can copy them to Windows.
 In packer, I have mine in a script folder, that is then mountet as a A:/ drive.

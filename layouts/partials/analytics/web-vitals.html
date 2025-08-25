@@ -1,0 +1,102 @@
+{{- if and .Site.Params.gtagId (ne .Site.Params.gtagId "") -}}
+<script>
+  // Web Vitals monitoring for Core Web Vitals
+  (function() {
+    // Only load on production
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return;
+    }
+
+    // Load web-vitals library
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.iife.js';
+    script.onload = function() {
+      if (typeof webVitals === 'undefined') return;
+      
+      // Send to Google Analytics 4
+      function sendToGoogleAnalytics({name, value, rating, delta, id, attribution}) {
+        if (typeof gtag === 'undefined') return;
+        
+        // Send the Core Web Vitals metric to Google Analytics
+        gtag('event', name, {
+          event_category: 'Web Vitals',
+          event_label: id,
+          value: Math.round(name === 'CLS' ? value * 1000 : value),
+          custom_parameter_1: rating,
+          custom_parameter_2: Math.round(delta),
+          // Additional attribution data
+          debug_target: attribution?.largestShiftTarget || attribution?.loadState || attribution?.eventTarget || 'unknown'
+        });
+        
+        // Also log to console in development
+        console.log('Web Vital:', {
+          name, 
+          value: Math.round(name === 'CLS' ? value * 1000 : value), 
+          rating,
+          attribution
+        });
+      }
+
+      // Send to custom endpoint (optional - for your own analytics)
+      function sendToCustomEndpoint({name, value, rating, delta, id, attribution}) {
+        // You can implement a custom endpoint to collect Core Web Vitals data
+        const data = {
+          name,
+          value,
+          rating,
+          delta,
+          id,
+          page: window.location.pathname,
+          timestamp: Date.now(),
+          attribution: {
+            largestShiftTarget: attribution?.largestShiftTarget,
+            loadState: attribution?.loadState,
+            eventTarget: attribution?.eventTarget,
+            timeToFirstByte: attribution?.timeToFirstByte,
+            firstByteToFCP: attribution?.firstByteToFCP,
+            fcpToLCP: attribution?.fcpToLCP
+          }
+        };
+
+        // Example: send to your own analytics endpoint
+        // fetch('/api/web-vitals', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify(data)
+        // }).catch(console.error);
+        
+        // For now, just store in localStorage for debugging
+        const vitals = JSON.parse(localStorage.getItem('webVitals') || '[]');
+        vitals.push(data);
+        // Keep only last 50 entries
+        if (vitals.length > 50) vitals.splice(0, vitals.length - 50);
+        localStorage.setItem('webVitals', JSON.stringify(vitals));
+      }
+
+      // Combine both handlers
+      function handleVital(vital) {
+        sendToGoogleAnalytics(vital);
+        sendToCustomEndpoint(vital);
+      }
+
+      // Monitor Core Web Vitals
+      webVitals.onCLS(handleVital);
+      webVitals.onFID(handleVital);
+      webVitals.onFCP(handleVital);
+      webVitals.onLCP(handleVital);
+      webVitals.onTTFB(handleVital);
+      
+      // Monitor additional metrics if available
+      if (webVitals.onINP) {
+        webVitals.onINP(handleVital);
+      }
+    };
+    
+    script.onerror = function() {
+      console.warn('Failed to load web-vitals library');
+    };
+    
+    document.head.appendChild(script);
+  })();
+</script>
+{{- end -}}

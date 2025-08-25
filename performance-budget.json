@@ -1,0 +1,67 @@
+{
+  "budgets": [
+    {
+      "name": "Core Web Vitals Budget",
+      "resourceSizes": [
+        {
+          "resourceType": "total",
+          "budget": 1000
+        },
+        {
+          "resourceType": "image",
+          "budget": 300
+        },
+        {
+          "resourceType": "script",
+          "budget": 150
+        },
+        {
+          "resourceType": "stylesheet",
+          "budget": 100
+        },
+        {
+          "resourceType": "font",
+          "budget": 100
+        }
+      ],
+      "timings": [
+        {
+          "metric": "first-contentful-paint",
+          "budget": 2000
+        },
+        {
+          "metric": "largest-contentful-paint", 
+          "budget": 2500
+        },
+        {
+          "metric": "cumulative-layout-shift",
+          "budget": 100
+        },
+        {
+          "metric": "total-blocking-time",
+          "budget": 300
+        },
+        {
+          "metric": "speed-index",
+          "budget": 3000
+        },
+        {
+          "metric": "interactive",
+          "budget": 5000
+        }
+      ]
+    }
+  ],
+  "thresholds": {
+    "performance": 80,
+    "accessibility": 90,
+    "best-practices": 90,
+    "seo": 90,
+    "pwa": 70
+  },
+  "alerts": {
+    "performance_degradation_threshold": 5,
+    "size_increase_threshold": 10,
+    "notify_on_regression": true
+  }
+}

@@ -1,0 +1,36 @@
+{{- if not .IsHome -}}
+<nav class="breadcrumb" aria-label="Breadcrumb navigation" role="navigation">
+  <ol class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <!-- Home breadcrumb -->
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ .Site.BaseURL }}" class="breadcrumb__link" itemprop="item">
+        <span itemprop="name">Home</span>
+        <meta itemprop="position" content="1" />
+      </a>
+      <span class="breadcrumb__separator" aria-hidden="true">›</span>
+    </li>
+    
+    {{- if .Section -}}
+    <!-- Section breadcrumb (e.g., Posts) -->
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ printf "%s%s/" .Site.BaseURL .Section }}" class="breadcrumb__link" itemprop="item">
+        <span itemprop="name">{{ .Section | title }}</span>
+        <meta itemprop="position" content="2" />
+      </a>
+      {{- if .IsPage -}}
+      <span class="breadcrumb__separator" aria-hidden="true">›</span>
+      {{- end -}}
+    </li>
+    {{- end -}}
+    
+    {{- if .IsPage -}}
+    <!-- Current page breadcrumb -->
+    <li class="breadcrumb__item breadcrumb__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+      <span class="breadcrumb__current" itemprop="name">{{ .Title }}</span>
+      <meta itemprop="position" content="{{ if .Section }}3{{ else }}2{{ end }}" />
+      <meta itemprop="item" content="{{ .Permalink }}" />
+    </li>
+    {{- end -}}
+  </ol>
+</nav>
+{{- end -}}

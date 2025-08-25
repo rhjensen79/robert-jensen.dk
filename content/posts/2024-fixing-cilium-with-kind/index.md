@@ -7,6 +7,7 @@ toc: true
 thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Troubleshooting and solving Cilium networking issues on Apple Silicon M1 MacBooks by replacing Docker Desktop with Colima for local Kubernetes Kind clusters"
+slug: "fixing-cilium-cni-kind-kubernetes-clusters"
 ---
 ## Update
 
@@ -66,7 +67,7 @@ With colima running, I could follow the Cilium Kind guide again, and after 2 min
 
 ## Afterthought
 
-Colima seems to be a seamless replacement for Docker desktop. If you're looking for alternative ways to build containers without Docker Desktop, you might also be interested in [using Buildpacks instead of Dockerfiles](https://www.robert-jensen.dk/posts/2021-hello-buildpacks-goodbye-dockerfiles/).
+Colima seems to be a seamless replacement for Docker desktop. For more Kubernetes networking insights, you might find my post on [K8S Ingress and Pfsense firewall](/posts/2019-k8s-ingress-and-pfsense-firewall/) helpful for understanding ingress configurations. If you're looking for alternative ways to build containers without Docker Desktop, you might also be interested in [using Buildpacks instead of Dockerfiles](https://www.robert-jensen.dk/posts/2021-hello-buildpacks-goodbye-dockerfiles/).
 
 And judging from some of the comments, I got on this post, there is a lot of options for running colima, that is worth looking further into.
 

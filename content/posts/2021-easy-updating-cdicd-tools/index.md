@@ -28,7 +28,7 @@ If you just want to see my Dockerfile, or use my container, then then links are 
 - Git repo [hjensen79/autocontainer](https://github.com/rhjensen79/autocontainer)
 - Docker Hub : [robertjensen/autocontainer](https://hub.docker.com/r/robertjensen/autocontainer)
 
-### Dockerfile
+## Dockerfile
 
 My Dockerfile is based on ubuntu 20.04 and contains the following tools today (it changes all the time). 
 - Git
@@ -100,7 +100,7 @@ So when Packer got updated yesterday, all i needed to do, was to change the valu
 
 Note I could just install latest, but that way i can't controll what version i'm running.  
 
-### Building new image
+## Building new image
 
 For this image, I don't need it to be build fast, and i want it to be avaliable, on the internet, for my automation to consume. So I have hooked it up to my Github repository, for auto build to Docker Hub, everytime a change happens. 
 

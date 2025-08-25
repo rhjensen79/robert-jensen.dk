@@ -19,7 +19,7 @@ The reason this was a bit special, is that LogInsight itself, can manage the age
 In a normal deployment, I would let SaltStack, manage the configuration files, since this is one of the key benefits of the product imho. 
 
 
-### The Code
+## The Code
 
 If you just wanna see the code, then here it is. 
 Below this I will try to break it down, and explain what it's doing.

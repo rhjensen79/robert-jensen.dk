@@ -20,8 +20,8 @@ description = "A place for my random ramblings. Mostly about VMware, Cloud Nativ
 profilePicture = "/images/profile.webp"
 keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Cloud Native, Devops, Kubernetes"
 favicon = "favicons/"
-customCss = ["css/performance.css", "css/fontawesome-minimal.css", "css/mobile-optimizations.css"]
-customJs = []
+customCss = ["css/performance.css", "css/fontawesome-minimal.css", "css/mobile-optimizations.css", "css/breadcrumb.css"]
+customJs = ["js/web-vitals-dashboard.js"]
 mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification
@@ -92,6 +92,10 @@ title = "Youtube"
 url = "https://www.youtube.com/channel/UCl04Gdm6a75l2GMzl86Tujg"
 
 ignoreLogs = ['warning-goldmark-raw-html']
+
+# SEO-optimized permalink structure
+[permalinks]
+  posts = "/posts/:year/:slug/"
 
 # Performance optimizations
 [build]

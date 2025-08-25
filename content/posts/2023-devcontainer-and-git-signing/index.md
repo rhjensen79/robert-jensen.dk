@@ -7,6 +7,7 @@ toc: true
 thumbnail: "images/certificate.webp"
 #image: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
 description: "How to setup VScode Devcontainer to use a local SSH key for signing"
+slug: "devcontainer-git-signing-ssh-keys"
 ---
 ## Intro
 

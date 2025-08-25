@@ -29,7 +29,7 @@ But I ended up finding another solution, since I did not have full controll on t
   
 So the solution I ended up building, was the following.  
 
-#### How to run the code
+## How to run the code
 
 I wanted to have something, that was independent of my local environment. Also i have been trying to learn Python for quite some time. So ABX or Lambda on AWS, ended up being my choice.  
 
@@ -49,7 +49,7 @@ So a [thingspeak.com](http://thingspeak.com/) dashboard, presentet on a [Github
 
 #### The code
 
-All the code to get this working, is on my Github Repository under [Scripts](https://github.com/rhjensen79/cmpvalue/tree/master/Scripts)  
+All the code to get this working, is on my Github Repository under [Scripts](https://github.com/rhjensen79/cmpvalue/tree/master/Scripts). For more advanced VMware automation examples, you might also find my [Application Deployment With Salt and VRA](https://www.robert-jensen.dk/posts/2020-application-deployment-with-salt-and-vra/) post useful  
   
 I have 2 ABX functions running.  
 1\. after every VM deployment.  
