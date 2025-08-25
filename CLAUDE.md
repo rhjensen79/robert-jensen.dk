@@ -230,3 +230,4 @@ Based on comprehensive SEO analysis of robert-jensen.dk, the following improveme
 - [ ] **User Intent**: Optimize content for different search intents (how-to, troubleshooting, tutorials)
 - aways save and read from claude.md task list. so it's updated
 - Always run a local test sever, and ask for manuel verification that the task is ok, before marking it complete
+- do automated test of the website, before asking me to verify it manual.

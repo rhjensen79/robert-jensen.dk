@@ -1,0 +1,3 @@
+<!-- Error handling and accessibility improvements -->
+{{ $errorFix := resources.Get "js/fix-console-errors.js" | resources.Minify }}
+<script src="{{ $errorFix.RelPermalink }}" defer></script>

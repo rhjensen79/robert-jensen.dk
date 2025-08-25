@@ -52,6 +52,31 @@
 
 /* Performance optimizations without layout overrides */
 
+/* Fix deprecated font-size warnings - explicit font sizes for headings */
+h1, .post__content h1 {
+  font-size: 3.6rem !important;
+}
+
+h2, .post__content h2 {
+  font-size: 2.4rem !important;
+}
+
+h3, .post__content h3 {
+  font-size: 2rem !important;
+}
+
+h4, .post__content h4 {
+  font-size: 1.8rem !important;
+}
+
+h5, .post__content h5 {
+  font-size: 1.6rem !important;
+}
+
+h6, .post__content h6 {
+  font-size: 1.4rem !important;
+}
+
 /* Optimize theme switch performance */
 .themeswitch {
   will-change: transform;
@@ -70,4 +95,108 @@
   list-style: none;
   padding: 0;
   margin: 2rem 0;
+}
+
+/* Accessibility improvements - higher contrast ratios */
+.theme--light {
+  --text-color: #2c3e50;
+  --link-color: #1a5490;
+  --link-hover-color: #0f3460;
+  --bg-color: #ffffff;
+  --border-color: #bdc3c7;
+}
+
+.theme--dark {
+  --text-color: #ecf0f1;
+  --link-color: #74a9d8;
+  --link-hover-color: #a8c8ec;
+  --bg-color: #2c3e50;
+  --border-color: #546e7a;
+}
+
+/* Apply improved contrast colors */
+.theme--light a {
+  color: var(--link-color);
+}
+
+.theme--light a:hover {
+  color: var(--link-hover-color);
+}
+
+.theme--dark a {
+  color: var(--link-color);
+}
+
+.theme--dark a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Focus indicators for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+.themeswitch a:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Touch targets minimum size for all interactive elements */
+a, button, input[type="submit"], input[type="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Fix list structure for accessibility */
+ul li, ol li {
+  list-style-position: inside;
+}
+
+/* Ensure proper semantic structure for assistive technology */
+.sidebar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__list-item {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Screen reader improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .theme--light {
+    --text-color: #000000;
+    --link-color: #0000ff;
+    --link-hover-color: #000080;
+    --bg-color: #ffffff;
+    --border-color: #000000;
+  }
+  
+  .theme--dark {
+    --text-color: #ffffff;
+    --link-color: #ffff00;
+    --link-hover-color: #ffffff;
+    --bg-color: #000000;
+    --border-color: #ffffff;
+  }
 }

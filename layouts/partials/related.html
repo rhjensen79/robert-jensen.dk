@@ -1,0 +1,15 @@
+{{ if .Site.Params.relatedPosts }}
+  {{ $related := .Site.RegularPages.Related . }}
+  {{ with $related }}
+    <section class="related">
+      <h2>{{- T "related_posts" -}}</h2>
+      <ul class="related__list">
+        {{ range first 3 . }}
+          <li class="related__list-item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+{{ end }}
