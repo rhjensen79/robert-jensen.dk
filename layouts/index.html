@@ -1,3 +1,12 @@
+{{ define "head" }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ range first 1 $paginator.Pages }}
+    {{ if .Params.thumbnail }}
+      <link rel="preload" as="image" href="{{ .Params.thumbnail | relURL }}" fetchpriority="high">
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ define "main" }}
   <div
     class="post {{ with .Site.Params.doNotLoadAnimations }}
@@ -33,7 +42,7 @@
   {{ end }}
 
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-  {{ range $paginator.Pages }}
+  {{ range $index, $page := $paginator.Pages }}
     <div
       class="post {{ with .Site.Params.doNotLoadAnimations }}
         .
@@ -44,12 +53,47 @@
       {{ if .Params.thumbnail }}
         <div class="post__thumbnail-wrapper">
           <a href="{{ .RelPermalink }}">
-            <img 
-              class="post__thumbnail" 
-              src="{{ .Params.thumbnail | relURL }}" 
-              alt="Thumbnail for {{ .Title }}"
-              loading="lazy" 
-            />
+            {{- $thumbnail := .Params.thumbnail -}}
+            {{- $isWebP := strings.HasSuffix $thumbnail ".webp" -}}
+            {{- if $isWebP -}}
+              {{- $jpgPath := replace $thumbnail ".webp" ".jpg" -}}
+              <picture>
+                <source 
+                  type="image/webp"
+                  srcset="{{ $thumbnail | relURL }} 1x,
+                          {{ $thumbnail | relURL }} 2x"
+                  sizes="(max-width: 480px) 95vw, (max-width: 768px) 85vw, 600px"
+                >
+                <source 
+                  type="image/jpeg"
+                  srcset="{{ $jpgPath | relURL }} 1x,
+                          {{ $jpgPath | relURL }} 2x"
+                  sizes="(max-width: 480px) 95vw, (max-width: 768px) 85vw, 600px"
+                >
+                <img 
+                  class="post__thumbnail" 
+                  src="{{ $jpgPath | relURL }}" 
+                  alt="Thumbnail for {{ .Title }}"
+                  width="600"
+                  height="338"
+                  loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}" 
+                  {{ if eq $index 0 }}fetchpriority="high"{{ end }}
+                  decoding="async"
+                />
+              </picture>
+            {{- else -}}
+              <img 
+                class="post__thumbnail" 
+                src="{{ $thumbnail | relURL }}" 
+                alt="Thumbnail for {{ .Title }}"
+                width="600"
+                height="338"
+                sizes="(max-width: 480px) 95vw, (max-width: 768px) 85vw, 600px"
+                loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}" 
+                {{ if eq $index 0 }}fetchpriority="high"{{ end }}
+                decoding="async"
+              />
+            {{- end -}}
           </a>
         </div>
       {{ end }}

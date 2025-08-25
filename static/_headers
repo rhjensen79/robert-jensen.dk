@@ -8,6 +8,8 @@
   Accept-CH: Viewport-Width, Width, DPR
   Critical-CH: Viewport-Width, Width
   # Early hints for critical resources
+  Link: </fonts/fa-solid-900.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
+  Link: </fonts/fa-brands-400.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
   Link: </css/performance.min.css>; rel=preload; as=style
   Link: </scss/main.min.css>; rel=preload; as=style
   Link: </images/profile.webp>; rel=preload; as=image; fetchpriority=high

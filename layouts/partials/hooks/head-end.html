@@ -1,3 +1,18 @@
+<!-- Critical CSS inline -->
+{{ partial "critical-css.html" . }}
+
+<!-- Preload fonts -->
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Defer non-critical CSS -->
+<link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+</noscript>
+
 <!-- Error handling and accessibility improvements -->
 {{ $errorFix := resources.Get "js/fix-console-errors.js" | resources.Minify }}
 <script src="{{ $errorFix.RelPermalink }}" defer></script>
