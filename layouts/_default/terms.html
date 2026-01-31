@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div
+    class="archive {{ with .Site.Params.doNotLoadAnimations }}
+      .
+    {{ else }}
+      animated fadeInDown
+    {{ end }}"
+  >
+    <h1>{{ .Title }}</h1>
+    <div class="taxonomy-cloud">
+      {{ range .Data.Terms.Alphabetical }}
+        <a class="taxonomy-cloud__tag" href="{{ .Page.RelPermalink }}">
+          {{ .Page.Title }} <span class="taxonomy-cloud__count">({{ .Count }})</span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
