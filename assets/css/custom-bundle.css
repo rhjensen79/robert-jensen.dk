@@ -603,3 +603,32 @@ ul li, ol li {
     transition: none;
   }
 }
+
+/* Taxonomy cloud (tags/categories listing) */
+.taxonomy-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.taxonomy-cloud__tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.taxonomy-cloud__tag:hover {
+  background-color: var(--link-color, #1a5490);
+  color: #fff;
+  border-color: var(--link-color, #1a5490);
+}
+
+.taxonomy-cloud__count {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
