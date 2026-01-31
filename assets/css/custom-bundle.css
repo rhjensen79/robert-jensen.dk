@@ -632,3 +632,67 @@ ul li, ol li {
   font-size: 0.8rem;
   opacity: 0.7;
 }
+
+/* ============================================
+   Dark Mode Readability Improvements
+   ============================================ */
+
+/* 1. Post content link colors - brighter for readability */
+.theme--dark .post__content a {
+  color: #74a9d8;
+}
+.theme--dark .post__content a:hover {
+  color: #a8c8ec;
+}
+
+/* 2. Code block backgrounds - distinct from page background */
+.theme--dark .post__content pre,
+.theme--dark .post__content .chroma {
+  background-color: #1a2733;
+  border: 1px solid #2a3a4a;
+}
+
+/* 3. Inline code styling in dark mode */
+.theme--dark .post__content code:not(pre code) {
+  background-color: #1a2733;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  border: 1px solid #2a3a4a;
+}
+
+/* 4. Brighter tag/metadata text */
+.theme--dark .post__meta,
+.theme--dark .post__footer {
+  color: #b0b8c0;
+}
+.theme--dark .post__meta a,
+.theme--dark .post__footer a {
+  color: #8ab4d6;
+}
+
+/* 5. Breadcrumb dark mode - class-based theming */
+.theme--dark .breadcrumb {
+  border-bottom-color: #2a3a4a;
+}
+.theme--dark .breadcrumb__link {
+  color: #9aafbf;
+}
+.theme--dark .breadcrumb__link:hover,
+.theme--dark .breadcrumb__link:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.theme--dark .breadcrumb__separator {
+  color: #6a7a8a;
+}
+.theme--dark .breadcrumb__current {
+  color: #c0cdd8;
+}
+
+/* 6. Posts archive page - improved title contrast */
+.theme--dark .post__title a {
+  color: #d4dce4;
+}
+.theme--dark .post__title a:hover {
+  color: #ffffff;
+}
