@@ -10,7 +10,16 @@
     
     {{ if .Params.thumbnail }}
       <div class="post__thumbnail-wrapper">
-        <img class="post__thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" />
+        <img
+          class="post__thumbnail"
+          src="{{ .Params.thumbnail | relURL }}"
+          alt="Thumbnail for {{ .Title }}"
+          width="600"
+          height="338"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
       </div>
     {{ end }}
     <div class="post__content">
