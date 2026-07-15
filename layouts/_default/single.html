@@ -95,6 +95,29 @@
       {{ end }}
     </div>
 
+    {{- if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
+      {{/* Confirmed by date on this Hugo build:
+           .NextInSection = newer post, .PrevInSection = older post */}}
+      {{- $newer := .NextInSection -}}
+      {{- $older := .PrevInSection -}}
+      {{- if or $newer $older -}}
+        <nav class="post-nav" aria-label="Post navigation">
+          {{- with $older -}}
+            <a class="post-nav__link post-nav__link--prev" href="{{ .RelPermalink }}" rel="prev">
+              <span class="post-nav__dir">← Older</span>
+              <span class="post-nav__title">{{ .Title }}</span>
+            </a>
+          {{- end -}}
+          {{- with $newer -}}
+            <a class="post-nav__link post-nav__link--next" href="{{ .RelPermalink }}" rel="next">
+              <span class="post-nav__dir">Newer →</span>
+              <span class="post-nav__title">{{ .Title }}</span>
+            </a>
+          {{- end -}}
+        </nav>
+      {{- end -}}
+    {{- end -}}
+
     {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type)) (ne .Page.Params.disableComments true) }}
       {{- if .Site.Config.Services.Disqus.Shortname -}}
         <div id="comment">
