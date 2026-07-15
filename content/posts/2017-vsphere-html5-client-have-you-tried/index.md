@@ -1,6 +1,7 @@
 ---
-title: 'vSphere HTML5 client - Have you tried the Fling ? '
+title: "vSphere HTML5 Client - Have You Tried the Fling?"
 date: 2017-12-27T19:49:00.001+01:00
+description: "The vSphere HTML5 client keeps improving with weekly updates. Robert shares why he switched from the C# and Flash web clients and how to try the HTML5 Fling."
 draft: false
 aliases: [ "/2017/12/vsphere-html5-client-have-you-tried.html" ]
 tags: [vmware, vsphere]

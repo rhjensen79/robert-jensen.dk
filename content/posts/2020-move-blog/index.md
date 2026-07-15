@@ -1,6 +1,7 @@
 ---
 title: "Move Blog"
 date: 2020-11-06T12:56:48+01:00
+description: "Moving a blog from Blogger to a static site built with Hugo and deployed via Netlify, for a faster, free, Git-based publishing workflow managed in VS Code."
 tags: [homelab]
 #image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 thumbnail: "images/erda-estremera-sxNt9g77PE0-unsplash.webp"

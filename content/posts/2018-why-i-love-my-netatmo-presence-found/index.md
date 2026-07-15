@@ -1,6 +1,7 @@
 ---
 title: 'Why i love my Netatmo Presence - Found potential thief'
 date: 2018-01-19T13:57:00.000+01:00
+description: "Netatmo Presence uses object detection to spot people, cars and animals, alerting the author to a potential bike thief and triggering HomeKit security lights."
 draft: false
 aliases: [ "/2018/01/why-i-love-my-netatmo-presence-found.html" ]
 tags: [home-automation, security, automation]

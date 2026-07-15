@@ -1,6 +1,7 @@
 ---
 title: 'K8S Ingress and Pfsense firewall'
 date: 2019-07-04T15:04:00.002+02:00
+description: "Fix a Kubernetes Ingress Controller failing on a vSphere homelab because pfSense DNS rebind protection blocks xip.io, with the exact forwarder and resolver settings."
 draft: false
 aliases: [ "/2019/07/k8s-ingress-and-pfsense-firewall.html" ]
 tags: [kubernetes, networking, vsphere]

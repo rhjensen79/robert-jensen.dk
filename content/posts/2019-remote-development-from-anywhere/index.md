@@ -1,6 +1,7 @@
 ---
 title: 'Remote development from anywhere'
 date: 2019-10-09T09:05:00.000+02:00
+description: "Remote development from anywhere using VS Code Remote and ZeroTier, a free SD-WAN overlay that reaches homelab VMs without VPN or SSH headaches."
 draft: false
 aliases: [ "/2019/10/remote-development-from-anywhere.html" ]
 tags: [networking, vmware, devcontainers, automation]

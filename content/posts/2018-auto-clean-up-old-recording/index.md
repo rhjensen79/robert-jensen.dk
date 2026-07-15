@@ -1,6 +1,7 @@
 ---
 title: 'Auto Clean up old recordings'
 date: 2018-01-07T20:47:00.003+01:00
+description: "Automatically delete old Netatmo Presence recordings on a Synology NAS using a scheduled DSM task and a simple find command to remove files older than 30 days."
 draft: false
 aliases: [ "/2018/01/auto-clean-up-old-recording.html" ]
 tags: [home-automation, automation]

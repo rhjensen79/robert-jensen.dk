@@ -1,6 +1,7 @@
 ---
 title: "New project part 2"
 date: 2021-03-22T08:22:25+01:00
+description: "Part two of a VMware cloud automation project on robert-jensen.dk, continuing the CI/CD and infrastructure-as-code journey started in part one."
 tags: [vmware, ci-cd, cloud]
 draft: true
 thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.webp"

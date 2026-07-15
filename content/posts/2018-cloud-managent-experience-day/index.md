@@ -1,6 +1,7 @@
 ---
 title: 'Cloud Management Experience Day'
 date: 2018-02-19T14:00:00.000+01:00
+description: "VMware's Cloud Management Experience Day in Denmark lets customers explore CMP products through expert-led sessions and hands-on labs on 28 February 2018."
 draft: false
 aliases: [ "/2018/02/cloud-managent-experience-day.html" ]
 tags: [vmware, automation, cloud]

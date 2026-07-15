@@ -1,6 +1,7 @@
 ---
 title: 'Filter Extensibility subscriptions in CAS'
 date: 2019-01-22T13:28:00.001+01:00
+description: "Filter extensibility subscriptions in VMware Cloud Assembly using a blueprint input and custom property so Slack notifications only fire when you choose to."
 draft: false
 aliases: [ "/2019/01/filter-extensibility-subscriptions-in.html" ]
 tags: [vmware, automation, cloud]

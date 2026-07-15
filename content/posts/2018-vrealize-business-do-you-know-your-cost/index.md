@@ -1,6 +1,7 @@
 ---
 title: 'vRealize Business - Do you know your cost ? '
 date: 2018-01-29T09:05:00.000+01:00
+description: "vRealize Business reveals the true cost of your datacenter and compares it against public cloud pricing, helping IT teams inform cloud migration decisions."
 draft: false
 aliases: [ "/2018/01/vrealize-business-do-you-know-your-cost.html" ]
 tags: [vmware, vsphere, cloud]

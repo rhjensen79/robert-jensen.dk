@@ -1,6 +1,7 @@
 ---
 title: 'Duplicate ipadress on Packer Ubuntu VM''s'
 date: 2019-05-03T20:57:00.002+02:00
+description: "Fixing duplicate IP addresses on Packer-built Ubuntu VMs by setting a MAC-based Netplan dhcp-identifier, automated with a shell script in the build pipeline."
 draft: false
 aliases: [ "/2019/05/duplicate-ipadress-on-packer-ubuntu-vms.html" ]
 tags: [vmware, vsphere, automation, ci-cd]

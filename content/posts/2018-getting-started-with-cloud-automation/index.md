@@ -1,6 +1,7 @@
 ---
 title: 'Getting started with Cloud Automation Services - Almost'
 date: 2018-12-12T21:11:00.000+01:00
+description: "Getting started with VMware Cloud Automation Services and Cloud Assembly: first impressions of the SaaS offering, YAML blueprints and storing them in Git."
 draft: false
 aliases: [ "/2018/12/getting-started-with-cloud-automation.html" ]
 tags: [vmware, vsphere, automation, cloud]

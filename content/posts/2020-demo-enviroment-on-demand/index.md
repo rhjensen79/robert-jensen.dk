@@ -1,6 +1,7 @@
 ---
 title: 'Demo Enviroment on demand'
 date: 2020-06-02T12:25:00.001+02:00
+description: "Build a demo environment on demand for vRealize Automation Cloud, chaining an iPhone shortcut, AWS API Gateway, Lambda, and a Code Stream pipeline to deploy VMs."
 draft: false
 aliases: [ "/2020/06/demo-enviroment-on-demand.html" ]
 tags: [vmware, cloud, automation, ci-cd]
