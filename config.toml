@@ -43,7 +43,7 @@ ogType = "website"
 [params.utterances]
 repo = "rhjensen79/robert-jensen.dk"
 issueTerm = "pathname"
-theme= "github-light"
+theme= "preferred-color-scheme"
 # label = "comment"
 
 [params.umami]
