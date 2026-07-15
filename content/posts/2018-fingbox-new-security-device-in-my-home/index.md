@@ -2,6 +2,8 @@
 title: 'Fingbox - New security device in my home'
 date: 2018-02-12T14:54:00.000+01:00
 description: "Fingbox is a network security appliance that monitors your home network 24/7, checking for open ports, new devices and internet speed, with instant push alerts."
+thumbnail: "images/jordan-harrison-40XgDxBfYXM-unsplash.webp"
+images: ["images/jordan-harrison-40XgDxBfYXM-unsplash.webp"]
 draft: false
 aliases: [ "/2018/02/fingbox-new-security-device-in-my-home.html" ]
 tags: [home-automation, security, networking]
@@ -9,7 +11,7 @@ tags: [home-automation, security, networking]
 
   
 
-![](https://lh3.googleusercontent.com/-d7RKh7zbkos/WoGZisrWIbI/AAAAAAABT08/Iz0n14MhZhke90LqFplRj3Hi0E9H7DvdQCHMYCw/s9999/Fingbox.png)
+![Fingbox network security appliance](https://lh3.googleusercontent.com/-d7RKh7zbkos/WoGZisrWIbI/AAAAAAABT08/Iz0n14MhZhke90LqFplRj3Hi0E9H7DvdQCHMYCw/s9999/Fingbox.png)
 
 So i bought a new gadget. After hearing my collegaue, telling me about it, and I was sold.
 

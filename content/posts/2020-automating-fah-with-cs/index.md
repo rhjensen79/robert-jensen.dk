@@ -5,6 +5,7 @@ description: "Automate Folding@home on vSphere with VMware Code Stream and Terra
 tags: [vmware, vsphere, ci-cd, automation]
 draft: false
 thumbnail: "images/top_picture.webp"
+images: ["images/top_picture.webp"]
 ---
 I am always looking for new ways to do demo's, and to showcase the solutions the company I work for have. 
 One usecase, that I really wanted to show, was infrastructure as code (IAC), using a combination of both VMware and opensource tools.
@@ -18,7 +19,7 @@ The result is what you read here :-)
 
 The first thing i did, was to fork the project, and change the code, so it would pull directly from a URL. I actuallily think it was inspired from a post from [William Lam](https://twitter.com/lamw), where he described how to do just that (i can't find the post now - sorry). 
 
-In the intial version, the OVF was pulled from the local git repo folder, and since I run everything in Code Stream, using a container, having it local did not make sense for me. 
+In the intial version, the OVF was pulled from the local git repo folder, and since I run everything in [Code Stream](/posts/2020/demo-enviroment-on-demand/), using a container, having it local did not make sense for me. 
 I created a [issue](https://github.com/saintdle/Terraform/pull/1#issuecomment-723975191)
 
 And [Dean](https://twitter.com/saintdle) responded quickly, and have since implementet a really nice solution, in his repo, that can do both local and remote. So check out his [Github repo](https://github.com/saintdle/Terraform) if you want to play with this yourself.

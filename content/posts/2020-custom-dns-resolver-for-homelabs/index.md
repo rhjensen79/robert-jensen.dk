@@ -5,6 +5,7 @@ description: "Resolve internal homelab domains on macOS and Linux using per-doma
 tags: [homelab, networking]
 draft: false
 thumbnail: "images/andrew-neel-1-29wyvvLJA-unsplash.webp"
+images: ["images/andrew-neel-1-29wyvvLJA-unsplash.webp"]
 ---
 Using custom dns servers, depending on enviroment, or resolving multiple internal domains, can be a real pain.
 

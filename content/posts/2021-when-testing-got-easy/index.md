@@ -4,6 +4,7 @@ date: 2021-03-03T15:55:59+01:00
 tags: [python, docker]
 draft: false
 thumbnail: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.webp"
+images: ["images/debby-hudson-oVQBn0X2oEk-unsplash-2.webp"]
 toc: true
 #image: 
 #- "images/debby-hudson-oVQBn0X2oEk-unsplash-2.jpg"
@@ -19,7 +20,7 @@ I have used [AWS simple email service](https://aws.amazon.com/ses/) in the past,
 
 The solution I found, was so simple, that I had to share it here.
 
-A simple email server, running in a Docker container, with a web interface, to read the emails. Meet [Mailhog](https://hub.docker.com/r/mailhog/mailhog/)
+A simple email server, [running in a Docker container](/posts/2020/docker-for-almost-everything/), with a web interface, to read the emails. Meet [Mailhog](https://hub.docker.com/r/mailhog/mailhog/)
 
 I have created a [Github repo](https://github.com/rhjensen79/smtp-test), with the files shown here, so it's easy to clone and use yourself.
 

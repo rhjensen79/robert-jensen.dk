@@ -6,10 +6,11 @@ draft: false
 aliases: [ "/2020/07/jenkins-and-codestream-csrf-fix.html" ]
 tags: [vmware, ci-cd, automation]
 thumbnail: "images/michael-dziedzic--Rc6usOigMk-unsplash.webp"
+images: ["images/michael-dziedzic--Rc6usOigMk-unsplash.webp"]
 ---
 For some time, I have had the problem with Jenkins, that when I ran my Code Stream pipeline, it gave me the following error 
 
-[![](https://1.bp.blogspot.com/-BRpc30hcMVE/XyMfwKhdNOI/AAAAAAACP3c/Iq-QLTGWSSA1jgaZLJBO294lPOSv7It4ACLcBGAsYHQ/w400-h130/Sk%25C3%25A6rmbillede%2B2020-07-30%2Bkl.%2B21.29.45.png)](https://1.bp.blogspot.com/-BRpc30hcMVE/XyMfwKhdNOI/AAAAAAACP3c/Iq-QLTGWSSA1jgaZLJBO294lPOSv7It4ACLcBGAsYHQ/s930/Sk%25C3%25A6rmbillede%2B2020-07-30%2Bkl.%2B21.29.45.png)
+[![Code Stream pipeline error showing the Jenkins CSRF crumb failure](https://1.bp.blogspot.com/-BRpc30hcMVE/XyMfwKhdNOI/AAAAAAACP3c/Iq-QLTGWSSA1jgaZLJBO294lPOSv7It4ACLcBGAsYHQ/w400-h130/Sk%25C3%25A6rmbillede%2B2020-07-30%2Bkl.%2B21.29.45.png)](https://1.bp.blogspot.com/-BRpc30hcMVE/XyMfwKhdNOI/AAAAAAACP3c/Iq-QLTGWSSA1jgaZLJBO294lPOSv7It4ACLcBGAsYHQ/s930/Sk%25C3%25A6rmbillede%2B2020-07-30%2Bkl.%2B21.29.45.png)
 
 To fix it, I have been running the code below, in the Jenkins "Script Console" 
 
@@ -23,7 +24,7 @@ instance.setCrumbIssuer(null)
 
   
 
-This has been ok, until my container, running Jenkins, restarted or got updated, and then I got the error again.
+This has been ok, until [my container, running Jenkins](/posts/2020/docker-for-almost-everything/), restarted or got updated, and then I got the error again.
 
   
 

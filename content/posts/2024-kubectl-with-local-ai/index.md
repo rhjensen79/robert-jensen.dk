@@ -5,6 +5,7 @@ tags: [kubernetes, ai, automation]
 draft: false
 toc: true
 thumbnail: "images/boliviainteligente-DEci5GH0r0k-unsplash.webp"
+images: ["images/boliviainteligente-DEci5GH0r0k-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Learn how to streamline Kubernetes manifest creation with kubectl-ai and local LLMs running on Ollama. This step-by-step guide shows how to install, configure and use open-source AI models locally to enhance your Kubernetes workflow without cloud dependencies."
 ---

@@ -2,12 +2,14 @@
 title: 'VMware Lifecycle Manager - The first tool to install'
 date: 2018-01-02T11:16:00.000+01:00
 description: "vRealize Suite Lifecycle Manager simplifies installing, configuring and upgrading VMware products like vRA, vROps and Log Insight from a single appliance."
+thumbnail: "images/andrew-neel-1-29wyvvLJA-unsplash.webp"
+images: ["images/andrew-neel-1-29wyvvLJA-unsplash.webp"]
 draft: false
 aliases: [ "/2018/01/vmware-lifecycle-manager-first-tool-to.html" ]
 tags: [vmware, automation]
 ---
 
-[![](https://4.bp.blogspot.com/-gch9AxQp2Gk/WkINEDqljuI/AAAAAAABQUA/IZjEFdbMJ-E7t1iLN7IRtXnxLER9PAXKQCLcBGAs/s640/vrealizelifecyclemanager.jpg)](https://4.bp.blogspot.com/-gch9AxQp2Gk/WkINEDqljuI/AAAAAAABQUA/IZjEFdbMJ-E7t1iLN7IRtXnxLER9PAXKQCLcBGAs/s1600/vrealizelifecyclemanager.jpg)
+[![vRealize Suite Lifecycle Manager product banner](https://4.bp.blogspot.com/-gch9AxQp2Gk/WkINEDqljuI/AAAAAAABQUA/IZjEFdbMJ-E7t1iLN7IRtXnxLER9PAXKQCLcBGAs/s640/vrealizelifecyclemanager.jpg)](https://4.bp.blogspot.com/-gch9AxQp2Gk/WkINEDqljuI/AAAAAAABQUA/IZjEFdbMJ-E7t1iLN7IRtXnxLER9PAXKQCLcBGAs/s1600/vrealizelifecyclemanager.jpg)
 
 VMware has released a new tool, to make it easyer to install and upgrade, some of your VMware products.  
   
@@ -19,7 +21,7 @@ It also follows [VMware validated designs](https://www.vmware.com/solutions/soft
   
 One nice thing, is that it uses your [My VMware](https://my.vmware.com/) account, for downloading appliances and software (Local NFS locations is also supported). So you don't have to bother with downloading, and maintaining binaries.  
 
-[![](https://2.bp.blogspot.com/-lcbcfWejhUo/Wks0IM1mTII/AAAAAAABQt4/2n6v-uDD9-IdJ7OcBhK9l8OXTr3RiiL_ACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.26.00.jpg)](https://2.bp.blogspot.com/-lcbcfWejhUo/Wks0IM1mTII/AAAAAAABQt4/2n6v-uDD9-IdJ7OcBhK9l8OXTr3RiiL_ACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.26.00.jpg)
+[![Adding datacenters to a map with their management or workload type](https://2.bp.blogspot.com/-lcbcfWejhUo/Wks0IM1mTII/AAAAAAABQt4/2n6v-uDD9-IdJ7OcBhK9l8OXTr3RiiL_ACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.26.00.jpg)](https://2.bp.blogspot.com/-lcbcfWejhUo/Wks0IM1mTII/AAAAAAABQt4/2n6v-uDD9-IdJ7OcBhK9l8OXTr3RiiL_ACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.26.00.jpg)
 
 You also add your datacenters (vCentre) on a map, and select their type (Management/Workload or both).
 
@@ -27,31 +29,31 @@ Lifecycle Manager currently supports the following products :
   
 
 *   Identity manager
-*   vRealize Business
+*   [vRealize Business](/posts/2018/vrealize-business-do-you-know-your-cost/)
 *   vRealize Operations
 *   vRealize Log Insight
-*   vRealize Automation
+*   [vRealize Automation](/posts/2018/data-collection-catalog-item-in-vra/)
 
 When you want to install a new a new product you get the option, to follow a wizard, or to use a configuration file. The configuration file, is available, as a export at the end of the wizard, if you want to reuse your configuration.
 
-[![](https://4.bp.blogspot.com/-FqvRacj5x3o/WktBPVIBisI/AAAAAAABQuI/R6x0PhMZzBQe_sTOoD2vypLGiXYJpVe2ACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.39.24.jpg)](https://4.bp.blogspot.com/-FqvRacj5x3o/WktBPVIBisI/AAAAAAABQuI/R6x0PhMZzBQe_sTOoD2vypLGiXYJpVe2ACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.39.24.jpg)
+[![Product installation wizard in vRealize Suite Lifecycle Manager](https://4.bp.blogspot.com/-FqvRacj5x3o/WktBPVIBisI/AAAAAAABQuI/R6x0PhMZzBQe_sTOoD2vypLGiXYJpVe2ACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.39.24.jpg)](https://4.bp.blogspot.com/-FqvRacj5x3o/WktBPVIBisI/AAAAAAABQuI/R6x0PhMZzBQe_sTOoD2vypLGiXYJpVe2ACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B08.39.24.jpg)
 
 One of the more interesting things, about the deployment, is that you get to chose, what kind of deployment you are doing. So you can have an automated test setup, as well as a production environment, using the same lifecycle manger. 
 
-[![](https://4.bp.blogspot.com/-imuRRk_cWDA/WktCEJHF14I/AAAAAAABQuQ/xK_mVJV1HiMCqCnHx72dXI2jFvJiRJbiACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.23.07.jpg)](https://4.bp.blogspot.com/-imuRRk_cWDA/WktCEJHF14I/AAAAAAABQuQ/xK_mVJV1HiMCqCnHx72dXI2jFvJiRJbiACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.23.07.jpg)
+[![Choosing the deployment type for the environment being installed](https://4.bp.blogspot.com/-imuRRk_cWDA/WktCEJHF14I/AAAAAAABQuQ/xK_mVJV1HiMCqCnHx72dXI2jFvJiRJbiACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.23.07.jpg)](https://4.bp.blogspot.com/-imuRRk_cWDA/WktCEJHF14I/AAAAAAABQuQ/xK_mVJV1HiMCqCnHx72dXI2jFvJiRJbiACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.23.07.jpg)
 
   
 
 You can also chose with products you want to install or import (you can always add products later).
 
-[![](https://2.bp.blogspot.com/-LmUm9j6N38U/WktCvcN6AOI/AAAAAAABQuY/zZ9w-Iuchmkic7b21t4s_YTcNrFh5NanwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.26.28.jpg)](https://2.bp.blogspot.com/-LmUm9j6N38U/WktCvcN6AOI/AAAAAAABQuY/zZ9w-Iuchmkic7b21t4s_YTcNrFh5NanwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.26.28.jpg)
+[![Selecting which VMware products to install or import](https://2.bp.blogspot.com/-LmUm9j6N38U/WktCvcN6AOI/AAAAAAABQuY/zZ9w-Iuchmkic7b21t4s_YTcNrFh5NanwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.26.28.jpg)](https://2.bp.blogspot.com/-LmUm9j6N38U/WktCvcN6AOI/AAAAAAABQuY/zZ9w-Iuchmkic7b21t4s_YTcNrFh5NanwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.26.28.jpg)
 
   
 
   
 After installation, you can see your installation, and upgrade it, using the tool.  
 
-[![](https://2.bp.blogspot.com/-mAgP6iR3qrw/WktDJNgViAI/AAAAAAABQug/C69LCJl2SXocdcES2XmtE5RwO8c7nfm4wCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.29.51.jpg)](https://2.bp.blogspot.com/-mAgP6iR3qrw/WktDJNgViAI/AAAAAAABQug/C69LCJl2SXocdcES2XmtE5RwO8c7nfm4wCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.29.51.jpg)
+[![Viewing and upgrading an installed environment in Lifecycle Manager](https://2.bp.blogspot.com/-mAgP6iR3qrw/WktDJNgViAI/AAAAAAABQug/C69LCJl2SXocdcES2XmtE5RwO8c7nfm4wCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.29.51.jpg)](https://2.bp.blogspot.com/-mAgP6iR3qrw/WktDJNgViAI/AAAAAAABQug/C69LCJl2SXocdcES2XmtE5RwO8c7nfm4wCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-02%2Bkl.%2B09.29.51.jpg)
 
   
 

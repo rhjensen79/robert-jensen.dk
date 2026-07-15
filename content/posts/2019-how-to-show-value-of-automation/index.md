@@ -6,9 +6,10 @@ draft: false
 aliases: [ "/2019/12/how-to-show-value-of-automation.html" ]
 tags: [vmware, automation, cloud]
 thumbnail: "images/riccardo-annandale-7e2pe9wjL9M-unsplash.webp"
+images: ["images/riccardo-annandale-7e2pe9wjL9M-unsplash.webp"]
 ---
 
-[![](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s640/value-proposition.jpg)](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s1600/value-proposition.jpg)
+[![Value proposition concept header image](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s640/value-proposition.jpg)](https://1.bp.blogspot.com/-Qi3SFyH2sZo/Xek2RdwBaPI/AAAAAAACBzQ/X0dwvH7N0KI0LTHJ_kqmNCb8ofc86_lrQCLcBGAsYHQ/s1600/value-proposition.jpg)
 
   
 Being able to show the value, of automation is essential, to be able to keep getting support, for the time you spend on it.  
@@ -46,22 +47,22 @@ So a [thingspeak.com](http://thingspeak.com/) dashboard, presentet on a [Github
   
   
 
-[![](https://1.bp.blogspot.com/-Qa9vo_--rMs/XfdXXoJGAvI/AAAAAAACCR0/p-hUkdodhywbCCZ-TE6k5yrEI0F3rgbTwCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.07.02.png)](https://1.bp.blogspot.com/-Qa9vo_--rMs/XfdXXoJGAvI/AAAAAAACCR0/p-hUkdodhywbCCZ-TE6k5yrEI0F3rgbTwCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.07.02.png)
+[![ThingSpeak dashboard presenting automation time-saved metrics](https://1.bp.blogspot.com/-Qa9vo_--rMs/XfdXXoJGAvI/AAAAAAACCR0/p-hUkdodhywbCCZ-TE6k5yrEI0F3rgbTwCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.07.02.png)](https://1.bp.blogspot.com/-Qa9vo_--rMs/XfdXXoJGAvI/AAAAAAACCR0/p-hUkdodhywbCCZ-TE6k5yrEI0F3rgbTwCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.07.02.png)
 
 #### The code
 
-All the code to get this working, is on my Github Repository under [Scripts](https://github.com/rhjensen79/cmpvalue/tree/master/Scripts). For more advanced VMware automation examples, you might also find my [Application Deployment With Salt and VRA](https://www.robert-jensen.dk/posts/2020-application-deployment-with-salt-and-vra/) post useful  
+All the code to get this working, is on my Github Repository under [Scripts](https://github.com/rhjensen79/cmpvalue/tree/master/Scripts). For more advanced VMware automation examples, you might also find my [Application Deployment With Salt and VRA](/posts/2020/application-deployment-salt-vrealize-automation/) post useful  
   
 I have 2 ABX functions running.  
 1\. after every VM deployment.  
 It opens the JSON file on S3, and adds +1 to the counter, and saves it again.  
 
-[![](https://1.bp.blogspot.com/-m2UIqYLkoYY/XfdZczy_H3I/AAAAAAACCSA/BRVrYO0depQ7zE285IKSBB54lFhPGpXoQCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.04.png)](https://1.bp.blogspot.com/-m2UIqYLkoYY/XfdZczy_H3I/AAAAAAACCSA/BRVrYO0depQ7zE285IKSBB54lFhPGpXoQCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.04.png)
+[![Python ABX function that increments the deployment counter in S3](https://1.bp.blogspot.com/-m2UIqYLkoYY/XfdZczy_H3I/AAAAAAACCSA/BRVrYO0depQ7zE285IKSBB54lFhPGpXoQCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.04.png)](https://1.bp.blogspot.com/-m2UIqYLkoYY/XfdZczy_H3I/AAAAAAACCSA/BRVrYO0depQ7zE285IKSBB54lFhPGpXoQCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.04.png)
 
   
 2\. After the deployment is finished, it opens the file, reads the data, and updates the values on Thingspeak.com  
 
-[![](https://1.bp.blogspot.com/-Bd70xjBiYkY/XfdZl7V5oSI/AAAAAAACCSE/sDArboleSkQmipzlKWr_l12hgtJ-NjmagCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.45.png)](https://1.bp.blogspot.com/-Bd70xjBiYkY/XfdZl7V5oSI/AAAAAAACCSE/sDArboleSkQmipzlKWr_l12hgtJ-NjmagCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.45.png)
+[![Python ABX function that updates the values on ThingSpeak](https://1.bp.blogspot.com/-Bd70xjBiYkY/XfdZl7V5oSI/AAAAAAACCSE/sDArboleSkQmipzlKWr_l12hgtJ-NjmagCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.45.png)](https://1.bp.blogspot.com/-Bd70xjBiYkY/XfdZl7V5oSI/AAAAAAACCSE/sDArboleSkQmipzlKWr_l12hgtJ-NjmagCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-12-16%2Bkl.%2B11.16.45.png)
 
   
 

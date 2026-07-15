@@ -2,12 +2,14 @@
 title: 'Auto Clean up old recordings'
 date: 2018-01-07T20:47:00.003+01:00
 description: "Automatically delete old Netatmo Presence recordings on a Synology NAS using a scheduled DSM task and a simple find command to remove files older than 30 days."
+thumbnail: "images/shahadat-rahman-gnyA8vd3Otc-unsplash.webp"
+images: ["images/shahadat-rahman-gnyA8vd3Otc-unsplash.webp"]
 draft: false
 aliases: [ "/2018/01/auto-clean-up-old-recording.html" ]
 tags: [home-automation, automation]
 ---
 
-[![](https://3.bp.blogspot.com/-mm3eelAnTf4/WlJ1piJwP3I/AAAAAAABQ9E/e3emey4hdEIsHTlOxqK2xzUHPHFHKnmAwCLcBGAs/s640/codecode.jpg)](https://3.bp.blogspot.com/-mm3eelAnTf4/WlJ1piJwP3I/AAAAAAABQ9E/e3emey4hdEIsHTlOxqK2xzUHPHFHKnmAwCLcBGAs/s1600/codecode.jpg)
+[![Lines of code on a screen](https://3.bp.blogspot.com/-mm3eelAnTf4/WlJ1piJwP3I/AAAAAAABQ9E/e3emey4hdEIsHTlOxqK2xzUHPHFHKnmAwCLcBGAs/s640/codecode.jpg)](https://3.bp.blogspot.com/-mm3eelAnTf4/WlJ1piJwP3I/AAAAAAABQ9E/e3emey4hdEIsHTlOxqK2xzUHPHFHKnmAwCLcBGAs/s1600/codecode.jpg)
 
   
 
@@ -19,7 +21,7 @@ I do however, upload everything to my NAS using ftp, for safe keeping.
 
   
 
-My settings, is to keep everything for 30 days. That's more than enough, and something the Netatmo supports -  or so I thought. 
+My settings, is to keep everything for 30 days. That's more than enough, and something the [Netatmo](/posts/2018/why-i-love-my-netatmo-presence-found-potential-thief/) supports -  or so I thought. 
 
   
 
@@ -37,13 +39,13 @@ So the solution was rather easy.
 
   
 
-[![](https://4.bp.blogspot.com/-oxYImTW4Zl8/WlJ29oB0RnI/AAAAAAABQ9I/0P4lsU5SBz82XKNyFyzgwZgjWuNo6FUwQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.33.jpg)](https://4.bp.blogspot.com/-oxYImTW4Zl8/WlJ29oB0RnI/AAAAAAABQ9I/0P4lsU5SBz82XKNyFyzgwZgjWuNo6FUwQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.33.jpg)
+[![Synology DSM scheduled task set to run daily at 23:59](https://4.bp.blogspot.com/-oxYImTW4Zl8/WlJ29oB0RnI/AAAAAAABQ9I/0P4lsU5SBz82XKNyFyzgwZgjWuNo6FUwQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.33.jpg)](https://4.bp.blogspot.com/-oxYImTW4Zl8/WlJ29oB0RnI/AAAAAAABQ9I/0P4lsU5SBz82XKNyFyzgwZgjWuNo6FUwQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.33.jpg)
 
 Create a task in the Synologt DSM interface, that runs every day at 23:59 (sorry for the danish screenshot).
 
   
 
-[![](https://2.bp.blogspot.com/-i1UQaboe41E/WlJ3ID_4RuI/AAAAAAABQ9M/VJbBkgeBx5oQmFfhDRbjCCh73ibmeF9gQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.16.jpg)](https://2.bp.blogspot.com/-i1UQaboe41E/WlJ3ID_4RuI/AAAAAAABQ9M/VJbBkgeBx5oQmFfhDRbjCCh73ibmeF9gQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.16.jpg)
+[![Synology DSM task run command with find deleting files older than 30 days](https://2.bp.blogspot.com/-i1UQaboe41E/WlJ3ID_4RuI/AAAAAAABQ9M/VJbBkgeBx5oQmFfhDRbjCCh73ibmeF9gQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.16.jpg)](https://2.bp.blogspot.com/-i1UQaboe41E/WlJ3ID_4RuI/AAAAAAABQ9M/VJbBkgeBx5oQmFfhDRbjCCh73ibmeF9gQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-07%2Bkl.%2B20.29.16.jpg)
 
 Run the script :
 

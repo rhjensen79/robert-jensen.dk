@@ -5,6 +5,7 @@ tags: [kubernetes, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/carlos-aranda-QMjCzOGeglA-unsplash.webp"
+images: ["images/carlos-aranda-QMjCzOGeglA-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to deploy kubernetes with Continuous Delivery as part of the deployment"
 ---
@@ -122,7 +123,7 @@ This is specific for the `overlays/test`folder
 
 But I can also see projectcontour, cert-manager, nginx there.
 ![namespace](images/namespace.webp)
-Running `k get secrets -n cert-manager` shows that my Cloudflare secret, has been applied, so I can pull new certificates, using the Clusterissuer, that is also installed.
+Running `k get secrets -n cert-manager` shows that my Cloudflare secret, has been applied, so I can pull new certificates, using the [Clusterissuer](/posts/2022/auto-generating-tls-certificates-for-tanzu-application-platform-tap-workloads/), that is also installed.
 ![secret](images/secret.webp)
 
 This means all my configurations, have been applied, without me having to do anything, and my colleagues that use the same platform, can deploy K8S clusters, pre-configured, with the settings they need.

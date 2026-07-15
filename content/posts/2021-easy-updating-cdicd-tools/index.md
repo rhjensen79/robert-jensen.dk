@@ -4,10 +4,11 @@ date: 2021-02-18T09:18:30+01:00
 tags: [ci-cd, automation, docker]
 draft: false
 thumbnail: "images/sven-mieke-fteR0e2BzKo-unsplash.webp"
+images: ["images/sven-mieke-fteR0e2BzKo-unsplash.webp"]
 description: "How to use Docker autobuild feature, to automaticly create and deploy container images to Docker Hub"
 ---
 Update 09/06/2021 : Docker has changed their licenses, so that AutoBuild, in no longer part of the free license., due to it being exploided by Bitcoin miners. A shame, but something i fully understand.
-Update 23/03/2021 : I have changed my container image, to be build using Gitlab, and pushed to my private Harbor registry, due to speed, and amount of pulls.
+Update 23/03/2021 : I have changed my container image, to be build using Gitlab, and pushed to my [private Harbor registry](/posts/2021/harbor-behind-traefik-lets-encrypt-certificate/), due to speed, and amount of pulls.
 It's public avaliable, so if you want to use it, pull it using 
 ```
 docker pull registry.cmplab.dk/cmplab/autocontainer:latest
@@ -128,7 +129,7 @@ My Builds
 That's all it takes.
 Not that Docker hub autobuilds, is not the fastest. So if you need to build your images fast, then you should look into other options. That said, I think it's a really nice service.
 
-Also if you want to learn more abour docker, then I did a presentation, to the latest Automation User Group, around basic docker. You can find the links below.
+Also if you want to [learn more abour docker](/posts/2020/docker-for-almost-everything/), then I did a presentation, to the latest Automation User Group, around basic docker. You can find the links below.
 
 Back to Basics: Getting started with Docker - Robert Jensen
 

@@ -4,6 +4,7 @@ date: 2021-01-19T09:35:55+01:00
 tags: [homelab, docker, traefik, networking]
 draft: false
 thumbnail: "images/markus-spiske-uPXs5Vx5bIg-unsplash.webp"
+images: ["images/markus-spiske-uPXs5Vx5bIg-unsplash.webp"]
 description: "How to setup Tailscale, to get remote, seamless access to you home lab, or demo enviroment."
 ---
 
@@ -51,7 +52,7 @@ And for me, that is all I needed to get it working.
 
 ## Installation
 
-The way I have installed it, is as a Docker container, running behind my [Traefik](https://traefik.io) reverse proxy. 
+The way I have installed it, is as a Docker container, running behind my [Traefik](https://traefik.io) [reverse proxy](/posts/2021/secure-deployments-with-docker-traefik-and-lets-encrypt/). 
 That way, I have a secure way to access it, and it's protected by a [Let'sEncrypt](https://letsencrypt.org) certificate. 
 Note when I say secure, it's secure in the way, that it uses HTTPS, and i'm offcourse dependend on the security Guacamole provides and you have to know the url, to be able to access it. So for me, it's currently good enough.
 
@@ -87,6 +88,6 @@ networks:
     external: true
 ```
 
-So if your setup looks like the one I described in this [post](https://www.robert-jensen.dk/posts/2021-tailscale-on-edgerouter/) then all you need to do, is to change, the file path, for your configuration files, and set your public url, and you should be good to go.
+So if your setup looks like the one I described in this [post](/posts/2021/tailscale-on-ubitique-edgerouter/) then all you need to do, is to change, the file path, for your configuration files, and set your public url, and you should be good to go.
 
 <span>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/access?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

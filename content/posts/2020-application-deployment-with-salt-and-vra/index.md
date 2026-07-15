@@ -5,6 +5,7 @@ description: "Automate application deployment on vSphere by integrating SaltStac
 tags: [vmware, vsphere, salt, automation, docker]
 draft: false
 thumbnail: "images/shahadat-rahman-gnyA8vd3Otc-unsplash.webp"
+images: ["images/shahadat-rahman-gnyA8vd3Otc-unsplash.webp"]
 slug: "application-deployment-salt-vrealize-automation"
 ---
 Here is a short post, around my first integration between [SaltStack](https://www.saltstack.com) and [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html).
@@ -100,11 +101,11 @@ The top.sls file, is simply a filter, that decides what jobs to run, based on di
 
 I have mine setup as below.
 
-'*' means all minions, and it runs base jobs, like enabling Presence on the minion. Setting the correct SSH keys, and SSH configuration, and installing and configuring the LogInsight agent.
+'*' means all minions, and it runs base jobs, like enabling Presence on the minion. Setting the correct SSH keys, and SSH configuration, and [installing and configuring the LogInsight agent](/posts/2021/install-loginsight-agent-using-saltstack/).
 
 'App:Docker' matches all Grains with the folling key and value, and applys the job Docker.
 
-'test:container' is for testing jobs in my container. See this [post](https://www.robert-jensen.dk/posts/2020-docker-for-almost-everything/) for more info, on how i setup this litte test minion :-)
+'test:container' is for testing jobs in my container. See this [post](/posts/2020/docker-for-almost-everything/) for more info, on how i setup this litte test minion :-)
 
 The above means that my VM, get all the jobs in * but also the jobs in App:Docker.
 - presence

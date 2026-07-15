@@ -2,12 +2,14 @@
 title: "vSphere HTML5 Client - Have You Tried the Fling?"
 date: 2017-12-27T19:49:00.001+01:00
 description: "The vSphere HTML5 client keeps improving with weekly updates. Robert shares why he switched from the C# and Flash web clients and how to try the HTML5 Fling."
+thumbnail: "images/michael-dziedzic--Rc6usOigMk-unsplash.webp"
+images: ["images/michael-dziedzic--Rc6usOigMk-unsplash.webp"]
 draft: false
 aliases: [ "/2017/12/vsphere-html5-client-have-you-tried.html" ]
 tags: [vmware, vsphere]
 ---
 
-[![](https://labs.vmware.com/flings/files/uploads/0/0/0/0/0/8/6/2016-03-07_1741_h5client_-_screenshot0-1024x684.png)](https://labs.vmware.com/flings/files/uploads/0/0/0/0/0/8/6/2016-03-07_1741_h5client_-_screenshot0-1024x684.png)
+[![The vSphere HTML5 web client user interface](https://labs.vmware.com/flings/files/uploads/0/0/0/0/0/8/6/2016-03-07_1741_h5client_-_screenshot0-1024x684.png)](https://labs.vmware.com/flings/files/uploads/0/0/0/0/0/8/6/2016-03-07_1741_h5client_-_screenshot0-1024x684.png)
 
   
 From time to time, people have asked me "When do you fix the vSphere web client", or "When will the C# client come back"  

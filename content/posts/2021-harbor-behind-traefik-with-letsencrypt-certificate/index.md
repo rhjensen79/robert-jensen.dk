@@ -4,6 +4,7 @@ date: 2021-02-19T13:53:10+01:00
 tags: [traefik, docker, security]
 draft: false
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.webp"
+images: ["images/everaldo-coelho-KPaSCpklCZw-unsplash.webp"]
 description: "How to setup Harbor Container Registry, behind Traefik Reverse Proxy, and how to get secure https Let's Encrypt certificates deploye automaticly"
 slug: "harbor-behind-traefik-lets-encrypt-certificate"
 ---
@@ -23,7 +24,7 @@ This blog is about how to do just that :-)
 ## Before you begin, you need
 
 - A working Traefik proxy, with Let's Encrypt enabled
-My setup is [described here](https://www.robert-jensen.dk/posts/2021-secure-deployments-with-docker-and-traefik/), and should be quite easy to follow.
+My setup is [described here](/posts/2021/secure-deployments-with-docker-traefik-and-lets-encrypt/), and should be quite easy to follow.
 
 - An clean Ubuntu 18.04 VM for running Harbor
 (That is what i'm using anyway)

@@ -7,15 +7,16 @@ Categories: []
 DisableComments: false
 toc: true
 thumbnail: "images/kimi-lee-M3RVFbqKGu4-unsplash.webp"
+images: ["images/kimi-lee-M3RVFbqKGu4-unsplash.webp"]
 #images: 
 #- "images/kimi-lee-M3RVFbqKGu4-unsplash.jpg"
 draft: false
 ---
 ## Intro
 
-For some time, I have been writing about setting up [Traefik](https://traefik.io), with [docker](https://www.docker.com), and using it as a reverse proxy, for my workloads.
+For some time, I have been writing about setting up [Traefik](https://traefik.io), with [docker](https://www.docker.com), and [using it as a reverse proxy](/posts/2021/secure-deployments-with-docker-traefik-and-lets-encrypt/), for my workloads.
 
-I have been running a stand alone Docker host, for a while, but due to changes in my job (more about that in the next post), I wanted to change this to Kubernetes instead, to get a lot more hands on.
+I have been running a stand alone Docker host, for a while, but due to [changes in my job](/posts/2021/new-role/) (more about that in the next post), I wanted to change this to Kubernetes instead, to get a lot more hands on.
 
 I have been a fan of Traefik, for quite some time. But getting it up and running on [Kubernetes](https://kubernetes.io), has not been easy. I think that it's mostly due to Kubernetes evolving so fast, so the guides out there, quickly get's outdated (or maybe it's just my lack of knowledge)
 

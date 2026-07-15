@@ -4,6 +4,7 @@ date: 2021-01-12T20:28:10+01:00
 tags: [tailscale, networking]
 draft: false
 thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.webp"
+images: ["images/jj-ying-8bghKxNU1j0-unsplash.webp"]
 #image:
 #- "images/jj-ying-8bghKxNU1j0-unsplash.jpg"
 description: "How to install Tailscale on an Unifi Edgerouter Lite, to make it a proxy endpoint, for the rest of your Lan"
@@ -13,7 +14,7 @@ description: "How to install Tailscale on an Unifi Edgerouter Lite, to make it a
 06.08.2021 : Updated blog to version 1.12.3 - Tested and working.
 30.01.2021 : Updated blog to version 1.4.1 - Tested and working.
 
-[Tailscale](https://tailscale.com) is what I have been using, to get access to my demo enviroment, and allow clients to communicate with each other, across networks etc.
+[Tailscale](https://tailscale.com) is what I have been using, to [get access to my demo enviroment](/posts/2021/remote-access-to-demolab-using-apache-guacamole/), and allow clients to communicate with each other, across networks etc.
 But I have really missed, having it installed on my firewall, to make it act as a more traditional vpn.
 The firewall i'm using is an Ubitique Edgerouter lite.
 

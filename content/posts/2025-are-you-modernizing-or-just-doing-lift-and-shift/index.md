@@ -5,6 +5,7 @@ tags: [vmware, kubernetes, cloud]
 draft: false
 toc: true
 thumbnail: "images/hamster.webp"
+images: ["images/hamster.webp"]
 description: "Moving between hypervisor platforms might save on licensing costs, but are you truly modernizing your applications or just moving in circles?"
 ---
 
@@ -30,7 +31,7 @@ True It's gotten a lot easier, but since most people run fairly complex datacent
 
 The right solution is to modernize the applications. That might not be possible for all workloads, and might cost money, time etc. But looking closely at each application, to see if there is newer alternatives, to the service it's running, makes sense instead of just moving it around.
 
-Also see if your current platform, has the capabilities of supporting different types of workloads. This could be Containers directly, Kubernetes, or maybe Linux machines running containers, to bring more value into your current platform, and utilize it better.
+Also see if your current platform, has the capabilities of supporting different types of workloads. This could be Containers directly, [Kubernetes](/posts/2023/when-kubernetes-is-not-the-right-choice/), or maybe Linux machines running containers, to bring more value into your current platform, and utilize it better.
 This is also a great stepping stone, to bring your application to a state, that allows you to have the flexibility in the future, to easily migrate to a platform, that allows for greater scaling, locality or availability.
 
 ### Conclusion

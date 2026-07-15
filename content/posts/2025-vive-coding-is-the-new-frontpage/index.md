@@ -6,6 +6,7 @@ description: "How AI-assisted coding tools like GitHub Copilot and ChatGPT mirro
 tags: ["ai"]
 toc: true
 thumbnail: "images/frontpage.webp"
+images: ["images/frontpage.webp"]
 categories: ["Technology"]
 ---
 

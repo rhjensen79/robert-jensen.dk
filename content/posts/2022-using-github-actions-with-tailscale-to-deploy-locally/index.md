@@ -5,6 +5,7 @@ tags: [github-actions, tailscale, kubernetes, docker, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"
+images: ["images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to use Github Actions, to Create and build docker containers, and then deploy them localy using Tailscale, to Kubernetes"
 slug: "github-actions-tailscale-deploy-locally"
@@ -37,7 +38,7 @@ The name of the app is [Perfect-Charge](https://github.com/rhjensen79/perfect-ch
 
 ![action](images/action.webp)
 
-My current action, builds each of the current 4 containers, and pushes them to Githib's Container registry, with a unique label.
+My current action, builds each of the current 4 containers, and [pushes them to Githib's Container registry](/posts/2023/build-publish-and-host-your-docker-images-on-github-registry/), with a unique label.
 
 When they are all done, I update the Kubernetes deployment yaml file, with the unique label of the containers.
 And then I install Tailscale, and apply's the updated config, to my Kubernetes cluster.
@@ -80,7 +81,7 @@ And at last, I use the "azure/k8s-set-context@v2" to install all Kubernetes tool
 
 The real magic here, is Tailscale, and how easy they have made it, to connect to different enviroments.
 
-I need to have the network setup prior to this, but it's really easy, and it just connects to the setup I already had in place.
+I need to have [the network setup](/posts/2021/tailscale-on-ubitique-edgerouter/) prior to this, but it's really easy, and it just connects to the setup I already had in place.
 
 Photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly Sikkema</a> on <a href="https://unsplash.com/s/photos/build?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   

@@ -5,6 +5,7 @@ tags: [vmware, ci-cd, cloud]
 draft: false
 description: "Learn how to integrate Azure DevOps with VMware CodeStream for CI/CD pipelines. Step-by-step guide using API tokens and Bearer authentication to trigger VMware CodeStream pipelines from Azure DevOps workflows."
 thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.webp"
+images: ["images/clay-banks-LjqARJaJotc-unsplash.webp"]
 #images: 
 #- "images/clay-banks-LjqARJaJotc-unsplash.jpg"
 ---
@@ -55,7 +56,7 @@ When you comit and push a new file, to the repo.
 It triggers a Pipelin run in Azure Devops
 ![Azure DevOps pipeline dashboard displaying successful execution of Ubuntu container running integration script to trigger VMware CodeStream](images/azure.webp)
 
-That start's a Ubuntu container, that runs the script, that triggers the CodeStream pipeline.
+That start's a Ubuntu container, that runs the script, that triggers the [CodeStream pipeline](/posts/2020/automating-folding@home-with-vmware-code-stream/).
 ![VMware CodeStream pipeline execution view showing successful automated trigger from Azure DevOps integration via REST API](images/codestream.webp)
 
 This is just a simpel example. You can do it a lot more advanced, and pass parameters to the CodeStream pipeline, if you want to. But for my usecase, this was enough, and it's easily replicated, to other platforms, that can run the script, or just do a simple rest call.

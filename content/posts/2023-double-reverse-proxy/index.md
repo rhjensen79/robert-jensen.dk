@@ -5,6 +5,7 @@ tags: [networking, security]
 draft: false
 toc: true
 thumbnail: "images/marc-olivier-jodoin--TQUERQGUZ8-unsplash.webp"
+images: ["images/marc-olivier-jodoin--TQUERQGUZ8-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to setup Caddy reverse proxy, after Cloudflare reverse proxy"
 ---
@@ -23,7 +24,7 @@ The concept looks something like this.
 ![infra](images/infra.svg)
 
 Cloudflared proxy creates a tunnel, to CloudFlare CDN. So I don't have to open any fw ports.
-If you haven't tried this, then I have a couple of blog posts, on this site, that show how. It's a really cool solution.
+If you haven't tried this, then I have [a couple of blog posts, on this site, that show how](/posts/2022/remote-access-to-pod-without-opening-firewall-on-tanzu-community-edition/). It's a really cool solution.
 
 The reason for using Caddy, is that I can use it, to deliver the request to the correct endpoint, based on the URL etc.
 

@@ -2,12 +2,14 @@
 title: 'Homekit support for non homekit devices'
 date: 2018-11-12T08:58:00.001+01:00
 description: "Add HomeKit support to non-HomeKit devices with cheap Sonoff switches and RavenCore firmware, replacing an OpenHAB and MQTT bridge with direct HomeKit control."
+thumbnail: "images/jackson-simmer-Vqg809B-SrE-unsplash.webp"
+images: ["images/jackson-simmer-Vqg809B-SrE-unsplash.webp"]
 draft: false
 aliases: [ "/2018/11/homekit-support-for-non-homekit-devices.html" ]
 tags: [home-automation, automation]
 ---
 
-[![](https://images.techhive.com/images/article/2017/02/homekit-logo-100707188-large.jpg)](https://images.techhive.com/images/article/2017/02/homekit-logo-100707188-large.jpg)
+[![Apple HomeKit logo](https://images.techhive.com/images/article/2017/02/homekit-logo-100707188-large.jpg)](https://images.techhive.com/images/article/2017/02/homekit-logo-100707188-large.jpg)
 
 For that last 2 years, I have been playing around with Home Automation.  
 So far i'm running a mix of both an [Openhab](https://www.openhab.org/) installation, based on [MQTT](http://mqtt.org/), and some H[omekit](https://www.apple.com/dk/shop/accessories/all-accessories/homekit) devices ([Philips hue](https://www2.meethue.com/da-dk) etc).  
@@ -40,7 +42,7 @@ You can see all releases [here](https://github.com/RavenSystem/esp-homekit-devic
 Note that there is a lot of Sonoff devices, and Ravencore, only supports a few. But I hope it's only a matter of time, until we see support for more devices and features.  
   
 
-[![](https://1.bp.blogspot.com/-7DkWi-4UlaY/W-kwmcBh5UI/AAAAAAABjYc/QkK0EFPxEm82dS2iX54ROL2QDaRISN28QCLcBGAs/s640/IMG_3593.PNG)](https://1.bp.blogspot.com/-7DkWi-4UlaY/W-kwmcBh5UI/AAAAAAABjYc/QkK0EFPxEm82dS2iX54ROL2QDaRISN28QCLcBGAs/s1600/IMG_3593.PNG)
+[![HomeKit app showing the Sonoff device running RavenCore firmware](https://1.bp.blogspot.com/-7DkWi-4UlaY/W-kwmcBh5UI/AAAAAAABjYc/QkK0EFPxEm82dS2iX54ROL2QDaRISN28QCLcBGAs/s640/IMG_3593.PNG)](https://1.bp.blogspot.com/-7DkWi-4UlaY/W-kwmcBh5UI/AAAAAAABjYc/QkK0EFPxEm82dS2iX54ROL2QDaRISN28QCLcBGAs/s1600/IMG_3593.PNG)
 
 This is the details from Homekit, when it's up and running.
 

@@ -5,6 +5,7 @@ tags: [docker, kubernetes, ci-cd]
 draft: true
 toc: true
 thumbnail: "images/john-barkiple-l090uFWoPaI-unsplash.webp"
+images: ["images/john-barkiple-l090uFWoPaI-unsplash.webp"]
 #image: "images/john-barkiple-l090uFWoPaI-unsplash.jpg"
 description: "How I deploy applications in my setup - configuration"
 ---

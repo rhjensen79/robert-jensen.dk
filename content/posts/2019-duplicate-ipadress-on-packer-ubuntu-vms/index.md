@@ -2,12 +2,14 @@
 title: 'Duplicate ipadress on Packer Ubuntu VM''s'
 date: 2019-05-03T20:57:00.002+02:00
 description: "Fixing duplicate IP addresses on Packer-built Ubuntu VMs by setting a MAC-based Netplan dhcp-identifier, automated with a shell script in the build pipeline."
+thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"
+images: ["images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"]
 draft: false
 aliases: [ "/2019/05/duplicate-ipadress-on-packer-ubuntu-vms.html" ]
 tags: [vmware, vsphere, automation, ci-cd]
 ---
 
-[![](https://www.gohacking.com/wp-content/uploads/2009/10/Trace-IP-735x400.jpg)](https://www.gohacking.com/wp-content/uploads/2009/10/Trace-IP-735x400.jpg)
+[![Illustration of tracing an IP address](https://www.gohacking.com/wp-content/uploads/2009/10/Trace-IP-735x400.jpg)](https://www.gohacking.com/wp-content/uploads/2009/10/Trace-IP-735x400.jpg)
 
   
 After reading a blog [post](https://www.thehumblelab.com/automating-ubuntu-18-packer/), from Cody's blog [thehumblelab.com](http://thehumblelab.com/), about how to create automated vSphere templates, using Packer.  
@@ -141,11 +143,11 @@ d-i passwd/user-default-groups vmware sudo
 
   
 After this, it seams to be working.  
-I'm still in the progress of updating all my templates, with this new fix, and if I were a developer, or better at Packer, it would probably have been fixed, in a more elegant way, and faster. But I'm still learning, and really soon, I will have som nice templates, that is automatically updated, just by running a VMware Code Stream pipeline, when the git code is changed, or when I need it to :-)  
+I'm still in the progress of updating all my templates, with this new fix, and if I were a developer, or better at Packer, it would probably have been fixed, in a more elegant way, and faster. But I'm still learning, and really soon, I will have som nice templates, that is automatically updated, just by running a [VMware Code Stream pipeline](/posts/2020/automating-folding@home-with-vmware-code-stream/), when the git code is changed, or when I need it to :-)  
   
 And yes, it's off course all is done thru a Code Stream pipeline :-)  
 To finish up, for inspiration, and because I really like VMware Cloud Automation Services, I will just include a picture of the pipeline :-)  
   
 I hope this might inspire others, to start looking into pipelines, for automating stuff.  
 
-[![](https://1.bp.blogspot.com/-7-XQnQqYshk/XMyLZHbYUJI/AAAAAAABujs/uirC6yeEklwVSDsICew1nOByqO9Y7664gCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-05-03%2Bkl.%2B20.39.43.png)](https://1.bp.blogspot.com/-7-XQnQqYshk/XMyLZHbYUJI/AAAAAAABujs/uirC6yeEklwVSDsICew1nOByqO9Y7664gCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-05-03%2Bkl.%2B20.39.43.png)
+[![VMware Code Stream pipeline that builds the Packer Ubuntu template](https://1.bp.blogspot.com/-7-XQnQqYshk/XMyLZHbYUJI/AAAAAAABujs/uirC6yeEklwVSDsICew1nOByqO9Y7664gCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-05-03%2Bkl.%2B20.39.43.png)](https://1.bp.blogspot.com/-7-XQnQqYshk/XMyLZHbYUJI/AAAAAAABujs/uirC6yeEklwVSDsICew1nOByqO9Y7664gCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-05-03%2Bkl.%2B20.39.43.png)

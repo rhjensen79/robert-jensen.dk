@@ -4,6 +4,7 @@ date: 2021-05-07T20:13:49+02:00
 tags: [python, traefik, homelab]
 draft: false
 thumbnail: "images/joshua-eckstein-VAJEea9u6k8-unsplash.webp"
+images: ["images/joshua-eckstein-VAJEea9u6k8-unsplash.webp"]
 #images: 
 #- "images/joshua-eckstein-VAJEea9u6k8-unsplash.jpg"
 description: "Description, of my new project, where i use Hugo, FastAPI, Mongodb and some other tools, to list all the Crossfit and Non Crossfit boxes in the world"
@@ -40,7 +41,7 @@ But in my case, there is probably more than 10k boxes in the world, and managein
 So next part of my project, was to find a Database, and a way to get the data.
 
 I ended up using [MongoDB](https://www.mongodb.com) as the Database, with [FastApi](https://fastapi.tiangolo.com) as the api frontend.
-All services are running on my local enviroment, in containers, behind a [Traefic](https://traefik.io) reverse proxy, with [Letsencrypt](https://letsencrypt.org) certificate.
+All services are running on my local enviroment, in containers, behind a [Traefic](https://traefik.io) [reverse proxy](/posts/2021/secure-deployments-with-docker-traefik-and-lets-encrypt/), with [Letsencrypt](https://letsencrypt.org) certificate.
 
 Mongodb was an easy way to store the documents, since it's basicly just storing Json documents.
 And FastApi, was perfect, since I could use the Python skills I have, to grab the data from MongoDB, and present it to Hugo.

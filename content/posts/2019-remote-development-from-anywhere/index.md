@@ -6,9 +6,10 @@ draft: false
 aliases: [ "/2019/10/remote-development-from-anywhere.html" ]
 tags: [networking, vmware, devcontainers, automation]
 thumbnail: "images/yancy-min-842ofHC6MaI-unsplash.webp"
+images: ["images/yancy-min-842ofHC6MaI-unsplash.webp"]
 ---
 
-[![](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)
+[![Abstract digital network and big data concept illustration](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)](https://www.noknok.com/wp-content/uploads/2018/07/big-data-abstract-digital-concept-picture-id870658190-1-1-600x300.jpg)
 
   
 [VScode](https://code.visualstudio.com/) is that type of software, that I hated in the beginning, and now love (for the most part).  
@@ -37,7 +38,7 @@ So let's look into it.
 Let me show you.  
   
 
-[![](https://1.bp.blogspot.com/--kSGBZXT79I/XZ1_YipYLSI/AAAAAAAB9jw/8GHKJnsGCV8tnECtAV9OX9xbqWYo-o3NwCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.33.53.png)](https://1.bp.blogspot.com/--kSGBZXT79I/XZ1_YipYLSI/AAAAAAAB9jw/8GHKJnsGCV8tnECtAV9OX9xbqWYo-o3NwCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.33.53.png)
+[![Creating a private network in the ZeroTier management console](https://1.bp.blogspot.com/--kSGBZXT79I/XZ1_YipYLSI/AAAAAAAB9jw/8GHKJnsGCV8tnECtAV9OX9xbqWYo-o3NwCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.33.53.png)](https://1.bp.blogspot.com/--kSGBZXT79I/XZ1_YipYLSI/AAAAAAAB9jw/8GHKJnsGCV8tnECtAV9OX9xbqWYo-o3NwCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.33.53.png)
 
 I start by creating a network.  
 2 important things.  
@@ -47,14 +48,14 @@ I start by creating a network.
 2\. The network is set to private. This means, that I have to approve all that joins my network. Set this to public, and everyone, that has my is, can join (you probably don't want that).  
   
 
-[![](https://1.bp.blogspot.com/-2w-KtBWpV8M/XZ1_-H7I9DI/AAAAAAAB9j4/4dEceNlwK7Ygf4a1QiFh9FYUETDyrAAcACLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.36.29.png)](https://1.bp.blogspot.com/-2w-KtBWpV8M/XZ1_-H7I9DI/AAAAAAAB9j4/4dEceNlwK7Ygf4a1QiFh9FYUETDyrAAcACLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.36.29.png)
+[![Setting the network IP range and routes in ZeroTier](https://1.bp.blogspot.com/-2w-KtBWpV8M/XZ1_-H7I9DI/AAAAAAAB9j4/4dEceNlwK7Ygf4a1QiFh9FYUETDyrAAcACLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.36.29.png)](https://1.bp.blogspot.com/-2w-KtBWpV8M/XZ1_-H7I9DI/AAAAAAAB9j4/4dEceNlwK7Ygf4a1QiFh9FYUETDyrAAcACLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.36.29.png)
 
   
 I can also set static routes. But that's for another blog post.  
 But I can also chose my network range. Select something you like, and leve it. Zerotier automatically assigns ip adresses from that range.  
   
 
-[![](https://1.bp.blogspot.com/-Obe9h8S6_EM/XZ2CDe3lneI/AAAAAAAB9kE/mvzgr8uyXc8AABZwuMSEHrX9jCJ6acBygCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.45.21.png)](https://1.bp.blogspot.com/-Obe9h8S6_EM/XZ2CDe3lneI/AAAAAAAB9kE/mvzgr8uyXc8AABZwuMSEHrX9jCJ6acBygCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.45.21.png)
+[![ZeroTier network members with automatically assigned IP addresses](https://1.bp.blogspot.com/-Obe9h8S6_EM/XZ2CDe3lneI/AAAAAAAB9kE/mvzgr8uyXc8AABZwuMSEHrX9jCJ6acBygCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.45.21.png)](https://1.bp.blogspot.com/-Obe9h8S6_EM/XZ2CDe3lneI/AAAAAAAB9kE/mvzgr8uyXc8AABZwuMSEHrX9jCJ6acBygCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.45.21.png)
 
   
 Go to the [download](https://www.zerotier.com/download/) page, and find the package for your os.  
@@ -79,7 +80,7 @@ It's so easy, and pretty scary at the same time :-)
 My [VScode](https://code.visualstudio.com/) auto reconnects, everytime I open it, as long as there is internet.  
 So now I don't have to think about VPN anymore. I'm always on the same network, as my VM.  
 
-[![](https://1.bp.blogspot.com/-2VrcgfVvRdc/XZ2Eb5oXi4I/AAAAAAAB9kQ/YoJXlCGyaFAOWi7GmOVrPGuz0XrLT8WvgCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.53.44.png)](https://1.bp.blogspot.com/-2VrcgfVvRdc/XZ2Eb5oXi4I/AAAAAAAB9kQ/YoJXlCGyaFAOWi7GmOVrPGuz0XrLT8WvgCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.53.44.png)
+[![VS Code connected remotely to the Linux VM over ZeroTier](https://1.bp.blogspot.com/-2VrcgfVvRdc/XZ2Eb5oXi4I/AAAAAAAB9kQ/YoJXlCGyaFAOWi7GmOVrPGuz0XrLT8WvgCLcBGAsYHQ/s640/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.53.44.png)](https://1.bp.blogspot.com/-2VrcgfVvRdc/XZ2Eb5oXi4I/AAAAAAAB9kQ/YoJXlCGyaFAOWi7GmOVrPGuz0XrLT8WvgCLcBGAsYHQ/s1600/Sk%25C3%25A6rmbillede%2B2019-10-09%2Bkl.%2B08.53.44.png)
 
   
 Note there is a lot more usecases, and probably just as many security concerns. But the solution is imho really cool, and useful, if used in the correct way.  

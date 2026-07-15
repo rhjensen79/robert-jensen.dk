@@ -3,6 +3,7 @@ title: "Install Loginsight agent using SaltStack"
 date: 2021-05-20T20:50:06+02:00
 tags: [vmware, salt, automation]
 thumbnail: "images/brett-jordan-YuQEEaNOgBA-unsplash.webp"
+images: ["images/brett-jordan-YuQEEaNOgBA-unsplash.webp"]
 draft: false
 description: "How to use SaltStack to deploy and install LogInsight on to both Linux and windows, and to maintain the initial configuration, and then switch the control over to the LogInsihgt server, using Grains"
 ---
@@ -11,7 +12,7 @@ For a POC i'm preparing for, I had the chance to look at bit more at [SaltStack]
 I like the product, and what it can do, but I really need a usecase, to do anything usefull with it. It's the same with many other products, but with SaltStack, i'm just feeling it more. So it was nice to have a goal this time :-) 
 
 I wanted to share what I have done, for inspiration, for people just starting out with SaltStack or Salt.
-This usecase, is eash to replicate, and use for other deployments/configurations etc. 
+This usecase, is eash to replicate, and use for [other deployments/configurations](/posts/2020/application-deployment-salt-vrealize-automation/) etc. 
 
 The usecase is to deploy [LogInsight](https://www.vmware.com/products/vrealize-log-insight.html) agent's on all my VM's. This being both Windows and Linux in one single job. 
 

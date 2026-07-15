@@ -5,6 +5,7 @@ tags: [docker, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.webp"
+images: ["images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Troubleshoot and solve static file preservation issues in Cloud Native Buildpacks. Step-by-step guide for handling static assets in containerized Golang applications."
 ---
@@ -51,7 +52,7 @@ The rest is mostly for TAP, and someting we can talk about another day.
 
 ## Build
 
-So TAP (or Buildpacks) looks at the root of the directory, for code to determine how to build the container.
+So TAP (or [Buildpacks](/posts/2021/hello-buildpacks-goodbye-dockerfiles/)) looks at the root of the directory, for code to determine how to build the container.
 In my case my code is in the app folder.
 So I needed to tell it, where to look.
 That is done, using a project.toml file, in the root of my repository.
