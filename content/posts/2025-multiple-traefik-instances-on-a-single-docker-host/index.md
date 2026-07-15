@@ -5,6 +5,7 @@ tags: [docker, traefik, networking]
 draft: false
 toc: true
 thumbnail: "images/sigmund-EJe6LqEjHpA-unsplash.webp"
+images: ["images/sigmund-EJe6LqEjHpA-unsplash.webp"]
 description: "How to run multiple Traefik instances on the same Docker host and selectively route containers to different proxies using labels"
 slug: "multiple-traefik-instances-single-docker-host"
 ---
@@ -37,7 +38,7 @@ The solution I found was to use Docker labels as a filtering mechanism, which tu
 
 The key component that makes this setup work is the `constraints` parameter in Traefik's Docker provider configuration. This allows you to filter which containers Traefik will discover and route.
 
-For my Tailscale-only Traefik instance, I use the following configuration:
+For my [Tailscale-only Traefik instance](/posts/2025/securely-exposing-services-with-traefik-and-tailscale/), I use the following configuration:
 
 ```yaml
 providers:

@@ -5,9 +5,11 @@ draft: false
 aliases: [ "/2019/03/new-password-manager.html" ]
 tags: [security, cloud]
 description: "A short description, around my new passwordmanager Bitwarden" 
+thumbnail: "images/georg-bommeli-ybtUqjybcjE-unsplash.webp"
+images: ["images/georg-bommeli-ybtUqjybcjE-unsplash.webp"]
 ---
 
-[![](https://images.idgesg.net/images/article/2018/08/5_password-best-practices_unique-passwords_authentication-100768646-large.jpg)](https://images.idgesg.net/images/article/2018/08/5_password-best-practices_unique-passwords_authentication-100768646-large.jpg)
+[![Password authentication and security best practices concept](https://images.idgesg.net/images/article/2018/08/5_password-best-practices_unique-passwords_authentication-100768646-large.jpg)](https://images.idgesg.net/images/article/2018/08/5_password-best-practices_unique-passwords_authentication-100768646-large.jpg)
 
   
 I have been a (happy) long time user of [Keepass](https://keepass.info/).  

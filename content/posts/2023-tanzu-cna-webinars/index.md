@@ -5,6 +5,7 @@ tags: [tanzu, kubernetes, docker, ci-cd]
 draft: true
 toc: true
 thumbnail: "images/minions.webp"
+images: ["images/minions.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Discover key insights from VMware Tanzu Cloud Native webinar series covering Kubernetes, Docker, CI/CD pipelines, and modern application development practices."
 ---

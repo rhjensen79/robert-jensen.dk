@@ -4,11 +4,12 @@ date: 2021-11-04T13:37:46+01:00
 tags: [kubernetes]
 draft: false
 thumbnail: "images/wesley-tingey-snNHKZ-mGfE-unsplash.webp"
+images: ["images/wesley-tingey-snNHKZ-mGfE-unsplash.webp"]
 #images: "images/wesley-tingey-snNHKZ-mGfE-unsplash.jpg"
 description: "How to manage multiple kubeconfig files, using iCloud sync, and Kubectx"
 ---
 
-As a part of my [new role](https://www.robert-jensen.dk/posts/2021-new-role/), I found myself having to manage a lot of different Kubeconfig files.
+As a part of my [new role](/posts/2021/new-role/), I found myself having to manage a lot of different Kubeconfig files.
 
 Switching between 2 computers, meant it quicly became a mess, to have access to the same configs, all the time.
 

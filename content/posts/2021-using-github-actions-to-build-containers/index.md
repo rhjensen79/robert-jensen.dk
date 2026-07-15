@@ -4,11 +4,12 @@ date: 2021-09-09T13:20:37+02:00
 tags: [docker, github-actions, ci-cd]
 draft: false
 thumbnail: "images/ian-taylor-jOqJbvo1P9g-unsplash.webp"
+images: ["images/ian-taylor-jOqJbvo1P9g-unsplash.webp"]
 #image: 
 #- "images/ian-taylor-jOqJbvo1P9g-unsplash.jpg"
 description: "How to build and host Docker containers, using Github actions"
 ---
-Some time ago, I wrote a [blog](https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/), around how to easily build and host, [Docker](https://www.docker.com) containers using Dockers autobuild tools.
+Some time ago, I wrote a [blog](/posts/2021/easy-updating-ci/cd-tools/), around how to easily build and host, [Docker](https://www.docker.com) containers using Dockers autobuild tools.
 
 After the blog post Docker both changed to using [rate limits](https://www.docker.com/increase-rate-limits), for API calls, but also removed the [Autobuild feature](https://www.docker.com/blog/changes-to-docker-hub-autobuilds/).
 
@@ -22,7 +23,7 @@ I have long been wanting to look more into github Actions, but have struggled to
 
 This is a post, on how I changed to using Github Actions to build and host my Docker containers.
 
-First off. I did not change anything in my repo, from my last [blog](https://www.robert-jensen.dk/posts/2021-easy-updating-cdicd-tools/).
+First off. I did not change anything in my repo, from my last [blog](/posts/2021/easy-updating-ci/cd-tools/).
 But if you are starting from scratch, then create a Dockerfile in your Github repo, and make sure it works. Then you are good to follow the rest of my guide.
 
 First I disconnected the [Gitlab sync](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html), that I had been running, to have a synced repo, on both Github and Gitlab.
@@ -53,7 +54,7 @@ The continer is now also being build every night, and pushed to Github's repo, s
 Since this is a public repo, there is no charge, but let's see if that changes in the future.
 For now, i'm happy with my new hosted repo, can I can use without thinking about API limits, in my CI/CD pipelines.
 
-I will still save my private images in my private Harbor registry, since it gives me some added services, with security scanning etc. But most of my images are ok in being public, and there I can see myself using this a lot more in the future. Maybe even creating small repo's for single containers, to have an easy way of building, updating, and hosting them.
+I will still save my private images in my [private Harbor registry](/posts/2021/harbor-behind-traefik-lets-encrypt-certificate/), since it gives me some added services, with security scanning etc. But most of my images are ok in being public, and there I can see myself using this a lot more in the future. Maybe even creating small repo's for single containers, to have an easy way of building, updating, and hosting them.
 
 If you want to try yourself, then feel free to use my container image, or to fork the Repo to create your own version : <https://github.com/rhjensen79/autocontainer>
 

@@ -6,6 +6,7 @@ draft: false
 aliases: [ "/2019/07/vmware-cloud-management-series.html" ]
 tags: [vmware, vsphere, cloud]
 thumbnail: "images/eberhard-grossgasteiger-_uAVHAMjGYA-unsplash.webp"
+images: ["images/eberhard-grossgasteiger-_uAVHAMjGYA-unsplash.webp"]
 ---
 
   
@@ -14,7 +15,7 @@ I have started a new Cloud Management (CMP) series where I want to show, just ho
 
 It's all in Danish, to keep it local, but I will will update this post, to keep all the videos in one place.
 
-1\. Multi Cloud Blueprints in Cloud Assembly.
+1\. [Multi Cloud Blueprints in Cloud Assembly](/posts/2019/cloud-agnostic-blueprints-vmware-cas/).
 {{< youtube R1otMUOI1Js >}}
 
 2\. Versionering af Blueprints  
@@ -32,13 +33,13 @@ It's all in Danish, to keep it local, but I will will update this post, to keep 
 6\. Placering af workloads  
 {{< youtube kNKGiME3hmI >}}
 
-7\. Extensibility
+7\. [Extensibility](/posts/2019/filter-extensibility-subscriptions-in-cas/)
 {{< youtube 3Md7IbFvKno >}}
 
 8\. Service Catalog  
 {{< youtube IysxOZ8ZdCM >}}
 
-9\. Pipelines
+9\. [Pipelines](/posts/2020/automating-folding@home-with-vmware-code-stream/)
 {{< youtube 8_hSJ_oXvQk >}}
 
 

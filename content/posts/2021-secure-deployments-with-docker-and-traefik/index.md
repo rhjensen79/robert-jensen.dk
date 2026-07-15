@@ -4,6 +4,7 @@ date: 2021-01-06T20:45:52+01:00
 tags: [docker, traefik, python, security]
 draft: false
 thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.webp"
+images: ["images/danielle-macinnes-Ehtk87Go0Wg-unsplash.webp"]
 description: "Learn to deploy secure Docker applications using Traefik reverse proxy with automatic Let's Encrypt SSL certificates and custom DNS configuration for production-ready setups."
 ---
 During the christmas holliday, I had some time, to look into [Traefik](https://traefik.io/traefik/) reverse proxy.
@@ -11,7 +12,7 @@ During the christmas holliday, I had some time, to look into [Traefik](https://t
 The reason for me to use Traefik, is due to the automation, it delivers. 
 It can automaticly detect deployments, and present them, and for my demo projects, that is exactly what I need.
 
-Optimal, I would deploy everything to a K8S cluster, but i'm having some problems getting it working with Traefik. So for now, it's just running on a single docker host. So K8S must be for a later blog post, when I get it working :-) 
+Optimal, I would deploy everything to a K8S cluster, but i'm having some problems getting it working with Traefik. So for now, it's just running on a single docker host. So [K8S must be for a later blog post](/posts/2021/installing-microk8s-with-traefik-and-metallb/), when I get it working :-) 
 
 My configuration is quite simple (when I finalily got it working).
 

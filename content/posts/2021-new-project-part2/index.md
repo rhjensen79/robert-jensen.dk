@@ -5,6 +5,7 @@ description: "Part two of a VMware cloud automation project on robert-jensen.dk,
 tags: [vmware, ci-cd, cloud]
 draft: true
 thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.webp"
+images: ["images/clay-banks-LjqARJaJotc-unsplash.webp"]
 #images: 
 #- "images/clay-banks-LjqARJaJotc-unsplash.jpg"
 ---

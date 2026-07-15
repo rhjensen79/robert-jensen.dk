@@ -5,6 +5,7 @@ tags: [tanzu, kubernetes, security]
 draft: false
 toc: true
 thumbnail: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.webp"
+images: ["images/bank-phrom-Tzm3Oyu_6sk-unsplash.webp"]
 #image: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
 description: "How to configure Tanzu Application Platform, to auto generate certificates for workloads"
 ---

@@ -5,6 +5,7 @@ tags: [tanzu, kubernetes, networking]
 draft: false
 toc: true
 thumbnail: "images/matthaeus-hew8vAvvvz4-unsplash.webp"
+images: ["images/matthaeus-hew8vAvvvz4-unsplash.webp"]
 #image: "images/matthaeus-hew8vAvvvz4-unsplash.jpg"
 description: "How to expose a local POD or Service, to the outside world, without opening any firewall ports"
 ---
@@ -148,7 +149,7 @@ This is CloudFlare pointing your new record, to the newly created tunnel id.
 
 Since i'm using an Arm Based M1, I cannot use the officiel Docker image on [Docker Hub](https://hub.docker.com/r/cloudflare/cloudflared).
 
-So I have created my own build, that works on both ARM and x86.
+So I have [created my own build](/posts/2023/build-publish-and-host-your-docker-images-on-github-registry/), that works on both ARM and x86.
 If you are not running ARM, then feel free, to use the official one from Docker Hub.
 
 My version, can found [here](https://github.com/TanzuDK/cloudflared/pkgs/container/cloudflared)

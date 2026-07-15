@@ -5,6 +5,7 @@ description: "Moving a blog from Blogger to a static site built with Hugo and de
 tags: [homelab]
 #image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 thumbnail: "images/erda-estremera-sxNt9g77PE0-unsplash.webp"
+images: ["images/erda-estremera-sxNt9g77PE0-unsplash.webp"]
 #draft: true
 ---
 For the last year or so, I have seen a lot of people, talking about their move of blogs, from a traditionel CMS system, to a static site.

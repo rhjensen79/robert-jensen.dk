@@ -4,6 +4,7 @@ date: 2021-03-19T10:48:02+01:00
 tags: [security, automation]
 draft: false
 thumbnail: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.webp"
+images: ["images/gabriel-gusmao-pMmw3ynuXHw-unsplash.webp"]
 #images: 
 #- "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.jpg"
 description: "How to store your enviroment variables in Bitwarden password manager, and get the onto your system, using Bitwarden CLI"

@@ -5,6 +5,7 @@ tags: [docker, ci-cd, automation, salt, kubernetes]
 draft: false
 description: "Discover how to use Docker containers for system administration tasks beyond development. Learn GitOps approach with Docker Hub, Jenkins automation, and practical examples including SaltStack minion containers for testing."
 thumbnail: "images/thomas-lipke-kkXDhAUnxYI-unsplash.webp"
+images: ["images/thomas-lipke-kkXDhAUnxYI-unsplash.webp"]
 ---
 I'm no expert in containers, but I do talk to a lot of admins in my job, that has not taken the time, to look at containers yet, and therefore haven't found, if they can be a usefull tool, for them.
 
@@ -44,7 +45,7 @@ I can also use, something like watchtower, on my docker host's to automaticly up
 
 Playing around with [SaltStack](https://www.saltstack.com), I needed to be able to test new Minion easily, to deploy job's to it.
 
-After first deploying new VM's (using VRA) and then pulling the official Ubuntu docker image down, a couple of times, and installing SaltStack, and doing configurations manualily, I desided to build my own test container, with everything installed and the correct config.
+After first deploying new VM's (using VRA) and then pulling the official Ubuntu docker image down, a couple of times, and [installing SaltStack](/posts/2020/application-deployment-salt-vrealize-automation/), and doing configurations manualily, I desided to build my own test container, with everything installed and the correct config.
 
 So let me run you thru, what I did.
 

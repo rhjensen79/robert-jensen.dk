@@ -4,6 +4,7 @@ date: 2021-06-03T11:27:40+02:00
 tags: [vmware, vsphere, automation]
 draft: false
 thumbnail: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.webp"
+images: ["images/jonathan-hanna-xgdsC0tRsPc-unsplash.webp"]
 #images: 
 #- "images/jonathan-hanna-xgdsC0tRsPc-unsplash.jpg"
 description: "How to automaticly install Cloudbase-Init onto Windows VM's using packer, with a configuration that works with vSphere and vRealize Automation"
@@ -111,7 +112,7 @@ Note I do not power off the VM, after the sysprep is finished, since I let Packe
 
 But that is all it takes.
 
-For me, I use Cloudbase-Init to set hostname, on my VM, and to install the [Salt Minion](https://docs.saltproject.io/en/latest/ref/cli/salt-minion.html), so do further configuration, when I deploy using vRealize Automation.
+For me, I use Cloudbase-Init to set hostname, on my VM, and to install the [Salt Minion](https://docs.saltproject.io/en/latest/ref/cli/salt-minion.html), so do further configuration, when I [deploy using vRealize Automation](/posts/2020/application-deployment-salt-vrealize-automation/).
 
 I have added an example, on how the Cloudbase part of the Cloud Template, could look like below.
 

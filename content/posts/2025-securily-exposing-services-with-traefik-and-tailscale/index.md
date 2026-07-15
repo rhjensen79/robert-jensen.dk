@@ -5,6 +5,7 @@ tags: [tailscale, traefik, docker, security, networking]
 draft: false
 toc: true
 thumbnail: "images/joshua-sortino-LqKhnDzSF-8-unsplash.webp"
+images: ["images/joshua-sortino-LqKhnDzSF-8-unsplash.webp"]
 description: "Step-by-step guide to creating a secure gateway for self-hosted services using Traefik reverse proxy with Tailscale VPN, complete with automatic HTTPS certificates and clean URL routing for your private network infrastructure"
 ---
 ## Intro
@@ -243,7 +244,7 @@ certificatesResolvers:
 ```
 
 Note this has a constraint setup, so it requires the container, to have the label "tailscale=true" for it to be picked up by this traefik container.
-This is done since I have more Traefik proxys running on the same Docker host.
+This is done since I have [more Traefik proxys running on the same Docker host](/posts/2025/multiple-traefik-instances-single-docker-host/).
 
 ## Adding Services
 

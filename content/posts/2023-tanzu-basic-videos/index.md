@@ -5,6 +5,7 @@ tags: [tanzu, kubernetes, docker, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.webp"
+images: ["images/felix-mooneeram-evlkOfkQ5rE-unsplash.webp"]
 #image: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
 description: "A list of videos create to show the basics of VMware Tanzu Kubernetes grid"
 ---

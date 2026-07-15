@@ -4,6 +4,7 @@ date: 2021-09-01T13:55:17+02:00
 tags: [docker, ci-cd, github-actions, python]
 draft: false
 thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"
+images: ["images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"]
 #images: 
 #- "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Discover Cloud Native Buildpacks as a Dockerfile alternative for containerizing applications. Learn benefits, implementation with GitHub Actions, and Python/Streamlit examples."
@@ -139,7 +140,7 @@ The echo part of the script, should explain what every part of the job does, so 
 
 The versioning is based on the run_id variable. There might be better ways of doing this, but it works fine in my usecase.
 
-After it's build, and pushed, my [Harbor](https://goharbor.io) registry, does security scans on it. So this is something to consider, for extra security. If you're interested in setting up your own Harbor registry, check out my [guide on installing Harbor behind Traefik with Let's Encrypt certificates](https://www.robert-jensen.dk/posts/2021-harbor-behind-traefik-with-letsencrypt-certificate/). For comparison with traditional container building approaches, you might also find my post on [Using Github Actions to Build Containers](https://www.robert-jensen.dk/posts/2021-using-github-actions-to-build-containers/) helpful.
+After it's build, and pushed, my [Harbor](https://goharbor.io) registry, does security scans on it. So this is something to consider, for extra security. If you're interested in setting up your own Harbor registry, check out my [guide on installing Harbor behind Traefik with Let's Encrypt certificates](/posts/2021/harbor-behind-traefik-lets-encrypt-certificate/). For comparison with traditional container building approaches, you might also find my post on [Using Github Actions to Build Containers](/posts/2021/using-github-actions-to-build-containers-and-host-them/) helpful.
 
 ![Harbor Container Registry security scan results displaying vulnerability assessment for the buildpack-generated container image](images/harbor.webp)
 

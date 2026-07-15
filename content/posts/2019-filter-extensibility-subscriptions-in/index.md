@@ -2,15 +2,17 @@
 title: 'Filter Extensibility subscriptions in CAS'
 date: 2019-01-22T13:28:00.001+01:00
 description: "Filter extensibility subscriptions in VMware Cloud Assembly using a blueprint input and custom property so Slack notifications only fire when you choose to."
+thumbnail: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.webp"
+images: ["images/gabriel-gusmao-pMmw3ynuXHw-unsplash.webp"]
 draft: false
 aliases: [ "/2019/01/filter-extensibility-subscriptions-in.html" ]
 tags: [vmware, automation, cloud]
 ---
 
-[![](https://upload.wikimedia.org/wikipedia/commons/f/f0/DARPA_Big_Data.jpg)](https://upload.wikimedia.org/wikipedia/commons/f/f0/DARPA_Big_Data.jpg)
+[![Abstract big data network visualization](https://upload.wikimedia.org/wikipedia/commons/f/f0/DARPA_Big_Data.jpg)](https://upload.wikimedia.org/wikipedia/commons/f/f0/DARPA_Big_Data.jpg)
 
   
-For the last couple of days, I have been playing quite a lot with Cloud Automation Services.  
+For the last couple of days, I have been playing quite a lot with [Cloud Automation Services](/posts/2018/getting-started-with-cloud-automation-services-almost/).  
 That means deploying a lot of VM's, just to destroy them again.  
   
 Some time ago, I got help, from some good colleagues, to setup a Python Slack notification, using the extensibility on AWS Faas. The subscription to this, was on a single project, and on all Post Compute Provisions events.  
@@ -41,7 +43,7 @@ This means, that I get a property, called notify under customProperties.
 If you want to see the full blueprint, use this link to my Github repo : [https://github.com/rhjensen79/cas/blob/master/blueprints/ubuntu\_demo.yaml](https://github.com/rhjensen79/cas/blob/master/blueprints/ubuntu_demo.yaml)  
   
 
-[![](https://3.bp.blogspot.com/-Xy80pSa2TIk/XEcKoPl4HQI/AAAAAAABoCg/O4uRbGcnOpgQDT1as-de7YsdwZHqUUHWACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.20.09.png)](https://3.bp.blogspot.com/-Xy80pSa2TIk/XEcKoPl4HQI/AAAAAAABoCg/O4uRbGcnOpgQDT1as-de7YsdwZHqUUHWACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.20.09.png)
+[![Cloud Assembly blueprint YAML with notify input and custom property](https://3.bp.blogspot.com/-Xy80pSa2TIk/XEcKoPl4HQI/AAAAAAABoCg/O4uRbGcnOpgQDT1as-de7YsdwZHqUUHWACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.20.09.png)](https://3.bp.blogspot.com/-Xy80pSa2TIk/XEcKoPl4HQI/AAAAAAABoCg/O4uRbGcnOpgQDT1as-de7YsdwZHqUUHWACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.20.09.png)
 
 Under Extensibility -> Subscriptions, I then edited my subscription, and selected "Filter events in topic"
 
@@ -59,7 +61,7 @@ to make sure the subscription only runs, when i select yes during deployment.
 
   
 
-[![](https://4.bp.blogspot.com/-vLQMUywbetg/XEcLZuX75kI/AAAAAAABoCo/OXlpbZk6MU8IX7ALC8GLbKFwZyegeFAswCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.23.41.png)](https://4.bp.blogspot.com/-vLQMUywbetg/XEcLZuX75kI/AAAAAAABoCo/OXlpbZk6MU8IX7ALC8GLbKFwZyegeFAswCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.23.41.png)
+[![Subscription filter events in topic with notify equals yes condition](https://4.bp.blogspot.com/-vLQMUywbetg/XEcLZuX75kI/AAAAAAABoCo/OXlpbZk6MU8IX7ALC8GLbKFwZyegeFAswCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.23.41.png)](https://4.bp.blogspot.com/-vLQMUywbetg/XEcLZuX75kI/AAAAAAABoCo/OXlpbZk6MU8IX7ALC8GLbKFwZyegeFAswCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-22%2Bkl.%2B13.23.41.png)
 
   
 

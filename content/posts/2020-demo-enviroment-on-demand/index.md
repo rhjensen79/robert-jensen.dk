@@ -6,6 +6,7 @@ draft: false
 aliases: [ "/2020/06/demo-enviroment-on-demand.html" ]
 tags: [vmware, cloud, automation, ci-cd]
 thumbnail: "images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.webp"
+images: ["images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.webp"]
 ---
 
 A couple of years ago Jad El-Zein (@virtualjad) created a demo, where he ordered a VM (I think it was) using Siri on his iPhone, with vRealize Automation (VRA).
@@ -41,7 +42,7 @@ So to make this work, the following happens. 
 
 4\. The Pipeline in CodeStream, requests a Blueprint, with a specific sets of input properties, and deploys a VM in my VMware environment. 
 
-5\. As part of the deployment, a ABX Action is triggered, that gives me a notification in Telegram, with the details of the deployment. 
+5\. As part of the deployment, a [ABX Action](/posts/2019/filter-extensibility-subscriptions-in-cas/) is triggered, that gives me a notification in Telegram, with the details of the deployment. 
 
   
 
@@ -60,7 +61,7 @@ API Gateway
 
 I won't go thru, how to setup the API Gateway, but to make it execute the Lambda function, I setup integrations.
 
-[![](https://1.bp.blogspot.com/-gZhMkvC_6jQ/XtYUInKgCHI/AAAAAAACMic/WAslebcrz5IEIK4quFYGxwdWEDgXJnGUQCK4BGAsYHg/w640-h335/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.55.10.png)](https://1.bp.blogspot.com/-gZhMkvC_6jQ/XtYUInKgCHI/AAAAAAACMic/WAslebcrz5IEIK4quFYGxwdWEDgXJnGUQCK4BGAsYHg/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.55.10.png)
+[![AWS API Gateway integration configured to invoke the Lambda function](https://1.bp.blogspot.com/-gZhMkvC_6jQ/XtYUInKgCHI/AAAAAAACMic/WAslebcrz5IEIK4quFYGxwdWEDgXJnGUQCK4BGAsYHg/w640-h335/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.55.10.png)](https://1.bp.blogspot.com/-gZhMkvC_6jQ/XtYUInKgCHI/AAAAAAACMic/WAslebcrz5IEIK4quFYGxwdWEDgXJnGUQCK4BGAsYHg/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.55.10.png)
 
   
 
@@ -117,13 +118,13 @@ def lambda\_handler(event, context):
 CodeStream Pipeline
 -------------------
 
-The CodeStream pipeline, is really simple. It just uses blueprints, I already have and uses, in Cloud Assembly.
+The CodeStream pipeline, is really simple. It just uses blueprints, I already have and uses, in [Cloud Assembly](/posts/2019/cloud-agnostic-blueprints-vmware-cas/).
 
 The only real thing I have done so far, is the Deployment name. 
 
 It's "Test\_Env-${executionId}" to make sure I can recognize it, and to make sur, it gets a unique name, every time. 
 
-[![](https://1.bp.blogspot.com/-zmeaZ-NAN3Q/XtYVGxCrQxI/AAAAAAACMi8/3-6H-FqDM8cmJLLeSRsZjVHVJrh_6jItQCK4BGAsYHg/w640-h312/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.57.56.png)](https://1.bp.blogspot.com/-zmeaZ-NAN3Q/XtYVGxCrQxI/AAAAAAACMi8/3-6H-FqDM8cmJLLeSRsZjVHVJrh_6jItQCK4BGAsYHg/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.57.56.png)
+[![Code Stream pipeline deploying a blueprint with a unique Test_Env deployment name](https://1.bp.blogspot.com/-zmeaZ-NAN3Q/XtYVGxCrQxI/AAAAAAACMi8/3-6H-FqDM8cmJLLeSRsZjVHVJrh_6jItQCK4BGAsYHg/w640-h312/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.57.56.png)](https://1.bp.blogspot.com/-zmeaZ-NAN3Q/XtYVGxCrQxI/AAAAAAACMi8/3-6H-FqDM8cmJLLeSRsZjVHVJrh_6jItQCK4BGAsYHg/Sk%25C3%25A6rmbillede%2B2020-06-02%2Bkl.%2B10.57.56.png)
 
   
 

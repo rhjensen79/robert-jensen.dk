@@ -2,12 +2,14 @@
 title: 'Why i love my Netatmo Presence - Found potential thief'
 date: 2018-01-19T13:57:00.000+01:00
 description: "Netatmo Presence uses object detection to spot people, cars and animals, alerting the author to a potential bike thief and triggering HomeKit security lights."
+thumbnail: "images/top_picture.webp"
+images: ["images/top_picture.webp"]
 draft: false
 aliases: [ "/2018/01/why-i-love-my-netatmo-presence-found.html" ]
 tags: [home-automation, security, automation]
 ---
 
-[![](https://cdn3.techadvisor.co.uk/cmsdata/reviews/3649289/netatmo-presence-review_thumb800.jpg)](https://cdn3.techadvisor.co.uk/cmsdata/reviews/3649289/netatmo-presence-review_thumb800.jpg)
+[![Netatmo Presence outdoor security camera](https://cdn3.techadvisor.co.uk/cmsdata/reviews/3649289/netatmo-presence-review_thumb800.jpg)](https://cdn3.techadvisor.co.uk/cmsdata/reviews/3649289/netatmo-presence-review_thumb800.jpg)
 
   
 
@@ -19,7 +21,7 @@ Due to that, I found that i had a visit, from somebody, who was probably trying 
 
   
 
-It was just a short recording, but i detected it, since presence let me know, that it saw a person, at 2.40 in the night. We have a lot of cars driving by, so normally i would never see a recording like this, but in this case, i looked, as saw the guy below.
+It was just a short [recording](/posts/2018/auto-clean-up-old-recordings/), but i detected it, since presence let me know, that it saw a person, at 2.40 in the night. We have a lot of cars driving by, so normally i would never see a recording like this, but in this case, i looked, as saw the guy below.
 
   
 
@@ -27,6 +29,6 @@ It was just a short recording, but i detected it, since presence let me know, th
 
 He got scared by the light. 
 
-After this, i also added some Homekit Automation (more about that, in a later post), so that when my camera detects something, in the night, i also turns on all my lights outside, for a while.
+After this, i also added some [Homekit Automation](/posts/2018/homekit-support-for-non-homekit-devices/) (more about that, in a later post), so that when my camera detects something, in the night, i also turns on all my lights outside, for a while.
 
 That should make sure, no thief can come unnoticed to my house again.

@@ -5,6 +5,7 @@ tags: [kubernetes, networking, automation]
 draft: false
 toc: true
 thumbnail: "images/brittany-colette-GFLMi4c8XMg-unsplash.webp"
+images: ["images/brittany-colette-GFLMi4c8XMg-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "Are you tired of manually creating DNS records for your Kubernetes services? In this tutorial, we'll show you how to automate the process using CloudFlare and External DNS. We'll walk you through the steps of setting up a Cloudflare API key, installing External DNS, and configuring it to work with your Kubernetes cluster. With this setup, you can easily create and manage DNS records for your services without having to manually update them in CloudFlare. Perfect for IT professionals looking to streamline their workflow and improve their infrastructure's reliability and security."
 slug: "external-dns-cloudflare-kubernetes-automation"
@@ -28,7 +29,7 @@ And it's possible, but I had some problems using the official guide (and finding
 
 ## Preprerequisite
 
-A Kubernetes cluster that has a LoadBalancer that can give out an external IP.
+A Kubernetes cluster that has a [LoadBalancer that can give out an external IP](/posts/2025/fix-loadbalancer-services-not-working-on-single-node-talos-kubernetes-cluster/).
 
 A Cloudflare API key with correct permissions.
 
@@ -193,7 +194,7 @@ For me, is was all about using locked-down tokens, and not the full API access k
 
 And I had a lot of trial and error, finding a configuration that worked.
 
-Hope you found it useful and can use it to automate your DNS creations. For more Kubernetes automation, you might also find my post on [using GitHub Actions with Tailscale to deploy locally](https://www.robert-jensen.dk/posts/2022-using-github-actions-with-tailscale-to-deploy-locally/) helpful.
+Hope you found it useful and can use it to automate your DNS creations. For more Kubernetes automation, you might also find my post on [using GitHub Actions with Tailscale to deploy locally](/posts/2021/github-actions-tailscale-deploy-locally/) helpful.
 
 Photo by <a href="https://unsplash.com/@candidbcolette?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brittany Colette</a> on <a href="https://unsplash.com/photos/persons-holding-book-GFLMi4c8XMg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   

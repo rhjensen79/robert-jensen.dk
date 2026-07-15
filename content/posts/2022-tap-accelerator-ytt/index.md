@@ -5,6 +5,7 @@ tags: [tanzu, kubernetes]
 draft: false
 toc: true
 thumbnail: "images/pro-church-media-7NGU2YqBue8-unsplash.webp"
+images: ["images/pro-church-media-7NGU2YqBue8-unsplash.webp"]
 #image: "images/pro-church-media-7NGU2YqBue8-unsplash.jpg"
 description: "How to use YTT with Tanzu Application Accelerators"
 ---

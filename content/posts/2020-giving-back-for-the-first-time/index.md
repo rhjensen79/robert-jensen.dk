@@ -5,6 +5,7 @@ tags: [homelab]
 draft: false
 description: "My first experience contributing to open source projects on GitHub. Learn how easy it can be to contribute to projects you use daily, starting with simple translations and documentation improvements."
 thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"
+images: ["images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"]
 ---
 One thing, I have been wanting to do, ever since I started learning Python, and started using Github, was to give back, the the projects, that I use. 
 I remember reading, how to get started doing this, but I see myself as a beginner, when it comes to coding, and find myself thinking, "why would anybody want something, that I have done."
@@ -13,7 +14,7 @@ The article I read, was about helping with improving code. Improving graphics. I
 
 But it finalily happend for me, and not in the way I would have thought. 
 
-Since I moved away from blogger, an into Hugo, I have been using the [anatole](https://github.com/lxndrblz/anatole) theme. And I have been watching the Git repo, for changes etc.
+Since I [moved away from blogger, an into Hugo](/posts/2020/move-blog/), I have been using the [anatole](https://github.com/lxndrblz/anatole) theme. And I have been watching the Git repo, for changes etc.
 
 I really like this repo, but my skills in web programming, is close to non existing, so i'm just a normal user here. 
 But then I noticed, that the theme had localications, in different languages, and I took a look at the files. 

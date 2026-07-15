@@ -5,6 +5,7 @@ tags: [kubernetes, docker, ci-cd, github-actions]
 draft: false
 toc: true
 thumbnail: "images/minions.webp"
+images: ["images/minions.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to update applications on Docker, the same you you would on Kubernetes"
 ---
@@ -59,7 +60,7 @@ The solution I found, was that Watchtower has the option of enabling a [HTTP api
 
 The drawback, was that it removed the schelduled update, but luckely whare was a fix to that as well :-)
 
-I added my Watchtover container, to my Cloudflare network, and exposed Watchtower api, to the internet, so I could call the API from outside using Github Actions.
+I added my Watchtover container, to my Cloudflare network, and [exposed Watchtower api, to the internet](/posts/2022/remote-access-to-pod-without-opening-firewall-on-tanzu-community-edition/), so I could call the API from outside using Github Actions.
 
 It's required to add an api token, to make it a bit more secure (it fails to start, if you don't specify it).
 
@@ -113,7 +114,7 @@ So now all i needed was to make it part of my pipeline
 
 GitHub Actions is my goto tool, when I want to automate something.
 
-So to automate the update, I found an action, where I create and publish a new container image.
+So to automate the update, I found an action, where I [create and publish a new container image](/posts/2023/build-publish-and-host-your-docker-images-on-github-registry/).
 
 After the image has been published I added a new step, that calls the API.
 

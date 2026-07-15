@@ -2,15 +2,17 @@
 title: 'Cloud Agnostic Blueprints in VMware CAS'
 date: 2019-01-18T07:51:00.001+01:00
 description: "Cloud agnostic blueprints in VMware Cloud Assembly deploy one YAML blueprint across AWS, Azure, GCP and vSphere using tags and constraints to pick regions."
+thumbnail: "images/eberhard-grossgasteiger-_uAVHAMjGYA-unsplash.webp"
+images: ["images/eberhard-grossgasteiger-_uAVHAMjGYA-unsplash.webp"]
 draft: false
 aliases: [ "/2019/01/cloud-agnostic-blueprints-in-vmware-cas.html" ]
 tags: [vmware, vsphere, automation, cloud]
 slug: "cloud-agnostic-blueprints-vmware-cas"
 ---
 
-[![](https://i.pinimg.com/originals/48/d3/26/48d326ab0636b4902d16f0a216385380.jpg)](https://i.pinimg.com/originals/48/d3/26/48d326ab0636b4902d16f0a216385380.jpg)
+[![Multi-cloud automation concept illustration](https://i.pinimg.com/originals/48/d3/26/48d326ab0636b4902d16f0a216385380.jpg)](https://i.pinimg.com/originals/48/d3/26/48d326ab0636b4902d16f0a216385380.jpg)
 
-VMware Cloud Automation Services went GA 2 days ago, on the 15/1/2019.  
+[VMware Cloud Automation Services](/posts/2018/getting-started-with-cloud-automation-services-almost/) went GA 2 days ago, on the 15/1/2019.  
 There is already a ton of blogs, describing the solution.  
   
 I thought that I would give my view on one of the things, that i find most cool about the solution.  
@@ -26,14 +28,14 @@ I will spend my time in Cloud Assembly today. So all you see, is taken from ther
   
 Cloud Assembly support the following Clouds today.  
 
-[![](https://2.bp.blogspot.com/-NIPov-0VhiA/XEDbF-D36AI/AAAAAAABnuY/pub5k8aKoKggHl-C4oLYmWgeu62c-KrFwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.43.11.jpg)](https://2.bp.blogspot.com/-NIPov-0VhiA/XEDbF-D36AI/AAAAAAABnuY/pub5k8aKoKggHl-C4oLYmWgeu62c-KrFwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.43.11.jpg)
+[![Cloud Assembly showing supported cloud providers AWS, Azure, GCP and vSphere](https://2.bp.blogspot.com/-NIPov-0VhiA/XEDbF-D36AI/AAAAAAABnuY/pub5k8aKoKggHl-C4oLYmWgeu62c-KrFwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.43.11.jpg)](https://2.bp.blogspot.com/-NIPov-0VhiA/XEDbF-D36AI/AAAAAAABnuY/pub5k8aKoKggHl-C4oLYmWgeu62c-KrFwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.43.11.jpg)
 
   
 I have connected to AWS, Azure, GCP and vSphere, along with NSX-v  
   
 For each account, I have created one or more Cloud Zones, containing the different zones, in a region.  
 
-[![](https://3.bp.blogspot.com/-SAGsSgPW51A/XEDbyBkcStI/AAAAAAABnug/RthqJ6UY9JksYANYyI5HIFeEl9Q_yv4NwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.45.25.jpg)](https://3.bp.blogspot.com/-SAGsSgPW51A/XEDbyBkcStI/AAAAAAABnug/RthqJ6UY9JksYANYyI5HIFeEl9Q_yv4NwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.45.25.jpg)
+[![Cloud Assembly Cloud Zones configured for each account region](https://3.bp.blogspot.com/-SAGsSgPW51A/XEDbyBkcStI/AAAAAAABnug/RthqJ6UY9JksYANYyI5HIFeEl9Q_yv4NwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.45.25.jpg)](https://3.bp.blogspot.com/-SAGsSgPW51A/XEDbyBkcStI/AAAAAAABnug/RthqJ6UY9JksYANYyI5HIFeEl9Q_yv4NwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.45.25.jpg)
 
   
 The way I have tagged all my locations, is in the compute zones, that is available in each zone.  
@@ -46,18 +48,18 @@ So my tags are :
 \- region:ireland - For Azure in Ireland  
 \- region:netherlands - for GCP in Nederlands  
 
-[![](https://3.bp.blogspot.com/-_ibxkbQm00o/XEDcZLUgSNI/AAAAAAABnuw/w5a_Gb0cPYUEZuQJ3EQjmI01hf6hcdkqQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.47.55.jpg)](https://3.bp.blogspot.com/-_ibxkbQm00o/XEDcZLUgSNI/AAAAAAABnuw/w5a_Gb0cPYUEZuQJ3EQjmI01hf6hcdkqQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.47.55.jpg)
+[![Region tags in region:city format applied to compute zones](https://3.bp.blogspot.com/-_ibxkbQm00o/XEDcZLUgSNI/AAAAAAABnuw/w5a_Gb0cPYUEZuQJ3EQjmI01hf6hcdkqQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.47.55.jpg)](https://3.bp.blogspot.com/-_ibxkbQm00o/XEDcZLUgSNI/AAAAAAABnuw/w5a_Gb0cPYUEZuQJ3EQjmI01hf6hcdkqQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.47.55.jpg)
 
   
 
 The image I use in this post, is Ubuntu, and I have also mapped this, to an image in each zone.
 
-[![](https://1.bp.blogspot.com/-ZhieVcg8O38/XEDc3oFEE3I/AAAAAAABnu4/qsuRgNF9AzM1AoSrYrfK6dYVk3046C52QCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.51.46.jpg)](https://1.bp.blogspot.com/-ZhieVcg8O38/XEDc3oFEE3I/AAAAAAABnu4/qsuRgNF9AzM1AoSrYrfK6dYVk3046C52QCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.51.46.jpg)
+[![Ubuntu image mapped to an image in each cloud zone](https://1.bp.blogspot.com/-ZhieVcg8O38/XEDc3oFEE3I/AAAAAAABnu4/qsuRgNF9AzM1AoSrYrfK6dYVk3046C52QCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.51.46.jpg)](https://1.bp.blogspot.com/-ZhieVcg8O38/XEDc3oFEE3I/AAAAAAABnu4/qsuRgNF9AzM1AoSrYrfK6dYVk3046C52QCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.51.46.jpg)
 
   
 The same is done with the size. Here it's small  
 
-[![](https://2.bp.blogspot.com/-oI_Nd36grjU/XEDdTbXXfMI/AAAAAAABnvA/sw06pEx82uUnib0cBpahuLJsb1djd--UACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.53.08.jpg)](https://2.bp.blogspot.com/-oI_Nd36grjU/XEDdTbXXfMI/AAAAAAABnvA/sw06pEx82uUnib0cBpahuLJsb1djd--UACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.53.08.jpg)
+[![Small flavor mapping configured for each cloud zone](https://2.bp.blogspot.com/-oI_Nd36grjU/XEDdTbXXfMI/AAAAAAABnvA/sw06pEx82uUnib0cBpahuLJsb1djd--UACLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.53.08.jpg)](https://2.bp.blogspot.com/-oI_Nd36grjU/XEDdTbXXfMI/AAAAAAABnvA/sw06pEx82uUnib0cBpahuLJsb1djd--UACLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B20.53.08.jpg)
 
   
 
@@ -113,21 +115,21 @@ _        - tag: '${input.region}'_
 
 I have created the regions as dropdown menu's, with a default to region:copenhagen and hardcoded the image and the size, just for this post.
 
-[![](https://3.bp.blogspot.com/-qYTypMN9YwE/XEDs_iGPSXI/AAAAAAABnvQ/7fIcTEqjfLEJg1_EYyJSteIdEWU1Ts1wgCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B22.00.29.jpg)](https://3.bp.blogspot.com/-qYTypMN9YwE/XEDs_iGPSXI/AAAAAAABnvQ/7fIcTEqjfLEJg1_EYyJSteIdEWU1Ts1wgCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B22.00.29.jpg)
+[![Cloud Assembly blueprint canvas with region dropdown input](https://3.bp.blogspot.com/-qYTypMN9YwE/XEDs_iGPSXI/AAAAAAABnvQ/7fIcTEqjfLEJg1_EYyJSteIdEWU1Ts1wgCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B22.00.29.jpg)](https://3.bp.blogspot.com/-qYTypMN9YwE/XEDs_iGPSXI/AAAAAAABnvQ/7fIcTEqjfLEJg1_EYyJSteIdEWU1Ts1wgCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-17%2Bkl.%2B22.00.29.jpg)
 
   
 
 The deploy dialog now looks like this
 
-[![](https://1.bp.blogspot.com/-ns010OzALlI/XEF0xe4h_oI/AAAAAAABnwI/JpKftI8vO6YW4IbGEbJRKzl1I_tVLwIAQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.39.48.jpg)](https://1.bp.blogspot.com/-ns010OzALlI/XEF0xe4h_oI/AAAAAAABnwI/JpKftI8vO6YW4IbGEbJRKzl1I_tVLwIAQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.39.48.jpg)
+[![Deployment dialog with region tag selection](https://1.bp.blogspot.com/-ns010OzALlI/XEF0xe4h_oI/AAAAAAABnwI/JpKftI8vO6YW4IbGEbJRKzl1I_tVLwIAQCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.39.48.jpg)](https://1.bp.blogspot.com/-ns010OzALlI/XEF0xe4h_oI/AAAAAAABnwI/JpKftI8vO6YW4IbGEbJRKzl1I_tVLwIAQCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.39.48.jpg)
 
-[![](https://2.bp.blogspot.com/-qfOMLioI2Ns/XEF06JtOp5I/AAAAAAABnwM/cewVNRSR5fAbgobL51uetkCChk5SgfQAwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.40.28.jpg)](https://2.bp.blogspot.com/-qfOMLioI2Ns/XEF06JtOp5I/AAAAAAABnwM/cewVNRSR5fAbgobL51uetkCChk5SgfQAwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.40.28.jpg)
+[![Deployment dialog showing the region dropdown expanded](https://2.bp.blogspot.com/-qfOMLioI2Ns/XEF06JtOp5I/AAAAAAABnwM/cewVNRSR5fAbgobL51uetkCChk5SgfQAwCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.40.28.jpg)](https://2.bp.blogspot.com/-qfOMLioI2Ns/XEF06JtOp5I/AAAAAAABnwM/cewVNRSR5fAbgobL51uetkCChk5SgfQAwCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2019-01-18%2Bkl.%2B07.40.28.jpg)
 
   
 
 Now to test it, all there is left, is to deploy one in each location.
 
-[![](https://3.bp.blogspot.com/-Om0WHShZDpU/XEDtp0RcY0I/AAAAAAABnvc/W1yB2fBvFd4EYSeV85S1hUchGIYBzeNcQCLcBGAs/s640/Billede1.png)](https://3.bp.blogspot.com/-Om0WHShZDpU/XEDtp0RcY0I/AAAAAAABnvc/W1yB2fBvFd4EYSeV85S1hUchGIYBzeNcQCLcBGAs/s1600/Billede1.png)
+[![Same blueprint deployed across two AWS, Azure, GCP and vSphere](https://3.bp.blogspot.com/-Om0WHShZDpU/XEDtp0RcY0I/AAAAAAABnvc/W1yB2fBvFd4EYSeV85S1hUchGIYBzeNcQCLcBGAs/s640/Billede1.png)](https://3.bp.blogspot.com/-Om0WHShZDpU/XEDtp0RcY0I/AAAAAAABnvc/W1yB2fBvFd4EYSeV85S1hUchGIYBzeNcQCLcBGAs/s1600/Billede1.png)
 
   
 

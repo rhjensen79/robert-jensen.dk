@@ -5,6 +5,7 @@ tags: [tailscale, devcontainers, docker]
 draft: true
 toc: true
 thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"
+images: ["images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
 description: "How to use Devcontainers with Tailscale, to develop anywhere"
 ---
