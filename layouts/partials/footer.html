@@ -28,7 +28,7 @@
 {{/* Only load scripts on the base footer, not the sidebar footer (prevents duplicates). See issue #4. */}}
 {{- if eq .footerClassModifier "base" -}}
   {{- partial "medium-zoom.html" .context -}}
-  {{- partial "math.html" .context -}}
+  {{/* math.html is now a render-hook helper in the theme (server-side transform.ToMath); no footer call needed. */}}
   {{- if (hasPrefix .context.Site.Config.Services.GoogleAnalytics.ID "G-") -}}
     {{- template "_internal/google_analytics.html" .context -}}
   {{- end -}}

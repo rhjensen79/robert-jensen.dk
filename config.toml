@@ -155,10 +155,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
   [caches.assets]
     dir = ":resourceDir/_gen"
     maxAge = "720h"  # 30 days
-  [caches.getjson]
-    dir = ":cacheDir/:project"
-    maxAge = "1h"
-  [caches.getcsv]
+  [caches.getresource]
     dir = ":cacheDir/:project"
     maxAge = "1h"
 

@@ -1,1 +1,1 @@
-# github.com/lxndrblz/anatole v1.16.2
+# github.com/lxndrblz/anatole v1.20.0
