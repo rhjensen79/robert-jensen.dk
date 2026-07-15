@@ -93,7 +93,7 @@ Based on comprehensive codebase analysis, ALL PageSpeed Insights performance imp
 
 ### ✅ Medium Priority - ALL COMPLETED  
 - [x] **Render-blocking Resources**: COMPLETED - Critical CSS inlined, non-critical CSS deferred
-- [x] **Unused CSS/JS**: COMPLETED - Custom minimal FontAwesome (98.7% reduction), optimized performance.css
+- [x] **Unused CSS/JS**: COMPLETED - Custom minimal FontAwesome (98.7% reduction); all styling consolidated into a single control-plane.css (dead custom-bundle/performance/mobile-optimizations/breadcrumb CSS removed)
 - [x] **Compression**: COMPLETED - Comprehensive gzip compression via static/_headers
 - [x] **Browser Caching**: COMPLETED - Advanced caching strategy in static/_headers (1yr for assets, optimized HTML)
 - [x] **Asset Fingerprinting**: COMPLETED - Hugo Pipes with content hashes implemented
@@ -105,7 +105,7 @@ Based on comprehensive codebase analysis, ALL PageSpeed Insights performance imp
 - [x] **Service Worker**: COMPLETED - Enhanced service worker (static/sw.js) with smart caching strategies
 
 ### ✅ Mobile-Specific Optimizations - ALL COMPLETED
-- [x] **Mobile Performance Gap**: COMPLETED - Mobile-first optimizations in mobile-optimizations.css
+- [x] **Mobile Performance Gap**: COMPLETED - Mobile-first optimizations and responsive breakpoints in control-plane.css
 - [x] **Touch Target Size**: COMPLETED - 44px+ minimum touch targets implemented
 - [x] **Mobile-First CSS**: COMPLETED - Responsive CSS with mobile breakpoints
 - [x] **Mobile Image Optimization**: COMPLETED - Mobile image sizes (280px, 480px) in render-image.html
@@ -176,7 +176,7 @@ All core performance optimizations are complete. Remaining tasks are infrastruct
 3. **Font Optimization**: Minimal FontAwesome CSS (56 lines vs thousands)
 4. **Service Worker**: 155 lines of advanced caching logic in sw.js
 5. **Analytics Optimization**: Delayed loading with user interaction triggers
-6. **Mobile Optimizations**: 195 lines of mobile-first CSS
+6. **Mobile Optimizations**: mobile-first responsive rules in control-plane.css
 7. **Caching Strategy**: Comprehensive headers in _headers file (132 lines)
 8. **Asset Minification**: Hugo Pipes with aggressive minification enabled
 9. **Lazy Loading**: Comments and images with intersection observer
@@ -197,7 +197,7 @@ Based on codebase analysis, all technical SEO optimizations have been implemente
   - BreadcrumbList schema for navigation
   - Person schema for author information
   - Organization schema for publisher details
-- [x] **Accessibility**: COMPLETED - WCAG compliance implemented in performance.css with contrast ratios, focus indicators, and keyboard navigation
+- [x] **Accessibility**: COMPLETED - WCAG compliance implemented in control-plane.css with contrast ratios, focus indicators, and keyboard navigation
 - [x] **Mobile SEO**: COMPLETED - Mobile-optimized responsive design with mobile-first CSS
 
 ### ✅ Technical SEO Foundations - COMPLETED
