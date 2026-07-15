@@ -343,15 +343,31 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
 .pv--fallback {
   display: flex;
   align-items: flex-end;
-  padding: 1.6rem;
-  background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
+  padding: 1.8rem;
+  /* Deterministic per-title gradient (hues set inline via --pv-h1/--pv-h2).
+     Mid-toned and saturated so white label text reads in light AND dark. */
+  background: linear-gradient(135deg, hsl(var(--pv-h1, 240) 58% 45%), hsl(var(--pv-h2, 282) 64% 33%));
+}
+.pv--fallback::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.35));
+  pointer-events: none;
 }
 .pv__label {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--text-dim);
-  text-transform: capitalize;
+  font-weight: 650;
+  font-size: 1.6rem;
+  line-height: 1.28;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ===================================================================

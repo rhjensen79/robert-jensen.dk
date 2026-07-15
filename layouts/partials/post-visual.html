@@ -15,9 +15,14 @@
     />
   </div>
 {{- else -}}
-  {{- $cat := "posts" -}}
-  {{- with $page.Params.categories -}}{{ $cat = index . 0 }}{{- end -}}
-  <div class="pv pv--fallback">
-    <span class="pv__label">{{ $cat }}</span>
+  {{/* Self-sufficient fallback: deterministic hue from the title so tiles
+       vary, with the post title (or first tag) as a readable label. */}}
+  {{- $label := $page.Title -}}
+  {{- with $page.Params.tags -}}{{ $label = index . 0 }}{{- end -}}
+  {{- $h := hash.FNV32a $page.Title -}}
+  {{- $hue := mod (add (mod $h 360) 360) 360 -}}
+  {{- $hue2 := mod (add $hue 42) 360 -}}
+  <div class="pv pv--fallback" style="--pv-h1:{{ $hue }};--pv-h2:{{ $hue2 }}">
+    <span class="pv__label">{{ $label }}</span>
   </div>
 {{- end -}}
