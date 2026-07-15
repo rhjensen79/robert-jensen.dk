@@ -28,8 +28,10 @@
   font-weight: 100 800;
   src: url("/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2");
 }
-/* RSS glyph (uses already-loaded FA Solid webfont) */
+/* Extra FA Solid glyphs used by our components (webfont is the full set) */
 .fa-rss:before { content: "\f09e"; }
+.fa-link:before { content: "\f0c1"; }
+.fa-check:before { content: "\f00c"; }
 
 /* ---------- Tokens ---------- */
 :root {
@@ -595,6 +597,31 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
 .tag::before { content: "#"; color: var(--text-faint); margin-right: 1px; }
 .category { color: var(--accent) !important; border-color: var(--accent-soft); background: var(--accent-soft); }
 .tag:hover, .category:hover { color: var(--accent) !important; border-color: var(--accent); }
+
+/* ===================================================================
+   SHARE ROW
+   =================================================================== */
+.share {
+  max-width: var(--w-read);
+  margin: 3.2rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+.share__label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 0.4rem;
+}
+.share .btn { font-size: 1.4rem; padding: 0.8rem 1.4rem; color: var(--text) !important; }
+.share .btn:hover { color: var(--accent) !important; }
+.share__copy { cursor: pointer; }
+.share__copy.is-copied { border-color: var(--accent) !important; color: var(--accent) !important; }
 
 /* ===================================================================
    AUTHOR BIO

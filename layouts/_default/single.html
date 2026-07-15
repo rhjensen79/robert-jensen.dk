@@ -70,6 +70,7 @@
       {{- end -}}
 
       {{- if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
+        {{- partial "share.html" . -}}
         {{- partial "author-bio.html" . -}}
       {{- end -}}
 
