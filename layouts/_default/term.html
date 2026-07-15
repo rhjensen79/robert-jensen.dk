@@ -27,7 +27,7 @@
               {{ with .Params.categories }}<span class="pill-accent">{{ index . 0 }}</span>{{ end }}
               <span>{{ .Date.Format "Jan 2, 2006" }}</span>
             </div>
-            <h3 class="card__title">{{ .Title }}</h3>
+            <h2 class="card__title">{{ .Title }}</h2>
             <div class="card-meta">
               <span>{{ .ReadingTime }} min read</span>
             </div>

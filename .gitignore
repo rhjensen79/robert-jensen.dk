@@ -7,3 +7,6 @@ public
 .vscode
 .DS_Store
 static/.DS_Store
+
+# Lighthouse CI local run artifacts
+.lighthouseci/
