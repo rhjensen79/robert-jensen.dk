@@ -54,7 +54,7 @@
   --surface-2: #f5f6f8;
   --text: #14161a;
   --text-dim: #565a63;
-  --text-faint: #878b94;
+  --text-faint: #6b6f77;
   --border: #ececf0;
   --border-strong: #dddfe4;
   --accent: #5b57f2;
@@ -73,11 +73,11 @@
   --surface-2: #1c1d22;
   --text: #f2f3f5;
   --text-dim: #9ca1aa;
-  --text-faint: #6c7178;
+  --text-faint: #8b9099;
   --border: #24262c;
   --border-strong: #303339;
-  --accent: #8b87ff;
-  --accent-strong: #a6a3ff;
+  --accent: #9c99ff;
+  --accent-strong: #b3b0ff;
   --accent-contrast: #0b0c0e;
   --accent-soft: rgba(139, 135, 255, 0.14);
   --topbar-bg: rgba(11, 12, 14, 0.72);
@@ -403,7 +403,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
   color: var(--text-faint);
 }
 .pill-accent {
-  color: var(--accent);
+  color: var(--accent-strong);
   background: var(--accent-soft);
   padding: 0.35rem 0.9rem;
   border-radius: 100px;
