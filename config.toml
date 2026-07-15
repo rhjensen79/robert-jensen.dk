@@ -31,6 +31,7 @@ images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 copyright = "2019-{{ YEAR }}"
 relatedPosts = true
 numberOfRelatedPosts = 3
+disableTitleCapitalization = true
 contentratio = 0.8
 #hidesidebar = true
 gtagId = "G-545708GXNW"
