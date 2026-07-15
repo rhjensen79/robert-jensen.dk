@@ -25,6 +25,10 @@ jobs:
           hugo-version: '0.164.0'
           extended: true
 
+      # Anatole >= v1.19 compiles SCSS with the Dart Sass transpiler (uses @use "hugo:vars").
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
