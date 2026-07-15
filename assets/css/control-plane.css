@@ -656,6 +656,27 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
 .author-bio__links a.is-primary { background: var(--accent); color: var(--accent-contrast) !important; border-color: var(--accent); }
 .author-bio__links a.is-primary:hover { background: var(--accent-strong); color: var(--accent-contrast) !important; }
 
+/* ===================================================================
+   FOLLOW CTA
+   =================================================================== */
+.follow {
+  max-width: var(--w-read);
+  margin: 1.6rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 2rem 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.follow__title { font-family: var(--font-display); font-weight: 600; font-size: 1.8rem; color: var(--text); margin-bottom: 0.2rem; }
+.follow__desc { color: var(--text-dim); font-size: 1.5rem; margin: 0; }
+.follow__actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+@media (max-width: 560px) { .follow { flex-direction: column; align-items: flex-start; } }
+
 /* related */
 .related { max-width: var(--w-read); margin: 3.2rem auto 0; }
 .related h2 { font-size: 2rem !important; margin: 0 0 1rem !important; color: var(--text) !important; }

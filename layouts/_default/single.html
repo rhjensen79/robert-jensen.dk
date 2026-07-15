@@ -72,6 +72,7 @@
       {{- if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
         {{- partial "share.html" . -}}
         {{- partial "author-bio.html" . -}}
+        {{- partial "follow.html" . -}}
       {{- end -}}
 
       {{- if (eq .Site.Params.relatedPosts true) -}}
