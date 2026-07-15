@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <div class="search-page">
+    <header class="search-page__header">
+      <p class="search-page__eyebrow">Search</p>
+      <h1 class="search-page__title">{{ .Title | default "Search" }}</h1>
+      {{ with .Content }}{{ . }}{{ else }}
+        <p class="search-page__lead">Search {{ len (where .Site.RegularPages "Section" "posts") }} posts of troubleshooting notes, guides and write-ups.</p>
+      {{ end }}
+    </header>
+
+    <div id="search"></div>
+
+    <p class="search-page__empty" id="search-unavailable">
+      Search index is being built. On a freshly deployed site it appears within a minute; during local
+      <code>hugo server</code> it is only available after running <code>npx pagefind --site public</code>.
+    </p>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.PagefindUI) {
+        new PagefindUI({
+          element: '#search',
+          showSubResults: true,
+          showImages: false,
+          excerptLength: 25,
+          translations: { placeholder: 'Search posts…' }
+        });
+      } else {
+        var msg = document.getElementById('search-unavailable');
+        if (msg) { msg.style.display = 'block'; }
+      }
+    });
+  </script>
+{{ end }}

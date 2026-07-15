@@ -1,0 +1,123 @@
+/* =====================================================================
+   Site search (Pagefind) — issue #33
+   Topbar search entry point + dedicated /search/ page.
+   Themed to the control-plane design system (indigo accent, radius 16px,
+   Inter/Geist fonts) with full light + dark support.
+   ===================================================================== */
+
+/* ---------- Topbar search icon (mirrors .themeswitch a) ---------- */
+.topnav__search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 9px;
+  color: var(--text-dim) !important;
+  transition: color 0.15s var(--ease), background 0.15s var(--ease);
+}
+.topnav__search:hover { color: var(--text) !important; background: var(--surface-2); }
+.topnav__search.is-active { color: var(--accent) !important; }
+.topnav__search svg { display: block; }
+
+/* ---------- Search page ---------- */
+.search-page {
+  max-width: var(--w-read);
+  margin: 0 auto;
+  padding: clamp(2.4rem, 5vw, 4.8rem) var(--pad-x) 6rem;
+}
+.search-page__header { margin-bottom: 2.4rem; }
+.search-page__eyebrow {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+.search-page__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 0.8rem;
+}
+.search-page__lead {
+  font-size: 1.6rem;
+  color: var(--text-dim);
+  margin: 0;
+}
+.search-page__empty {
+  display: none;
+  margin-top: 1.6rem;
+  font-size: 1.5rem;
+  color: var(--text-faint);
+}
+
+/* ---------- Pagefind UI theming ---------- */
+/* Pagefind reads these custom properties. Referencing the site tokens means
+   the widget automatically follows the light/dark theme toggle. */
+#search {
+  --pagefind-ui-scale: 0.85;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: var(--surface);
+  --pagefind-ui-border: var(--border);
+  --pagefind-ui-tag: var(--surface-2);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 12px;
+  --pagefind-ui-font: var(--font-body);
+}
+
+/* Search input box */
+#search .pagefind-ui__search-input {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+}
+#search .pagefind-ui__search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+#search .pagefind-ui__search-input::placeholder { color: var(--text-faint); }
+
+/* Result cards */
+#search .pagefind-ui__result {
+  border-top: 1px solid var(--border);
+}
+#search .pagefind-ui__result-link {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+#search .pagefind-ui__result-link:hover { color: var(--accent); }
+#search .pagefind-ui__result-excerpt { color: var(--text-dim); }
+#search mark {
+  background: var(--accent-soft);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 0 0.2rem;
+}
+
+/* Message / count line */
+#search .pagefind-ui__message { color: var(--text-dim); }
+
+/* Load-more button */
+#search .pagefind-ui__button {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: color 0.15s var(--ease), background 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+#search .pagefind-ui__button:hover {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
