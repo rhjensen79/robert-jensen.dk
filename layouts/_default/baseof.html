@@ -1,0 +1,82 @@
+<!doctype html>
+<html
+  dir="{{ .Site.Language.Direction | default "ltr" }}"
+  lang="{{- site.Language.Lang -}}"
+  data-theme="{{- .Site.Params.displayMode -}}"
+  {{ if eq .Site.Params.displayMode "dark" }}
+    class="html theme--dark"
+  {{ else }}
+    class="html theme--light"
+  {{ end }}
+>
+  {{- partial "head.html" . -}}
+  <body class="body">
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="{{ .Site.BaseURL | relLangURL }}">
+          <img class="brand__avatar" src="{{ .Site.Params.profilePicture | relURL }}" alt="" width="32" height="32" />
+          <span class="brand__name">{{ .Site.Params.author | default .Site.Params.Title }}</span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </a>
+          <ul class="topnav__list" id="navMenu">
+            {{ $url := .RelPermalink }}
+            {{ range .Site.Menus.main }}
+              <li class="topnav__item">
+                <a class="topnav__link{{ if eq $url .URL }} is-active{{ end }}"
+                   href="{{ .URL }}"
+                   {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener noreferrer"{{ end }}
+                   title="{{ .Title }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+            {{ if not .Site.Params.disableThemeSwitcher }}
+              <li class="topnav__item topnav__item--theme">
+                <div class="themeswitch">
+                  <a href="#" title="Switch theme" role="button" aria-label="Toggle dark/light theme">
+                    <svg class="themeswitch__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path class="ts-sun" d="M12 3v1.5M12 19.5V21M4.2 4.2l1.1 1.1M18.7 18.7l1.1 1.1M3 12h1.5M19.5 12H21M4.2 19.8l1.1-1.1M18.7 5.3l1.1-1.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                      <circle class="ts-sun-core" cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/>
+                      <path class="ts-moon" d="M20 14.5A8 8 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      {{- block "main" . }}{{- end }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__name">{{ .Site.Params.author }}</span>
+          {{ with .Site.Params.role }}<span class="site-footer__role">{{ . }}</span>{{ end }}
+        </div>
+        <ul class="site-footer__social">
+          {{ range .Site.Params.socialIcons }}
+            <li>
+              <a href="{{ .url }}" target="_blank" rel="noopener me" aria-label="{{ .title }}" title="{{ .title }}">
+                <i class="{{ .icon }}" aria-hidden="true"></i>
+              </a>
+            </li>
+          {{ end }}
+          {{ with .OutputFormats.Get "rss" }}
+            <li><a href="{{ .RelPermalink }}" aria-label="RSS" title="RSS"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+          {{ end }}
+        </ul>
+        <div class="site-footer__legal">© {{ now.Year }} {{ .Site.Params.author }}</div>
+      </div>
+    </footer>
+
+    {{- if (eq .Site.Params.simpleAnalytics.enable true) -}}
+      {{- partial "analytics/simpleanalytics.html" . -}}
+    {{- end -}}
+  </body>
+</html>

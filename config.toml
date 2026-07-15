@@ -20,8 +20,10 @@ description = "A place for my random ramblings. Mostly about VMware, Cloud Nativ
 profilePicture = "/images/profile.webp"
 keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Cloud Native, Devops, Kubernetes"
 favicon = "favicons/"
-customCss = ["css/custom-bundle.css"]
+customCss = ["css/fontawesome-minimal.css", "css/control-plane.css"]
 customJs = ["js/web-vitals-dashboard.js"]
+role = "Cloud Native · DevOps"
+handle = "robert@12f"
 mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 # Google Site Verification

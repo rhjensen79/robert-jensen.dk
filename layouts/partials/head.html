@@ -36,6 +36,10 @@
   {{- end -}}
 
 
+  <!-- Self-hosted variable fonts -->
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/geist-latin-wght-normal.woff2" | relURL }}" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/inter-latin-wght-normal.woff2" | relURL }}" crossorigin />
+
   <!-- CSS -->
   {{ $contentRatio := or site.Params.contentratio 0.6 -}}
   {{ $vars := dict

@@ -8,11 +8,11 @@ Welcome to my blog.
 
 I'm not a big writer, so don't expect too much. But from time to time, I create posts, of what i'm doing, and what I think, others could find interesting.
 
-Most posts will probably be around cloud Native developemnt, and things in that space. But I might wander off, and do other stuff as well :-) 
+Most posts will probably be around Cloud Native development, and things in that space. But I might wander off, and do other stuff as well :-) 
 
 If you want to follow, what I'm doing, then follow me on github. That is where I put everything I do.
 
-I'm also also happy for a connect on Linkein or bluesky.
+I'm also happy to connect on LinkedIn or Bluesky.
 
 ## Work
 
@@ -32,7 +32,7 @@ From 2012 - to 2024 I worked for [VMware](https://www.vmware.com), as a Systems 
 - Roadracing.
 
   I ride a Yamaha R1 from 2004.
-- Neerdy stuff :-)
+- Nerdy stuff :-)
 
   SwiftUI programming
 

@@ -1,0 +1,32 @@
+{{/* Author bio + follow CTA, shown at the end of every post to build
+     trust and give readers a next step. */}}
+<aside class="author-bio">
+  <img
+    class="author-bio__avatar"
+    src="{{ .Site.Params.profilePicture | relURL }}"
+    alt="Robert Jensen"
+    width="70"
+    height="70"
+    loading="lazy"
+  />
+  <div class="author-bio__body">
+    <div class="author-bio__eyebrow">Written by</div>
+    <div class="author-bio__name">{{ .Site.Params.author }}</div>
+    <p class="author-bio__text">
+      Freelance Cloud Native / DevOps consultant at 12F. Previously a systems
+      engineer at VMware working on the Tanzu portfolio. I write about Kubernetes,
+      VMware, and the messy reality of running real infrastructure.
+    </p>
+    <div class="author-bio__links">
+      {{ range .Site.Params.socialIcons }}
+        {{ if in (slice "GitHub" "BlueSky" "Linkedin") .title }}
+          <a href="{{ .url }}" target="_blank" rel="noopener me"
+            {{ if eq .title "GitHub" }}class="is-primary"{{ end }}>
+            <i class="{{ .icon }}" aria-hidden="true"></i>&nbsp;{{ .title }}
+          </a>
+        {{ end }}
+      {{ end }}
+      {{ with .OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
+    </div>
+  </div>
+</aside>
