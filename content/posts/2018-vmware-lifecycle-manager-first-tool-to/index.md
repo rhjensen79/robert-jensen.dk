@@ -3,7 +3,7 @@ title: 'VMware Lifecycle Manager - The first tool to install'
 date: 2018-01-02T11:16:00.000+01:00
 draft: false
 aliases: [ "/2018/01/vmware-lifecycle-manager-first-tool-to.html" ]
-tags : [lifecycle manager, installation, VMware, automation]
+tags: [vmware, automation]
 ---
 
 [![](https://4.bp.blogspot.com/-gch9AxQp2Gk/WkINEDqljuI/AAAAAAABQUA/IZjEFdbMJ-E7t1iLN7IRtXnxLER9PAXKQCLcBGAs/s640/vrealizelifecyclemanager.jpg)](https://4.bp.blogspot.com/-gch9AxQp2Gk/WkINEDqljuI/AAAAAAABQUA/IZjEFdbMJ-E7t1iLN7IRtXnxLER9PAXKQCLcBGAs/s1600/vrealizelifecyclemanager.jpg)

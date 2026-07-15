@@ -1,7 +1,7 @@
 ---
 title: "Tanzu Basic Videos"
 date: 2023-09-17T12:00:00+01:00
-tags : [Kubernetes, Docker, K8S, CICD, Tanzu, TKG]
+tags: [tanzu, kubernetes, docker, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/felix-mooneeram-evlkOfkQ5rE-unsplash.webp"

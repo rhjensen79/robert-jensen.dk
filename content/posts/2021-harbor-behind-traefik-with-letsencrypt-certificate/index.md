@@ -1,7 +1,7 @@
 ---
 title: "Installing Harbor Container Registry Behind Traefik Reverse Proxy With Let's Encrypt Certificate"
 date: 2021-02-19T13:53:10+01:00
-tags : [Harbor, Traefik, Letsencrypt, Registry, Docker, security, proxy, reverse proxy, Container Registry, secure, https, certificate, Docker Hub, Rate Limit]
+tags: [traefik, docker, security]
 draft: false
 thumbnail: "images/everaldo-coelho-KPaSCpklCZw-unsplash.webp"
 description: "How to setup Harbor Container Registry, behind Traefik Reverse Proxy, and how to get secure https Let's Encrypt certificates deploye automaticly"

@@ -3,7 +3,7 @@ title: 'Why i love my Netatmo Presence - Found potential thief'
 date: 2018-01-19T13:57:00.000+01:00
 draft: false
 aliases: [ "/2018/01/why-i-love-my-netatmo-presence-found.html" ]
-tags : [Security, IOT, Survalience, automation, Homekit]
+tags: [home-automation, security, automation]
 ---
 
 [![](https://cdn3.techadvisor.co.uk/cmsdata/reviews/3649289/netatmo-presence-review_thumb800.jpg)](https://cdn3.techadvisor.co.uk/cmsdata/reviews/3649289/netatmo-presence-review_thumb800.jpg)

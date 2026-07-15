@@ -31,6 +31,7 @@ images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
 copyright = "2019-{{ YEAR }}"
 relatedPosts = true
 numberOfRelatedPosts = 3
+disableTitleCapitalization = true
 contentratio = 0.8
 #hidesidebar = true
 gtagId = "G-545708GXNW"
@@ -43,7 +44,7 @@ ogType = "website"
 [params.utterances]
 repo = "rhjensen79/robert-jensen.dk"
 issueTerm = "pathname"
-theme= "github-light"
+theme= "preferred-color-scheme"
 # label = "comment"
 
 [params.umami]
@@ -98,6 +99,18 @@ ignoreLogs = ['warning-goldmark-raw-html']
 # SEO-optimized permalink structure
 [permalinks]
   posts = "/posts/:year/:slug/"
+
+# Related-content index (drives layouts/partials/related.html)
+[related]
+  includeNewer = true
+  threshold = 60
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 # Performance optimizations
 [build]

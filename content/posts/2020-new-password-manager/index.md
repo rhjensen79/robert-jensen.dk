@@ -3,7 +3,7 @@ title: 'New Password manager'
 date: 2019-03-30T13:44:00.001+01:00
 draft: false
 aliases: [ "/2019/03/new-password-manager.html" ]
-tags : [osx, ios, Security, windows, notes, password, Cloud, bitwarden, opensource, free]
+tags: [security, cloud]
 description: "A short description, around my new passwordmanager Bitwarden" 
 ---
 

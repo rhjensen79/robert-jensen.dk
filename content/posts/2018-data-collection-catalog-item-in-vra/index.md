@@ -3,7 +3,7 @@ title: 'Data collection Catalog Item in VRA'
 date: 2018-01-04T12:49:00.001+01:00
 draft: false
 aliases: [ "/2018/01/data-collection-catalog-item-in-vra.html" ]
-tags : [vRA, XaaS, vSphere, VMware, automation]
+tags: [vmware, vsphere, automation]
 ---
 
 [![](https://4.bp.blogspot.com/-ZztK3DqfMjg/Wk4PVgdiFGI/AAAAAAABQyw/om4ggpptpgU--7D4tFYrfEdLOoQBzLxAQCLcBGAs/s640/cog-wheels-2125183_1280.jpg)](https://4.bp.blogspot.com/-ZztK3DqfMjg/Wk4PVgdiFGI/AAAAAAABQyw/om4ggpptpgU--7D4tFYrfEdLOoQBzLxAQCLcBGAs/s1600/cog-wheels-2125183_1280.jpg)

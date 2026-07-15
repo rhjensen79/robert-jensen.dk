@@ -1,7 +1,7 @@
 ---
 title: "How I Deploy Apps - Build"
 date: 2022-11-12T19:46:27+01:00
-tags : [Containers, Docker, Github, Kubernetes]
+tags: [docker, kubernetes, ci-cd]
 draft: true
 toc: true
 thumbnail: "images/randy-fath-ymf4_9Y9S_A-unsplash.webp"

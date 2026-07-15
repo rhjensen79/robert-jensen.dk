@@ -1,7 +1,7 @@
 ---
 title: "New Role"
 date: 2021-10-20T12:25:48+02:00
-tags : [Cloud Management, Modern Application, Tanzu, Kubernetes, developers]
+tags: [tanzu, kubernetes, cloud]
 draft: false
 thumbnail: "images/jack-sloop-eYwn81sPkJ8-unsplash.webp"
 description: "Transitioning from VMware Cloud Management Specialist to Modern Applications business unit, focusing on Tanzu platform and DevOps practices for developers."

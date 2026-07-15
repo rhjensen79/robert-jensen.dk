@@ -3,7 +3,7 @@ title: 'vSphere HTML5 client - Have you tried the Fling ? '
 date: 2017-12-27T19:49:00.001+01:00
 draft: false
 aliases: [ "/2017/12/vsphere-html5-client-have-you-tried.html" ]
-tags : [flings, vSphere, VMware, Client, HTML5]
+tags: [vmware, vsphere]
 ---
 
 [![](https://labs.vmware.com/flings/files/uploads/0/0/0/0/0/8/6/2016-03-07_1741_h5client_-_screenshot0-1024x684.png)](https://labs.vmware.com/flings/files/uploads/0/0/0/0/0/8/6/2016-03-07_1741_h5client_-_screenshot0-1024x684.png)

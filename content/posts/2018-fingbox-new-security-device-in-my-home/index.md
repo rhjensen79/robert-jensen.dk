@@ -3,7 +3,7 @@ title: 'Fingbox - New security device in my home'
 date: 2018-02-12T14:54:00.000+01:00
 draft: false
 aliases: [ "/2018/02/fingbox-new-security-device-in-my-home.html" ]
-tags : [Monitoring, Gadget, Network, Security]
+tags: [home-automation, security, networking]
 ---
 
   

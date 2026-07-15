@@ -1,0 +1,30 @@
+{{/* Follow CTA: turn one-time readers into repeat readers.
+     Zero-maintenance — RSS + BlueSky, both pulled from site config. */}}
+{{- $rss := "" -}}
+{{- with .Site.Home.OutputFormats.Get "rss" -}}{{ $rss = .RelPermalink }}{{- end -}}
+{{- $bsky := "" -}}
+{{- range .Site.Params.socialIcons -}}
+  {{- if eq .title "BlueSky" -}}{{ $bsky = .url }}{{- end -}}
+{{- end -}}
+{{- if or $rss $bsky -}}
+<aside class="follow">
+  <div class="follow__text">
+    <div class="follow__title">Enjoyed this?</div>
+    <p class="follow__desc">
+      Get new posts via RSS{{ with $bsky }} or follow me on BlueSky{{ end }}.
+    </p>
+  </div>
+  <div class="follow__actions">
+    {{ with $rss }}
+      <a class="btn btn--ghost" href="{{ . }}">
+        <i class="fas fa-rss" aria-hidden="true"></i>RSS
+      </a>
+    {{ end }}
+    {{ with $bsky }}
+      <a class="btn btn--primary" href="{{ . }}" target="_blank" rel="noopener me">
+        <i class="fab fa-bluesky" aria-hidden="true"></i>Follow on BlueSky
+      </a>
+    {{ end }}
+  </div>
+</aside>
+{{- end -}}

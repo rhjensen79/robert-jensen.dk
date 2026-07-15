@@ -1,7 +1,7 @@
 ---
 title: "Giving Back for the First Time"
 date: 2020-12-12T15:18:34Z
-tags : [Github, Giving, code, Hugo, opensource, theme, web, website]
+tags: [homelab]
 draft: false
 description: "My first experience contributing to open source projects on GitHub. Learn how easy it can be to contribute to projects you use daily, starting with simple translations and documentation improvements."
 thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"

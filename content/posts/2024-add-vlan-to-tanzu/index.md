@@ -1,7 +1,7 @@
 ---
 title: "Adding extra vlan/portgroup to a Tanzu TKGS enviroment"
 date: 2024-04-22T12:00:00+01:00
-tags : [K8S, Tanzu, VLAN, Network, vSphere, VMware,  Broadkom, Kubernetes, Loadbalancer, AVI, Port Groups, Virtuel Infrastructure]
+tags: [vmware, vsphere, tanzu, kubernetes, networking]
 draft: false
 toc: true
 thumbnail: "images/jordan-harrison-40XgDxBfYXM-unsplash.webp"

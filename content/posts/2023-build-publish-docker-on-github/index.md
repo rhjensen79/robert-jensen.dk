@@ -1,7 +1,7 @@
 ---
 title: "Build, Publish and host your Docker images on Github Registry"
 date: 2023-05-23T12:00:00+01:00
-tags : [Containers, Actions, Github, automation]
+tags: [docker, github-actions, automation]
 draft: false
 toc: true
 thumbnail: "images/containers.webp"

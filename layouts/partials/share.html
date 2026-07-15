@@ -1,0 +1,33 @@
+{{/* Share row: copy link, BlueSky, LinkedIn.
+     Plain intent URLs only — no third-party embeds or tracking scripts. */}}
+{{- $url := .Permalink -}}
+{{- $title := .Title -}}
+<div class="share" data-share>
+  <span class="share__label">Share</span>
+  <button type="button" class="btn btn--ghost share__copy" data-copy="{{ $url }}" aria-label="Copy link to this post">
+    <i class="fas fa-link" aria-hidden="true"></i><span class="share__copy-text">Copy link</span>
+  </button>
+  <a class="btn btn--ghost" href="https://bsky.app/intent/compose?text={{ printf "%s %s" $title $url | urlquery }}" target="_blank" rel="noopener" aria-label="Share on BlueSky">
+    <i class="fab fa-bluesky" aria-hidden="true"></i>BlueSky
+  </a>
+  <a class="btn btn--ghost" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url | urlquery }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
+  </a>
+</div>
+<script>
+(function () {
+  var btn = document.querySelector('[data-share] .share__copy');
+  if (!btn || !navigator.clipboard) return;
+  btn.addEventListener('click', function () {
+    navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () {
+      var label = btn.querySelector('.share__copy-text'), original = label.textContent;
+      label.textContent = 'Copied!';
+      btn.classList.add('is-copied');
+      setTimeout(function () {
+        label.textContent = original;
+        btn.classList.remove('is-copied');
+      }, 1600);
+    });
+  });
+})();
+</script>

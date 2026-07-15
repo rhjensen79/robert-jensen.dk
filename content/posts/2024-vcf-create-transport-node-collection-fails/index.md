@@ -1,7 +1,7 @@
 ---
 title: "VCF Create Transport Node Collection fails at 48 percent"
 date: 2024-08-29T12:00:00+01:00
-tags: [VMware NSX Troubleshooting, VCF Installation Error, Transport Node Collection Failure, NSX Manager Connectivity, ESXi Firewall Configuration, VMware Cloud Foundation, Broadcom NSX, Enterprise Virtualization]
+tags: [vmware, networking]
 draft: false
 toc: true
 thumbnail: "images/tim-mossholder-rx_GNopVlFs-unsplash.webp"

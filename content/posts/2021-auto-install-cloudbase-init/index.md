@@ -1,7 +1,7 @@
 ---
 title: "Auto Install Cloudbase-Init"
 date: 2021-06-03T11:27:40+02:00
-tags : [cloud-init, cloudbase-init, vsphere, packer, automation, vRealizs Automation]
+tags: [vmware, vsphere, automation]
 draft: false
 thumbnail: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.webp"
 #images: 

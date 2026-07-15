@@ -1,7 +1,7 @@
 ---
 title: "Tanzu Cloud Native Webinars"
 date: 2023-09-03T12:00:00+01:00
-tags : [Kubernetes, Docker, K8S, CICD, Webinar]
+tags: [tanzu, kubernetes, docker, ci-cd]
 draft: true
 toc: true
 thumbnail: "images/minions.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Tanzu Application Platform Accelerator with YTT"
 date: 2022-04-11T08:18:44+02:00
-tags : [Tanzu, TAP, YTT, Carvel, VMware]
+tags: [tanzu, kubernetes]
 draft: false
 toc: true
 thumbnail: "images/pro-church-media-7NGU2YqBue8-unsplash.webp"

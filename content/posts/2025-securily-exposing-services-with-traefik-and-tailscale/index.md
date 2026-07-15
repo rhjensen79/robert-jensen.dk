@@ -1,7 +1,7 @@
 ---
 title: "Securely Exposing Services with Traefik and Tailscale"
 date: 2025-03-10T12:00:00+01:00
-tags: [Tailscale VPN, Traefik Reverse Proxy, Docker Containers, Secure Networking, Self-Hosted Services, HTTPS Certificates, DNS Configuration, Mesh VPN, Service Discovery, Private Network Security]
+tags: [tailscale, traefik, docker, security, networking]
 draft: false
 toc: true
 thumbnail: "images/joshua-sortino-LqKhnDzSF-8-unsplash.webp"

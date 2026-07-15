@@ -3,7 +3,7 @@ title: "Vibe Coding is the new FrontPage - and that's not necessarily bad"
 date: 2025-08-24T10:00:00+02:00
 draft: false
 description: "How AI-assisted coding tools like GitHub Copilot and ChatGPT mirror the democratization of web development that Microsoft FrontPage started. Why the resistance is familiar and why embracing AI coding tools is the right path forward."
-tags: ["AI", "Development", "Programming", "Opinion"]
+tags: ["ai"]
 toc: true
 thumbnail: "images/frontpage.webp"
 categories: ["Technology"]

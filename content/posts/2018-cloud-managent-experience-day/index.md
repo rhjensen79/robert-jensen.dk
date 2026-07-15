@@ -3,7 +3,7 @@ title: 'Cloud Management Experience Day'
 date: 2018-02-19T14:00:00.000+01:00
 draft: false
 aliases: [ "/2018/02/cloud-managent-experience-day.html" ]
-tags : [vRA, CMP, Education, VMware, automation, Presenting]
+tags: [vmware, automation, cloud]
 ---
 
 [![](https://static-1.europeanschooluxembourg2.eu/wp-content/uploads/education_button2.jpg)](https://static-1.europeanschooluxembourg2.eu/wp-content/uploads/education_button2.jpg)

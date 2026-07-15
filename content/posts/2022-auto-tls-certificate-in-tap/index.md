@@ -1,7 +1,7 @@
 ---
 title: "Auto generating TLS Certificates for Tanzu Application Platform (TAP) Workloads"
 date: 2022-10-27T19:46:27+01:00
-tags : [tanzu, tap, tls, certificate, knative, letsencrypt, cert-manager, tanzu application platform, secure]
+tags: [tanzu, kubernetes, security]
 draft: false
 toc: true
 thumbnail: "images/bank-phrom-Tzm3Oyu_6sk-unsplash.webp"

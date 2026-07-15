@@ -1,7 +1,7 @@
 ---
 title: "When Testing Got Easy - a story about SMTP and Docker"
 date: 2021-03-03T15:55:59+01:00
-tags : [testing, smtp, mail, python, docker]
+tags: [python, docker]
 draft: false
 thumbnail: "images/debby-hudson-oVQBn0X2oEk-unsplash-2.webp"
 toc: true
