@@ -1,6 +1,7 @@
 ---
 title: 'Jenkins and CodeStream CSRF fix'
 date: 2020-07-30T21:38:00.000+02:00
+description: "Fix the Jenkins CSRF crumb error in VMware Code Stream pipelines by replacing username and password credentials with a Jenkins API token for a permanent solution."
 draft: false
 aliases: [ "/2020/07/jenkins-and-codestream-csrf-fix.html" ]
 tags: [vmware, ci-cd, automation]

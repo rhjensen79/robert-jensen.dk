@@ -1,6 +1,7 @@
 ---
 title: 'How to show the value of Automation'
 date: 2019-12-16T11:27:00.001+01:00
+description: "Prove the value of automation by tracking vRealize Automation VM deployments with Python ABX functions, an S3-hosted JSON store, and a ThingSpeak dashboard."
 draft: false
 aliases: [ "/2019/12/how-to-show-value-of-automation.html" ]
 tags: [vmware, automation, cloud]

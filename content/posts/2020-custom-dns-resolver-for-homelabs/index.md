@@ -1,6 +1,7 @@
 ---
 title: "Custom DNS Resolver for Homelabs"
 date: 2020-12-20T09:53:39+01:00
+description: "Resolve internal homelab domains on macOS and Linux using per-domain files in /etc/resolver, so custom DNS servers take priority even while connected to a VPN."
 tags: [homelab, networking]
 draft: false
 thumbnail: "images/andrew-neel-1-29wyvvLJA-unsplash.webp"

@@ -1,6 +1,7 @@
 ---
 title: 'Homekit support for non homekit devices'
 date: 2018-11-12T08:58:00.001+01:00
+description: "Add HomeKit support to non-HomeKit devices with cheap Sonoff switches and RavenCore firmware, replacing an OpenHAB and MQTT bridge with direct HomeKit control."
 draft: false
 aliases: [ "/2018/11/homekit-support-for-non-homekit-devices.html" ]
 tags: [home-automation, automation]

@@ -1,6 +1,7 @@
 ---
 title: 'Monitor Domain Admins using VMware Log Insight'
 date: 2018-06-27T10:57:00.000+02:00
+description: "Monitor changes to the Domain Admins group with VMware Log Insight by building filtered searches that trigger security alerts or dashboard widgets."
 draft: false
 aliases: [ "/2018/06/monitor-domain-admins-using-vmware-log.html" ]
 tags: [vmware, automation, security]

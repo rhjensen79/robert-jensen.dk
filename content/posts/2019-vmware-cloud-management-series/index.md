@@ -1,6 +1,7 @@
 ---
 title: 'VMware Cloud Management series'
 date: 2019-07-11T11:19:00.002+02:00
+description: "A VMware Cloud Management video series covering vRealize Automation and Cloud Assembly: multi-cloud blueprints, Ansible integration, extensibility, and pipelines."
 draft: false
 aliases: [ "/2019/07/vmware-cloud-management-series.html" ]
 tags: [vmware, vsphere, cloud]

@@ -1,6 +1,7 @@
 ---
 title: "Automating Folding@Home With VMware Code Stream"
 date: 2020-11-18T16:42:22+01:00
+description: "Automate Folding@home on vSphere with VMware Code Stream and Terraform, using a Git-triggered pipeline to deploy and update appliances as infrastructure as code."
 tags: [vmware, vsphere, ci-cd, automation]
 draft: false
 thumbnail: "images/top_picture.webp"
