@@ -99,6 +99,18 @@ ignoreLogs = ['warning-goldmark-raw-html']
 [permalinks]
   posts = "/posts/:year/:slug/"
 
+# Related-content index (drives layouts/partials/related.html)
+[related]
+  includeNewer = true
+  threshold = 60
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
 # Performance optimizations
 [build]
   writeStats = true
