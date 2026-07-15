@@ -2,7 +2,8 @@
    robert-jensen.dk — clean & spacious design system
    Geist (display) + Inter (body), generous whitespace, one indigo accent,
    light-first with full dark support. Top-nav, centered column layout.
-   Loads AFTER custom-bundle.css so these rules win.
+   The only site stylesheet besides fontawesome-minimal.css (see
+   config.toml customCss) — it owns all layout, including breadcrumbs.
    Base: html is 62.5% => 1rem = 10px.
    ===================================================================== */
 
