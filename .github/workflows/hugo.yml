@@ -41,6 +41,10 @@ jobs:
         with:
           hugo-version: '0.164.0'
           extended: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       # Anatole >= v1.19 compiles SCSS with the Dart Sass transpiler (uses @use "hugo:vars").
       - name: Install Dart Sass
         run: sudo snap install dart-sass
@@ -73,6 +77,10 @@ jobs:
             --enableGitInfo=false \
             --templateMetrics=false \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      # Site search (issue #33): index the built site with Pagefind. Writes the
+      # search index into public/pagefind/, which deploys with the rest of the site.
+      - name: Build Pagefind search index
+        run: npx -y pagefind@1 --site public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
