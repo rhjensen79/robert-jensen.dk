@@ -403,7 +403,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
   color: var(--text-faint);
 }
 .pill-accent {
-  color: var(--accent);
+  color: var(--accent-strong);
   background: var(--accent-soft);
   padding: 0.35rem 0.9rem;
   border-radius: 100px;
