@@ -1,7 +1,7 @@
 ---
 title: "Tailscale on Ubitique Edgerouter"
 date: 2021-01-12T20:28:10+01:00
-tags : [ubitique, tailscale, edgerouter, vpn, network, network, ubnt, wireguard]
+tags : [tailscale, networking]
 draft: false
 thumbnail: "images/jj-ying-8bghKxNU1j0-unsplash.webp"
 #image:

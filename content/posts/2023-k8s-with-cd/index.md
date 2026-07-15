@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes with Continuous Delivery included"
 date: 2023-02-16T12:00:00+01:00
-tags : [Kubernetes, Containers, CD, Continuous Delivery, GitOps, Git]
+tags : [kubernetes, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/carlos-aranda-QMjCzOGeglA-unsplash.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Enhance Kubectl with Local AI using Ollama and Open Source LLMs"
 date: 2024-08-04T12:00:00+01:00
-tags: [kubernetes, kubectl-ai, ollama, local-llm, k8s, devops, ai-tools, developer-productivity, cloud-native, open-source-llm, kubernetes-automation, kubectl-plugin, infrastructure-as-code, ai-for-developers, container-orchestration]
+tags: [kubernetes, ai, automation]
 draft: false
 toc: true
 thumbnail: "images/boliviainteligente-DEci5GH0r0k-unsplash.webp"

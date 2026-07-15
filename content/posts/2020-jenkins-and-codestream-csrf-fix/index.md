@@ -3,7 +3,7 @@ title: 'Jenkins and CodeStream CSRF fix'
 date: 2020-07-30T21:38:00.000+02:00
 draft: false
 aliases: [ "/2020/07/jenkins-and-codestream-csrf-fix.html" ]
-tags : [automation, vmware, jenkins, codestream, pipeline, ci, cd, cicd]
+tags : [vmware, ci-cd, automation]
 thumbnail: "images/michael-dziedzic--Rc6usOigMk-unsplash.webp"
 ---
 For some time, I have had the problem with Jenkins, that when I ran my Code Stream pipeline, it gave me the following error 

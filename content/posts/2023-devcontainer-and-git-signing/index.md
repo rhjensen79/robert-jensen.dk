@@ -1,7 +1,7 @@
 ---
 title: "VScode Devcontainer and Git signing"
 date: 2023-12-05T00:00:00+01:00
-tags : [VScode, Git, SSH, Devcontainer]
+tags : [devcontainers, security]
 draft: false
 toc: true
 thumbnail: "images/certificate.webp"

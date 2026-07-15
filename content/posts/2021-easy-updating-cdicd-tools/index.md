@@ -1,7 +1,7 @@
 ---
 title: "Easy Updating CI/CD Tools"
 date: 2021-02-18T09:18:30+01:00
-tags : [automation, CI, CD, CICD, devops, hashicorp, packer, terraform, docker]
+tags : [ci-cd, automation, docker]
 draft: false
 thumbnail: "images/sven-mieke-fteR0e2BzKo-unsplash.webp"
 description: "How to use Docker autobuild feature, to automaticly create and deploy container images to Docker Hub"
