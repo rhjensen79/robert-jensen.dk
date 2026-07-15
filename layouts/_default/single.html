@@ -59,7 +59,10 @@
 
       {{- partial "expirationnote.html" . -}}
 
-      {{- if (eq .Params.toc true) -}}
+      {{/* Auto-show the TOC for posts with 3+ h2/h3 headings,
+           while respecting an explicit toc: false in front matter. */}}
+      {{- $headings := len (findRE "<h[2-3]" .Content) -}}
+      {{- if and (ne .Params.toc false) (or (eq .Params.toc true) (ge $headings 3)) -}}
         {{- partial "toc.html" . -}}
       {{- end -}}
 
