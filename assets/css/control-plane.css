@@ -505,6 +505,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
 .post__content p { margin: 1.4rem 0; }
 .post__content a { color: var(--accent) !important; text-decoration: underline; text-decoration-color: var(--accent-soft); text-underline-offset: 3px; }
 .post__content a:hover { color: var(--accent-strong) !important; text-decoration-color: currentColor; }
+/* Buttons inside post content must keep their button colors, not the link-accent rule above */
+.post__content a.btn { text-decoration: none !important; }
+.post__content a.btn--primary, .post__content a.btn--primary:hover { color: var(--accent-contrast) !important; }
+.post__content a.btn--ghost, .post__content a.btn--ghost:hover { color: var(--text) !important; }
 .post__content blockquote {
   border-left: 3px solid var(--accent);
   background: var(--surface-2);
