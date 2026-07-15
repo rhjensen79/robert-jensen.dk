@@ -28,7 +28,7 @@
       {{ else }}
         <h1>{{ title .Title }}</h1>
       {{ end }}
-      {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
+      {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) }}
         <ul class="post__meta">
           <li class="post__meta-item">
             <em class="fas fa-calendar-day post__meta-icon"></em>
@@ -67,6 +67,10 @@
 
       {{- if isset .Params "series" -}}
         {{- partial "series.html" . -}}
+      {{- end -}}
+
+      {{- if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
+        {{- partial "author-bio.html" . -}}
       {{- end -}}
 
       {{- if (eq .Site.Params.relatedPosts true) -}}

@@ -1,0 +1,23 @@
+{{/* Renders a post's thumbnail, or a soft placeholder if none exists. */}}
+{{- $page := .page -}}
+{{- $eager := .eager -}}
+{{- with $page.Params.thumbnail -}}
+  <div class="pv">
+    <img
+      class="pv__img"
+      src="{{ . | relURL }}"
+      alt="{{ $page.Title }}"
+      width="600"
+      height="338"
+      loading="{{ if $eager }}eager{{ else }}lazy{{ end }}"
+      {{ if $eager }}fetchpriority="high"{{ end }}
+      decoding="async"
+    />
+  </div>
+{{- else -}}
+  {{- $cat := "posts" -}}
+  {{- with $page.Params.categories -}}{{ $cat = index . 0 }}{{- end -}}
+  <div class="pv pv--fallback">
+    <span class="pv__label">{{ $cat }}</span>
+  </div>
+{{- end -}}

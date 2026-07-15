@@ -1,0 +1,39 @@
+{{ define "main" }}
+  {{ $paginator := .Paginate .Pages }}
+  <div class="list-header">
+    <p class="list-header__eyebrow">{{ .Site.Params.role | default "Blog" }}</p>
+    <h1 class="list-header__title">{{ .Title }}</h1>
+    <p class="list-header__count">{{ len .Pages }} {{ cond (eq (len .Pages) 1) "post" "posts" }}</p>
+    {{ with .Site.Taxonomies.tags.ByCount }}
+      <nav class="topic-switch" aria-label="Browse by topic">
+        {{ range first 12 . }}
+          <a class="chip" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="chip__n">{{ .Count }}</span></a>
+        {{ end }}
+      </nav>
+    {{ end }}
+  </div>
+
+  <div class="card-grid">
+    {{ range $i, $p := $paginator.Pages }}
+      <article class="card">
+        <a class="card__link" href="{{ .RelPermalink }}">
+          {{ partial "post-visual.html" (dict "page" . "eager" (lt $i 3)) }}
+          <div class="card__body">
+            <div class="eyebrow">
+              {{ with .Params.categories }}<span class="pill-accent">{{ index . 0 }}</span>{{ end }}
+              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            </div>
+            <h3 class="card__title">{{ .Title }}</h3>
+            <div class="card-meta">
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    {{ end }}
+  </div>
+
+  <div class="pagination">
+    {{ template "partials/pagination.html" . }}
+  </div>
+{{ end }}
