@@ -1,7 +1,7 @@
 ---
 title: "Static files in Buildpacks"
 date: 2023-01-20T12:00:00+01:00
-tags : [docker, ci-cd]
+tags: [docker, ci-cd]
 draft: false
 toc: true
 thumbnail: "images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.webp"

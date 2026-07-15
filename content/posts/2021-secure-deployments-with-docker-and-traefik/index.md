@@ -1,7 +1,7 @@
 ---
 title: "Secure Deployments With Docker, Traefik and Let's Encrypt"
 date: 2021-01-06T20:45:52+01:00
-tags : [docker, traefik, python, security]
+tags: [docker, traefik, python, security]
 draft: false
 thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.webp"
 description: "Learn to deploy secure Docker applications using Traefik reverse proxy with automatic Let's Encrypt SSL certificates and custom DNS configuration for production-ready setups."

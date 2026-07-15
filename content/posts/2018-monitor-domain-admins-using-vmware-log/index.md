@@ -3,7 +3,7 @@ title: 'Monitor Domain Admins using VMware Log Insight'
 date: 2018-06-27T10:57:00.000+02:00
 draft: false
 aliases: [ "/2018/06/monitor-domain-admins-using-vmware-log.html" ]
-tags : [vmware, automation, security]
+tags: [vmware, automation, security]
 ---
 
 I had a customer asking me yesterday, if it was possible to use [Log Insight,](https://www.vmware.com/products/vrealize-log-insight.html) to monitor changes done to the Domain Admins group.  

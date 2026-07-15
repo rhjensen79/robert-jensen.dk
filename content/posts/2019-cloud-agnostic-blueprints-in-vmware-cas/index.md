@@ -3,7 +3,7 @@ title: 'Cloud Agnostic Blueprints in VMware CAS'
 date: 2019-01-18T07:51:00.001+01:00
 draft: false
 aliases: [ "/2019/01/cloud-agnostic-blueprints-in-vmware-cas.html" ]
-tags : [vmware, vsphere, automation, cloud]
+tags: [vmware, vsphere, automation, cloud]
 slug: "cloud-agnostic-blueprints-vmware-cas"
 ---
 

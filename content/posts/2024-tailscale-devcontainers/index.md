@@ -1,7 +1,7 @@
 ---
 title: "Using Devcontainers in VScode with Tailscale"
 date: 2024-02-18T12:00:00+01:00
-tags : [tailscale, devcontainers, docker]
+tags: [tailscale, devcontainers, docker]
 draft: true
 toc: true
 thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"

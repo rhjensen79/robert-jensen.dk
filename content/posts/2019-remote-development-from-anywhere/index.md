@@ -3,7 +3,7 @@ title: 'Remote development from anywhere'
 date: 2019-10-09T09:05:00.000+02:00
 draft: false
 aliases: [ "/2019/10/remote-development-from-anywhere.html" ]
-tags : [networking, vmware, devcontainers, automation]
+tags: [networking, vmware, devcontainers, automation]
 thumbnail: "images/yancy-min-842ofHC6MaI-unsplash.webp"
 ---
 

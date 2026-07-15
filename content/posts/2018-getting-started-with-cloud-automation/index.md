@@ -3,7 +3,7 @@ title: 'Getting started with Cloud Automation Services - Almost'
 date: 2018-12-12T21:11:00.000+01:00
 draft: false
 aliases: [ "/2018/12/getting-started-with-cloud-automation.html" ]
-tags : [vmware, vsphere, automation, cloud]
+tags: [vmware, vsphere, automation, cloud]
 ---
 
 [![](https://zdnet1.cbsistatic.com/hub/i/r/2018/08/27/35e3272b-8068-4a7a-9857-788bf474f542/resize/770xauto/944f241b4c67da109c6d4d1b760d9def/vmwarecloudservices.png)](https://zdnet1.cbsistatic.com/hub/i/r/2018/08/27/35e3272b-8068-4a7a-9857-788bf474f542/resize/770xauto/944f241b4c67da109c6d4d1b760d9def/vmwarecloudservices.png)

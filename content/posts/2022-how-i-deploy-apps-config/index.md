@@ -1,7 +1,7 @@
 ---
 title: "How I Deploy Apps - config"
 date: 2022-11-12T19:46:27+01:00
-tags : [docker, kubernetes, ci-cd]
+tags: [docker, kubernetes, ci-cd]
 draft: true
 toc: true
 thumbnail: "images/john-barkiple-l090uFWoPaI-unsplash.webp"

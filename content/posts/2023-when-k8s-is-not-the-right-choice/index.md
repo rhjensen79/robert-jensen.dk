@@ -1,7 +1,7 @@
 ---
 title: "When Kubernetes is not the right choice"
 date: 2023-06-27T12:00:00+01:00
-tags : [kubernetes, docker, ci-cd, github-actions]
+tags: [kubernetes, docker, ci-cd, github-actions]
 draft: false
 toc: true
 thumbnail: "images/minions.webp"

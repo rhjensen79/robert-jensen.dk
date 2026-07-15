@@ -1,7 +1,7 @@
 ---
 title: "Keeping .env files in sync using Bitwarden"
 date: 2021-03-19T10:48:02+01:00
-tags : [security, automation]
+tags: [security, automation]
 draft: false
 thumbnail: "images/gabriel-gusmao-pMmw3ynuXHw-unsplash.webp"
 #images: 

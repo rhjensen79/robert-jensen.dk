@@ -3,7 +3,7 @@ title: 'Auto Clean up old recordings'
 date: 2018-01-07T20:47:00.003+01:00
 draft: false
 aliases: [ "/2018/01/auto-clean-up-old-recording.html" ]
-tags : [home-automation, automation]
+tags: [home-automation, automation]
 ---
 
 [![](https://3.bp.blogspot.com/-mm3eelAnTf4/WlJ1piJwP3I/AAAAAAABQ9E/e3emey4hdEIsHTlOxqK2xzUHPHFHKnmAwCLcBGAs/s640/codecode.jpg)](https://3.bp.blogspot.com/-mm3eelAnTf4/WlJ1piJwP3I/AAAAAAABQ9E/e3emey4hdEIsHTlOxqK2xzUHPHFHKnmAwCLcBGAs/s1600/codecode.jpg)

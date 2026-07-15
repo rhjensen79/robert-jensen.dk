@@ -1,7 +1,7 @@
 ---
 title: "New Project"
 date: 2021-05-07T20:13:49+02:00
-tags : [python, traefik, homelab]
+tags: [python, traefik, homelab]
 draft: false
 thumbnail: "images/joshua-eckstein-VAJEea9u6k8-unsplash.webp"
 #images: 

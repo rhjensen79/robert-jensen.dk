@@ -1,7 +1,7 @@
 ---
 title: "Application Deployment With Salt and Vra"
 date: 2020-11-24T14:09:39+01:00
-tags : [vmware, vsphere, salt, automation, docker]
+tags: [vmware, vsphere, salt, automation, docker]
 draft: false
 thumbnail: "images/shahadat-rahman-gnyA8vd3Otc-unsplash.webp"
 slug: "application-deployment-salt-vrealize-automation"

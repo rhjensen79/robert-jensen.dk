@@ -1,7 +1,7 @@
 ---
 title: "Running External DNS with CloudFlare"
 date: 2024-05-15T12:00:00+01:00
-tags : [kubernetes, networking, automation]
+tags: [kubernetes, networking, automation]
 draft: false
 toc: true
 thumbnail: "images/brittany-colette-GFLMi4c8XMg-unsplash.webp"

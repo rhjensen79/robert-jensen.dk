@@ -1,7 +1,7 @@
 ---
 title: "New project part 2"
 date: 2021-03-22T08:22:25+01:00
-tags : [vmware, ci-cd, cloud]
+tags: [vmware, ci-cd, cloud]
 draft: true
 thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.webp"
 #images: 

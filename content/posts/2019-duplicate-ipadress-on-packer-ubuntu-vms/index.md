@@ -3,7 +3,7 @@ title: 'Duplicate ipadress on Packer Ubuntu VM''s'
 date: 2019-05-03T20:57:00.002+02:00
 draft: false
 aliases: [ "/2019/05/duplicate-ipadress-on-packer-ubuntu-vms.html" ]
-tags : [vmware, vsphere, automation, ci-cd]
+tags: [vmware, vsphere, automation, ci-cd]
 ---
 
 [![](https://www.gohacking.com/wp-content/uploads/2009/10/Trace-IP-735x400.jpg)](https://www.gohacking.com/wp-content/uploads/2009/10/Trace-IP-735x400.jpg)

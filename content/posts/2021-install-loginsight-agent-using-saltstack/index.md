@@ -1,7 +1,7 @@
 ---
 title: "Install Loginsight agent using SaltStack"
 date: 2021-05-20T20:50:06+02:00
-tags : [vmware, salt, automation]
+tags: [vmware, salt, automation]
 thumbnail: "images/brett-jordan-YuQEEaNOgBA-unsplash.webp"
 draft: false
 description: "How to use SaltStack to deploy and install LogInsight on to both Linux and windows, and to maintain the initial configuration, and then switch the control over to the LogInsihgt server, using Grains"

@@ -1,7 +1,7 @@
 ---
 title: "Move Blog"
 date: 2020-11-06T12:56:48+01:00
-tags : [homelab]
+tags: [homelab]
 #image : "/img/erda-estremera-sxNt9g77PE0-unsplash.jpg"
 thumbnail: "images/erda-estremera-sxNt9g77PE0-unsplash.webp"
 #draft: true

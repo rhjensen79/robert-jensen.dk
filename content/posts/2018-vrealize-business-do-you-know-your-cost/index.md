@@ -3,7 +3,7 @@ title: 'vRealize Business - Do you know your cost ? '
 date: 2018-01-29T09:05:00.000+01:00
 draft: false
 aliases: [ "/2018/01/vrealize-business-do-you-know-your-cost.html" ]
-tags : [vmware, vsphere, cloud]
+tags: [vmware, vsphere, cloud]
 ---
 
 [![](https://1.bp.blogspot.com/-ioGkc_FI3b0/Wm7ArYuLXsI/AAAAAAABTDg/ymHXOxdaxTgwDQCz-8fkbwnR5NM3sXSwgCLcBGAs/s640/Sk%25C3%25A6rmbillede%2B2018-01-29%2Bkl.%2B07.34.56.jpg)](https://1.bp.blogspot.com/-ioGkc_FI3b0/Wm7ArYuLXsI/AAAAAAABTDg/ymHXOxdaxTgwDQCz-8fkbwnR5NM3sXSwgCLcBGAs/s1600/Sk%25C3%25A6rmbillede%2B2018-01-29%2Bkl.%2B07.34.56.jpg)

@@ -3,7 +3,7 @@ title: 'Filter Extensibility subscriptions in CAS'
 date: 2019-01-22T13:28:00.001+01:00
 draft: false
 aliases: [ "/2019/01/filter-extensibility-subscriptions-in.html" ]
-tags : [vmware, automation, cloud]
+tags: [vmware, automation, cloud]
 ---
 
 [![](https://upload.wikimedia.org/wikipedia/commons/f/f0/DARPA_Big_Data.jpg)](https://upload.wikimedia.org/wikipedia/commons/f/f0/DARPA_Big_Data.jpg)

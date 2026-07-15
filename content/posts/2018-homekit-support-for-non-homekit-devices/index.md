@@ -3,7 +3,7 @@ title: 'Homekit support for non homekit devices'
 date: 2018-11-12T08:58:00.001+01:00
 draft: false
 aliases: [ "/2018/11/homekit-support-for-non-homekit-devices.html" ]
-tags : [home-automation, automation]
+tags: [home-automation, automation]
 ---
 
 [![](https://images.techhive.com/images/article/2017/02/homekit-logo-100707188-large.jpg)](https://images.techhive.com/images/article/2017/02/homekit-logo-100707188-large.jpg)
