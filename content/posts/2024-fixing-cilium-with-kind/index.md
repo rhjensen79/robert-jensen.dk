@@ -1,7 +1,7 @@
 ---
 title: "Fixing Cilium on Kind"
 date: 2024-01-25T12:00:00+01:00
-tags: [Kubernetes, Kind, Cilium, Docker Desktop, Colima, M1 Mac, CNI, Container Networking]
+tags: [kubernetes, networking, docker]
 draft: false
 toc: true
 thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"

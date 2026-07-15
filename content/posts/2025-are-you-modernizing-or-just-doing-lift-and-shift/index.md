@@ -1,7 +1,7 @@
 ---
 title: "Are you modernizing or just doing lift and shift?"
 date: 2025-04-25T12:00:00+01:00
-tags: [modernizing, virtualization, business, legacy, hypervisor, containers, kubernetes]
+tags: [vmware, kubernetes, cloud]
 draft: false
 toc: true
 thumbnail: "images/hamster.webp"

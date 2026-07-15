@@ -1,7 +1,7 @@
 ---
 title: "Using Github Actions to Build Containers (and host them)"
 date: 2021-09-09T13:20:37+02:00
-tags : [Docker, Github, Actions, Registry, hosting, cicd, Harbor, Gitlab]
+tags : [docker, github-actions, ci-cd]
 draft: false
 thumbnail: "images/ian-taylor-jOqJbvo1P9g-unsplash.webp"
 #image: 

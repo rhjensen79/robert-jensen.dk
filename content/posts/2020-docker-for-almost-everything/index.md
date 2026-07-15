@@ -1,7 +1,7 @@
 ---
 title: "Docker for Almost Everything"
 date: 2020-11-21T19:26:12+01:00
-tags : [docker, Jenkins, automation, test, VMware, container, SaltStack, Minion, K8S]
+tags : [docker, ci-cd, automation, salt, kubernetes]
 draft: false
 description: "Discover how to use Docker containers for system administration tasks beyond development. Learn GitOps approach with Docker Hub, Jenkins automation, and practical examples including SaltStack minion containers for testing."
 thumbnail: "images/thomas-lipke-kkXDhAUnxYI-unsplash.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Manage Multiple Kubeconfigs Using iCloud and Kubectx"
 date: 2021-11-04T13:37:46+01:00
-tags : [Kubernetes, k8s, kubectx, kubeconfig, fzf, iCloud, apple, config]
+tags : [kubernetes]
 draft: false
 thumbnail: "images/wesley-tingey-snNHKZ-mGfE-unsplash.webp"
 #images: "images/wesley-tingey-snNHKZ-mGfE-unsplash.jpg"

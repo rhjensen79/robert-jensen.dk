@@ -1,7 +1,7 @@
 ---
 title: "Hello Buildpacks, goodbye Dockerfiles"
 date: 2021-09-01T13:55:17+02:00
-tags : [buildpacks, dockerfile, docker, containers, cicd, github, git, github actions, Python, Streamlit]
+tags : [docker, ci-cd, github-actions, python]
 draft: false
 thumbnail: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.webp"
 #images: 

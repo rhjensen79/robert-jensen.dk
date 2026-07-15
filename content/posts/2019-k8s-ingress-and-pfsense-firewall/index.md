@@ -3,7 +3,7 @@ title: 'K8S Ingress and Pfsense firewall'
 date: 2019-07-04T15:04:00.002+02:00
 draft: false
 aliases: [ "/2019/07/k8s-ingress-and-pfsense-firewall.html" ]
-tags : [cna, container, vSphere, kubernetes, pfsense, ingress, k8s]
+tags : [kubernetes, networking, vsphere]
 thumbnail: "images/georg-bommeli-ybtUqjybcjE-unsplash.webp"
 ---
 
