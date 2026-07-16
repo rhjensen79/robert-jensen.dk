@@ -7,6 +7,7 @@ toc: true
 thumbnail: "images/jackson-simmer-Vqg809B-SrE-unsplash.webp"
 images: ["images/jackson-simmer-Vqg809B-SrE-unsplash.webp"]
 description: "Step-by-step guide to fixing LoadBalancer services on single-node Talos Kubernetes clusters by modifying node labels for both Cilium and MetalLB implementations."
+speakable: true
 howto:
   name: "Fix LoadBalancer services on a single-node Talos Kubernetes cluster"
   description: "Remove the control-plane label that excludes a single-node Talos cluster from external load balancing, so LoadBalancer services work with Cilium and MetalLB."
