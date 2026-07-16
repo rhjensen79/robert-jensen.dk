@@ -10,3 +10,6 @@ static/.DS_Store
 
 # Lighthouse CI local run artifacts
 .lighthouseci/
+
+# Hugo generated resource cache (regenerated on build)
+resources/_gen/
