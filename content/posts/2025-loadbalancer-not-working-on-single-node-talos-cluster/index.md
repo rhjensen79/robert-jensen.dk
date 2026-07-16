@@ -7,6 +7,25 @@ toc: true
 thumbnail: "images/jackson-simmer-Vqg809B-SrE-unsplash.webp"
 images: ["images/jackson-simmer-Vqg809B-SrE-unsplash.webp"]
 description: "Step-by-step guide to fixing LoadBalancer services on single-node Talos Kubernetes clusters by modifying node labels for both Cilium and MetalLB implementations."
+howto:
+  name: "Fix LoadBalancer services on a single-node Talos Kubernetes cluster"
+  description: "Remove the control-plane label that excludes a single-node Talos cluster from external load balancing, so LoadBalancer services work with Cilium and MetalLB."
+  steps:
+    - name: "Identify the blocking node label"
+      text: "Talos adds node.kubernetes.io/exclude-from-external-load-balancers to control-plane nodes. On a single-node cluster the control-plane node is also the only worker, so this label stops LoadBalancer services from being exposed."
+    - name: "Comment out the nodeLabels block in the machine config"
+      text: "In your control-plane machine configuration, comment out the machine.nodeLabels block that sets node.kubernetes.io/exclude-from-external-load-balancers."
+    - name: "Apply the updated configuration"
+      text: "Apply the updated machine configuration. On an already-running cluster this removes the label from the node."
+    - name: "Verify LoadBalancer services"
+      text: "After applying, LoadBalancer services keep their assigned external IP and become reachable, for both Cilium and MetalLB."
+faq:
+  - q: "Why don't LoadBalancer services work on a single-node Talos cluster?"
+    a: "Talos labels control-plane nodes with node.kubernetes.io/exclude-from-external-load-balancers. On a single-node cluster the control-plane node is also the only worker, so this label prevents LoadBalancer services from being exposed even though they get an external IP."
+  - q: "Does this affect both Cilium and MetalLB?"
+    a: "Yes. The same control-plane label blocks external load balancing regardless of whether you use Cilium or MetalLB."
+  - q: "How do I fix LoadBalancer services on a single-node Talos cluster?"
+    a: "Comment out the machine.nodeLabels block containing node.kubernetes.io/exclude-from-external-load-balancers in the control-plane machine configuration and apply the updated config."
 ---
 ## Intro
 
