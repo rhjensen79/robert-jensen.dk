@@ -1,19 +1,17 @@
 <head>
   <meta charset="utf-8" />
+  {{/* Title: brand as SUFFIX on interior pages (SEO issue #48); keyword-rich
+       title on the homepage. Set params.homeTitle to override the home title. */}}
   <title>
-    {{ if (eq .Site.Params.reversepagetitle true) }}
-      {{ with .Title }}
-        {{ . }} |
-      {{ end }}
-      {{- .Site.Params.author -}}
-    {{ else }}
-      {{- .Site.Params.author -}}{{ with .Title }}
-        |
-        {{ . }}
-      {{ end }}
-
-    {{ end }}
-
+    {{- if .IsHome -}}
+      {{ or .Site.Params.homeTitle (printf "%s — Cloud Native, Kubernetes & DevOps" .Site.Title) }}
+    {{- else -}}
+      {{- with .Title -}}
+        {{ . }} · {{ $.Site.Title }}
+      {{- else -}}
+        {{ $.Site.Title }}
+      {{- end -}}
+    {{- end -}}
   </title>
 
   <!-- Meta -->
