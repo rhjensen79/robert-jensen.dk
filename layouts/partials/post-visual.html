@@ -6,7 +6,7 @@
     <img
       class="pv__img"
       src="{{ . | relURL }}"
-      alt="{{ $page.Title }}"
+      alt="{{ $page.Params.thumbnailAlt }}"
       width="600"
       height="338"
       loading="{{ if $eager }}eager{{ else }}lazy{{ end }}"
