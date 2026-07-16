@@ -10,10 +10,12 @@
     
     {{ if .Params.thumbnail }}
       <div class="post__thumbnail-wrapper">
+        {{/* Descriptive alt from params.thumbnailAlt; otherwise the hero is
+             decorative (title H1 sits beside it) → empty alt, not boilerplate (#54). */}}
         <img
           class="post__thumbnail"
           src="{{ .Params.thumbnail | relURL }}"
-          alt="Thumbnail for {{ .Title }}"
+          alt="{{ .Params.thumbnailAlt }}"
           width="600"
           height="338"
           loading="eager"

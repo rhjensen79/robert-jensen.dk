@@ -6,6 +6,7 @@ description: "The honest story behind Home Stories, an iOS app for homeowners to
 tags: ["ios", "side-project", "home-renovation"]
 toc: true
 thumbnail: "images/home-stories-hero.webp"
+thumbnailAlt: "The Home Stories iOS app shown on a phone, displaying a home renovation project with budget tracking"
 images: ["images/home-stories-hero.webp"]
 categories: ["Projects"]
 ---
