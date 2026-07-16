@@ -34,7 +34,9 @@ I've started playing around with [Talos](https://www.talos.dev) for my homelab s
 
 In my lab, I only have a single Intel NUC that needs to function as both control plane (master) and worker node. This should work fine in theory, but after setting everything up, I ran into an issue with LoadBalancer services.
 
-## The Problem
+**Short answer:** Talos adds the label `node.kubernetes.io/exclude-from-external-load-balancers` to control-plane nodes. On a single-node cluster that node is also your only worker, so the label stops LoadBalancer services from being exposed (with both Cilium and MetalLB). Comment out that `nodeLabels` block in the machine config and re-apply, and LoadBalancer services start working.
+
+## Why don't LoadBalancer services work on a single-node Talos cluster?
 
 I tried setting up LoadBalancer services using both [Cilium](https://cilium.io) and [MetalLB](https://metallb.universe.tf), but encountered the same problem with both solutions.
 
@@ -47,7 +49,7 @@ When I tried accessing the service directly using port-forwarding (`kubectl port
 
 I went through multiple reinstallations and troubleshooting attempts, but nothing seemed to solve the issue.
 
-## Solution
+## How do I fix LoadBalancer services on a single-node Talos cluster?
 
 After digging through various GitHub issues, I finally found the solution in this MetalLB issue: [https://github.com/metallb/metallb/issues/2676](https://github.com/metallb/metallb/issues/2676)
 

@@ -10,7 +10,9 @@ images: ["images/tim-mossholder-rx_GNopVlFs-unsplash.webp"]
 description: "Troubleshooting guide for VMware Cloud Foundation (VCF) deployment failure during Transport Node Collection creation at 48%. Learn how to resolve NSX Manager connectivity issues and firewall configuration problems in your VMware infrastructure."
 slug: "vmware-vcf-create-transport-node-collection-fails"
 ---
-## The problem
+**Short answer:** If VCF Cloud Builder fails at "Create Transport Node Collection" (around 48%) with the ESXi hosts stuck on "Waiting for connection to managers", a firewall between the ESXi hosts and the NSX managers is silently dropping the traffic on port 1234. Setting the firewall rule to allow the traffic (any/any, instead of application-aware filtering) resolves it.
+
+## Why does VCF fail at 48% on "Create Transport Node Collection"?
 
 For a clean installation, Cloud Builder fails with the step "Create Transport Node Collection".
 
@@ -43,7 +45,7 @@ A VMware support engineer (Danilo) helped me, and solved the problem.
 
 He found that there was a firewall dropping the connection, after doing a packet trace.
 
-## Solution
+## How to fix it: allow the traffic through the firewall
 
 Going back to my network engineer, we found out, that he had set the firewall to allow all application trafic. 
 

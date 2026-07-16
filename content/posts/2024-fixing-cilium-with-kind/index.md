@@ -24,7 +24,9 @@ For me, Docker Desktop is gone, and I will test out Colima in my env going forwa
 I have started playing with [Cilium](https://cilium.io), and learning about all the interesting things it offeres. 
 That involves running a local Kind cluster, where I can quickly test things out. 
 
-## Problem
+**Short answer:** On an Apple Silicon (M1) Mac, Cilium's DaemonSet pods keep restarting and CoreDNS never starts on a Kind cluster running under Docker Desktop. Replacing Docker Desktop with [Colima](https://github.com/abiosoft/colima) (or downgrading the Docker engine) fixes it, and the Cilium Kind guide then works normally.
+
+## Why does Cilium fail on a Kind cluster on an M1 Mac?
 
 Cilium has a [guide](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/) on how to run this on a Kind cluster. The only problem, is that it's not working on my M1 Macbook.
 
@@ -34,7 +36,7 @@ This means it's pretty useless for me.
 
 I have created a [PR](https://github.com/cilium/cilium/issues/30278), where I think the error was found, but no real solution, until [Parshin Pavel](https://github.com/pparshin) gave me a workaround.
 
-## Solution
+## How to fix Cilium on Kind (M1 Mac): replace Docker Desktop with Colima
 
 The workaround was simply to replace Docker desktop with [Colima](https://github.com/abiosoft/colima)
 
