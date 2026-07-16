@@ -34,6 +34,13 @@
 {{- if .Params.tags -}}
   {{- $schema = merge $schema (dict "keywords" .Params.tags) -}}
 {{- end -}}
+{{/* Speakable (opt-in via front-matter `speakable: true`) marks the
+     voice-friendly summary section; override selectors with
+     `speakableSelectors: [ ... ]` (#56). */}}
+{{- if .Params.speakable -}}
+  {{- $sel := or .Params.speakableSelectors (slice ".post__content h1" ".post__content > p:first-of-type") -}}
+  {{- $schema = merge $schema (dict "speakable" (dict "@type" "SpeakableSpecification" "cssSelector" $sel)) -}}
+{{- end -}}
 <script type="application/ld+json">
 {{ $schema | jsonify | safeJS }}
 </script>
