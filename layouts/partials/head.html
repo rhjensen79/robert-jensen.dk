@@ -18,14 +18,19 @@
   {{- hugo.Generator -}}
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="{{ .Site.Params.author }}" />
-  <meta
-    name="description"
-    content="{{ if .Params.description }}
-      {{- .Params.description -}}
-    {{ else }}
-      {{- .Site.Params.description -}}
-    {{ end }}"
-  />
+  {{/* Meta description: explicit front-matter description wins; taxonomy term
+       pages get an auto-generated one; otherwise fall back to site desc (#50). */}}
+  {{- $desc := .Site.Params.description -}}
+  {{- with .Params.description -}}
+    {{- $desc = . -}}
+  {{- else -}}
+    {{- if eq .Kind "term" -}}
+      {{- $desc = printf "Posts tagged “%s” on %s — cloud native, Kubernetes, DevOps and homelab notes." .Title .Site.Title -}}
+    {{- else if eq .Kind "taxonomy" -}}
+      {{- $desc = printf "Browse posts by %s on %s." (.Title | lower) .Site.Title -}}
+    {{- end -}}
+  {{- end -}}
+  <meta name="description" content="{{ $desc | plainify | chomp }}" />
   {{ if .Params.redirectUrl }}
     <meta http-equiv="refresh" content="1; url={{ .Params.redirectUrl }}" />
   {{ end }}

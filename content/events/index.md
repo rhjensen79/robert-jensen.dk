@@ -4,6 +4,7 @@ date: 2023-01-17T11:56:57+01:00
 relatedPosts: false
 #draft: true
 thumbnail: "images/events.webp"
+description: "Talks and speaking engagements by Robert Jensen on cloud native, Kubernetes, Tanzu Application Platform, Backstage and DevOps — with slides and recordings."
 ---
 ## 2024
 
