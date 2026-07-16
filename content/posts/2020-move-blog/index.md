@@ -7,6 +7,7 @@ tags: [homelab]
 thumbnail: "images/erda-estremera-sxNt9g77PE0-unsplash.webp"
 images: ["images/erda-estremera-sxNt9g77PE0-unsplash.webp"]
 #draft: true
+noindex: true
 ---
 For the last year or so, I have seen a lot of people, talking about their move of blogs, from a traditionel CMS system, to a static site.
 

@@ -7,6 +7,7 @@ images: ["images/clay-banks-LjqARJaJotc-unsplash.webp"]
 draft: false
 aliases: [ "/2018/02/cloud-managent-experience-day.html" ]
 tags: [vmware, automation, cloud]
+noindex: true
 ---
 
 [![Cloud Management Experience Day learning event banner](https://static-1.europeanschooluxembourg2.eu/wp-content/uploads/education_button2.jpg)](https://static-1.europeanschooluxembourg2.eu/wp-content/uploads/education_button2.jpg)

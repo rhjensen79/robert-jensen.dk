@@ -8,6 +8,7 @@ images: ["images/jack-sloop-eYwn81sPkJ8-unsplash.webp"]
 description: "Transitioning from VMware Cloud Management Specialist to Modern Applications business unit, focusing on Tanzu platform and DevOps practices for developers."
 #images: 
 #- "images/ross-findon-mG28olYFgHI-unsplash.jpg"
+noindex: true
 ---
 For the last +4 years, I have had the role, of [Cloud Management Specialist](/posts/2019/vmware-cloud-management-series/) @ VMware.
 

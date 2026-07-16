@@ -31,6 +31,10 @@
     {{- end -}}
   {{- end -}}
   <meta name="description" content="{{ $desc | plainify | chomp }}" />
+  {{/* Per-page noindex for thin/obsolete content (#51). Links still followed. */}}
+  {{- if .Params.noindex }}
+    <meta name="robots" content="noindex,follow" />
+  {{- end }}
   {{ if .Params.redirectUrl }}
     <meta http-equiv="refresh" content="1; url={{ .Params.redirectUrl }}" />
   {{ end }}

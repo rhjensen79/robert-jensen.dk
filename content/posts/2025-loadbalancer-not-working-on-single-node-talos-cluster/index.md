@@ -1,6 +1,7 @@
 ---
 title: "Fix LoadBalancer Services Not Working on Single Node Talos Kubernetes Cluster"
 date: 2025-03-26T12:00:00+01:00
+lastmod: 2026-07-16T12:00:00+02:00
 tags: [kubernetes, homelab, networking]
 draft: false
 toc: true

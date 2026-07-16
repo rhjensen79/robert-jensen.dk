@@ -1,6 +1,7 @@
 ---
 title: "Fixing Cilium on Kind"
 date: 2024-01-25T12:00:00+01:00
+lastmod: 2026-07-16T12:00:00+02:00
 tags: [kubernetes, networking, docker]
 draft: false
 toc: true
