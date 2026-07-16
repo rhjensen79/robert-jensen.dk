@@ -37,6 +37,40 @@
 <script type="application/ld+json">
 {{ $schema | jsonify | safeJS }}
 </script>
+{{/* HowTo schema (opt-in via front-matter `howto`) — for step-by-step
+     tutorials. See CLAUDE.md / any tutorial post for the shape (#47). */}}
+{{- with .Params.howto -}}
+  {{- $steps := slice -}}
+  {{- range $i, $s := .steps -}}
+    {{- $steps = $steps | append (dict "@type" "HowToStep" "position" (add $i 1) "name" $s.name "text" $s.text) -}}
+  {{- end -}}
+  {{- $howto := dict
+    "@context" "https://schema.org"
+    "@type" "HowTo"
+    "name" (or .name $.Title)
+    "step" $steps
+  -}}
+  {{- with .description -}}{{ $howto = merge $howto (dict "description" .) }}{{- end -}}
+  {{- with .totalTime -}}{{ $howto = merge $howto (dict "totalTime" .) }}{{- end -}}
+<script type="application/ld+json">
+{{ $howto | jsonify | safeJS }}
+</script>
+{{- end -}}
+{{/* FAQPage schema (opt-in via front-matter `faq`: list of {q, a}) (#47). */}}
+{{- with .Params.faq -}}
+  {{- $questions := slice -}}
+  {{- range . -}}
+    {{- $questions = $questions | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+  {{- end -}}
+  {{- $faq := dict
+    "@context" "https://schema.org"
+    "@type" "FAQPage"
+    "mainEntity" $questions
+  -}}
+<script type="application/ld+json">
+{{ $faq | jsonify | safeJS }}
+</script>
+{{- end -}}
 {{- end -}}
 {{- end -}}
 
