@@ -12,4 +12,4 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /fontawesome/
 
-Sitemap: https://robert-jensen.dk/sitemap.xml
+Sitemap: {{ "sitemap.xml" | absURL }}
