@@ -53,7 +53,7 @@ I went through multiple reinstallations and troubleshooting attempts, but nothin
 
 After digging through various GitHub issues, I finally found the solution in this MetalLB issue: [https://github.com/metallb/metallb/issues/2676](https://github.com/metallb/metallb/issues/2676)
 
-It turns out that Talos (following Kubernetes best practices) automatically adds a label to control plane nodes that prevents them from being used for external load balancers:
+It turns out that Talos (following Kubernetes best practices) automatically adds a label to control plane nodes that prevents them from being used for external load balancers. This label, [`node.kubernetes.io/exclude-from-external-load-balancers`](https://kubernetes.io/docs/reference/labels-annotations-taints/#node-kubernetes-io-exclude-from-external-load-balancers), is documented in the upstream Kubernetes label reference and tells load-balancer implementations to skip the node:
 
 ```yaml
 nodeLabels:
@@ -71,7 +71,13 @@ machine:
   #   node.kubernetes.io/exclude-from-external-load-balancers: ""
 ```
 
-If you've already deployed your cluster, you'll need to update your machine configuration by commenting out this label and then applying the updated configuration.
+If you've already deployed your cluster, you'll need to update your machine configuration by commenting out this label and then applying the updated configuration with [`talosctl`](https://www.talos.dev/latest/reference/cli/#talosctl-apply-config):
+
+```bash
+talosctl apply-config --nodes <node-ip> --file controlplane.yaml
+```
+
+Talos applies the change and removes the label from the node. See the [Talos machine configuration reference](https://www.talos.dev/latest/reference/configuration/v1alpha1/config/#Config.machine) for the `machine.nodeLabels` field.
 
 After applying this change, my LoadBalancer services started working correctly.
 
@@ -84,6 +90,13 @@ However, for homelab and testing environments where resources are limited, this 
 I hope this post helps anyone encountering the same issue with single-node Talos clusters.
 
 A big thanks to [ugoogalizer](https://github.com/ugoogalizer) for providing the solution in the GitHub issue!
+
+## References
+
+- [Kubernetes label reference — `node.kubernetes.io/exclude-from-external-load-balancers`](https://kubernetes.io/docs/reference/labels-annotations-taints/#node-kubernetes-io-exclude-from-external-load-balancers)
+- [Talos machine configuration reference (`machine.nodeLabels`)](https://www.talos.dev/latest/reference/configuration/v1alpha1/config/#Config.machine)
+- [MetalLB issue #2676 — the original discussion](https://github.com/metallb/metallb/issues/2676)
+- [MetalLB documentation](https://metallb.universe.tf) · [Cilium documentation](https://docs.cilium.io)
 
 Photo by <a href="https://unsplash.com/@simmerdownjpg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jackson Simmer</a> on <a href="https://unsplash.com/photos/blue-green-and-red-plastic-clothes-pin-Vqg809B-SrE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
