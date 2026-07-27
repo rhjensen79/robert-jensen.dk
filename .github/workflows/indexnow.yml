@@ -1,0 +1,144 @@
+name: IndexNow
+
+# Notify IndexNow-participating search engines (Bing, Yandex, Seznam, Naver, Yep)
+# whenever a GitHub Pages deploy succeeds. Submits only the URLs whose <lastmod>
+# changed since the previous deploy, diffed against a cached sitemap snapshot.
+#
+# The IndexNow key is PUBLIC by design (it is served as {key}.txt at the site
+# root), so it is safe to hard-code here — there is no secret to protect.
+# Google does not participate in IndexNow.
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    # Only act on a *successful* GitHub Pages deployment.
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment_status.environment == 'github-pages'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restore previous sitemap snapshot
+        uses: actions/cache@v4
+        with:
+          path: .indexnow
+          key: indexnow-${{ github.repository }}-${{ github.run_id }}
+          restore-keys: |
+            indexnow-${{ github.repository }}-
+
+      - name: Submit changed URLs to IndexNow
+        env:
+          INDEXNOW_KEY: b0b687723d7b1c12e407c2dfb52947d1
+          SITE_URL: ${{ github.event.deployment_status.environment_url }}
+          TARGET_URL: ${{ github.event.deployment_status.target_url }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.request, urllib.error
+          import xml.etree.ElementTree as ET
+          from urllib.parse import urlparse
+
+          key = os.environ["INDEXNOW_KEY"]
+          site = (os.environ.get("SITE_URL") or os.environ.get("TARGET_URL") or "").strip()
+          if not site:
+              print("No deployment URL on the event; nothing to do.")
+              sys.exit(0)
+          if not site.endswith("/"):
+              site += "/"
+          host = urlparse(site).netloc
+
+          NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "indexnow-gha"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return r.read()
+
+          def parse_sitemap(url, seen=None):
+              """Return {loc: lastmod}, following sitemap indexes."""
+              seen = seen if seen is not None else set()
+              if url in seen:
+                  return {}
+              seen.add(url)
+              out = {}
+              try:
+                  root = ET.fromstring(fetch(url))
+              except Exception as e:
+                  print(f"Could not read {url}: {e}")
+                  return out
+              tag = root.tag.split('}')[-1]
+              if tag == "sitemapindex":
+                  for sm in root.findall(f"{NS}sitemap"):
+                      loc = sm.findtext(f"{NS}loc")
+                      if loc:
+                          out.update(parse_sitemap(loc.strip(), seen))
+              else:
+                  for u in root.findall(f"{NS}url"):
+                      loc = u.findtext(f"{NS}loc")
+                      if not loc:
+                          continue
+                      lm = u.findtext(f"{NS}lastmod") or ""
+                      out[loc.strip()] = lm.strip()
+              return out
+
+          current = parse_sitemap(site + "sitemap.xml")
+          print(f"Sitemap has {len(current)} URL(s)")
+
+          os.makedirs(".indexnow", exist_ok=True)
+          snap = ".indexnow/sitemap.json"
+          previous = {}
+          if os.path.exists(snap):
+              try:
+                  previous = json.load(open(snap))
+              except Exception:
+                  previous = {}
+
+          have_lastmod = any(current.values())
+          if not previous:
+              changed = sorted(current)
+              print("First run (no snapshot) — submitting all URLs.")
+          elif have_lastmod:
+              changed = sorted(u for u, lm in current.items() if previous.get(u) != lm)
+          else:
+              # No <lastmod> anywhere: can't tell what changed, so only submit new URLs.
+              changed = sorted(u for u in current if u not in previous)
+
+          json.dump(current, open(snap, "w"))
+
+          if not changed:
+              print("No changed URLs since last deploy.")
+              sys.exit(0)
+
+          print(f"Submitting {len(changed)} URL(s) to IndexNow:")
+          for u in changed:
+              print("  " + u)
+
+          endpoint = "https://api.indexnow.org/indexnow"
+          for i in range(0, len(changed), 10000):
+              batch = changed[i:i + 10000]
+              payload = json.dumps({
+                  "host": host,
+                  "key": key,
+                  "keyLocation": f"{site}{key}.txt",
+                  "urlList": batch,
+              }).encode()
+              req = urllib.request.Request(
+                  endpoint, data=payload,
+                  headers={"Content-Type": "application/json; charset=utf-8"},
+                  method="POST")
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      print(f"IndexNow responded {r.status} for {len(batch)} URL(s)")
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode(errors="replace")
+                  print(f"IndexNow HTTP {e.code}: {body}")
+                  if e.code >= 400:
+                      sys.exit(1)
+          PY
