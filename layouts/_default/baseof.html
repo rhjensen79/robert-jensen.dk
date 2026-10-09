@@ -69,6 +69,26 @@
           <span class="site-footer__name">{{ .Site.Params.author }}</span>
           {{ with .Site.Params.role }}<span class="site-footer__role">{{ . }}</span>{{ end }}
         </div>
+        {{/* "Apps I build" (#76): send readers to the 12f app sites.
+             Normal followed links; each link carries a data-umami-event
+             for Umami custom-event tracking. */}}
+        <div class="site-footer__apps">
+          <span class="site-footer__apps-label">Apps I build</span>
+          <ul class="site-footer__apps-list">
+            {{ range .Site.Params.apps }}
+              <li>
+                <a
+                  href="{{ .url }}"
+                  data-umami-event="app-site-click"
+                  data-umami-event-site="{{ .site }}"
+                  title="{{ .name }}"
+                >
+                  {{ .name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
         <ul class="site-footer__social">
           {{ range .Site.Params.socialIcons }}
             <li>

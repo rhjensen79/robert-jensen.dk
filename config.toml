@@ -52,6 +52,65 @@ serverURL = "umami.robert-jensen.dk"
 id = "f31c28bb-490d-4f20-8052-5e9e0c062e05"
 trackerScriptName = "script.js"
 
+# "Apps I build" footer block (#76): honest links to the 12f app sites.
+# Rendered in layouts/_default/baseof.html; each link fires the
+# app-site-click Umami event with the app host as app-site param.
+[[params.apps]]
+name = "12f.dk"
+url = "https://www.12f.dk/"
+site = "www.12f.dk"
+
+[[params.apps]]
+name = "Travel Stories"
+url = "https://travel-stories.12f.dk/"
+site = "travel-stories.12f.dk"
+
+[[params.apps]]
+name = "Home Stories"
+url = "https://home-stories.12f.dk/"
+site = "home-stories.12f.dk"
+
+[[params.apps]]
+name = "Event Stories"
+url = "https://event-stories.12f.dk/"
+site = "event-stories.12f.dk"
+
+[[params.apps]]
+name = "Bike Stories"
+url = "https://bike-stories.12f.dk/"
+site = "bike-stories.12f.dk"
+
+[[params.apps]]
+name = "NearEats"
+url = "https://neareats.12f.dk/"
+site = "neareats.12f.dk"
+
+[[params.apps]]
+name = "Wrnty"
+url = "https://wrnty.12f.dk/"
+site = "wrnty.12f.dk"
+
+[[params.apps]]
+name = "Snapdeck"
+url = "https://snapdeck.12f.dk/"
+site = "snapdeck.12f.dk"
+
+[[params.apps]]
+name = "Meugrana"
+url = "https://meugrana.12f.dk/"
+site = "meugrana.12f.dk"
+
+[[params.apps]]
+name = "RankMaster"
+url = "https://rankmaster.12f.dk/"
+site = "rankmaster.12f.dk"
+
+[[params.apps]]
+name = "Provaro"
+url = "https://provaro.12f.dk/"
+site = "provaro.12f.dk"
+
+
 ## Math settings
 [params.math]
 enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
