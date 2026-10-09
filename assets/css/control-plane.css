@@ -774,6 +774,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
 .site-footer__social a { font-size: 1.9rem; color: var(--text-faint); transition: color 0.15s var(--ease); }
 .site-footer__social a:hover { color: var(--accent); }
 .site-footer__legal { font-size: 1.4rem; color: var(--text-faint); }
+/* Apps I build (#76): small, honest link cluster in the footer. */
+.site-footer__apps { display: flex; flex-direction: column; gap: 0.6rem; }
+.site-footer__apps-label { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+.site-footer__apps-list { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; list-style: none; margin: 0; padding: 0; max-width: 52rem; }
+.site-footer__apps-list a { font-size: 1.4rem; color: var(--text-faint); transition: color 0.15s var(--ease); }
+.site-footer__apps-list a:hover { color: var(--accent); }
 
 /* ===================================================================
    RESPONSIVE
