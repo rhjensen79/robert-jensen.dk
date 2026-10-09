@@ -4,3 +4,16 @@
   src="https://{{ .Site.Params.umami.serverURL }}/{{ .Site.Params.umami.trackerScriptName | default "umami.js" }}"
   data-website-id="{{ .Site.Params.umami.id }}"
 ></script>
+<script>
+  // Production-hostname guard: the Umami tag above is removed when the page is
+  // served from a non-production host (localhost, 127.0.0.1, staging, preview
+  // domains), so local dev never reports to the robert-jensen.dk site. The
+  // inline guard runs during HTML parse, before the async tag can fire.
+  (function () {
+    var H = "www.robert-jensen.dk";
+    if (location.hostname !== H && location.hostname !== "robert-jensen.dk") {
+      var t = document.querySelector('script[data-website-id="{{ .Site.Params.umami.id }}"]');
+      if (t) t.remove();
+    }
+  })();
+</script>
