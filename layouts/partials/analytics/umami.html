@@ -16,6 +16,7 @@
       script.defer = true;
       script.src = 'https://{{ .Site.Params.umami.serverURL }}/{{ .Site.Params.umami.trackerScriptName | default "umami.js" }}';
       script.setAttribute('data-website-id', '{{ .Site.Params.umami.id }}');
+      script.setAttribute('data-performance', 'true');
       document.head.appendChild(script);
     }
   }
