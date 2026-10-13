@@ -192,8 +192,14 @@ ignoreLogs = ['warning-goldmark-raw-html']
   url = "/events"
 
   [[menu.main]]
-  name = "About"
+  name = "Apps"
   weight = 3
+  identifier = "apps"
+  url = "/apps/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 4
   identifier = "about"
   url = "/about"
 

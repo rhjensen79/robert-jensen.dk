@@ -1,0 +1,20 @@
+{{/* Returns the live 12F apps (those with an App Store URL), in the order
+     12f.dk lists them. Source of truth is 12f.dk's data/apps.yaml, fetched at
+     build time (getresource cache: 1h, see config.toml); data/apps.yaml in this
+     repo is the fallback when the fetch fails. Cached per build via partialCached. */}}
+{{- $apps := hugo.Data.apps.apps -}}
+{{- $url := "https://raw.githubusercontent.com/rhjensen79/12f.dk/main/data/apps.yaml" -}}
+{{- with try (resources.GetRemote $url) -}}
+  {{- with .Err -}}
+    {{- warnf "apps: using local fallback, fetch failed: %s" . -}}
+  {{- else with .Value -}}
+    {{- with (transform.Unmarshal .).apps -}}{{- $apps = . -}}{{- end -}}
+  {{- else -}}
+    {{- warnf "apps: using local fallback, %s returned no content" $url -}}
+  {{- end -}}
+{{- end -}}
+{{- $live := slice -}}
+{{- range $apps -}}
+  {{- if .appStoreUrl -}}{{- $live = $live | append . -}}{{- end -}}
+{{- end -}}
+{{- return $live -}}

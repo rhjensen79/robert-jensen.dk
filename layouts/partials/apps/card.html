@@ -1,0 +1,14 @@
+{{/* In-post app card. Args: app (map). */}}
+{{- $href := partial "apps/link.html" (dict "app" .app "medium" "post-card") -}}
+<aside class="app-card">
+  <a class="app-card__link" href="{{ $href }}" target="_blank" rel="noopener"
+     data-umami-event="app-card" data-umami-event-app="{{ .app.slug }}">
+    {{ partial "apps/icon.html" (dict "app" .app "size" 56 "decorative" true) }}
+    <span class="app-card__body">
+      <span class="app-card__eyebrow">{{ if .app.landing }}My app · {{ .app.category }}{{ else }}My app · App Store{{ end }}</span>
+      <span class="app-card__name">{{ .app.name }}</span>
+      <span class="app-card__tagline">{{ .app.tagline }}</span>
+    </span>
+    <span class="app-card__cta">See the app →</span>
+  </a>
+</aside>

@@ -1,0 +1,5 @@
+{{/* Outbound URL for an app: its landing page, else its App Store page.
+     Args: app (map), medium (utm_medium, e.g. "apps-page" / "post-card"). */}}
+{{- $base := .app.landing | default .app.appStoreUrl -}}
+{{- $sep := cond (strings.Contains $base "?") "&" "?" -}}
+{{- return printf "%s%sutm_source=robert-jensen.dk&utm_medium=%s&utm_campaign=%s" $base $sep .medium .app.slug -}}

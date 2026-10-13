@@ -1,0 +1,10 @@
+{{/* Cards for the apps named in a post's front matter (apps: [slug, ...]).
+     Skipped when the post places its own cards with the app shortcode. */}}
+{{- if and .Params.apps (not (.HasShortcode "app")) -}}
+  {{- $all := partialCached "apps/data.html" . -}}
+  {{- range .Params.apps -}}
+    {{- range first 1 (where $all "slug" .) -}}
+      {{- partial "apps/card.html" (dict "app" .) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

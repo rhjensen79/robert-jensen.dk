@@ -9,6 +9,7 @@ thumbnail: "images/home-stories-hero.webp"
 thumbnailAlt: "The Home Stories iOS app shown on a phone, displaying a home renovation project with budget tracking"
 images: ["images/home-stories-hero.webp"]
 categories: ["Projects"]
+apps: ["home-stories"]
 ---
 
 ## Intro
@@ -16,6 +17,8 @@ categories: ["Projects"]
 Most of my side projects start the same way: I run into a small, annoying problem and can't stop thinking about it. **Home Stories** was different. It didn't start with my problem at all - it started with my sister's camera.
 
 If you've followed this blog for a while, you know I mostly write about Kubernetes, automation and homelabs. This post is a bit of a detour. It's about a personal project, why I built it, and what happened once real people started using it. If you want to skip straight to the app, it lives at **[home-stories.12f.dk](https://home-stories.12f.dk)**.
+
+{{< app "home-stories" >}}
 
 ## It started with a "Wood Story"
 
