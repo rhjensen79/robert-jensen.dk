@@ -1,0 +1,56 @@
+{{ define "main" }}
+  {{- $apps := partialCached "apps/data.html" . -}}
+  <div class="list-header">
+    <p class="list-header__eyebrow">12F · iOS apps</p>
+    <h1 class="list-header__title">{{ .Title }}</h1>
+    <p class="list-header__count">{{ len $apps }} apps on the App Store</p>
+    <div class="apps-intro">{{ .Content }}</div>
+  </div>
+
+  <div class="apps-grid">
+    {{- range $apps -}}
+      {{- $app := . -}}
+      {{- $href := partial "apps/link.html" (dict "app" $app "medium" "apps-page") -}}
+      {{- $posts := where site.RegularPages "Params.apps" "intersect" (slice $app.slug) -}}
+      <article class="app-tile" id="{{ $app.slug }}">
+        <a class="app-tile__main" href="{{ $href }}" target="_blank" rel="noopener"
+           data-umami-event="apps-page" data-umami-event-app="{{ $app.slug }}">
+          {{ partial "apps/icon.html" (dict "app" $app "size" 56) }}
+          <span class="app-tile__body">
+            <span class="app-tile__cat">{{ $app.category }}</span>
+            <span class="app-tile__name">{{ $app.name }}</span>
+            <span class="app-tile__tagline">{{ $app.tagline }}</span>
+          </span>
+        </a>
+        <div class="app-tile__links">
+          {{- if $app.landing -}}
+            <a href="{{ $href }}" target="_blank" rel="noopener">Website</a>
+          {{- end -}}
+          <a href="{{ $app.appStoreUrl }}" target="_blank" rel="noopener"
+             data-umami-event="apps-page-store" data-umami-event-app="{{ $app.slug }}">App Store</a>
+          {{- range first 1 $posts -}}
+            <a class="app-tile__story" href="{{ .RelPermalink }}">Read the story →</a>
+          {{- end -}}
+        </div>
+      </article>
+    {{- end -}}
+  </div>
+
+  {{- /* ItemList of SoftwareApplication for search engines. */ -}}
+  {{- $items := slice -}}
+  {{- range $i, $a := $apps -}}
+    {{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" (add $i 1)
+      "item" (dict
+        "@type" "SoftwareApplication"
+        "name" $a.name
+        "description" $a.tagline
+        "applicationCategory" $a.category
+        "operatingSystem" "iOS"
+        "url" ($a.landing | default $a.appStoreUrl)
+        "sameAs" $a.appStoreUrl
+        "author" (dict "@type" "Organization" "name" "12F ApS" "url" "https://www.12f.dk"))) -}}
+  {{- end -}}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "name" .Title "itemListElement" $items | jsonify | safeJS }}</script>
+{{ end }}

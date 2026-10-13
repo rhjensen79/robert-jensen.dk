@@ -1,0 +1,147 @@
+# FALLBACK COPY of rhjensen79/12f.dk/data/apps.yaml.
+# The build fetches the live file from GitHub (layouts/partials/apps/data.html)
+# and only uses this copy if that fetch fails. Refresh it now and then with:
+#   curl -s https://raw.githubusercontent.com/rhjensen79/12f.dk/main/data/apps.yaml > data/apps.yaml
+
+# App showcase data — drives /apps/
+# appStoreId values verified against the iTunes lookup API (artistId 1786807724).
+# icon files live in static/images/apps/<slug>.png (256px, self-hosted).
+
+apps:
+  - slug: home-stories
+    name: "Home Stories"
+    tagline: "Plan, track and cost every renovation project — from a kitchen remodel to the whole house."
+    category: "Productivity"
+    appStoreId: "6754754960"
+    appStoreUrl: "https://apps.apple.com/app/id6754754960"
+    landing: "https://home-stories.12f.dk"
+    privacy: "/home-stories/privacy-policy/"
+
+  - slug: travel-stories
+    name: "Travel Stories"
+    tagline: "An all-in-one trip planner: itineraries, packing lists and countdowns to every adventure."
+    category: "Travel"
+    appStoreId: "6756801168"
+    appStoreUrl: "https://apps.apple.com/app/id6756801168"
+    landing: "https://travel-stories.12f.dk"
+    tool: "https://travel-stories.12f.dk/packing-list/"
+    toolLabel: "Packing list"
+    privacy: "/travel-stories/privacy-policy/"
+
+  - slug: event-stories
+    name: "Event Stories"
+    tagline: "Weddings, birthdays and parties — guests, budget and to-dos in one shared plan."
+    category: "Lifestyle"
+    appStoreId: "6755695151"
+    appStoreUrl: "https://apps.apple.com/app/id6755695151"
+    landing: "https://event-stories.12f.dk"
+    privacy: "/event-stories/privacy-policy/"
+
+  - slug: dog-stories
+    name: "Dog Stories"
+    tagline: "Your dog's health, costs, schedule and memories — private, on your device."
+    category: "Lifestyle"
+    appStoreId: "6758636869"
+    appStoreUrl: "https://apps.apple.com/app/id6758636869"
+    privacy: "/dog-stories/privacy/"
+    support: "/dog-stories/support/"
+
+  - slug: bike-stories
+    name: "Bike Stories"
+    tagline: "The logbook for people who love their bikes — maintenance, parts and true cost of ownership."
+    category: "Health & Fitness"
+    appStoreId: "6783374730"
+    appStoreUrl: "https://apps.apple.com/app/id6783374730"
+    landing: "https://bike-stories.12f.dk"
+    privacy: "/bike-stories/privacy/"
+    support: "/bike-stories/support/"
+
+  - slug: provaro
+    name: "Provaro"
+    tagline: "Photograph the job, mark up what matters, hand over a branded PDF report before you pack up."
+    category: "Business"
+    appStoreId: "6800068309"
+    appStoreUrl: "https://apps.apple.com/app/id6800068309"
+    landing: "https://provaro.12f.dk"
+    privacy: "/provaro/privacy-policy/"
+
+  - slug: snapdeck
+    name: "SnapDeck AI"
+    tagline: "Snap your notes and get revision-ready flashcards in seconds — entirely on-device."
+    category: "Education"
+    appStoreId: "6759596002"
+    appStoreUrl: "https://apps.apple.com/app/id6759596002"
+    landing: "https://snapdeck.12f.dk"
+    privacy: "/snapdeck/privacy-policy/"
+
+  - slug: meugrana
+    name: "MeuGrana"
+    tagline: "See what your credit card bill will be next month — installment tracking built for Brazil."
+    category: "Finance"
+    appStoreId: "6759177555"
+    appStoreUrl: "https://apps.apple.com/app/id6759177555"
+    landing: "https://meugrana.12f.dk"
+    privacy: "/meugrana/privacy-policy/"
+
+  - slug: wrnty
+    name: "Wrnty"
+    tagline: "Every warranty and receipt in one place, with alerts before they expire. One-time purchase."
+    category: "Productivity"
+    appStoreId: "6747742961"
+    appStoreUrl: "https://apps.apple.com/app/id6747742961"
+    privacy: "/wrnty/privacy-policy/"
+
+  - slug: wodsnap
+    name: "WOD Snap"
+    tagline: "Photograph the gym whiteboard and your CrossFit workout is logged. No typing."
+    category: "Health & Fitness"
+    appStoreId: "6751361699"
+    appStoreUrl: "https://apps.apple.com/app/id6751361699"
+    privacy: "/wodsnap/privacy-policy/"
+
+  - slug: neareats
+    name: "NearEats"
+    tagline: "Find good restaurants and cafés near you, instantly — no account, built on open map data."
+    category: "Food & Drink"
+    appStoreId: "6754101006"
+    appStoreUrl: "https://apps.apple.com/app/id6754101006"
+    landing: "https://neareats.12f.dk"
+    privacy: "/neareats/privacy-policy/"
+
+  - slug: sonicsnap
+    name: "SonicSnap"
+    tagline: "First words through play — sounds, animations and narration for 1–2 year olds."
+    category: "Education"
+    appStoreId: "6739737364"
+    appStoreUrl: "https://apps.apple.com/app/id6739737364"
+    privacy: "/sonicsnap/privacy-policy/"
+
+  - slug: ellen
+    name: "Ellen"
+    tagline: "Classic marble solitaire, beautifully crafted in wood. Simple to learn, hard to master."
+    category: "Games"
+    appStoreId: "6760114432"
+    appStoreUrl: "https://apps.apple.com/app/id6760114432"
+    privacy: "/ellen/privacy-policy/"
+
+  - slug: rankmaster
+    name: "RankMaster"
+    tagline: "Guess where things rank — closer is better. A daily round of world facts, scored on how near you land."
+    category: "Games"
+    appStoreId: "6810373394"
+    appStoreUrl: "https://apps.apple.com/app/id6810373394"
+    landing: "https://rankmaster.12f.dk"
+    support: "https://rankmaster.12f.dk/support.html"
+    privacy: "https://rankmaster.12f.dk/privacy-policy.html"
+
+  # Pre-launch: no App Store id yet. The card shows "Coming soon" and the app is
+  # left out of the "apps live" counts until appStoreUrl is set. At launch, add
+  # appStoreId + appStoreUrl and delete comingSoon.
+  # Placeholder icon (social profile icon) until the App Store icon ships.
+  - slug: after-stories
+    name: "After Stories"
+    tagline: "Plan your group's trip, party or night out together — vote on the plan, share photos in one stream, wake up to the story."
+    category: "Social Networking"
+    comingSoon: true
+    landing: "https://after-stories.com"
+    privacy: "https://after-stories.com/privacy/"

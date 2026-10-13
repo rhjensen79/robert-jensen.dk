@@ -1,0 +1,21 @@
+{{/* Self-hosted, resized WebP app icon. Args: app (map), size (px, rendered),
+     alt (optional), decorative (bool). Fetches the 256px PNG from 12f.dk and
+     serves a 2x WebP from this site; hotlinks the PNG if the fetch fails.
+     decorative=true renders a background-image span instead of an <img>, so
+     theme's medium-zoom (binds every img in .post__content) leaves it alone. */}}
+{{- $size := .size | default 48 -}}
+{{- $src := printf "https://www.12f.dk/images/apps/%s.png" .app.slug -}}
+{{- $out := $src -}}
+{{- with try (resources.GetRemote $src) -}}
+  {{- with .Value -}}
+    {{- $px := mul $size 2 -}}
+    {{- $img := .Resize (printf "%dx%d webp q85" $px $px) -}}
+    {{- $out = ($img | resources.Copy (printf "images/apps/%s-%d.webp" $.app.slug $px)).RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- if .decorative -}}
+<span class="app-icon" aria-hidden="true" style="width:{{ $size }}px;height:{{ $size }}px;background-image:url({{ $out }})"></span>
+{{- else -}}
+<img class="app-icon" src="{{ $out }}" alt="{{ .alt | default (printf "%s app icon" .app.name) }}"
+  width="{{ $size }}" height="{{ $size }}" loading="lazy" decoding="async">
+{{- end -}}

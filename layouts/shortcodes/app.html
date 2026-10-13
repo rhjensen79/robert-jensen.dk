@@ -1,0 +1,8 @@
+{{/* {{< app "home-stories" >}} — app card anywhere in a post.
+     A post that uses this shortcode skips the automatic front-matter card. */}}
+{{- $slug := .Get 0 -}}
+{{- with where (partialCached "apps/data.html" .) "slug" $slug -}}
+  {{- partial "apps/card.html" (dict "app" (index . 0)) -}}
+{{- else -}}
+  {{- warnf "app shortcode: no live app %q in %s" $slug $.Page.File.Path -}}
+{{- end -}}

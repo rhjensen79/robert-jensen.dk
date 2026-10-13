@@ -782,17 +782,74 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); }
 .site-footer__apps-list a:hover { color: var(--accent); }
 
 /* ===================================================================
+   APPS — /apps/ page (layouts/apps/list.html) and in-post app card
+   (partials/apps/card.html, shortcode "app"). Data: partials/apps/data.html
+   =================================================================== */
+.app-icon {
+  display: block; flex-shrink: 0; border-radius: 22.5%;
+  border: 1px solid var(--border); background-size: cover; background-position: center;
+}
+.post__content img.app-icon { border-radius: 22.5%; }
+
+.apps-intro p { color: var(--text-dim); font-size: 1.7rem; max-width: 64ch; margin: 1.2rem 0 0; }
+.apps-intro a { color: var(--accent) !important; }
+.apps-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem; }
+.app-tile {
+  display: flex; flex-direction: column; min-width: 0;
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+  box-shadow: var(--shadow-sm); transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease), transform 0.15s var(--ease);
+  scroll-margin-top: 9rem;
+}
+.app-tile:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-2px); }
+.app-tile__main { display: flex; gap: 1.4rem; align-items: flex-start; padding: 1.8rem 1.8rem 1.2rem; flex: 1; }
+.app-tile__body { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.app-tile__name { font-family: var(--font-display); font-weight: 600; font-size: 1.8rem; line-height: 1.25; }
+.app-tile__cat { font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+.app-tile__tagline { font-size: 1.45rem; line-height: 1.5; color: var(--text-dim); }
+.app-tile__links {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; padding: 1.1rem 1.8rem;
+  border-top: 1px solid var(--border); font-size: 1.35rem; font-weight: 500;
+}
+.app-tile__story { margin-left: auto; }
+.app-tile__main { color: var(--text) !important; }
+.app-tile__main:hover .app-tile__name { color: var(--accent); }
+.app-tile__links a { color: var(--text-dim) !important; }
+.app-tile__links a:hover, .app-tile__links a.app-tile__story { color: var(--accent) !important; }
+
+.app-card { margin: 2.8rem 0; }
+.post__content .app-card__link {
+  display: grid; grid-template-columns: 5.6rem minmax(0, 1fr) auto; gap: 1.6rem; align-items: center;
+  padding: 1.8rem 2rem; border-radius: var(--radius); background: var(--accent-soft);
+  border: 1px solid transparent; color: var(--text) !important; text-decoration: none;
+  transition: border-color 0.15s var(--ease), transform 0.15s var(--ease);
+}
+.post__content .app-card__link:hover { border-color: var(--accent); transform: translateY(-1px); color: var(--text) !important; }
+.app-card__body { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.app-card__eyebrow { font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.app-card__name { font-family: var(--font-display); font-weight: 650; font-size: 1.9rem; line-height: 1.25; }
+.app-card__tagline { font-size: 1.5rem; line-height: 1.5; color: var(--text-dim); }
+.app-card__cta {
+  font-size: 1.4rem; font-weight: 600; white-space: nowrap; padding: 0.9rem 1.6rem; border-radius: 100px;
+  background: var(--accent); color: var(--accent-contrast);
+}
+.post__content .app-card__link:hover .app-card__cta { background: var(--accent-strong); }
+@media (max-width: 560px) {
+  .post__content .app-card__link { grid-template-columns: 5.6rem minmax(0, 1fr); }
+  .app-card__cta { grid-column: 1 / -1; text-align: center; }
+}
+
+/* ===================================================================
    RESPONSIVE
    =================================================================== */
 @media (max-width: 860px) {
-  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid, .apps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { grid-template-columns: 1fr; }
   .hero__avatar { order: -1; width: 9.6rem; height: 9.6rem; border-radius: 20px; }
   .featured__link { grid-template-columns: 1fr; }
   .featured__body { padding: 0.4rem; }
 }
 @media (max-width: 560px) {
-  .card-grid { grid-template-columns: 1fr; }
+  .card-grid, .apps-grid { grid-template-columns: 1fr; }
   /* mobile nav */
   .navbar-burger {
     display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
