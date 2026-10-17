@@ -1,5 +1,6 @@
 ---
 title: "Keeping .env files in sync using Bitwarden"
+serpTitle: ".env Files in Sync with Bitwarden"
 date: 2021-03-19T10:48:02+01:00
 tags: [security, automation]
 draft: false

@@ -7,7 +7,7 @@ images: ["images/jack-sloop-eYwn81sPkJ8-unsplash.webp"]
 #image: 
 #- "images/jack-sloop-eYwn81sPkJ8-unsplash.jpg"
 draft: false
-description: "How to level up as a vSphere admin, is about the VMUG summer presentation, around this topic, on what tools to use, when you are a vSphere admin, to be better at your job"
+description: "My VMUG summer presentation on how to level up as a vSphere admin: the tools to use and habits to build a better admin career."
 ---
 For the [Danish VMUG summermeeting](https://sommer2021.eventbrite.com/), on the 2 June 2021, I had the pleasure of presenting, "How to level up, as a vSphere admin".
 

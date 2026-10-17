@@ -1,7 +1,7 @@
 ---
 title: 'Data collection Catalog Item in VRA'
 date: 2018-01-04T12:49:00.001+01:00
-description: "Automate vRealize Automation data collection by turning the built-in vRO workflow into a self-service XaaS catalog item, saving clicks on every endpoint scan."
+description: "Automate vRealize Automation data collection by turning the built-in vRO workflow into a self-service XaaS catalog item, saving clicks on every scan."
 thumbnail: "images/yancy-min-842ofHC6MaI-unsplash.webp"
 images: ["images/yancy-min-842ofHC6MaI-unsplash.webp"]
 draft: false

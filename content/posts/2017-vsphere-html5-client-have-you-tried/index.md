@@ -1,7 +1,8 @@
 ---
 title: "vSphere HTML5 Client - Have You Tried the Fling?"
+serpTitle: "vSphere HTML5 Client: Try the Fling"
 date: 2017-12-27T19:49:00.001+01:00
-description: "The vSphere HTML5 client keeps improving with weekly updates. Robert shares why he switched from the C# and Flash web clients and how to try the HTML5 Fling."
+description: "The vSphere HTML5 client keeps improving with weekly updates. Robert shares why he switched from the C# and Flash web clients and how to get the Fling."
 thumbnail: "images/michael-dziedzic--Rc6usOigMk-unsplash.webp"
 images: ["images/michael-dziedzic--Rc6usOigMk-unsplash.webp"]
 draft: false

@@ -8,7 +8,7 @@ toc: true
 thumbnail: "images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"
 images: ["images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "Troubleshooting and solving Cilium networking issues on Apple Silicon M1 MacBooks by replacing Docker Desktop with Colima for local Kubernetes Kind clusters"
+description: "Troubleshooting and solving Cilium networking issues on Apple Silicon M1 MacBooks by replacing Docker Desktop with Colima for local Kind clusters."
 slug: "fixing-cilium-cni-kind-kubernetes-clusters"
 ---
 ## Update

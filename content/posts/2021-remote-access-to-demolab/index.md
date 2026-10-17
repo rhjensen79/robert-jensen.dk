@@ -1,5 +1,6 @@
 ---
 title: "Remote Access to Demolab using Apache Guacamole"
+serpTitle: "Remote Access to Demolab with Guacamole"
 date: 2021-01-19T09:35:55+01:00
 tags: [homelab, docker, traefik, networking]
 draft: false

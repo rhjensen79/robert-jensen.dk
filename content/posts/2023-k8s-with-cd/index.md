@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes with Continuous Delivery included"
+serpTitle: "Kubernetes with Continuous Delivery"
 date: 2023-02-16T12:00:00+01:00
 tags: [kubernetes, ci-cd]
 draft: false

@@ -75,10 +75,10 @@
         <h2 class="picker__head" id="picker-head">Browse by topic</h2>
         <p class="picker__text">Pick a topic to filter the archive and see the years I wrote about it.</p>
         <div class="picker__topics" role="group" aria-label="Topics">
-          <a class="topic is-on" href="/posts/" data-topic="" aria-pressed="true">All <span>{{ len $pages }}</span></a>
+          <a class="topic is-on" href="/posts/" data-topic="">All <span>{{ len $pages }}</span></a>
           {{ range $t := $topics }}
             {{ with index site.Taxonomies.tags $t }}
-              <a class="topic" href="{{ .Page.RelPermalink }}" data-topic="{{ $t }}" aria-pressed="false">{{ partial "tag-name.html" $t }} <span>{{ .Count }}</span></a>
+              <a class="topic" href="{{ .Page.RelPermalink }}" data-topic="{{ $t }}">{{ partial "tag-name.html" $t }} <span>{{ .Count }}</span></a>
             {{ end }}
           {{ end }}
         </div>

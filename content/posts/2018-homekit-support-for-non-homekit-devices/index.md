@@ -1,7 +1,7 @@
 ---
 title: 'Homekit support for non homekit devices'
 date: 2018-11-12T08:58:00.001+01:00
-description: "Add HomeKit support to non-HomeKit devices with cheap Sonoff switches and RavenCore firmware, replacing an OpenHAB and MQTT bridge with direct HomeKit control."
+description: "Add HomeKit support to non-HomeKit devices with cheap Sonoff switches and RavenCore firmware, replacing an OpenHAB/MQTT bridge with direct HomeKit control."
 thumbnail: "images/jackson-simmer-Vqg809B-SrE-unsplash.webp"
 images: ["images/jackson-simmer-Vqg809B-SrE-unsplash.webp"]
 draft: false
