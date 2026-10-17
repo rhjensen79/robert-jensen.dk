@@ -6,13 +6,13 @@ thumbnail: "images/thom-holmes-k-xKzowQRn8-unsplash.webp"
 ---
 Welcome to my blog.
 
-I'm Robert Jensen. I live in Denmark and work with Cloud Native and AI. I'm not a big writer, but from time to time I write about what I'm working on, and what I think others could find useful: Kubernetes, containers, automation, AI and the homelab. Now and then I wander off and write about other things as well :-)
+I'm Robert Jensen. I live in Denmark and focus on Cloud Native and AI. I'm not a big writer, but from time to time I write about what I'm working on, and what I think others could find useful: Kubernetes, containers, automation, AI and the homelab. Now and then I wander off and write about other things as well :-)
 
 Everything I build ends up on [GitHub](https://github.com/rhjensen79), so follow me there if you want to see what I'm doing. I'm also happy to connect on LinkedIn or Bluesky.
 
 ## Work
 
-Since August 2026 I work at **Everpure** as a Consulting Field Solutions Architect, based in Copenhagen. My focus is Cloud Native and AI.
+Since August 2026 I work at **Everpure** as a Consulting Field Solutions Architect, based in Copenhagen, focusing on Cloud Native and AI.
 
 I also own [12F](https://www.12f.dk), my own company, where I design and build applications and SaaS solutions, including a family of [small iOS apps](/apps/).
 
