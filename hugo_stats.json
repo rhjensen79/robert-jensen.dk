@@ -238,6 +238,7 @@
       "deliver-tanzu-kubernetes-to-your-users-as-a-vmware-vsphere-administrator",
       "deploy-cloudflare-tunnel-container",
       "deployment",
+      "disclaimer",
       "disclamer---this-is-probably-not-best-practice-to-keep-all-your-secrets-in-env-files-etc-so-keep-that-in-mind-if-you-are-using-this-guide",
       "dns-setup",
       "docker",

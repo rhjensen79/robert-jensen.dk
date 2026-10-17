@@ -16,13 +16,13 @@ pygmentsCodefencesGuessSyntax = true
 [params]
 title = "Robert-Jensen.dk"
 author = "Robert Jensen"
-description = "A place for my random ramblings. Mostly about VMware, Cloud Native, DevOps etc. but not limited to that :-) "
+description = "Robert Jensen's personal blog about Cloud Native, Kubernetes, AI, DevOps and the homelab. Opinions are my own."
 profilePicture = "/images/profile.webp"
 keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Cloud Native, Devops, Kubernetes"
 favicon = "favicons/"
 customCss = ["css/site.css"]
 customJs = ["js/web-vitals-dashboard.js", "js/site.js"]
-role = "Cloud Native · DevOps"
+role = "Cloud Native · AI"
 handle = "robert@12f"
 mainSections = ["posts"]
 images = ["images/thom-holmes-k-xKzowQRn8-unsplash.jpg"]
