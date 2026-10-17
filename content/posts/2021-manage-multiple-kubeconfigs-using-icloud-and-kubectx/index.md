@@ -1,5 +1,6 @@
 ---
 title: "Manage Multiple Kubeconfigs Using iCloud and Kubectx"
+serpTitle: "Manage Kubeconfigs with iCloud & Kubectx"
 date: 2021-11-04T13:37:46+01:00
 tags: [kubernetes]
 draft: false

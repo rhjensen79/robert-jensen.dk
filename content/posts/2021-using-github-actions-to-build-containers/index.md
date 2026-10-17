@@ -1,5 +1,6 @@
 ---
 title: "Using Github Actions to Build Containers (and host them)"
+serpTitle: "Build Containers with GitHub Actions"
 date: 2021-09-09T13:20:37+02:00
 tags: [docker, github-actions, ci-cd]
 draft: false

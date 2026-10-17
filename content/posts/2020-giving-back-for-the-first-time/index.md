@@ -3,7 +3,7 @@ title: "Giving Back for the First Time"
 date: 2020-12-12T15:18:34Z
 tags: [homelab]
 draft: false
-description: "My first experience contributing to open source projects on GitHub. Learn how easy it can be to contribute to projects you use daily, starting with simple translations and documentation improvements."
+description: "My first open source contributions on GitHub, and how easy it is to give back to projects you use daily, starting with translations and docs fixes."
 thumbnail: "images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"
 images: ["images/joshua-aragon-EaB4Ml7C7fE-unsplash.webp"]
 ---

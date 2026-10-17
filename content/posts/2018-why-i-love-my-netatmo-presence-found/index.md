@@ -1,5 +1,6 @@
 ---
 title: 'Why i love my Netatmo Presence - Found potential thief'
+serpTitle: "Netatmo Presence Spotted a Thief"
 date: 2018-01-19T13:57:00.000+01:00
 description: "Netatmo Presence uses object detection to spot people, cars and animals, alerting the author to a potential bike thief and triggering HomeKit security lights."
 thumbnail: "images/top_picture.webp"

@@ -24,7 +24,7 @@
     <article class="feature">
       <a class="feature__link" href="{{ $latest.RelPermalink }}">
         <span class="feature__pic">
-          {{ partial "pic.html" (dict "src" $latest.Params.thumbnail "page" $latest "w" 900 "ratio" "3:2" "alt" "" "eager" true "sizes" "(max-width: 760px) 100vw, 56vw") }}
+          {{ partial "pic.html" (dict "src" $latest.Params.thumbnail "page" $latest "w" 900 "ratio" "3:2" "alt" ($latest.Params.thumbnailAlt | default $latest.Title) "eager" true "sizes" "(max-width: 760px) 100vw, 56vw") }}
         </span>
         <span class="feature__text">
           <span class="feature__title">{{ $latest.Title }}</span>

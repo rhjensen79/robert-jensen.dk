@@ -1,5 +1,6 @@
 ---
 title: "Adding extra vlan/portgroup to a Tanzu TKGS enviroment"
+serpTitle: "Add a VLAN/Portgroup to Tanzu TKGS"
 date: 2024-04-22T12:00:00+01:00
 tags: [vmware, vsphere, tanzu, kubernetes, networking]
 draft: false
@@ -7,7 +8,7 @@ toc: true
 thumbnail: "images/jordan-harrison-40XgDxBfYXM-unsplash.webp"
 images: ["images/jordan-harrison-40XgDxBfYXM-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "Are you struggling to add more than one network to your vSphere with Tanzu environment using the AVI Loadbalancer? This quick guide shows you how to overcome this limitation and use multiple networks on your workload namespaces. Learn how to configure your supervisor cluster, add new port groups, and define network ranges for each network. Perfect for IT professionals looking to optimize and secure their virtual infrastructure."
+description: "Add more than one network to vSphere with Tanzu using the AVI load balancer: configure the supervisor cluster, add port groups and set network ranges."
 ---
 ## The problem
 

@@ -19,7 +19,7 @@
 
     {{ with .Params.thumbnail }}
       <figure class="post-hero">
-        {{ partial "pic.html" (dict "src" . "page" $ "w" 1600 "ratio" "12:5" "alt" ($.Params.thumbnailAlt | default "") "eager" true "sizes" "100vw") }}
+        {{ partial "pic.html" (dict "src" . "page" $ "w" 1600 "ratio" "12:5" "alt" ($.Params.thumbnailAlt | default $.Title) "eager" true "sizes" "100vw") }}
       </figure>
     {{ end }}
 

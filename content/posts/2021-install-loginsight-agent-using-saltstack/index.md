@@ -5,7 +5,7 @@ tags: [vmware, salt, automation]
 thumbnail: "images/brett-jordan-YuQEEaNOgBA-unsplash.webp"
 images: ["images/brett-jordan-YuQEEaNOgBA-unsplash.webp"]
 draft: false
-description: "How to use SaltStack to deploy and install LogInsight on to both Linux and windows, and to maintain the initial configuration, and then switch the control over to the LogInsihgt server, using Grains"
+description: "Use SaltStack and Grains to install the Log Insight agent on Linux and Windows, manage its initial config, then hand control to the Log Insight server."
 ---
 For a POC i'm preparing for, I had the chance to look at bit more at [SaltStack](https://www.vmware.com/products/vrealize-automation/saltstack-config.html).
 
