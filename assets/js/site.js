@@ -77,7 +77,6 @@
         ev.preventDefault();
         buttons.forEach(function (x) {
           x.classList.toggle('is-on', x === b);
-          x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
         });
         var label = b.childNodes[0].textContent.trim();
         apply(b.getAttribute('data-topic'), label);

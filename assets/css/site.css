@@ -236,7 +236,7 @@ p { margin: 0; }
 .pager__n, .pager__step { display: inline-grid; place-items: center; min-width: 46px; min-height: 46px; padding: 0 12px; background: var(--surface); text-decoration: none; font-weight: 600; font-size: var(--step-small); font-variant-numeric: tabular-nums; transition: transform 0.2s var(--ease); }
 .pager a:hover { transform: translateY(-2px); color: var(--accent-text); }
 .pager__n.is-on { background: var(--ink); color: var(--bg); }
-.pager__step.is-off { opacity: 0.4; }
+.pager__step.is-off { color: var(--muted); }
 
 /* ---------- Apps page ---------- */
 .apps-intro p { max-width: 46ch; }

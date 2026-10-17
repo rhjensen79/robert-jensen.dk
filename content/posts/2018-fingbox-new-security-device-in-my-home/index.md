@@ -1,7 +1,8 @@
 ---
 title: 'Fingbox - New security device in my home'
+serpTitle: "Fingbox: New Security Device at Home"
 date: 2018-02-12T14:54:00.000+01:00
-description: "Fingbox is a network security appliance that monitors your home network 24/7, checking for open ports, new devices and internet speed, with instant push alerts."
+description: "Fingbox is a network security appliance that monitors your home network 24/7, checking open ports, new devices and internet speed, with push alerts."
 thumbnail: "images/jordan-harrison-40XgDxBfYXM-unsplash.webp"
 images: ["images/jordan-harrison-40XgDxBfYXM-unsplash.webp"]
 draft: false

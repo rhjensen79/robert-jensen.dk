@@ -7,7 +7,7 @@ toc: true
 thumbnail: "images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.webp"
 images: ["images/amos-from-stockphotos-com-4N8oM5L7hyM-unsplash.webp"]
 #image: "images/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg"
-description: "Troubleshoot and solve static file preservation issues in Cloud Native Buildpacks. Step-by-step guide for handling static assets in containerized Golang applications."
+description: "Troubleshoot static file preservation in Cloud Native Buildpacks, with step-by-step handling of static assets in containerized Golang apps."
 ---
 ## Intro
 

@@ -1,5 +1,6 @@
 ---
 title: "Tanzu Application Platform Accelerator with YTT"
+serpTitle: "Tanzu Application Platform + YTT"
 date: 2022-04-11T08:18:44+02:00
 tags: [tanzu, kubernetes]
 draft: false

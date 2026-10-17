@@ -1,5 +1,6 @@
 ---
 title: 'vRealize Business - Do you know your cost ? '
+serpTitle: "vRealize Business: Know Your Cost"
 date: 2018-01-29T09:05:00.000+01:00
 description: "vRealize Business reveals the true cost of your datacenter and compares it against public cloud pricing, helping IT teams inform cloud migration decisions."
 thumbnail: "images/jonathan-hanna-xgdsC0tRsPc-unsplash.webp"
