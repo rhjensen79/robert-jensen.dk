@@ -1,14 +1,13 @@
 {{ define "main" }}
   <div class="search-page">
-    <header class="search-page__header">
-      <p class="search-page__eyebrow">Search</p>
-      <h1 class="search-page__title">{{ .Title | default "Search" }}</h1>
-      {{ with .Content }}{{ . }}{{ else }}
-        <p class="search-page__lead">Search {{ len (where .Site.RegularPages "Section" "posts") }} posts of troubleshooting notes, guides and write-ups.</p>
+    <header class="head">
+      <h1 class="head__title" data-rise>{{ .Title | default "Search" }}</h1>
+      {{ with .Content }}<div class="head__note">{{ . }}</div>{{ else }}
+        <p class="head__note">Search {{ len (where .Site.RegularPages "Section" "posts") }} posts of troubleshooting notes, guides and write-ups.</p>
       {{ end }}
     </header>
 
-    <div id="search"></div>
+    <div id="search" class="search"></div>
 
     <p class="search-page__empty" id="search-unavailable">
       Search index is being built. On a freshly deployed site it appears within a minute; during local

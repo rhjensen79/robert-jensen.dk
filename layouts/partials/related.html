@@ -2,11 +2,15 @@
   {{ $related := .Site.RegularPages.Related . }}
   {{ with $related }}
     <section class="related">
-      <h2>{{- T "related_posts" -}}</h2>
+      <h2 class="related__head">{{- T "related_posts" -}}</h2>
       <ul class="related__list">
         {{ range first 3 . }}
-          <li class="related__list-item">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <li data-rise>
+            <a href="{{ .RelPermalink }}">
+              <span class="related__pic">{{ partial "pic.html" (dict "src" .Params.thumbnail "page" . "w" 480 "ratio" "3:2" "alt" "" "sizes" "(max-width: 760px) 100vw, 30vw") }}</span>
+              <span class="related__title">{{ .Title }}</span>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
+            </a>
           </li>
         {{ end }}
       </ul>

@@ -20,8 +20,8 @@ description = "A place for my random ramblings. Mostly about VMware, Cloud Nativ
 profilePicture = "/images/profile.webp"
 keywords = "VMware, Blog, robert-jensen, Automation, DevOps, Python, golang, Cloud Native, Devops, Kubernetes"
 favicon = "favicons/"
-customCss = ["css/fontawesome-minimal.css", "css/control-plane.css"]
-customJs = ["js/web-vitals-dashboard.js"]
+customCss = ["css/site.css"]
+customJs = ["js/web-vitals-dashboard.js", "js/site.js"]
 role = "Cloud Native · DevOps"
 handle = "robert@12f"
 mainSections = ["posts"]
@@ -193,11 +193,9 @@ ignoreLogs = ['warning-goldmark-raw-html']
   
   [minify.tdewolff]
     [minify.tdewolff.css]
-      keepCSS2 = true
       precision = 0
     [minify.tdewolff.html]
       keepComments = false
-      keepConditionalComments = true
       keepDefaultAttrVals = true
       keepDocumentTags = true
       keepEndTags = true
@@ -268,3 +266,26 @@ ignoreLogs = ['warning-goldmark-raw-html']
   [[module.imports]]
     path = "github.com/lxndrblz/anatole"
     disable = false
+  # Default project mounts, plus static/images mounted into assets so
+  # templates can resize post thumbnails with Hugo Pipes (partials/pic.html).
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"

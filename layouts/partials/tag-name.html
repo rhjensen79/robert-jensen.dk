@@ -1,0 +1,8 @@
+{{/* Display name for a tag key ("vmware" → "VMware"). Arg: the key. */}}
+{{- $names := dict
+  "ai" "AI" "appwrite" "Appwrite" "ci-cd" "CI/CD" "devcontainers" "Dev containers"
+  "github" "GitHub" "github-actions" "GitHub Actions" "ios" "iOS" "vmware" "VMware"
+  "vsphere" "vSphere" "home-automation" "Home automation" "home-renovation" "Home renovation"
+  "side-project" "Side projects" -}}
+{{- $k := lower . -}}
+{{- return (index $names $k | default (humanize $k)) -}}

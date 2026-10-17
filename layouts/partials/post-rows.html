@@ -1,0 +1,17 @@
+{{/* Post list as rows: picture, date, title, summary. Arg: pages. */}}
+<ol class="prows">
+  {{ range $i, $p := .pages }}
+    <li class="prow" data-rise>
+      <a class="prow__link" href="{{ .RelPermalink }}">
+        <span class="prow__pic">
+          {{ partial "pic.html" (dict "src" .Params.thumbnail "page" . "w" 560 "ratio" "3:2" "alt" "" "eager" (lt $i 2) "sizes" "(max-width: 760px) 100vw, 36vw") }}
+        </span>
+        <span class="prow__text">
+          <span class="prow__title">{{ .Title }}</span>
+          <span class="prow__sum">{{ .Summary | plainify | htmlUnescape | replaceRE "^\\s*Intro\\s+" "" | truncate 170 }}</span>
+          <time class="prow__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}, {{ .ReadingTime }} min read</time>
+        </span>
+      </a>
+    </li>
+  {{ end }}
+</ol>

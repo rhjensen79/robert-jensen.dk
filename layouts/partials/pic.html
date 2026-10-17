@@ -1,0 +1,54 @@
+{{/* Resized WebP <img> with srcset. Args:
+     src    — path under static/ or assets/ ("images/x.webp", "/images/x.webp")
+     w      — largest rendered width in px (default 1200)
+     ratio  — optional crop as "W:H" (e.g. "4:5"); omitted keeps the source ratio
+     alt, class, sizes, eager (bool), page (optional: look in its bundle first)
+     Falls back to the plain URL when the file is not a processable resource. */}}
+{{- $src := strings.TrimPrefix "/" .src -}}
+{{- $w := .w | default 1200 -}}
+{{- $eager := .eager -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $img := resources.Get $src -}}
+{{- with .page -}}{{- with .Resources.Get $src -}}{{- $img = . -}}{{- end -}}{{- end -}}
+{{- if and $img (in (slice "jpeg" "png" "webp") $img.MediaType.SubType) -}}
+  {{- $rw := 0 -}}{{- $rh := 0 -}}
+  {{- with .ratio -}}
+    {{- $p := split . ":" -}}
+    {{- $rw = int (index $p 0) -}}{{- $rh = int (index $p 1) -}}
+  {{- end -}}
+  {{- $set := slice -}}
+  {{- $last := "" -}}
+  {{- range slice 480 800 1200 1600 2000 -}}
+    {{- if and (le . (mul $w 2)) (le . $img.Width) -}}
+      {{- $r := "" -}}
+      {{- if $rw -}}
+        {{- $h := div (mul . $rh) $rw -}}
+        {{- if le $h $img.Height -}}
+          {{- $r = $img.Fill (printf "%dx%d webp q78 smart" . $h) -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $r = $img.Resize (printf "%dx webp q78" .) -}}
+      {{- end -}}
+      {{- with $r -}}
+        {{- $set = $set | append (printf "%s %dw" .RelPermalink .Width) -}}
+        {{- $last = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $last -}}
+    {{- if $rw -}}
+      {{- $cw := $img.Width -}}{{- $ch := div (mul $cw $rh) $rw -}}
+      {{- if gt $ch $img.Height -}}{{- $ch = $img.Height -}}{{- $cw = div (mul $ch $rw) $rh -}}{{- end -}}
+      {{- $last = $img.Fill (printf "%dx%d webp q80 smart" $cw $ch) -}}
+    {{- else -}}
+      {{- $last = $img.Resize (printf "%dx webp q80" $img.Width) -}}
+    {{- end -}}
+    {{- $set = slice (printf "%s %dw" $last.RelPermalink $last.Width) -}}
+  {{- end -}}
+<img src="{{ $last.RelPermalink }}" srcset="{{ delimit $set ", " }}" sizes="{{ $sizes }}"
+  width="{{ $last.Width }}" height="{{ $last.Height }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}
+  {{ if $eager }}fetchpriority="high"{{ else }}loading="lazy"{{ end }} decoding="async">
+{{- else -}}
+<img src="{{ .src | relURL }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}
+  {{ if not $eager }}loading="lazy"{{ end }} decoding="async">
+{{- end -}}

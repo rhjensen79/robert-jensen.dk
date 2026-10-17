@@ -1,40 +1,38 @@
 {{ define "main" }}
   {{- $apps := partialCached "apps/data.html" . -}}
-  <div class="list-header">
-    <p class="list-header__eyebrow">12F · iOS apps</p>
-    <h1 class="list-header__title">{{ .Title }}</h1>
-    <p class="list-header__count">{{ len $apps }} apps on the App Store</p>
-    <div class="apps-intro">{{ .Content }}</div>
-  </div>
+  <header class="head">
+    <h1 class="head__title" data-rise>Apps</h1>
+    <div class="head__note apps-intro">{{ .Content }}</div>
+  </header>
 
-  <div class="apps-grid">
+  <ol class="applist">
     {{- range $apps -}}
       {{- $app := . -}}
       {{- $href := partial "apps/link.html" (dict "app" $app "medium" "apps-page") -}}
       {{- $posts := where site.RegularPages "Params.apps" "intersect" (slice $app.slug) -}}
-      <article class="app-tile" id="{{ $app.slug }}">
-        <a class="app-tile__main" href="{{ $href }}" target="_blank" rel="noopener"
+      <li class="app" id="{{ $app.slug }}" data-rise>
+        <a class="app__main" href="{{ $href }}" target="_blank" rel="noopener"
            data-umami-event="apps-page" data-umami-event-app="{{ $app.slug }}">
-          {{ partial "apps/icon.html" (dict "app" $app "size" 56) }}
-          <span class="app-tile__body">
-            <span class="app-tile__cat">{{ $app.category }}</span>
-            <span class="app-tile__name">{{ $app.name }}</span>
-            <span class="app-tile__tagline">{{ $app.tagline }}</span>
-          </span>
+          {{ partial "apps/icon.html" (dict "app" $app "size" 88) }}
+          <span class="app__name">{{ $app.name }}</span>
         </a>
-        <div class="app-tile__links">
-          {{- if $app.landing -}}
-            <a href="{{ $href }}" target="_blank" rel="noopener">Website</a>
-          {{- end -}}
-          <a href="{{ $app.appStoreUrl }}" target="_blank" rel="noopener"
-             data-umami-event="apps-page-store" data-umami-event-app="{{ $app.slug }}">App Store</a>
-          {{- range first 1 $posts -}}
-            <a class="app-tile__story" href="{{ .RelPermalink }}">Read the story →</a>
-          {{- end -}}
+        <div class="app__text">
+          <p class="app__tagline">{{ $app.tagline }}</p>
+          <p class="app__links">
+            <span class="app__cat">{{ $app.category }}</span>
+            {{- if $app.landing -}}
+              <a href="{{ $href }}" target="_blank" rel="noopener">Website</a>
+            {{- end -}}
+            <a href="{{ $app.appStoreUrl }}" target="_blank" rel="noopener"
+               data-umami-event="apps-page-store" data-umami-event-app="{{ $app.slug }}">App Store</a>
+            {{- range first 1 $posts -}}
+              <a href="{{ .RelPermalink }}">Read the story</a>
+            {{- end -}}
+          </p>
         </div>
-      </article>
+      </li>
     {{- end -}}
-  </div>
+  </ol>
 
   {{- /* ItemList of SoftwareApplication for search engines. */ -}}
   {{- $items := slice -}}

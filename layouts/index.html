@@ -1,97 +1,99 @@
-{{ define "head" }}
-  {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-  {{ range first 1 $pages }}
-    {{ if .Params.thumbnail }}
-      <link rel="preload" as="image" href="{{ .Params.thumbnail | relURL }}" fetchpriority="high">
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{ define "head" }}{{ end }}
 
 {{ define "main" }}
   {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ $paginator := .Paginate $pages }}
-  {{ $isFirst := eq $paginator.PageNumber 1 }}
 
-  {{/* ---------- HERO ---------- */}}
-  {{ if $isFirst }}
-    <section class="hero">
-      <div class="hero__intro">
-        <h1 class="hero__title">{{ .Site.Params.author }}</h1>
-        <p class="hero__role">{{ .Site.Params.role | default "Cloud Native & DevOps consultant" }}</p>
-        <p class="hero__lede">
-          I write about Kubernetes, VMware, and the reality of running real
-          infrastructure — the problems I hit and exactly how I fixed them.
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#latest">Read the blog</a>
-          <a class="btn btn--ghost" href="/about/">About me</a>
-        </div>
-        {{ with .Site.Taxonomies.tags.ByCount }}
-          <div class="hero__topics">
-            {{ range first 6 . }}
-              <a class="chip" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="chip__n">{{ .Count }}</span></a>
-            {{ end }}
-          </div>
-        {{ end }}
-      </div>
-      <img class="hero__avatar" src="{{ .Site.Params.profilePicture | relURL }}" alt="{{ .Site.Params.author }}" width="180" height="180" fetchpriority="high" />
-    </section>
-  {{ end }}
+  {{ if gt $paginator.PageNumber 1 }}
+    {{/* /page/N/ keeps working as a plain list of older posts. */}}
+    <header class="head">
+      <h1 class="head__title">Posts, page {{ $paginator.PageNumber }}</h1>
+      <p class="head__note">Older posts, newest first. All {{ len $pages }} posts are also listed by year on the <a href="/#archive">front page</a>.</p>
+    </header>
+    {{ partial "post-rows.html" (dict "pages" $paginator.Pages) }}
+    {{ partial "pagination.html" . }}
+  {{ else }}
+    {{ $latest := index $pages 0 }}
 
-  {{/* ---------- FEATURED (latest) ---------- */}}
-  {{ $rest := $paginator.Pages }}
-  {{ if $isFirst }}
-    {{ $featured := index $paginator.Pages 0 }}
-    {{ $rest = after 1 $paginator.Pages }}
-    <div class="section-head" id="latest">
-      <h2 class="section-head__title">Latest</h2>
-    </div>
-    <article class="featured">
-      <a class="featured__link" href="{{ $featured.RelPermalink }}">
-        {{ partial "post-visual.html" (dict "page" $featured "eager" true) }}
-        <div class="featured__body">
-          <div class="eyebrow">
-            {{ with $featured.Params.categories }}<span class="pill-accent">{{ index . 0 }}</span>{{ end }}
-            <span>{{ $featured.Date.Format "Jan 2, 2006" }}</span>
-          </div>
-          <h3 class="featured__title">{{ $featured.Title }}</h3>
-          <p class="featured__summary">{{ $featured.Summary | plainify | truncate 220 }}</p>
-          <div class="card-meta">
-            <span>{{ $featured.ReadingTime }} min read</span>
-            <span class="dot">·</span>
-            <span class="go">Read article →</span>
-          </div>
-        </div>
+    <header class="home-intro">
+      <h1 class="home-intro__title">Notes from running real infrastructure</h1>
+      <p class="home-intro__text">Kubernetes, Docker, Traefik, VMware and the homelab: the problems I hit and how I fixed them. Written by <a href="/about/">Robert Jensen</a>, freelance cloud native consultant in Denmark.</p>
+    </header>
+
+    {{/* ---------- The newest post ---------- */}}
+    <article class="feature">
+      <a class="feature__link" href="{{ $latest.RelPermalink }}">
+        <span class="feature__pic">
+          {{ partial "pic.html" (dict "src" $latest.Params.thumbnail "page" $latest "w" 900 "ratio" "3:2" "alt" "" "eager" true "sizes" "(max-width: 760px) 100vw, 56vw") }}
+        </span>
+        <span class="feature__text">
+          <span class="feature__title">{{ $latest.Title }}</span>
+          <span class="feature__sum">{{ $latest.Summary | plainify | htmlUnescape | replaceRE "^\\s*Intro\\s+" "" | truncate 220 }}</span>
+          <span class="feature__meta">
+            <time datetime="{{ $latest.Date.Format "2006-01-02" }}">{{ $latest.Date.Format "2 January 2006" }}</time>, {{ $latest.ReadingTime }} min read
+          </span>
+        </span>
       </a>
     </article>
+
+    {{/* ---------- Recent posts ---------- */}}
+    <section class="recent" aria-labelledby="recent-head">
+      <div class="recent__head">
+        <h2 class="section-title" id="recent-head">Recent posts</h2>
+        <a class="recent__all" href="/posts/">All {{ len $pages }} posts →</a>
+      </div>
+      {{ partial "post-rows.html" (dict "pages" (first 8 (after 1 $pages))) }}
+    </section>
+
+    {{/* ---------- The archive, with the topic filter ---------- */}}
+    {{ $topics := slice "kubernetes" "docker" "traefik" "vmware" "homelab" "automation" }}
+    <section class="archive" id="archive" data-archive>
+      <div class="archive__col">
+        <h2 class="section-title">Archive</h2>
+        <div class="years">
+          {{ range $i, $g := $pages.GroupByDate "2006" }}
+            <details class="year" data-year="{{ .Key }}" {{ if eq $i 0 }}open{{ end }}>
+              <summary>
+                <span class="year__key">{{ .Key }}</span>
+                <span class="year__n"><span data-n>{{ len .Pages }}</span> {{ cond (eq (len .Pages) 1) "post" "posts" }}</span>
+                <span class="year__plus" aria-hidden="true"></span>
+              </summary>
+              <ul class="year__list">
+                {{ range .Pages }}
+                  <li data-tags="{{ delimit (.Params.tags | default slice) " " }}">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan" }}</time>
+                  </li>
+                {{ end }}
+              </ul>
+            </details>
+          {{ end }}
+        </div>
+      </div>
+
+      <aside class="picker" aria-labelledby="picker-head">
+        <h2 class="picker__head" id="picker-head">Browse by topic</h2>
+        <p class="picker__text">Pick a topic to filter the archive and see the years I wrote about it.</p>
+        <div class="picker__topics" role="group" aria-label="Topics">
+          <a class="topic is-on" href="/posts/" data-topic="" aria-pressed="true">All <span>{{ len $pages }}</span></a>
+          {{ range $t := $topics }}
+            {{ with index site.Taxonomies.tags $t }}
+              <a class="topic" href="{{ .Page.RelPermalink }}" data-topic="{{ $t }}" aria-pressed="false">{{ partial "tag-name.html" $t }} <span>{{ .Count }}</span></a>
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="chart" aria-hidden="true">
+          {{ range $pages.GroupByDate "2006" | collections.Reverse }}
+            <div class="chart__col" data-year="{{ .Key }}">
+              <span class="chart__bar" style="--n: {{ len .Pages }}"></span>
+              <span class="chart__n">{{ len .Pages }}</span>
+              <span class="chart__y">{{ substr .Key 2 }}</span>
+            </div>
+          {{ end }}
+        </div>
+        <p class="picker__status" aria-live="polite" data-status>All topics: {{ len $pages }} posts.</p>
+        <a class="picker__all" href="/tags/">All topics →</a>
+      </aside>
+    </section>
   {{ end }}
-
-  <div class="section-head">
-    <h2 class="section-head__title">{{ if $isFirst }}More posts{{ else }}Posts{{ end }}</h2>
-    <span class="section-head__link">{{ len $pages }} articles</span>
-  </div>
-
-  <div class="card-grid">
-    {{ range $rest }}
-      <article class="card">
-        <a class="card__link" href="{{ .RelPermalink }}">
-          {{ partial "post-visual.html" (dict "page" . "eager" false) }}
-          <div class="card__body">
-            <div class="eyebrow">
-              {{ with .Params.categories }}<span class="pill-accent">{{ index . 0 }}</span>{{ end }}
-              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-            </div>
-            <h3 class="card__title">{{ .Title }}</h3>
-            <div class="card-meta">
-              <span>{{ .ReadingTime }} min read</span>
-            </div>
-          </div>
-        </a>
-      </article>
-    {{ end }}
-  </div>
-
-  <div class="pagination">
-    {{ template "partials/pagination.html" . }}
-  </div>
 {{ end }}

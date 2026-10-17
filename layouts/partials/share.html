@@ -2,16 +2,16 @@
      Plain intent URLs only — no third-party embeds or tracking scripts. */}}
 {{- $url := .Permalink -}}
 {{- $title := .Title -}}
-<div class="share" data-share>
-  <span class="share__label">Share</span>
-  <button type="button" class="btn btn--ghost share__copy" data-copy="{{ $url }}" aria-label="Copy link to this post">
-    <i class="fas fa-link" aria-hidden="true"></i><span class="share__copy-text">Copy link</span>
+<div class="share" data-share data-rise>
+  <p class="share__label">Share this post</p>
+  <button type="button" class="btn btn--line share__copy" data-copy="{{ $url }}" aria-label="Copy link to this post">
+    <span class="share__copy-text">Copy link</span>
   </button>
-  <a class="btn btn--ghost" href="https://bsky.app/intent/compose?text={{ printf "%s %s" $title $url | urlquery }}" target="_blank" rel="noopener" aria-label="Share on BlueSky">
-    <i class="fab fa-bluesky" aria-hidden="true"></i>BlueSky
+  <a class="btn btn--line" href="https://bsky.app/intent/compose?text={{ printf "%s %s" $title $url | urlquery }}" target="_blank" rel="noopener" aria-label="Share on BlueSky">
+    Bluesky
   </a>
-  <a class="btn btn--ghost" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url | urlquery }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
-    <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
+  <a class="btn btn--line" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url | urlquery }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    LinkedIn
   </a>
 </div>
 <script>

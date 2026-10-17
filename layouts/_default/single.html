@@ -1,164 +1,91 @@
 {{ define "main" }}
-  <div
-    class="post {{ with .Site.Params.doNotLoadAnimations }}
-      .
-    {{ else }}
-      animated fadeInDown
-    {{ end }}"
-  >
-    {{- partial "breadcrumb.html" . -}}
-    
-    {{ if .Params.thumbnail }}
-      <div class="post__thumbnail-wrapper">
-        {{/* Descriptive alt from params.thumbnailAlt; otherwise the hero is
-             decorative (title H1 sits beside it) → empty alt, not boilerplate (#54). */}}
-        <img
-          class="post__thumbnail"
-          src="{{ .Params.thumbnail | relURL }}"
-          alt="{{ .Params.thumbnailAlt }}"
-          width="600"
-          height="338"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        />
-      </div>
-    {{ end }}
-    <div class="post__content">
-      {{ if (eq .Site.Params.disableTitleCapitalization true) }}
-        <h1>{{ .Title }}</h1>
+  {{- $isPost := or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
+  {{- $headings := len (findRE "<h[2-3]" .Content) -}}
+  {{- $toc := and (ne .Params.toc false) (or (eq .Params.toc true) (ge $headings 3)) -}}
+  <article class="post{{ if not $isPost }} post--page{{ end }}">
+    <header class="post-head">
+      {{- partial "breadcrumb.html" . -}}
+      <h1 class="post-head__title" data-rise>{{ .Title }}</h1>
+      {{ if $isPost }}
+        <p class="post-head__meta" data-rise>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+          <span>{{ .ReadingTime }} min read</span>
+          {{ range .Params.tags }}<a href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ partial "tag-name.html" . }}</a>{{ end }}
+        </p>
       {{ else }}
-        <h1>{{ title .Title }}</h1>
+        {{ with .Description }}<p class="post-head__meta" data-rise>{{ . }}</p>{{ end }}
       {{ end }}
-      {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) }}
-        <ul class="post__meta">
-          <li class="post__meta-item">
-            <em class="fas fa-calendar-day post__meta-icon"></em>
-            <span class="post__meta-text"
-              >{{ if isset .Site.Params "singledateformat" }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format .Site.Params.singleDateFormat .Date }}
-                {{ else }}
-                  {{ .Date.Format .Site.Params.singleDateFormat }}
-                {{ end }}
+    </header>
 
-              {{ else }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format "Mon, Jan 2, 2006" .Date }}
-                {{ else }}
-                  {{ .Date.Format "Mon, Jan 2, 2006" }}
-                {{ end }}
+    {{ with .Params.thumbnail }}
+      <figure class="post-hero">
+        {{ partial "pic.html" (dict "src" . "page" $ "w" 1600 "ratio" "12:5" "alt" ($.Params.thumbnailAlt | default "") "eager" true "sizes" "100vw") }}
+      </figure>
+    {{ end }}
 
-              {{ end }}
-            </span>
-          </li>
-          <li class="post__meta-item">
-            <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">{{ i18n "reading_time" .ReadingTime }}</span>
-          </li>
-        </ul>
-      {{ end }}
+    <div class="post-body">
+      <div class="post-grid{{ if $toc }} has-toc{{ end }}">
+        {{- if $toc -}}
+          <aside class="post-toc" aria-label="Table of contents">
+            <p class="post-toc__head">In this post</p>
+            {{ .TableOfContents }}
+          </aside>
+        {{- end -}}
+        <div class="prose">
+          {{- partial "expirationnote.html" . -}}
+          {{ .Content }}
+          {{- partial "apps/post-cards.html" . -}}
+          {{- if isset .Params "series" -}}
+            {{- partial "series.html" . -}}
+          {{- end -}}
+          {{- if (eq .Params.contact true) -}}
+            {{- partial "contact.html" . -}}
+          {{- end -}}
+        </div>
+      </div>
 
-      {{- partial "expirationnote.html" . -}}
+      {{- if $isPost -}}
+        <div class="post-end">
+          {{- partial "share.html" . -}}
+          {{- partial "author-bio.html" . -}}
+          {{- partial "follow.html" . -}}
+          {{- if (eq .Site.Params.relatedPosts true) -}}
+            {{- partial "related.html" . -}}
+          {{- end -}}
 
-      {{/* Auto-show the TOC for posts with 3+ h2/h3 headings,
-           while respecting an explicit toc: false in front matter. */}}
-      {{- $headings := len (findRE "<h[2-3]" .Content) -}}
-      {{- if and (ne .Params.toc false) (or (eq .Params.toc true) (ge $headings 3)) -}}
-        {{- partial "toc.html" . -}}
-      {{- end -}}
+          {{/* Confirmed by date on this Hugo build:
+               .NextInSection = newer post, .PrevInSection = older post */}}
+          {{- $newer := .NextInSection -}}
+          {{- $older := .PrevInSection -}}
+          {{- if or $newer $older -}}
+            <nav class="post-nav" aria-label="Post navigation" data-rise>
+              {{- with $older -}}
+                <a class="post-nav__link post-nav__link--prev" href="{{ .RelPermalink }}" rel="prev">
+                  <span class="post-nav__dir">← Older</span>
+                  <span class="post-nav__title">{{ .Title }}</span>
+                </a>
+              {{- end -}}
+              {{- with $newer -}}
+                <a class="post-nav__link post-nav__link--next" href="{{ .RelPermalink }}" rel="next">
+                  <span class="post-nav__dir">Newer →</span>
+                  <span class="post-nav__title">{{ .Title }}</span>
+                </a>
+              {{- end -}}
+            </nav>
+          {{- end -}}
 
-      {{ .Content }}
-
-      {{- partial "apps/post-cards.html" . -}}
-
-      {{- if isset .Params "series" -}}
-        {{- partial "series.html" . -}}
-      {{- end -}}
-
-      {{- if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
-        {{- partial "share.html" . -}}
-        {{- partial "author-bio.html" . -}}
-        {{- partial "follow.html" . -}}
-      {{- end -}}
-
-      {{- if (eq .Site.Params.relatedPosts true) -}}
-        {{- partial "related.html" . -}}
-      {{- end -}}
-
-      {{- if (eq .Params.contact true) -}}
-        {{- partial "contact.html" . -}}
+          {{- if and .Site.Params.utterances.repo (ne .Params.disableComments true) -}}
+            <section id="comment" class="comments">
+              <h2 class="comments__head">{{ i18n "comments" }}</h2>
+              {{ partial "comments/utterances.html" . }}
+            </section>
+          {{- end -}}
+        </div>
       {{- end -}}
 
       {{- if (eq .Site.Params.mermaid.enable true) -}}
         {{- partial "mermaid.html" . -}}
       {{- end -}}
     </div>
-    <div class="post__footer">
-      {{ with .Page.Params.Categories }}
-        {{ partial "taxonomy/categories.html" . }}
-      {{ end }}
-
-      {{ with .Page.Params.Tags }}
-        {{ partial "taxonomy/tags.html" . }}
-      {{ end }}
-    </div>
-
-    {{- if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type) -}}
-      {{/* Confirmed by date on this Hugo build:
-           .NextInSection = newer post, .PrevInSection = older post */}}
-      {{- $newer := .NextInSection -}}
-      {{- $older := .PrevInSection -}}
-      {{- if or $newer $older -}}
-        <nav class="post-nav" aria-label="Post navigation">
-          {{- with $older -}}
-            <a class="post-nav__link post-nav__link--prev" href="{{ .RelPermalink }}" rel="prev">
-              <span class="post-nav__dir">← Older</span>
-              <span class="post-nav__title">{{ .Title }}</span>
-            </a>
-          {{- end -}}
-          {{- with $newer -}}
-            <a class="post-nav__link post-nav__link--next" href="{{ .RelPermalink }}" rel="next">
-              <span class="post-nav__dir">Newer →</span>
-              <span class="post-nav__title">{{ .Title }}</span>
-            </a>
-          {{- end -}}
-        </nav>
-      {{- end -}}
-    {{- end -}}
-
-    {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName) (in .Site.Params.mainSections .Type)) (ne .Page.Params.disableComments true) }}
-      {{- if .Site.Config.Services.Disqus.Shortname -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ template "_internal/disqus.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.utterances.repo -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/utterances.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.giscus.repo -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/giscus.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.CommentoURL -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/commento.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.gitalk.repo -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/gitalk.html" . }}
-        </div>
-      {{- end -}}
-
-    {{ end }}
-  </div>
+  </article>
 {{ end }}

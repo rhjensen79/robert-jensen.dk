@@ -1,43 +1,19 @@
 {{ define "main" }}
   {{ $paginator := .Paginate .Pages }}
   {{ $cur := .RelPermalink }}
-  <div class="list-header">
-    <a class="back-link" href="/posts/">← All posts</a>
-    <p class="list-header__eyebrow">{{ title .Data.Singular }}</p>
-    <h1 class="list-header__title">{{ .Title }}</h1>
-    <p class="list-header__count">{{ len .Pages }} {{ cond (eq (len .Pages) 1) "post" "posts" }}</p>
-
-    {{ $tax := index .Site.Taxonomies .Data.Plural }}
-    {{ with $tax }}
-      <nav class="topic-switch" aria-label="Other {{ $.Data.Plural }}">
+  {{ $name := partial "tag-name.html" (.Data.Term | default .Title) }}
+  <header class="head">
+    <a class="head__back" href="/posts/">← All posts</a>
+    <h1 class="head__title" data-rise>{{ $name }}</h1>
+    <p class="head__note" data-rise>{{ len .Pages }} {{ cond (eq (len .Pages) 1) "post" "posts" }} about {{ $name }}, newest first.</p>
+    {{ with index .Site.Taxonomies .Data.Plural }}
+      <nav class="taglist" aria-label="Other {{ $.Data.Plural }}">
         {{ range first 14 .ByCount }}
-          <a class="chip{{ if eq .Page.RelPermalink $cur }} chip--active{{ end }}" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="chip__n">{{ .Count }}</span></a>
+          <a href="{{ .Page.RelPermalink }}"{{ if eq .Page.RelPermalink $cur }} class="is-on" aria-current="page"{{ end }}>{{ partial "tag-name.html" .Term }}<span>{{ .Count }}</span></a>
         {{ end }}
       </nav>
     {{ end }}
-  </div>
-
-  <div class="card-grid">
-    {{ range $i, $p := $paginator.Pages }}
-      <article class="card">
-        <a class="card__link" href="{{ .RelPermalink }}">
-          {{ partial "post-visual.html" (dict "page" . "eager" (lt $i 3)) }}
-          <div class="card__body">
-            <div class="eyebrow">
-              {{ with .Params.categories }}<span class="pill-accent">{{ index . 0 }}</span>{{ end }}
-              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-            </div>
-            <h2 class="card__title">{{ .Title }}</h2>
-            <div class="card-meta">
-              <span>{{ .ReadingTime }} min read</span>
-            </div>
-          </div>
-        </a>
-      </article>
-    {{ end }}
-  </div>
-
-  <div class="pagination">
-    {{ template "partials/pagination.html" . }}
-  </div>
+  </header>
+  {{ partial "post-rows.html" (dict "pages" $paginator.Pages) }}
+  {{ partial "pagination.html" . }}
 {{ end }}
