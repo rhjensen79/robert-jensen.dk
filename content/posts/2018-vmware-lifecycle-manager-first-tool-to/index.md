@@ -1,5 +1,6 @@
 ---
 title: 'VMware Lifecycle Manager - The first tool to install'
+serpTitle: "VMware Lifecycle Manager: Install First"
 date: 2018-01-02T11:16:00.000+01:00
 description: "vRealize Suite Lifecycle Manager simplifies installing, configuring and upgrading VMware products like vRA, vROps and Log Insight from a single appliance."
 thumbnail: "images/andrew-neel-1-29wyvvLJA-unsplash.webp"

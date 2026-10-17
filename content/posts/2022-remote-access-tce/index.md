@@ -1,5 +1,6 @@
 ---
 title: "Remote Access to POD, without opening firewall, on Tanzu Community Edition"
+serpTitle: "Tanzu CE: Remote Pod Access, No Firewall"
 date: 2022-04-21T08:36:34+02:00
 tags: [tanzu, kubernetes, networking]
 draft: false

@@ -3,7 +3,7 @@ title: "Integrate Azure Devops With Vmware Codestream"
 date: 2021-03-22T08:22:25+01:00
 tags: [vmware, ci-cd, cloud]
 draft: false
-description: "Learn how to integrate Azure DevOps with VMware CodeStream for CI/CD pipelines. Step-by-step guide using API tokens and Bearer authentication to trigger VMware CodeStream pipelines from Azure DevOps workflows."
+description: "Integrate Azure DevOps with VMware CodeStream: trigger CodeStream CI/CD pipelines from Azure DevOps using API tokens and Bearer authentication."
 thumbnail: "images/clay-banks-LjqARJaJotc-unsplash.webp"
 images: ["images/clay-banks-LjqARJaJotc-unsplash.webp"]
 #images: 

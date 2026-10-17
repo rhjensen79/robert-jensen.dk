@@ -1,6 +1,6 @@
 {{/* Image Render Hook for Markdown - Automatic WebP/AVIF conversion */}}
 {{ $src := .Destination }}
-{{ $alt := .Text | default "" }}
+{{ $alt := .Text | default .Page.Title }}
 {{ $title := .Title | default "" }}
 
 {{/* Try to find the image as a page resource */}}

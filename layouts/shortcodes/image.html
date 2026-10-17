@@ -2,7 +2,7 @@
 {{/* Usage: {{< image src="images/example.jpg" alt="Description" caption="Optional caption" >}} */}}
 
 {{ $src := .Get "src" }}
-{{ $alt := .Get "alt" | default "" }}
+{{ $alt := .Get "alt" | default .Page.Title }}
 {{ $caption := .Get "caption" }}
 {{ $class := .Get "class" | default "" }}
 {{ $link := .Get "link" }}

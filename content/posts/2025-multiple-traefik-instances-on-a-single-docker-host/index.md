@@ -1,5 +1,6 @@
 ---
 title: "Using Multiple Traefik Instances on a Single Docker Host"
+serpTitle: "Multiple Traefik Instances on One Host"
 date: 2025-03-19T12:00:00+01:00
 tags: [docker, traefik, networking]
 draft: false

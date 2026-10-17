@@ -1,5 +1,6 @@
 ---
 title: "When Testing Got Easy - a story about SMTP and Docker"
+serpTitle: "SMTP Testing Made Easy with Docker"
 date: 2021-03-03T15:55:59+01:00
 tags: [python, docker]
 draft: false

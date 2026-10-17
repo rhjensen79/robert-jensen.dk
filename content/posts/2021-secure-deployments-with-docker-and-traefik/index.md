@@ -1,11 +1,12 @@
 ---
 title: "Secure Deployments With Docker, Traefik and Let's Encrypt"
+serpTitle: "Docker, Traefik and Let's Encrypt Deploys"
 date: 2021-01-06T20:45:52+01:00
 tags: [docker, traefik, python, security]
 draft: false
 thumbnail: "images/danielle-macinnes-Ehtk87Go0Wg-unsplash.webp"
 images: ["images/danielle-macinnes-Ehtk87Go0Wg-unsplash.webp"]
-description: "Learn to deploy secure Docker applications using Traefik reverse proxy with automatic Let's Encrypt SSL certificates and custom DNS configuration for production-ready setups."
+description: "Deploy secure Docker apps behind Traefik with automatic Let's Encrypt SSL certificates and custom DNS, for production-ready setups."
 ---
 During the christmas holliday, I had some time, to look into [Traefik](https://traefik.io/traefik/) reverse proxy.
 

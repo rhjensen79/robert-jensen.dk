@@ -4,7 +4,7 @@
     <li class="prow" data-rise>
       <a class="prow__link" href="{{ .RelPermalink }}">
         <span class="prow__pic">
-          {{ partial "pic.html" (dict "src" .Params.thumbnail "page" . "w" 560 "ratio" "3:2" "alt" "" "eager" (lt $i 2) "sizes" "(max-width: 760px) 100vw, 36vw") }}
+          {{ partial "pic.html" (dict "src" .Params.thumbnail "page" . "w" 560 "ratio" "3:2" "alt" (.Params.thumbnailAlt | default .Title) "eager" (lt $i 2) "sizes" "(max-width: 760px) 100vw, 36vw") }}
         </span>
         <span class="prow__text">
           <span class="prow__title">{{ .Title }}</span>

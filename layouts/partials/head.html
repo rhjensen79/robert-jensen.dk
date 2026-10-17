@@ -1,13 +1,15 @@
 <head>
   <meta charset="utf-8" />
   {{/* Title: brand as SUFFIX on interior pages (SEO issue #48); keyword-rich
-       title on the homepage. Set params.homeTitle to override the home title. */}}
+       title on the homepage. Set params.homeTitle to override the home title.
+       A page-level params.serpTitle shortens ONLY the <title> tag for long
+       SERP titles; the page <h1>, OG and schema keep .Title. */}}
   <title>
     {{- if .IsHome -}}
       {{ or .Site.Params.homeTitle (printf "%s — Cloud Native, Kubernetes & DevOps" .Site.Title) }}
     {{- else -}}
       {{- with .Title -}}
-        {{ . }} · {{ $.Site.Title }}
+        {{ $.Params.serpTitle | default . }} · {{ $.Site.Title }}
       {{- else -}}
         {{ $.Site.Title }}
       {{- end -}}
@@ -31,8 +33,18 @@
     {{- end -}}
   {{- end -}}
   <meta name="description" content="{{ $desc | plainify | chomp }}" />
-  {{/* Per-page noindex for thin/obsolete content (#51). Links still followed. */}}
-  {{- if .Params.noindex }}
+  {{/* Per-page noindex for thin/obsolete content (#51), and paginated list
+       pages beyond page 1. Links still followed. head renders before "main"
+       and Hugo keeps the FIRST Paginate call per page, so these calls MUST
+       stay identical to index.html / term.html / list.html. Only kinds whose
+       templates already paginate are touched (terms.html, apps/list.html don't). */}}
+  {{- $pager := false -}}
+  {{- if .IsHome -}}
+    {{- $pager = .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}
+  {{- else if or (eq .Kind "term") (and (eq .Kind "section") (ne .Type "apps")) -}}
+    {{- $pager = .Paginate .Pages -}}
+  {{- end -}}
+  {{- if or .Params.noindex (and $pager (gt $pager.PageNumber 1)) }}
     <meta name="robots" content="noindex,follow" />
   {{- end }}
   {{ if .Params.redirectUrl }}

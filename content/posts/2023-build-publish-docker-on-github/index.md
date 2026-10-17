@@ -1,5 +1,6 @@
 ---
 title: "Build, Publish and host your Docker images on Github Registry"
+serpTitle: "Host Docker Images on GitHub Registry"
 date: 2023-05-23T12:00:00+01:00
 tags: [docker, github-actions, automation]
 draft: false

@@ -1,8 +1,9 @@
 ---
 title: "Mission Control: One Dashboard for 30+ Side Projects"
+serpTitle: "Mission Control for 30+ Side Projects"
 date: 2026-07-22T19:00:00+02:00
 draft: false
-description: "Why I built a self-hosted dashboard on top of GitHub issues to keep track of 30+ side projects. The staleness score that decides what I work on next, the Refine + Appwrite stack behind it, and the mistakes I made along the way."
+description: "Why I built a self-hosted dashboard on GitHub issues to track 30+ side projects: the staleness score, the Refine + Appwrite stack, and lessons learned."
 tags: ["appwrite", "github", "side-project", "automation", "ai"]
 slug: "mission-control-dashboard-github-issues"
 toc: true

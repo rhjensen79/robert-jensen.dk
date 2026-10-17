@@ -1,5 +1,6 @@
 ---
 title: "Installing Harbor Container Registry Behind Traefik Reverse Proxy With Let's Encrypt Certificate"
+serpTitle: "Harbor Behind Traefik with Let's Encrypt"
 date: 2021-02-19T13:53:10+01:00
 tags: [traefik, docker, security]
 draft: false

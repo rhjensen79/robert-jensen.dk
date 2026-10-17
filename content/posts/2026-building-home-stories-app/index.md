@@ -1,8 +1,9 @@
 ---
 title: "Building Home Stories: How My Sister's YouTube Channel Turned Into a Renovation App"
+serpTitle: "Building Home Stories, a Renovation App"
 date: 2026-07-15T10:00:00+02:00
 draft: false
-description: "The honest story behind Home Stories, an iOS app for homeowners to plan renovation projects - track the budget, save products and prices, log the hours, and keep the before-and-after photos in one place. How it started, what it does, and what the user feedback has taught me."
+description: "The story behind Home Stories, an iOS app for planning home renovations: budgets, products, hours and before-and-after photos, plus lessons from users."
 tags: ["ios", "side-project", "home-renovation"]
 toc: true
 thumbnail: "images/home-stories-hero.webp"
@@ -61,7 +62,7 @@ The app is free to use, with an optional Pro upgrade for the extras - things lik
 
 ## The part nobody tells you: shipping is the easy bit
 
-Building the first version was the fun, fast part. I know that story well - I even [wrote about vibe coding](../2025-vive-coding-is-the-new-frontpage/) and how AI-assisted tooling lets you get a working idea in front of people faster than ever. Getting Home Stories from "idea in the shower" to "on the App Store" was genuinely quick.
+Building the first version was the fun, fast part. I know that story well - I even [wrote about vibe coding](/posts/2025/vibe-coding-is-the-new-frontpage-and-thats-not-necessarily-bad/) and how AI-assisted tooling lets you get a working idea in front of people faster than ever. Getting Home Stories from "idea in the shower" to "on the App Store" was genuinely quick.
 
 What I underestimated was everything *after* shipping.
 
