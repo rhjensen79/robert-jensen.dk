@@ -1,18 +1,12 @@
 {{ define "main" }}
-  <div
-    class="archive {{ with .Site.Params.doNotLoadAnimations }}
-      .
-    {{ else }}
-      animated fadeInDown
-    {{ end }}"
-  >
-    <h1>{{ .Title }}</h1>
-    <div class="taxonomy-cloud">
-      {{ range .Data.Terms.Alphabetical }}
-        <a class="taxonomy-cloud__tag" href="{{ .Page.RelPermalink }}">
-          {{ .Page.Title }} <span class="taxonomy-cloud__count">({{ .Count }})</span>
-        </a>
-      {{ end }}
-    </div>
-  </div>
+  <header class="head">
+    <h1 class="head__title" data-rise>{{ .Title }}</h1>
+    <p class="head__note">{{ len .Data.Terms }} topics across {{ len (where site.RegularPages "Section" "posts") }} posts.</p>
+  </header>
+  <p class="cloud">
+    {{ range $i, $t := .Data.Terms.ByCount }}
+      {{- if $i }}, {{ end -}}
+      <a href="{{ .Page.RelPermalink }}">{{ partial "tag-name.html" .Term }}&nbsp;<span>{{ .Count }}</span></a>
+    {{- end }}.
+  </p>
 {{ end }}

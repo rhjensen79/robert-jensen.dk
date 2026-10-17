@@ -7,24 +7,12 @@
   {{- if eq .title "BlueSky" -}}{{ $bsky = .url }}{{- end -}}
 {{- end -}}
 {{- if or $rss $bsky -}}
-<aside class="follow">
-  <div class="follow__text">
-    <div class="follow__title">Enjoyed this?</div>
-    <p class="follow__desc">
-      Get new posts via RSS{{ with $bsky }} or follow me on BlueSky{{ end }}.
-    </p>
-  </div>
-  <div class="follow__actions">
-    {{ with $rss }}
-      <a class="btn btn--ghost" href="{{ . }}">
-        <i class="fas fa-rss" aria-hidden="true"></i>RSS
-      </a>
-    {{ end }}
-    {{ with $bsky }}
-      <a class="btn btn--primary" href="{{ . }}" target="_blank" rel="noopener me">
-        <i class="fab fa-bluesky" aria-hidden="true"></i>Follow on BlueSky
-      </a>
-    {{ end }}
-  </div>
+<aside class="follow" data-rise>
+  <p class="follow__title">Get the next post</p>
+  <p class="follow__desc">New posts arrive via RSS{{ with $bsky }} and on Bluesky{{ end }}.</p>
+  <p class="follow__actions">
+    {{ with $bsky }}<a class="btn" href="{{ . }}" target="_blank" rel="noopener me">Follow on Bluesky</a>{{ end }}
+    {{ with $rss }}<a class="btn btn--line" href="{{ . }}">RSS feed</a>{{ end }}
+  </p>
 </aside>
 {{- end -}}

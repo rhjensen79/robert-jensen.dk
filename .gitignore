@@ -13,3 +13,4 @@ static/.DS_Store
 
 # Hugo generated resource cache (regenerated on build)
 resources/_gen/
+.taste-skill/
